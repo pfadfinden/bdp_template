@@ -1,0 +1,90 @@
+.searchbox {
+  position: absolute;
+  top: 1.5em;
+  left: 750px;
+  background: url(../../Images/BDP001_Streichholzschachtel_Streichholz_LY01.png) no-repeat;
+  width: 180px;
+  height: 114px;
+}
+
+.searchbox__submit {
+  font-family: akachenregular, serif;
+  color: #ffca28;
+  font-size: 1.4em;
+  margin: 25px 0 0 35px;
+  border: 0;
+  background: none;
+  padding: 0;
+  text-align: left;
+}
+
+.searchbox__input {
+  margin: 5px 25px 0 35px;
+  border: 2px solid #ffca28;
+  background: transparent;
+  color: #FFF;
+  padding: 2px;
+  width: 90px;
+}
+
+#tx_indexedsearch table {
+  width: 100%;
+}
+
+#tx_indexedsearch input,
+#tx_indexedsearch select {
+  border: 2px solid #0d53a5;
+  box-sizing: content-box;
+  margin: 2px 0;
+  padding: 4px;
+  width: 200px;
+}
+
+#tx_indexedsearch input[type="submit"] {
+  background: #0d53a5;
+  color: #fff;
+}
+
+#tx_indexedsearch input[type="checkbox"] {
+  width: auto;
+}
+
+#tx_indexedsearch td:nth-child(2) {
+  width: 222px;
+}
+
+#tx_indexedsearch td {
+  vertical-align: middle;
+}
+
+#tx_indexedsearch tr:first-child td:first-child {
+  width: 5em;
+}
+
+#tx_indexedsearch tr:nth-child(4) td:first-child {
+  width: 10em;
+}
+
+.tx-indexedsearch .tx-indexedsearch-res .tx-indexedsearch-descr .tx-indexedsearch-redMarkup {
+  color: #000;
+  background: #ffca28;
+  font-weight: normal;
+}
+
+.browsebox {
+  padding: 0;
+}
+
+.browsebox a {
+  padding: 3px;
+  border: 2px solid;
+}
+
+.tx-indexedsearch-title.title {
+  font-family: akachenregular,serif;
+  font-size: 20px;
+}
+
+.tx-indexedsearch-icon.icon {
+  display: none;
+}

@@ -1,0 +1,2 @@
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Resources/Private/TypoScript/Setup/" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Resources/Private/TypoScript/Setup/blocks" extensions="ts">

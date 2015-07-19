@@ -1,0 +1,41 @@
+{namespace n=Tx_News_ViewHelpers}
+<div class="csc-default article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+  <n:excludeDisplayedNews newsItem="{newsItem}" />
+
+      <div class="news-img-wrap">
+        <f:if condition="{newsItem.falMediaPreviews}">
+          <f:then>
+            <n:link newsItem="{newsItem}" settings="{settings}">
+              <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+                <f:if condition="{mediaElement.originalResource.type} == 2">
+                  <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+                </f:if>
+                <f:if condition="{mediaElement.originalResource.type} == 4">
+                  <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}" />
+                </f:if>
+              </f:alias>
+            </n:link>
+          </f:then>
+          <f:else>
+            <f:if condition="{settings.displayDummyIfNoMedia}">
+              <span class="no-media-element">
+                <n:link newsItem="{newsItem}" settings="{settings}">
+                  <f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+                </n:link>
+              </span>
+            </f:if>
+          </f:else>
+        </f:if>
+        <div class="news-title"><n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link></div>
+      </div>
+  <div class="teaser-text">
+    <f:if condition="{newsItem.teaser}">
+      <f:then>
+        <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.teaser}</f:format.crop></f:format.html>
+      </f:then>
+      <f:else>
+        <f:format.html><f:format.crop maxCharacters="{settings.cropMaxCharacters}" respectWordBoundaries="1">{newsItem.bodytext}</f:format.crop></f:format.html>
+      </f:else>
+    </f:if>
+  </div>
+</div>

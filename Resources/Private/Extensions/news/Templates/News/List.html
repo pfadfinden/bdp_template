@@ -1,0 +1,18 @@
+{namespace n=Tx_News_ViewHelpers}
+<f:layout name="General" />
+<f:section name="content">
+  <f:if condition="{news}">
+    <f:then>
+      <div class="masonry-container"><div class="news-list-view">
+        <f:for each="{news}" as="newsItem" iteration="iterator">
+          <f:if condition="{iterator.isFirst}"><div class="news_wrapper"></f:if><div class="masonry-item masonry-item-3"><div class="news_item"><f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" /></div></div><f:if condition="{iterator.isLast}"></div></f:if>
+        </f:for>
+      </div></div>
+    </f:then>
+    <f:else>
+      <div class="no-news-found">
+        <f:translate key="list_nonewsfound" />
+      </div>
+    </f:else>
+  </f:if>
+</f:section>

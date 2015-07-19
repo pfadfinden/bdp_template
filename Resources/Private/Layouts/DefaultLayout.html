@@ -1,0 +1,24 @@
+<div id="wrap">
+  <div id="header">
+    <div id="branding">
+      <div id="branding__logo">
+        <a href="/"><img src="typo3conf/ext/bdp_template/Resources/Public/Images/Bundeszeichen_v04.png" width="390" height="79" srcset="typo3conf/ext/bdp_template/Resources/Public/Images/Bundeszeichen_v04.png 1x, typo3conf/ext/bdp_template/Resources/Public/Images/Bundeszeichen_v04@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
+      </div>
+      <div id="responsivemenu">
+        <a href="javascript:void(0);">
+          <img alt="Suche und Navigation zeigen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAU0lEQVRYhe3UMQrAIBBE0Y/HE+/fGSToOZJKYmHKTZP/YMFudhEGJD0KcABX8FQg7xY4Pwif02ZoWhZY39G2WQUYxF/fefkCyR6wByR7wB6Q/ukGPHLwi9CjDYcAAAAASUVORK5CYII="/><span aria-hidden="true"><br>MENÜ</span>
+        </a>
+      </div>
+      <f:if condition="{settings.region} != ''">
+        <div id="branding__region"><a href="/">{settings.region}</a></div>
+      </f:if>
+    </div>
+    <div id="branding__shadow"></div>
+    <f:render partial="searchbox" arguments="{settings : settings}" />
+  </div>
+  <div id="main" class="clearfix">
+    <f:render partial="nav-primary" />
+    <f:render section="page" />
+  </div>
+</div>
+<f:render partial="nav-footer" arguments="{settings : settings}"/>

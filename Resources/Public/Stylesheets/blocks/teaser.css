@@ -1,0 +1,36 @@
+.teaser {
+  z-index:5;
+}
+
+.teaser__image {
+  position: relative;
+  margin: 0 0 1em 0;
+}
+
+.teaser__image img {
+  height: 100%;
+  width: 100%;
+  max-width: 1300px;
+  display: relative;
+}
+
+.teaser__image > img {
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+}
+
+.teaser__title {
+  position: absolute;
+  left: 240px;
+  bottom: 1em;
+}
+
+.teaser__titleline {
+  background: rgba(56,46,35,.7);
+  padding: 0.05em 0.25em;
+  display: inline;
+  margin-bottom: 0.25em;
+  font-size: 4em;
+  font-weight: light;
+  font-family: akachenregular, serif;
+  color: #FFCA28;  
+}

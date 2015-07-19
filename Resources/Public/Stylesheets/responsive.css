@@ -1,0 +1,134 @@
+#responsivemenu {display: none;}
+
+/* Desktops and laptops ----------- */
+@media only screen and (max-width : 1824px) {}
+
+/* iPads (landscape) ----------- */
+@media only screen and (max-width : 1224px) {}
+
+/* iPads (portrait) ----------- */
+@media only screen and (max-width : 1024px) {
+
+#content .grid-g .grid-u-1-2, 
+#content .grid-g .grid-u-1-3{float: none; width: 100%;}
+.searchbox {display: none;}
+.masonry-item-3 {width: 50%;}
+}
+
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (max-width : 768px) {
+#content {margin-left: 1em; width: 100%;}
+
+.teaser__title {left: 1em;}
+.teaser__titleline {font-size: 2em;}
+
+#branding {width: 100%; height: auto; margin: 0; padding: 0; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);}
+#branding__logo {padding: 1em; margin: 0 3em 0 0; text-align: left;}
+#branding__logo img {width: 100%; height: 100%; max-width: 250px;}
+#branding__shadow {display: none;}
+#branding__region a {text-align: left; padding-left: 0.75em;}
+
+#nav-secondary {display: none;}
+#wrap, #footer {background-image: none; }
+#nav-left {position:relative; width: 100%; margin: 0 0 1em 0; padding: 0;left: auto; top: auto; right: auto,}
+#nav-footer {margin: 1em 0 0 0; width: 100%;}
+.csc-header {margin-left: 1em; margin-right: 1em;}
+#nav-primary__menu {padding: 0 0 1em 0; display: none;}
+#main {margin: 0; padding: 0; min-height: 0;}
+#footer {widht: 100%; height: auto; overflow: none; margin: 0; padding: 1em; background-image: none; background-color: #C4A164; box-shadow: 0px -5px 5px rgba(0,0,0,0.3);}
+#nav-footer {padding: 0; margin: 0; background-image: none;  }
+#nav-footer .nav-footer__title {text-align: left; margin: 0; padding: 0; color: #000; }
+#footer .grid-g .grid-u-1-2{float: none; width: 100%;}
+#responsivemenu {display: inline; position: absolute; top: 1em; right: 1em; }
+#responsivemenu a {color: #0d53a5; text-decoration: none; }
+#responsivemenu a span {font-size: 0.85em; color: #000;}
+#content-fw, #content {margin-left: 1em;}
+}
+
+/* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
+@media only screen and (max-width : 640px) {
+.masonry-item {float: none; width: 100%;}
+.csc-default, .csc-default .csc-header, .csc-frame, .csc-frame-frame5 {margin-right: 0; margin-left: 0;}
+#content-fw, #content {margin-left: 0}
+}
+
+/* Smartphones (portrait) (ie: Galaxy 1) */
+@media only screen and (max-width : 321px) {}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request: h5bp.com/r
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+    
+    #teaser, #nav-left, .searchbox {
+    display: none;
+  }
+  
+  #content, #content-fw, #branding, #nav-footer, #socialshareprivacy {
+    margin: 0;
+    max-width: 100%;
+  }
+}
