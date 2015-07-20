@@ -5,13 +5,13 @@
 	clear:both;
 	background-color: #FFF;
 	overflow: hidden;
-	background: url(../../Images/BDP001_Loeffel_Topf_LY01.png) no-repeat right bottom;
+	background: url(//cdn.pfadfinden.de/bdp_template/gfx/objects/Kochtopf_v1.png) no-repeat right bottom;
 }
 
 #nav-footer {
 	height: 286px;
 	width: 660px;
-	background: url(../../Images/BDP001_Briefumschlag_LY01_v02.png) no-repeat;
+	background: url(//cdn.pfadfinden.de/bdp_template/gfx/objects/Briefumschlag_v1.png) no-repeat;
 	padding: 1em 2em 0 2em;
 	margin-left: 240px;
 }
@@ -34,7 +34,6 @@
 .nav-footer__content p, .nav-footer__content li{
 	font-size: 0.85em;
 }
-
 
 .nav-footer__content p {
 	color: #000;
@@ -95,8 +94,8 @@ padding: 0;
 	margin-top: 0;
 }
 
-#nav-footer__menu .footer_contact a{ background-image: url(../../Images/BDP001_Icon_Kontakt_v2.png); }
-#nav-footer__menu .footer_privacy a{ background-image: url(../../Images/BDP001_Icon_Impressum_v2.png); }
-#nav-footer__menu .footer_favorite a{ background-image: url(../../Images/BDP001_Icon_Favoriten_v2.png); }
-#nav-footer__menu .footer_print a{ background-image: url(../../Images/BDP001_Icon_Drucken_v2.png); }
-#nav-footer__menu .footer_recommend a{ background-image: url(../../Images/BDP001_Icon_Empfehlen.png); }
+#nav-footer__menu .footer_contact a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Kontakt_v1.png); }
+#nav-footer__menu .footer_privacy a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Impressum_v1.png); }
+#nav-footer__menu .footer_favorite a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Favoriten_v1.png); }
+#nav-footer__menu .footer_print a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Drucken_v1.png); }
+#nav-footer__menu .footer_recommend a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Favoriten_v1.png); }

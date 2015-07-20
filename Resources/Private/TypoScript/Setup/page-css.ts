@@ -18,6 +18,10 @@ page {
     ttaddress          = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-address.css
     responsive         = {$plugin.tx_bdptemplate.filepaths.css}responsive.css
   }
-  includeCSSLibs.normalize = http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css
-  includeCSSLibs.normalize.external = 1
+  includeCSSLibs {
+    normalize = http://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css
+    normalize.external = 1
+    font-akachen = {$plugin.tx_bdptemplate.filepaths.cdn}bdp_template/fonts/akachen/stylesheet.css
+    font-akachen.external = 1
+  }
 }
