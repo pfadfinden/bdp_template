@@ -2,14 +2,14 @@
 .csc-default h1, .csc-default h2, .csc-default h3, .csc-default h4,
 .csc-header h1, .csc-header h2, .csc-header h3, .csc-header h4, .csc-header h5,
 .csc-textpicHeader h1, .csc-textpicHeader h2, csc-textpicHeader h3, csc-textpicHeader h4, csc-textpicHeader h5{
-	font-family: akachenregular, serif;
+	font-family: akachen, serif;
 	color: #fff;
-	font-weight: normal;	
+	font-weight: normal;
 	margin: 0.5em 0 0.25em 0;
 }
 
-h1 span, h2 span, h3 span, h4 span, h5 span { 
-   letter-spacing: 0.03em;  
+h1 span, h2 span, h3 span, h4 span, h5 span {
+   letter-spacing: 0.03em;
    background: #FFCA28;
    padding: 0.2em 0.25em;
    margin: 0;
@@ -29,7 +29,7 @@ h1 {
 .header-blaugelb {
 	background-color: rgb(255, 202, 40);
 	color: #0D53A5;
-	font-family: akachenregular, serif;
+	font-family: akachen, serif;
 	font-size: 1.35em;
 	font-weight: normal;
 	letter-spacing: 0px;
@@ -72,7 +72,7 @@ h1 {
 }
 
 .csc-frame-frame1 h1, .csc-frame-frame1 h2, .csc-frame-frame1 h3 {
-	color: #0D53A5;	
+	color: #0D53A5;
 }
 
 .csc-frame-frame2 {

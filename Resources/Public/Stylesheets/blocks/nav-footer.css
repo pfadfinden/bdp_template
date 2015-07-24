@@ -5,25 +5,26 @@
 	clear:both;
 	background-color: #FFF;
 	overflow: hidden;
-	background: url(//cdn.pfadfinden.de/bdp_template/gfx/objects/Kochtopf_v1.png) no-repeat right bottom;
+	background: url(//cdn.pfadfinden.de/gfx/objects/Kochtopf_v1.png) no-repeat right bottom;
 }
 
 #nav-footer {
 	height: 286px;
 	width: 660px;
-	background: url(//cdn.pfadfinden.de/bdp_template/gfx/objects/Briefumschlag_v1.png) no-repeat;
+	background: url(//cdn.pfadfinden.de/gfx/objects/Briefumschlag_v1.png) no-repeat;
 	padding: 1em 2em 0 2em;
 	margin-left: 240px;
 }
 
 .nav-footer__title {
 	color: #FFCA28;
-	font-family: akachenregular, serif;
+	font-family: akachen, serif;
 	font-size: 25px;
 	font-weight: normal;
 	wdith: 100%;
 	text-align: center;
 	margin: 0.5em 0 2em 0;
+	padding: 0 1em;
 }
 
 .nav-footer__content {
@@ -49,7 +50,7 @@
 }
 
 .nav-footer__content h2{
-	font-family: akachenregular, serif;
+	font-family: akachen, serif;
 }
 
 
@@ -94,8 +95,8 @@ padding: 0;
 	margin-top: 0;
 }
 
-#nav-footer__menu .footer_contact a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Kontakt_v1.png); }
-#nav-footer__menu .footer_privacy a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Impressum_v1.png); }
-#nav-footer__menu .footer_favorite a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Favoriten_v1.png); }
-#nav-footer__menu .footer_print a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Drucken_v1.png); }
-#nav-footer__menu .footer_recommend a{ background-image: url(//cdn.pfadfinden.de/bdp_template/gfx/icons/Favoriten_v1.png); }
+#nav-footer__menu .footer_contact a{ background-image: url(//cdn.pfadfinden.de/gfx/icons/Kontakt_v1.png); }
+#nav-footer__menu .footer_privacy a{ background-image: url(//cdn.pfadfinden.de/gfx/icons/Impressum_v1.png); }
+#nav-footer__menu .footer_favorite a{ background-image: url(//cdn.pfadfinden.de/gfx/icons/Favoriten_v1.png); }
+#nav-footer__menu .footer_print a{ background-image: url(//cdn.pfadfinden.de/gfx/icons/Drucken_v1.png); }
+#nav-footer__menu .footer_recommend a{ background-image: url(//cdn.pfadfinden.de/gfx/icons/Favoriten_v1.png); }

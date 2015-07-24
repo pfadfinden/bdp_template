@@ -2,11 +2,11 @@
   <div id="header">
     <div id="branding">
       <div id="branding__logo">
-        <a href="/"><img src="//cdn.pfadfinden.de/bdp_template/gfx/logos/Bundeszeichen_v1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/bdp_template/gfx/logos/Bundeszeichen_v1.png 1x, //cdn.pfadfinden.de/bdp_template/gfx/logos/Bundeszeichen_v1.png@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
+        <a href="/"><img src="//cdn.pfadfinden.de/gfx/logos/Bundeszeichen_v1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/Bundeszeichen_v1.png 1x, //cdn.pfadfinden.de/gfx/logos/Bundeszeichen_v1.png@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
       </div>
       <div id="responsivemenu">
         <a href="javascript:void(0);">
-          <img alt="Suche und Navigation zeigen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAU0lEQVRYhe3UMQrAIBBE0Y/HE+/fGSToOZJKYmHKTZP/YMFudhEGJD0KcABX8FQg7xY4Pwif02ZoWhZY39G2WQUYxF/fefkCyR6wByR7wB6Q/ukGPHLwi9CjDYcAAAAASUVORK5CYII="/><span aria-hidden="true"><br>MENÜ</span>
+          <img alt="Suche und Navigation zeigen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAU0lEQVRYhe3UMQrAIBBE0Y/HE+/fGSToOZJKYmHKTZP/YMFudhEGJD0KcABX8FQg7xY4Pwif02ZoWhZY39G2WQUYxF/fefkCyR6wByR7wB6Q/ukGPHLwi9CjDYcAAAAASUVORK5CYII="/><span aria-hidden="true"><br>Menü</span>
         </a>
       </div>
       <f:if condition="{settings.region} != ''">
@@ -21,4 +21,4 @@
     <f:render section="page" />
   </div>
 </div>
-<f:render partial="nav-footer" arguments="{settings : settings}"/>
+<f:cObject typoscriptObjectPath="lib.footer" />

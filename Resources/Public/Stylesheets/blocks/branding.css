@@ -12,7 +12,7 @@
 #branding__logo {
   padding-top: 40px;
   padding-bottom: 1em;
-  text-align:center;  
+  text-align:center;
 }
 #branding__logo img{
 	height: 100%;
@@ -34,12 +34,12 @@
 
 #branding__region a {
   display: block;
-  font-size: 18px; 
-  background: #0d53a5; 
+  font-size: 18px;
+  background: #0d53a5;
   color: #ffca28; 
-  line-height: 30px; 
-  font-family: akachenregular,serif; 
-  letter-spacing: 1px; 
+  line-height: 30px;
+  font-family: akachen,serif;
+  letter-spacing: 1px;
   word-spacing: 2px;
   text-align: Center;
   padding: 0;

@@ -8,8 +8,18 @@ plugin.tx_bdptemplate {
   config {
     # cat=bdp/010; type=string; label= Basis URL
     domain = www.pfadfinden.de
-    # cat=bdp/010; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
+    # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
     region =
+    organisation = Bund der Pfadfinderinnen und Pfadfinder e.V.
+  }
+
+  contact {
+    name = BdP Landesverband Hessen e.V.
+    address = Königsteinerstr. 33, 61476 Kronberg, DE
+    phone = 06173 92 68 90
+    fax = 06173 4705
+    email = info@pfadfinden.de
+    website = www.pfadfinden.de
   }
 
   page {
@@ -35,7 +45,7 @@ plugin.tx_bdptemplate {
     # cat=bdp/paths/010; type=string; label= Extensiontemplates
     extensiontemplates = EXT:bdp_template/Resources/Private/Extensions/
     # cat=bdp/paths/010; type=string; label= CDN Pfad: URL zu Content Delivery Network
-    cdn = http://cdn.pfadfinden.de/
+    cdn = //cdn.pfadfinden.de/
   }
 
   meta {

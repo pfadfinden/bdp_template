@@ -2,13 +2,13 @@
   position: absolute;
   top: 1.5em;
   left: 750px;
-  background: url(//cdn.pfadfinden.de/bdp_template/gfx/objects/Streichholzschachtel_v1.png) no-repeat;
+  background: url(//cdn.pfadfinden.de/gfx/objects/Streichholzschachtel_v1.png) no-repeat;
   width: 180px;
   height: 114px;
 }
 
 .searchbox__submit {
-  font-family: akachenregular, serif;
+  font-family: akachen, serif;
   color: #ffca28;
   font-size: 1.4em;
   margin: 25px 0 0 35px;
@@ -81,7 +81,7 @@
 }
 
 .tx-indexedsearch-title.title {
-  font-family: akachenregular,serif;
+  font-family: akachen,serif;
   font-size: 20px;
 }
 

@@ -17,12 +17,11 @@ page.10 {
   file.stdWrap.cObject {
     key.data = levelfield:-1, backend_layout_next_level, slide
     key.override.field = backend_layout
-    # default template file
-    default = TEXT
-    default.value = {$plugin.tx_bdptemplate.filepaths.templates}Templates/defaultTemplate.html
-    # template file for backend-layout with ID 2
     1 = TEXT
     1.value = {$plugin.tx_bdptemplate.filepaths.templates}Templates/fullwidthTemplate.html
+    2 = TEXT
+    2.value = {$plugin.tx_bdptemplate.filepaths.templates}Templates/defaultTemplate.html
+    default < 2
   }
 }
-page.shortcutIcon = {$plugin.tx_bdptemplate.filepaths.images}favicon.ico
+page.shortcutIcon = {$plugin.tx_bdptemplate.filepaths.cdn}gfx/icons/favicon.ico
