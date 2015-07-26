@@ -17,13 +17,13 @@ Folgende Anwendungsversionen werden von der Extension unterstützt:
 | EXT gridelements | 3.2.0 - 3.2.99 |
 
 ## Installation
-### Installationsvariante 1: Dateidownload aus GitHub Repository
-1. Lade die aktuellste Version des TYPO3 BdP Template unter https://github.com/pfadfinden/bdp_template/archive/master.zip herunter.
-2. Entzippe das heruntergeladene Archiv und lösche "-master" aus dem Ordnername. Das Verzeichnis sollte nun den Namen "bdp_template" haben.
-3. Lade das Verzeichnis "bdp_template" per FTP/SSH nun auf deinen Webserver in den Ordner /typo3conf/ext/. Wenn du alles richtig gemacht hast, solltest du nun diese Installationsanleitung auch unter typo3conf/ext/bdp_template/README.md auf deinem Webserver wiederfinden.
-4. Öffne das TYPO3 Backend unter /typo3 und melde dich mit einem Benutzer mit administrativen Berechtigungen an.
-5. Klicke auf den Menüpunkt "Erweiterungsmanager". Das DropDown Menü im oberen Bildschirmbereich sollte den Modus "Erweiterungen verwalten" angewählt haben.
-6. In der Erweiterungsliste findest du nun auch "BdP Template". Aktiviere diese Erweiterung per Klick auf den Baustein vor dem Namen.
+### Variante A: Dateidownload aus GitHub Repository
+1. Lade die aktuellste Version des TYPO3 BdP Template [GitHub Repository](https://github.com/pfadfinden/bdp_template/archive/master.zip) herunter.
+2. Entzippe das heruntergeladene Archiv und lösche `-master` aus dem Ordnername. Das Verzeichnis sollte nun den Namen `bdp_template` haben.
+3. Lade das Verzeichnis `bdp_template` per FTP/SSH nun auf deinen Webserver in den Ordner `/typo3conf/ext/`. Wenn du alles richtig gemacht hast, solltest du nun diese Installationsanleitung auch unter `typo3conf/ext/bdp_template/README.md` auf deinem Webserver wiederfinden.
+4. Öffne das TYPO3 Backend unter `/typo3` und melde dich mit einem Benutzer mit administrativen Berechtigungen an.
+5. Klicke auf den Menüpunkt **Erweiterungsmanager**. Das DropDown Menü im oberen Bildschirmbereich sollte den Modus **Erweiterungen verwalten** angewählt haben.
+6. In der Erweiterungsliste findest du nun auch **BdP Template**. Aktiviere diese Erweiterung per Klick auf den Baustein vor dem Namen.
 
 
 ## Fragen & Antworten
@@ -36,3 +36,6 @@ Nein, die Extension tauscht keinerlei Informationen aus. Durch Einsatz eines CDN
 
 #### Kann ich in der selben TYPO3 Installation auch Webseiten komplett selbst gestalten?
 Ja, dies ist möglich und z.B. bei Microsites zu Veranstaltungen oder Lagern sinnvoll. Nur Seiten die das statische Template "BdP Template" einschließen, werden angepasst.
+
+#### Wo kann ich individuelle Änderungen am Template vornehmen?
+Alle Konfigurationen des Templates können ergänzt oder überschrieben werden. Diese Änderungen solltest du in dem root-Template Datensatz deines TYPO3 Systems vornehmen. Bitte beachte: Es ist keine gute Idee, Änderungen direkt im Extensionverzeichnis `typo3conf/ext/bdp_template` vorzunehmen. Änderungen in diesem Verzeichnis werden bei Updates der Erweiterung automatisch gelöscht.
