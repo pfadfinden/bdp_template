@@ -139,7 +139,7 @@ textarea {
 
 
 html{
-	background: url(//cdn.pfadfinden.de/gfx/backgrounds/Holzhintergrund_v1.jpg);
+	background: url(//cdn.pfadfinden.de/gfx/backgrounds/holzhintergrund_1.jpg);
 }
 
 html, body, #wrap {height: 100%;}
@@ -152,7 +152,7 @@ body > #wrap {height: auto; min-height: 100%;}
 }
 
 #wrap {
-	background: url(//cdn.pfadfinden.de/gfx/objects/Klufthemd_v1.png) no-repeat;
+	background: url(//cdn.pfadfinden.de/gfx/objects/klufthemd_1.png) no-repeat;
 }
 
 #content {

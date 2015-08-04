@@ -43,6 +43,8 @@ config {
   compressCss = 1
   concatenateCss = 1
 
+  compressJs = 1
+
   // Protect mail addresses from spamming
   spamProtectEmailAddresses = -3
   spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>

@@ -3,10 +3,9 @@
 # Kein Wrapping der Textelemente bei Textpic
 tt_content.textpic.20.text.20.wrap = |
 
-
-
-
 tt_content.stdWrap.innerWrap.cObject {
+	25 =< tt_content.stdWrap.innerWrap.cObject.default
+	25.20.10.value = csc-frame csc-frame-frame3
 	100 = TEXT
 	100.value = <div class="csc-frame csc-frame-frame4">|</div>
 	101 = TEXT

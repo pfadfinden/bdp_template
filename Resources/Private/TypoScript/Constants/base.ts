@@ -14,10 +14,10 @@ plugin.tx_bdptemplate {
   }
 
   contact {
-    name = BdP Landesverband Hessen e.V.
-    address = Königsteinerstr. 33, 61476 Kronberg, DE
-    phone = 06173 92 68 90
-    fax = 06173 4705
+    name = BdP Bundesamt
+    address = Kesselhaken 23, 34376 Immenhausen, DE
+    phone = 05673 9957284-0
+    fax = 05673 9957284-44
     email = info@pfadfinden.de
     website = www.pfadfinden.de
   }

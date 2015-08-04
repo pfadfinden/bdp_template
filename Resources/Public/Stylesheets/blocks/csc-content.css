@@ -40,9 +40,7 @@ h1 {
 	box-decoration-break: clone;
 }
 
-
-
-.csc-default {
+.csc-default, .csc-frame-frame1, .csc-frame-frame2, .csc-frame-frame3 {
 	margin: 0 0 2em 0;
 	overflow: hidden;
 }
@@ -80,8 +78,17 @@ h1 {
 	color: #FFF;
 }
 
+.csc-frame-frame3 {
+	background-color: #D30014;
+	color: #FFF;
+}
+
+.csc-frame-frame1 h1, .csc-frame-frame1 h2, .csc-frame-frame1 h3,
+.csc-frame-frame1 h1 a, .csc-frame-frame1 h2 a, .csc-frame-frame1 h3 a,
 .csc-frame-frame2 h1, .csc-frame-frame2 h2, .csc-frame-frame2 h3,
-.csc-frame-frame2 h1 a, .csc-frame-frame2 h2 a, .csc-frame-frame2 h3 a{
+.csc-frame-frame2 h1 a, .csc-frame-frame2 h2 a, .csc-frame-frame2 h3 a,
+.csc-frame-frame3 h1, .csc-frame-frame3 h2, .csc-frame-frame3 h3,
+.csc-frame-frame3 h1 a, .csc-frame-frame3 h2 a, .csc-frame-frame3 h3 a{
 	color: #FFF;
 	text-decoration: none;
 }
