@@ -1,20 +1,14 @@
 .teaser {
-  z-index:5;
-}
-
-.teaser__image {
   position: relative;
   margin: 0 0 1em 0;
+  display: inline-block;
 }
 
-.teaser__image img {
+.teaser img {
   height: 100%;
   width: 100%;
   max-width: 1300px;
   display: relative;
-}
-
-.teaser__image > img {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -30,7 +24,14 @@
   display: inline;
   margin-bottom: 0.25em;
   font-size: 4em;
-  font-weight: light;
   font-family: akachen, serif;
-  color: #FFCA28;
+  color: #ffcb04;
+}
+
+.teaser__source {
+  position: absolute;
+  right: 1em;
+  bottom: 0.25em;
+  color: #FFF;
+  font-size: 0.75em;
 }

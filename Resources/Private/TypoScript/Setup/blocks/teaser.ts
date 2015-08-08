@@ -1,28 +1,47 @@
 lib.teaser = COA
 lib.teaser {
+	stdWrap {
+		wrap = <div class="teaser">|</div>
+		if.isTrue.data = levelmedia:-1
+	}
 
 	10 = IMAGE
-#	10.layoutKey = srcset
-#	10.layout {
-#		srcset {
-#			element = <img src="###SRC###" srcset="###SOURCECOLLECTION###" ###PARAMS### ###ALTPARAMS### ###SELFCLOSINGTAGSLASH###>
-#			source = |*|###SRC### ###SRCSETCANDIDATE###,|*|###SRC### ###SRCSETCANDIDATE###
-#		}
-#	}
-#	10.sourceCollection {
-#		small {
-#			width = 200
-#			maxW = 200
-#			srcsetCandidate = 600w
-#			mediaQuery = (max-device-width: 600px)
-#			dataKey = small
-#		}
-#	}
-	10.file {
-		import.data = levelmedia:-1
-		import.data.required = 1
-		treatIdAsReference = 1
-		import.listNum = 0
+	10 {
+		file {
+			import.data = levelmedia:-1
+			import.data.required = 1
+			treatIdAsReference = 1
+			import.listNum = 0
+			maxW = 1300
+		}
+		sourceCollection {
+			small {
+				width = 640
+				srcsetCandidate = 640w
+			}
+			medium {
+				width = 768
+				srcsetCandidate = 768w
+			}
+			big {
+				width = 1300
+				srcsetCandidate = 1024w
+			}
+		}
+		layoutKey = srcset
+		layout < tt_content.image.20.1.layout
+
+	}
+
+	12 = FILES
+	12 {
+		references.data = levelmedia:-1, slide
+		renderObj = TEXT
+		renderObj {
+			data = file:current:source
+			stdWrap.required = 1
+			stdWrap.wrap = <div class="teaser__source">Bild:&nbsp;|</div>
+		}
 	}
 
 	20 = TEXT
@@ -37,14 +56,4 @@ lib.teaser {
 		required = 1
 		wrap = <div class="teaser__title">|</div>
 	}
-
-	stdWrap.wrap = <div id="teaser"><div class="teaser__image" id="teaserImage">|</div></div>
-	stdWrap.if.isTrue.data = levelmedia:-1
-
-#	30 = TEXT
-#	30 {
-#		data = page : abstract
-#		stdWrap.required = 1
-#		stdWrap.wrap = <div class="teaser__abstract">|</div>
-#	}
 }
