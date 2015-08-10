@@ -7,6 +7,7 @@ plugin.tx_news {
   }
   settings {
     cssFile >
+    displayDummyIfNoMedia = 0
     cropMaxCharacters = 250
     facebookLocale = de_DE
     googlePlusLocale = de

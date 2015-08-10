@@ -15,18 +15,24 @@
                 </f:if>
               </f:alias>
             </n:link>
+            <div class="news-title"><n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link></div>
           </f:then>
           <f:else>
             <f:if condition="{settings.displayDummyIfNoMedia}">
-              <span class="no-media-element">
-                <n:link newsItem="{newsItem}" settings="{settings}">
-                  <f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
-                </n:link>
-              </span>
+              <f:then>
+                <span class="no-media-element">
+                  <n:link newsItem="{newsItem}" settings="{settings}">
+                    <f:image src="{settings.list.media.dummyImage}" title="" alt="" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+                  </n:link>
+                </span>
+                <div class="news-title"><n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link></div>
+              </f:then>
+              <f:else>
+                <div class="news-title" style="position: relative;"><n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link></div>
+              </f:else>
             </f:if>
           </f:else>
         </f:if>
-        <div class="news-title"><n:link newsItem="{newsItem}" settings="{settings}">{newsItem.title}</n:link></div>
       </div>
   <div class="teaser-text">
     <f:if condition="{newsItem.teaser}">
