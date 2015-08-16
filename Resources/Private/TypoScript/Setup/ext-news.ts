@@ -3,7 +3,6 @@ plugin.tx_news {
   view {
     templateRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Templates/
     partialRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Partials/
-    layoutRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Layouts/
   }
   settings {
     cssFile >
@@ -21,7 +20,7 @@ plugin.tx_news {
       }
     }
     detail {
-      showSocialShareButtons = 1
+      showSocialShareButtons = 0
     }
     list {
       media.image.maxWidth = 350

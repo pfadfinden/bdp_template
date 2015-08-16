@@ -28,8 +28,8 @@
       <div class="csc-header">
         <h1>{newsItem.title}</h1>
       </div>
-      
-    
+
+
 
         <p>
           <!-- date -->
@@ -61,8 +61,6 @@
 
       <div class="csc-default">
 
-
-
       <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
       <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
 
@@ -76,7 +74,7 @@
         <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
       </f:if>
 
-      
+
       <f:if condition="{settings.backPid}">
         <!-- Link Back -->
         <div class="news-backlink-wrap">
@@ -85,7 +83,7 @@
           </f:link.page>
         </div>
       </f:if>
-  
+
       <!-- related things -->
       <div class="news-related-wrap">
 
@@ -187,11 +185,7 @@
         </f:if>
       </div>
       </div>
-      
-      <f:if condition="{settings.detail.showSocialShareButtons}">
-        <div class="shariff"></div>
-      </f:if>  
-      
+
     </f:then>
     <f:else>
 
