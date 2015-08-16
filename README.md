@@ -4,28 +4,32 @@ BdP Webseiten Layout als Extension für das Content Management System TYPO3
 
 ## Voraussetzungen
 
-Vorausgesetzt wird eine funktionsfähige TYPO3 Installation.
+Vorausgesetzt wird eine funktionsfähige TYPO3 Installation und Erweiterungen ab einer gewissen Versionsnummer.
+Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit BdP Template notwendig, bieten aber praktische Zusatzfunktionen und Vereinfachungen.
 
-Folgende Anwendungsversionen werden von der Extension unterstützt:
-
-| Anwendung        | Version        |
-| ---------------- | -------------- |
-| TYPO3 CMS        | 6.2.0 - 6.2.99 |
-| EXT extbase      | 1.3 - 6.2.99   |
-| EXT fluid        | 1.3 - 6.2.99   |
-| EXT news         | 3.2.0 - 3.9.99 |
-| EXT gridelements | 3.2.0 - 3.2.99 |
-| EXT realurl      | 1.13.0 - 1.99.99 |
+| Anwendung        | Version        | Optional |
+| ---------------- | -------------- | -------- |
+| TYPO3 CMS        | 6.2.0 - 6.2.99 | nein     |
+| EXT extbase      | 1.3 - 6.2.99   | nein     |
+| EXT fluid        | 1.3 - 6.2.99   | nein     |
+| EXT news         | 3.2.0 - 3.9.99 | ja       |
+| EXT gridelements | 3.2.0 - 3.2.99 | ja       |
+| EXT realurl      | 1.13.0 - 1.99.99 | ja     |
 
 ## Installation
-### Variante A: Dateidownload aus GitHub Repository
-1. Lade die aktuellste Version des TYPO3 BdP Template [GitHub Repository](https://github.com/pfadfinden/bdp_template/archive/master.zip) herunter.
-2. Entzippe das heruntergeladene Archiv und lösche `-master` aus dem Ordnername. Das Verzeichnis sollte nun den Namen `bdp_template` haben.
-3. Lade das Verzeichnis `bdp_template` per FTP/SSH nun auf deinen Webserver in den Ordner `/typo3conf/ext/`. Wenn du alles richtig gemacht hast, solltest du nun diese Installationsanleitung auch unter `typo3conf/ext/bdp_template/README.md` auf deinem Webserver wiederfinden.
-4. Öffne das TYPO3 Backend unter `www.deineseite.de/typo3` und melde dich mit einem Benutzer mit administrativen Berechtigungen an.
-5. Klicke auf den Menüpunkt `Erweiterungsmanager`. Das DropDown Menü im oberen Bildschirmbereich sollte den Modus `Erweiterungen verwalten` angewählt haben.
-6. In der Erweiterungsliste findest du nun auch `BdP Template`. Aktiviere diese Erweiterung per Klick auf den Baustein vor dem Namen.
+1. Lade die aktuelle Version des Templates unter [Github Releases](https://github.com/pfadfinden/bdp_template/releases) als `.zip` Datei herunter.
+2. Logge dich als Administrator im Backend deiner TYPO3 Installation an und wähle den Menüpunkt *Adminwerkzeuge/Erweiterungen*.
+3. Am oberen Bildschirmrand findest du das kleine Upload Icon "Erweiterung hochladen", klicke dies an. Es erscheint ein Formular in dem du die zuvor heruntergeladenen zip-Datei des Templates angibst und auf *Hochladen* klickst.
+4. In der Liste "Erweiterungen verwalten" findest du nun die Erweiterung `BdP Template`. Aktiviere diese Klick auf das Bausteinsymbol vor dem Dateinamen.
 
+## Update
+Beachte bei neuen Versionen des Templates besonders Hinweise zu geänderten Abhängigkeiten in den Releasenotes. Der Update des Extension erfolgt wie die Installation. Es ist in Schritt 3 lediglich zu beachten, dass die Checkbox *Überschreiben* gewählt ist, damit die alten Dateien ersetzt werden.
+
+## Konfiguration
+* Wähle im Menü *Web/Liste* aus und bearbeite den Template Datensatz der Anfangsseite der Webseite (root-Template). Solltest du noch kein Template angelegt haben, erstelle einen neuen Template Datensatz.
+* Im Reiter *Enthält* kannst du im Abschnitt *Statische Templates einschließen* nun das Objekt `BdP Template` auswählen. Speichere anschließend die Änderung am Template Datensatz.
+* Wechsel nun in das Menü *Web/Template*. Wähle in der Ansicht *Template-Werkzeug* die Kategorie `BdP Template` aus. Es werden dir alle Konfigurationen angezeigt, die du am Template vornehmen kannst. Nach Änderungen klicke auf das Speicher-Symbol (Diskette) am oberen Bildschirmrand.
+* Nach Änderungen am Template ist es sinnvoll, zwischengespeicherte Versionen der Webseite zu löschen. Klicke hierfür auf das Blitz-Symbol rechts oben und wähle *Frontend-Caches leeren*.
 
 ## Fragen & Antworten
 
