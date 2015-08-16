@@ -1,0 +1,2 @@
+*.ts linguist-language=TypoScript
+Resources/Public/JavaScript/Library/* linguist-vendored
