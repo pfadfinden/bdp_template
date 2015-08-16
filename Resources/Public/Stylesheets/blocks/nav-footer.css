@@ -53,7 +53,6 @@
 	font-family: akachen, serif;
 }
 
-
 .nav-footer__content li{
 	list-style: none;
 	padding: 0;
@@ -62,14 +61,13 @@
 
 .nav-footer__topf {
 	position: absolute;
-
 	bottom: 0;
-
 	right: -175px;
 }
+
 #nav-footer__menu {
-margin: 0;
-padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
 #nav-footer__menu li {
