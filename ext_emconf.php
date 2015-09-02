@@ -15,7 +15,8 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluid' => '1.3 - 6.2.99',
 			'typo3' => '6.2.0 - 6.2.99',
 			'news' => '3.2.0 - 3.9.99',
-			'gridelements' => '3.2.0 - 3.2.99'
+			'gridelements' => '3.2.0 - 3.2.99',
+			'filemetadata' => '6.2.0 - 6.2.99'
 		),
 		'conflicts' => array(),
 		'suggests' => array(),

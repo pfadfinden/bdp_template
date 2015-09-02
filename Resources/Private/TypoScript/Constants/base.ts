@@ -3,6 +3,7 @@
 # customsubcategory=news=News
 # customsubcategory=meta=Metadaten
 # customsubcategory=paths=Pfadangaben
+# customsubcategory=contact=Kontakt & Impressum
 
 plugin.tx_bdptemplate {
   config {
@@ -10,15 +11,22 @@ plugin.tx_bdptemplate {
     domain = www.pfadfinden.de
     # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
     region =
+    # cat=bdp/010; type=string; label= Name der Organisation
     organisation = Bund der Pfadfinderinnen und Pfadfinder e.V.
   }
 
   contact {
+    # cat=bdp/contact/010; type=string; label= Name der Organisation
     name = BdP Bundesamt
+    # cat=bdp/contact/012; type=string; label= Anschrift
     address = Kesselhaken 23, 34376 Immenhausen, DE
+    # cat=bdp/contact/020; type=string; label= Telefonnummer
     phone = 05673 9957284-0
+    # cat=bdp/contact/025; type=string; label= Faxnummer
     fax = 05673 9957284-44
+    # cat=bdp/contact/030; type=string; label= E-Mail Adresse
     email = info@pfadfinden.de
+    # cat=bdp/contact/035; type=string; label= Webseite
     website = www.pfadfinden.de
   }
 
