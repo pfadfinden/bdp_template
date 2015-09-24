@@ -17,8 +17,12 @@ page {
   includeCSSLibs {
     normalize = //cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css
     normalize.external = 1
+    normalize.disableCompression = 1
+    normalize.excludeFromConcatenation = 1
     font-akachen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/akachen/akachen.css
     font-akachen.external = 1
+    font-akachen.disableCompression = 1
+    font-akachen.excludeFromConcatenation = 1
   # font-immenhausen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/immenhausen/immenhausen.css
   # font-immenhausen.external = 1
     }
