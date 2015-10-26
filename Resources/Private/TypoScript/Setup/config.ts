@@ -50,7 +50,7 @@ config {
   spamProtectEmailAddresses_atSubst = @<span style="display:none;">remove-this.</span>
 
   // Comment in the <head> tag
-  headerComment = Bund der Pfadfinderinnen und Pfadfinder e.V. - Arbeitskreis Öffentlichkeitsarbeit
+  headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
 
   pageTitleSeparator = |
   pageTitleSeparator.noTrimWrap = | | |

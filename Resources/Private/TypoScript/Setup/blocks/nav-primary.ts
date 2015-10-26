@@ -1,5 +1,5 @@
 lib.nav-primary = COA
-lib.nav-primary.wrap = <div id="nav-primary">|</div>
+lib.nav-primary.wrap = <nav id="nav-primary">|</nav>
 lib.nav-primary.1 = HMENU
 lib.nav-primary.1 {
   entryLevel = 0

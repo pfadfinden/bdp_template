@@ -1,4 +1,20 @@
+
+
 page = PAGE
+
+page.1 = LOAD_REGISTER
+page.1 {
+  pageLayout.cObject = TEXT
+  pageLayout.cObject {
+    data = levelfield:-1, backend_layout_next_level, slide
+    override.field = backend_layout
+    split {
+      token = sitepackage__
+      1.current = 1
+      1.wrap = |
+    }
+  }
+}
 page.10 = FLUIDTEMPLATE
 page.10 {
   layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/
