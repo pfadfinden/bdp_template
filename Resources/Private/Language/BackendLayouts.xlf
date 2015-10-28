@@ -3,7 +3,7 @@
     <file source-language="de" datatype="plaintext" original="extra" date="2015-10-25T21:50:00Z" product-name="lang">
         <header/>
         <body>
-            <trans-unit id="oncolum" xml:space="preserve">
+            <trans-unit id="onecolum" xml:space="preserve">
 				<source>BdP Layout 1-spaltig</source>
 			</trans-unit>
 			<trans-unit id="twocolums" xml:space="preserve">

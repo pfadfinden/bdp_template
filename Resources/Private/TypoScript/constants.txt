@@ -1,1 +1,0 @@
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Resources/Private/TypoScript/Constants/base.ts">

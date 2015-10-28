@@ -18,7 +18,7 @@
   </header>
   <section id="main" class="clearfix">
     <f:render partial="nav-primary" />
-    <f:render section="page" />
+    <f:render partial="{layout}" arguments="{_all}"/>
   </section>
 </div>
 <f:cObject typoscriptObjectPath="lib.footer" />

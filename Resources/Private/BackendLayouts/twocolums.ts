@@ -12,6 +12,7 @@ backend_layout {
                 2 {
                     name = Zusatzmenü
                     colPos = 3
+                    colspan = 1
                 }
             }
         }
