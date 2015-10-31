@@ -6,7 +6,7 @@
   margin-bottom: -10px;
   padding-bottom: 0;
   width: 425px;
-  height: 100%; //145px;
+  height: 145px;
 }
 
 #branding__logo {
@@ -27,7 +27,7 @@
   margin-left: 241px;
   overflow: hidden;
   position: absolute;
-  top: 40px;
+  top: 22px;
   width: 457px;
   z-index: 1;
 }
@@ -38,7 +38,7 @@
   background: #0d53a5;
   color: #ffca28;
   line-height: 30px;
-  font-family: akachen,serif;
+  font-family: Immenhausen,serif;
   letter-spacing: 1px;
   word-spacing: 2px;
   text-align: Center;

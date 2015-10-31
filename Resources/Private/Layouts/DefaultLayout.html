@@ -1,5 +1,5 @@
 <div id="wrap">
-  <div id="header">
+  <header id="header">
     <div id="branding">
       <div id="branding__logo">
         <a href="/"><img src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
@@ -15,10 +15,10 @@
     </div>
     <div id="branding__shadow"></div>
     <f:render partial="searchbox" arguments="{settings : settings}" />
-  </div>
-  <div id="main" class="clearfix">
+  </header>
+  <section id="main" class="clearfix">
     <f:render partial="nav-primary" />
-    <f:render section="page" />
-  </div>
+    <f:render partial="{layout}" arguments="{_all}"/>
+  </section>
 </div>
 <f:cObject typoscriptObjectPath="lib.footer" />

@@ -1,7 +1,7 @@
 lib.teaser = COA
 lib.teaser {
 	stdWrap {
-		wrap = <div class="teaser">|</div>
+		wrap = <figure class="teaser">|</figure>
 		if.isTrue.data = levelmedia:-1
 	}
 

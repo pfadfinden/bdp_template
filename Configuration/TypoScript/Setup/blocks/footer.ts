@@ -1,6 +1,6 @@
 lib.footer = COA
 lib.footer {
-	wrap = <div id="footer"><div id="nav-footer">|</div></div>
+	wrap = <footer id="footer"><div id="nav-footer">|</div></footer>
 
   10 = TEXT
   10.value = {$plugin.tx_bdptemplate.config.organisation}

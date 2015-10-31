@@ -5,7 +5,7 @@
     <f:then>
       <div class="masonry-container"><div class="news-list-view">
         <f:for each="{news}" as="newsItem" iteration="iterator">
-          <f:if condition="{iterator.isFirst}"><div class="news_wrapper"></f:if><div class="masonry-item masonry-item-3"><div class="news_item"><f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" /></div></div><f:if condition="{iterator.isLast}"></div></f:if>
+          <f:if condition="{iterator.isFirst}"><div class="news_wrapper"></f:if><article class="masonry-item masonry-item-3"><div class="news_item"><f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" /></div></article><f:if condition="{iterator.isLast}"></div></f:if>
         </f:for>
       </div></div>
     </f:then>

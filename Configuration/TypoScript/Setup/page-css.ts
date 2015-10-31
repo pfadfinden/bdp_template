@@ -15,15 +15,13 @@ page {
     responsive         = {$plugin.tx_bdptemplate.filepaths.css}responsive.css
   }
   includeCSSLibs {
-    normalize = //cdnjs.cloudflare.com/ajax/libs/normalize/3.0.2/normalize.min.css
+    normalize = //cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css
     normalize.external = 1
     normalize.disableCompression = 1
     normalize.excludeFromConcatenation = 1
-    font-akachen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/akachen/akachen.css
-    font-akachen.external = 1
-    font-akachen.disableCompression = 1
-    font-akachen.excludeFromConcatenation = 1
-  # font-immenhausen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/immenhausen/immenhausen.css
-  # font-immenhausen.external = 1
+    font-immenhausen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/immenhausen/immenhausen.css
+    font-immenhausen.external = 1
+    font-immenhausen.disableCompression = 1
+    font-immenhausen.excludeFromConcatenation = 1
     }
 }

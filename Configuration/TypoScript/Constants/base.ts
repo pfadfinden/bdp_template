@@ -58,15 +58,15 @@ plugin.tx_bdptemplate {
 
   meta {
     # cat=bdp/meta/010; type=string; label= Description: Kurzbeschreibung der Webseite.
-    description = Bund der Pfadfinderinnen und Pfadfinder e.V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
+    description = Bund der Pfadfinderinnen und Pfadfinder e. V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
     # cat=bdp/meta/015; type=string; label= Keywords: Stichwörter der Webseite.
     keywords = jugend, pfadfinder, pfadfinderin, pfadfinden, bdp, scout
     # cat=bdp/meta/015; type=small; label= Robots
     robots = all
     # cat=bdp/meta/015; type=string; label= Copyright
-    copyright = Bund der Pfadfinderinnen und Pfadfinder e.V.
+    copyright = Bund der Pfadfinderinnen und Pfadfinder e. V.
     # cat=bdp/meta/015; type=string; label= Author
-    author = Bund der Pfadfinderinnen und Pfadfinder e.V.
+    author = Bund der Pfadfinderinnen und Pfadfinder e. V.
     # cat=bdp/meta/015; type=small; label= Revisit
     revisit = 7
     # cat=bdp/meta/015; type=small; label= Language
