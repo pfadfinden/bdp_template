@@ -9,7 +9,7 @@
 
 .searchbox__submit {
   font-family: Immenhausen, serif;
-  color: #ffca28;
+  color: #FFCB04;
   font-size: 1.4em;
   margin: 25px 0 0 35px;
   border: 0;
@@ -20,9 +20,9 @@
 
 .searchbox__input {
   margin: 5px 25px 0 35px;
-  border: 2px solid #ffca28;
+  border: 2px solid #FFCB04;
   background: transparent;
-  color: #FFF;
+  color: #ffffff;
   padding: 2px;
   width: 90px;
 }
@@ -42,7 +42,7 @@
 
 #tx_indexedsearch input[type="submit"] {
   background: #0d53a5;
-  color: #fff;
+  color: #ffffff;
 }
 
 #tx_indexedsearch input[type="checkbox"] {
@@ -66,8 +66,8 @@
 }
 
 .tx-indexedsearch .tx-indexedsearch-res .tx-indexedsearch-descr .tx-indexedsearch-redMarkup {
-  color: #000;
-  background: #ffca28;
+  color: #000000;
+  background: #FFCB04;
   font-weight: normal;
 }
 

@@ -8,7 +8,7 @@
 }
 
 #nav-primary {
-	background-color: #FFCA28;
+	background-color: #FFCB04;
 }
 
 #nav-primary__menu {
@@ -36,7 +36,7 @@
 }
 
 #nav-primary__menu li.active span{
-	color: #fff;
+	color: #ffffff;
 }
 
 #nav-primary__menu li.active ul li{
@@ -55,7 +55,7 @@
 }
 
 #nav-primary__menu li a:hover {
-	color: #000;
+	color: #000000;
 }
 
 #nav-primary__menu li.active ul {

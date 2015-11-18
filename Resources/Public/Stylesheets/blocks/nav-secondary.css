@@ -1,6 +1,6 @@
 #nav-secondary {
 	background: rgb(56, 46, 35);
-	background: rgba(56, 46, 35, .7);
+	background: rgba(56, 46, 35, 0.7);
 	padding: 50px 15px 15px 20px;
 }
 
@@ -10,7 +10,7 @@
 
 .nav-secondary__section h4{
 	margin: 0 0 0.25em 0em;
-	color: #FFCA28;
+	color: #FFCB04;
 	font-family: Immenhausen, serif;
 	font-size: 16px;
 	font-weight: normal;
@@ -19,7 +19,7 @@
 
 .nav-secondary__section a, .nav-secondary__section a h4, .nav-secondary a {
 	text-decoration: none;
-	color: #FFCA28;
+	color: #FFCB04;
 }
 
 .nav-secondary__section img{
@@ -43,7 +43,7 @@
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
-	color: #FFF;
+	color: #ffffff;
 	font-family: Georgia,serif;
 	font-style: italic;
 	font-size: 13px;

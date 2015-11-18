@@ -3,7 +3,7 @@
 	margin-top: -286px;
 	height: 286px;
 	clear:both;
-	background-color: #FFF;
+	background-color: #FFFFFF;
 	overflow: hidden;
 	background: url(//cdn.pfadfinden.de/gfx/objects/kochtopf_1.png) no-repeat right bottom;
 }
@@ -17,13 +17,13 @@
 }
 
 .nav-footer__title {
-	color: #FFCA28;
+	color: #FFCB04;
 	font-family: Immenhausen, serif;
 	font-size: 25px;
 	font-weight: normal;
 	wdith: 100%;
 	text-align: center;
-	margin: 0.5em 0 2em 0;
+	margin: 1.5em 0 2em 0;
 	padding: 0 1em;
 }
 

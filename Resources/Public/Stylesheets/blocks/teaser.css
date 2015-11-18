@@ -19,19 +19,19 @@
 }
 
 .teaser__titleline {
-  background: rgba(56,46,35,.7);
+  background: rgba(56,46,35,0.7);
   padding: 0.05em 0.25em;
   display: inline;
   margin-bottom: 0.25em;
   font-size: 4em;
   font-family: Immenhausen, serif;
-  color: #ffcb04;
+  color: #FFCB04;
 }
 
 .teaser__source {
   position: absolute;
   right: 1em;
   bottom: 0.25em;
-  color: #FFF;
+  color: #FFFFFF;
   font-size: 0.75em;
 }

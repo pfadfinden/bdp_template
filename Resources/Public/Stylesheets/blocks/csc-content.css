@@ -3,14 +3,14 @@
 .csc-header h1, .csc-header h2, .csc-header h3, .csc-header h4, .csc-header h5,
 .csc-textpicHeader h1, .csc-textpicHeader h2, .csc-textpicHeader h3, .csc-textpicHeader h4, .csc-textpicHeader h5{
 	font-family: Immenhausen, serif;
-	color: #fff;
+	color: #ffffff;
 	font-weight: normal;
 	margin: 0.5em 0 0.25em 0;
 }
 
 h1 span, h2 span, h3 span, h4 span, h5 span {
    letter-spacing: 0.03em;
-   background: #FFCA28;
+   background: #FFCB04;
    padding: 0.2em 0.25em;
    margin: 0;
 }
@@ -48,19 +48,19 @@ h1 {
 .csc-default a, .csc-default a:visited, .csc-frame a, .csc-frame a:visited {text-decoration: none; color: #0D53A5;}
 .csc-default a:hover, .csc-frame a:hover{text-decoration: underline;}
 
-.csc-frame.csc-frame-frame2 a {color: #FFCA28;}
+.csc-frame.csc-frame-frame2 a {color: #FFCB04;}
 
 /* Grid */
 
 .csc-default, .csc-frame {
 	margin-right: 1em;
-	background-color: #FFF;
+	background-color: #ffffff;
 	padding: 1em 1em;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
 .csc-frame-frame1 {
-	background-color: #FFCA28;
+	background-color: #FFCB04;
 }
 
 .csc-frame-frame1 h1, .csc-frame-frame1 h2, .csc-frame-frame1 h3,
@@ -75,12 +75,12 @@ h1 {
 
 .csc-frame-frame2 {
 	background-color: #0D53A5;
-	color: #FFF;
+	color: #ffffff;
 }
 
 .csc-frame-frame3 {
 	background-color: #D30014;
-	color: #FFF;
+	color: #ffffff;
 }
 
 .csc-frame-frame1 h1, .csc-frame-frame1 h2, .csc-frame-frame1 h3,
@@ -89,7 +89,7 @@ h1 {
 .csc-frame-frame2 h1 a, .csc-frame-frame2 h2 a, .csc-frame-frame2 h3 a,
 .csc-frame-frame3 h1, .csc-frame-frame3 h2, .csc-frame-frame3 h3,
 .csc-frame-frame3 h1 a, .csc-frame-frame3 h2 a, .csc-frame-frame3 h3 a{
-	color: #FFF;
+	color: #ffffff;
 	text-decoration: none;
 }
 
@@ -101,7 +101,7 @@ h1 {
 
 .csc-frame-frame5 {
 	margin: 0 1em 2em 0;
-	background-color: #FFF;
+	background-color: #ffffff;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -120,14 +120,14 @@ h1 {
 }
 
 .csc-uploads-footer {
-	background-color: #FFCA28;
+	background-color: #FFCB04;
 	padding: 0.25em 1em;
 	margin: 1em -1em 0 0;
 	text-align: right;
 }
 .csc-uploads-fileSize {
 	float: left;
-	color: #FFF;
+	color: #ffffff;
 }
 .csc-uploads-footer a {
 	display: block;

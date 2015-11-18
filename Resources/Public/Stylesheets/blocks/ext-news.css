@@ -36,8 +36,8 @@
 .news-list-view .news-img-wrap .news-title a:hover,
 .news-list-view .news-img-wrap .news-title a:link,
 .news-list-view .news-img-wrap .news-title a:visited {
-   background: #FFCA28;
-   border: 1px solid #FFCA28;
+   background: #FFCB04;
+   border: 1px solid #FFCB04;
    padding: 0.15em 0.25em;
    margin: 0;
    text-decoration: none;
@@ -54,7 +54,7 @@
 
 .news-list-view .readmore a {
 	padding: 0.25em 0.5em;
-	background-color: #FFCA28;
+	background-color: #FFCB04;
 	border: 0;
 	color:#0D53A5;
 	font-family: Immenhausen, serif;
