@@ -8,13 +8,13 @@
 }
 
 .ce-text .ce-text-inner {
-  background-color: #fff;
+  background-color: #FFFFFF;
   padding: 1em;
   margin-right: 1.25em;
 }
 
 .ce-text .ce-text-yellow {
-  background-color: #FFCA28;
+  background-color: #FFCB04;
 }
 
 .ce-text .ce-img-inner {
@@ -34,7 +34,7 @@
 }
 
 .ce-img-inner .img-overlay h3 {
-  background-color: #FFCA28;
+  background-color: #FFCB04;
   padding: 0 0.5em;
   display: inline;
   color: #0D53A5;
@@ -42,7 +42,7 @@
 
 
 .ce-img-inner .img-overlay p {
-  background-color: #fff;
+  background-color: #ffffff;
   padding: 0.5em;
 }
 
@@ -67,7 +67,7 @@
 }
 
 .ce-text-img {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 .ce-text-img img{
@@ -79,7 +79,7 @@
 
 .ce-text-img-inner h3{
   display: inline;
-  background-color: #FFCA28;
+  background-color: #FFCB04;
   color: #0D53A5;
   padding: 1px 5px;
   font-family: 'Bree Serif', serif;
@@ -94,14 +94,14 @@
 
 /* Calendar Slider */
 .ce-calendar-slider{
-  background-color: #fff;
+  background-color: #ffffff;
   height: 200px;
   margin: 0 0 4em;
   position: relative;
 }
 
 .ce-calender-slider-button {
-  background-color: #FFCA28;
+  background-color: #FFCB04;
   font-weight: bold;
   padding: 0.75em 1em;
   color: #0D53A5;
