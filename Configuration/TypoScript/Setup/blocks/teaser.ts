@@ -51,7 +51,7 @@ lib.teaser {
 			token = |
 			cObjNum = 1
 			1.current = 1
-			1.wrap = <div class="teaser__titleline">|</div><br /> |*| | |*| |
+			1.wrap = <div class="teaser__titleline">|</div><br> |*| | |*| |
 		}
 		required = 1
 		wrap = <div class="teaser__title">|</div>

@@ -4,6 +4,12 @@ lib.footer {
 
   10 = TEXT
   10.value = {$plugin.tx_bdptemplate.config.organisation}
+  10.split {
+    token = |
+    cObjNum = 1
+    1.current = 1
+    1.wrap = <div class="nav-footer__titleLine">|</div> |*| | |*| |
+  }
   10.wrap = <div class="nav-footer__title">|</div><div class="grid-g nav-footer__content">
 
   20 < lib.nav-footer
@@ -21,10 +27,12 @@ lib.footer {
 
   30.30 = TEXT
   30.30.value = {$plugin.tx_bdptemplate.contact.phone}
+  30.30.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.phone}
   30.30.wrap = <p>Telefon: <span itemprop="telephone">|</span>
 
   30.40 = TEXT
   30.40.value = {$plugin.tx_bdptemplate.contact.fax}
+  30.40.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.fax}
   30.40.wrap = <br />Telefax: <span itemprop="faxNumber">|</span>
 
   30.50 = TEXT
