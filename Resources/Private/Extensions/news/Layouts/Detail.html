@@ -1,0 +1,11 @@
+{namespace n=GeorgRinger\News\ViewHelpers}
+
+<f:if condition="{settings.cssFile}">
+	<n:includeFile path="{settings.cssFile}" />
+</f:if>
+
+<div class="news news-single">
+	<article class="article" itemscope="itemscope" itemtype="http://schema.org/Article">
+		<f:render section="content" />
+	</article>
+</div>

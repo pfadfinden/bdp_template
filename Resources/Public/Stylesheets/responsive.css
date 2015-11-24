@@ -31,9 +31,10 @@
   .teaser__titleline {font-size: 2em;}
 
   #branding {width: 100%; height: auto; margin: 0; padding: 0; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);}
-  #branding__logo {padding: 1em; margin: 0 3em 0 0; text-align: left;}
+  #branding .no_region {padding: 1rem}
+  #branding__logo {padding: 1rem; margin: 0 3rem 0 0; text-align: left; line-height: 1rem;}
   #branding__logo img {width: 100%; height: 100%; max-width: 250px;}
-  #branding__shadow {display: none;}
+  #branding:after {display: none;}
   #branding__region a {text-align: left; padding-left: 0.75em;}
   #nav-secondary {display: none;}
   #wrap, #footer {background-image: none; }
@@ -43,18 +44,22 @@
   #main {margin: 0; padding: 0; min-height: 0;}
   #footer {width: 100%; box-sizing: border-box; height: auto; margin: 0; padding: 1em; background-image: none; background-color: #FFCB04; box-shadow: 0px -5px 5px rgba(0,0,0,0.3);}
   #footer .grid-g .grid-u-1-2{float: none; width: 100%;}
-  #nav-footer {width: 100%; padding: 0; margin: 1em 0 0 0; background-image: none;  }
-  #nav-footer .nav-footer__title {text-align: left; margin: 0; padding: 0; color: #000000; }
+  #nav-footer {width: 100%; padding: 0; margin: 1em 0 0 0; background-image: none; height: auto;}
+  #nav-footer .nav-footer__title {text-align: left; margin: 0; padding: 0 0 0.5rem 0; color: #1D4899; height: auto;}
+  #nav-footer .nav-footer__titleLine {padding-top: 0;}
+  #nav-footer .nav-footer__titleLine:first-child {line-height: 1.0;}
+  #nav-footer .nav-footer__titleLine:only-child {line-height: 1.5;}
+  #nav-footer .nav-footer__content {margin:0;}
   #responsivemenu {display: inline; position: absolute; top: 1em; right: 1em; }
   #responsivemenu a {color: #0d53a5; text-decoration: none; }
   #responsivemenu a span {font-size: 0.85em; color: #000000;}
-  #content-fw, #content {margin-left: 1em;}
+  #content-fw, #content {margin-left: 1em; margin-top: 0}
 }
 
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/
 @media only screen and (max-width : 640px) {
   .masonry-item {float: none; width: 100%;}
-  .csc-default, .csc-default .csc-header, .csc-frame, .csc-frame-frame5 {margin-right: 0; margin-left: 0;}
+  .csc-default, .csc-default .csc-header, .csc-frame, .csc-frame-frame5 {margin-right: 0; margin-left: 0; margin-bottom: 1rem;}
   #content-fw, #content {margin-left: 0}
 }
 

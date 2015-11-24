@@ -1,7 +1,15 @@
 <div id="wrap">
   <header id="header">
     <div id="branding">
-      <div id="branding__logo">
+      <f:if condition="{settings.region} != ''">
+        <f:then>
+          <div id="branding__logo" >
+        </f:then>
+        <f:else>
+          <div id="branding__logo" class="no_region">
+        </f:else>
+      </f:if>
+
         <a href="/"><img src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
       </div>
       <div id="responsivemenu">
@@ -13,7 +21,6 @@
         <div id="branding__region"><a href="/">{settings.region}</a></div>
       </f:if>
     </div>
-    <div id="branding__shadow"></div>
     <f:render partial="searchbox" arguments="{settings : settings}" />
   </header>
   <section id="main" class="clearfix">

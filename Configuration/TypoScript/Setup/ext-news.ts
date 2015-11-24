@@ -3,6 +3,7 @@ plugin.tx_news {
   view {
     templateRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Templates/
     partialRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Partials/
+    layoutRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Layouts/
   }
   settings {
     cssFile >
@@ -21,10 +22,15 @@ plugin.tx_news {
     }
     detail {
       showSocialShareButtons = 0
+      media.image.maxWidth = 671
+      media.image.maxHeigt = 328
     }
     list {
-      media.image.maxWidth = 350
-      media.image.maxHeight = 210
+      media.image.maxWidth = 597
+      media.image.maxHeight = 292
+    }
+    opengraph {
+      type = article
     }
     link.skipControllerAndAction = 1
     listPid = {$plugin.tx_bdptemplate.news.startingpoint}

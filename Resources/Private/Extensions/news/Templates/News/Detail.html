@@ -25,9 +25,9 @@
         </f:if>
         <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
       </n:format.nothing>
-      <div class="csc-header">
+      <header class="csc-header">
         <h1>{newsItem.title}</h1>
-      </div>
+      </header>
 
 
 
@@ -65,9 +65,9 @@
       <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
 
       <!-- main text -->
-      <div class="news-text-wrap">
+      <main class="news-text-wrap">
         <f:format.html>{newsItem.bodytext}</f:format.html>
-      </div>
+      </main>
 
       <f:if condition="{newsItem.contentElements}">
         <!-- content elements -->

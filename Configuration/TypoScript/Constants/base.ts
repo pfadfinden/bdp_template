@@ -21,9 +21,9 @@ plugin.tx_bdptemplate {
     # cat=bdp/contact/012; type=string; label= Anschrift
     address = Kesselhaken 23, 34376 Immenhausen, DE
     # cat=bdp/contact/020; type=string; label= Telefonnummer
-    phone = 05673 9957284-0
+    phone = +49 5673 9957284-0
     # cat=bdp/contact/025; type=string; label= Faxnummer
-    fax = 05673 9957284-44
+    fax = +49 5673 9957284-44
     # cat=bdp/contact/030; type=string; label= E-Mail Adresse
     email = info@pfadfinden.de
     # cat=bdp/contact/035; type=string; label= Webseite
@@ -58,7 +58,7 @@ plugin.tx_bdptemplate {
 
   meta {
     # cat=bdp/meta/010; type=string; label= Description: Kurzbeschreibung der Webseite.
-    description = Bund der Pfadfinderinnen und Pfadfinder e. V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
+    description = Bund der Pfadfinderinnen und Pfadfinder e.V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
     # cat=bdp/meta/015; type=string; label= Keywords: Stichwörter der Webseite.
     keywords = jugend, pfadfinder, pfadfinderin, pfadfinden, bdp, scout
     # cat=bdp/meta/015; type=small; label= Robots
@@ -85,6 +85,20 @@ plugin.tx_bdptemplate {
     startingpoint =
     # cat=bdp/news/030; type=int+; label= Detailseite
     detailPid =
+
+    opengraph {
+      site_name = Bund der Pfadfinderinnen und Pfadfinder e.V.
+      email < plugin.tx_bdptemplate.contact.email
+      phone_number < plugin.tx_bdptemplate.contact.phone
+      fax_number < plugin.tx_bdptemplate.contact.fax
+      latitude =
+      longitude =
+      street-address = Kesselhaken 23
+      locality = Immenhausen
+      region =
+      postal-code = Kesselhaken 23
+      country-name = Germany
+    }
   }
 
 }
