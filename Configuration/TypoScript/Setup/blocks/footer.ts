@@ -26,21 +26,27 @@ lib.footer {
   30.20.wrap = <p itemprop="address">|</p>
 
   30.30 = TEXT
-  30.30.value = {$plugin.tx_bdptemplate.contact.phone}
-  30.30.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.phone}
-  30.30.wrap = <p>Telefon: <span itemprop="telephone">|</span>
+  30.30.value = <p>
 
   30.40 = TEXT
-  30.40.value = {$plugin.tx_bdptemplate.contact.fax}
-  30.40.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.fax}
-  30.40.wrap = <br />Telefax: <span itemprop="faxNumber">|</span>
+  30.40.value = {$plugin.tx_bdptemplate.contact.phone}
+  30.40.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.phone}
+  30.40.wrap = Telefon: <span itemprop="telephone">|</span><br>
 
   30.50 = TEXT
-  30.50.typolink.parameter = {$plugin.tx_bdptemplate.contact.email}
-  30.50.wrap = <br />E-Mail: |
+  30.50.value = {$plugin.tx_bdptemplate.contact.fax}
+  30.50.if.isTrue.dataWrap = {$plugin.tx_bdptemplate.contact.fax}
+  30.50.wrap = Telefax: <span itemprop="faxNumber">|</span><br>
 
   30.60 = TEXT
-  30.60.typolink.parameter = {$plugin.tx_bdptemplate.contact.website}
-  30.60.wrap = <br />Internet: <span itemprop="website">|</span>
+  30.60.typolink.parameter = {$plugin.tx_bdptemplate.contact.email}
+  30.60.wrap = E-Mail: <span itemprop="email">|</span><br>
+
+  30.70 = TEXT
+  30.70.typolink.parameter = {$plugin.tx_bdptemplate.contact.website}
+  30.70.wrap = Internet: <span itemprop="website">|</span>
+
+  30.80 = TEXT
+  30.80.value = </p>
 
 }

@@ -4,6 +4,13 @@
   display: inline-block;
 }
 
+.teaser + #content {
+  margin-top: 1rem;
+}
+.teaser + #content-fw {
+  margin-top: 1rem;
+}
+
 .teaser img {
   height: 100%;
   width: 100%;
