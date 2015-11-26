@@ -16,3 +16,69 @@ TCEFORM.tt_content {
         addItems.105 = Weise Box 3
     }
 }
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        twocolums {
+            title = Zweispalter
+            description = Ein zweispaltiges Inhaltselement
+            topLevelLayout = 1
+            frame = 2
+            config {
+                colCount = 2
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 10
+                                allowed = header,text,image,table,list,html
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 20
+                                allowed = header,text,image,table,list,html
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        threecolums {
+            title = Dreispalter
+            description = Ein dreispaltiges Inhaltselement
+            topLevelLayout = 1
+            frame = 3
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Spalte 1
+                                colPos = 10
+                                allowed = header,text,image,table,list,html
+                            }
+                            2 {
+                                name = Spalte 2
+                                colPos = 20
+                                allowed = header,text,image,table,list,html
+                            }
+                            3 {
+                                name = Spalte 3
+                                colPos = 30
+                                allowed = header,text,image,table,list,html
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

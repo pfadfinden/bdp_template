@@ -1,5 +1,5 @@
 html {
-    color: #000;
+    color: #000000;
     line-height: 1.5;
     font-size: 81.3%;
     font-family: verdana, arial, sans-serif;
@@ -11,7 +11,6 @@ p, ul li {
     margin: 0.75em 0;
     padding: 0;
 }
-
 ::-moz-selection {
     background: #b3d4fc;
     text-shadow: none;
@@ -156,13 +155,13 @@ body > #wrap {height: auto; min-height: 100%;}
 }
 
 #content {
-	margin: 1em 0 0 0;
+	margin-top: 3rem;
 	max-width: 710px;
 	margin-left: 240px;
 }
 
 #content-fw {
-	margin: 1em 0 0 0;
+    margin-top: 3rem;
 	max-width: 1020px;
 	margin-left: 240px;
 }

@@ -8,10 +8,15 @@
 
 /* iPads (portrait) ----------- */
 @media only screen and (max-width: 1024px) {
-  #content .grid-g .grid-u-1-2,
-  #content .grid-g .grid-u-1-3{float: none; width: 100%;}
-  .searchbox {display: none;}
-  .masonry-item-3 {width: 50%;}
+  #content .grid-g .grid-u-1-2, #content .grid-g .grid-u-1-3, #content-fw .grid-g .grid-u-1-2, #content-fw .grid-g .grid-u-1-3{
+    float: none; width: 100%;
+  }
+  .searchbox {
+    display: none;
+  }
+  .masonry-item-3 {
+    width: 50%;
+  }
 }
 
 /* Footer (fix) ----------- */
@@ -32,7 +37,7 @@
 
   #branding {width: 100%; height: auto; margin: 0; padding: 0; box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);}
   #branding .no_region {padding: 1rem}
-  #branding__logo {padding: 1rem; margin: 0 3rem 0 0; text-align: left; line-height: 1rem;}
+  #branding__logo {padding: 1rem; margin: 0 3.5rem 0 0; text-align: left; line-height: 1rem;}
   #branding__logo img {width: 100%; height: 100%; max-width: 250px;}
   #branding:after {display: none;}
   #branding__region a {text-align: left; padding-left: 0.75em;}
