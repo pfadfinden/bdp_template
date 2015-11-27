@@ -1,4 +1,4 @@
-# BdP TYPO3 Template
+#  Bund der Pfadfinderinnen und Pfadfinder - TYPO3 Template
 
 BdP Webseiten Layout als Extension für das Content Management System TYPO3
 
@@ -12,8 +12,8 @@ Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit Bd
 | TYPO3 CMS        | 6.2.0 - 6.2.99 | nein     |
 | EXT extbase      | 1.3 - 6.2.99   | nein     |
 | EXT fluid        | 1.3 - 6.2.99   | nein     |
-| EXT news         | 3.2.0 - 3.9.99 | ja       |
-| EXT gridelements | 3.2.0 - 3.2.99 | ja       |
+| EXT news         | 3.2.0 - 3.9.99 | nein       |
+| EXT gridelements | 3.2.0 - 3.2.99 | nein       |
 | EXT realurl      | 1.13.0 - 1.99.99 | ja     |
 | EXT filemetadata | 6.2.0 - 6.2.99 | nein     |
 
@@ -26,11 +26,20 @@ Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit Bd
 ## Update
 Beachte bei neuen Versionen des Templates besonders Hinweise zu geänderten Abhängigkeiten in den Releasenotes. Der Update des Extension erfolgt wie die Installation. Es ist in Schritt 3 lediglich zu beachten, dass die Checkbox *Überschreiben* gewählt ist, damit die alten Dateien ersetzt werden.
 
+Danach sollte gegebenenfalls die Konfiguration des Templates und der PageTS angepasst werden.
+
 ## Konfiguration
 * Wähle im Menü *Web/Liste* aus und bearbeite den Template Datensatz der Anfangsseite der Webseite (root-Template). Solltest du noch kein Template angelegt haben, erstelle einen neuen Template Datensatz.
-* Im Reiter *Enthält* kannst du im Abschnitt *Statische Templates einschließen* nun das Objekt `BdP Template` auswählen. Speichere anschließend die Änderung am Template Datensatz.
-* Wechsel nun in das Menü *Web/Template*. Wähle in der Ansicht *Template-Werkzeug* die Kategorie `BdP Template` aus. Es werden dir alle Konfigurationen angezeigt, die du am Template vornehmen kannst. Nach Änderungen klicke auf das Speicher-Symbol (Diskette) am oberen Bildschirmrand.
-* Nach Änderungen am Template ist es sinnvoll, zwischengespeicherte Versionen der Webseite zu löschen. Klicke hierfür auf das Blitz-Symbol rechts oben und wähle *Frontend-Caches leeren*.
+* Im Reiter *Enthält* solltest du im Abschnitt *Statische Templates einschließen* die Objekte `css_styled_content`, `news`, `gridelements` und `BdP Template` in dieser Reihenfolge aktivieren. Speichere anschließend die Änderung am Template Datensatz.
+* Wechsel nun in das Menü *Web/Template*. Wähle in der Ansicht *Template-Werkzeug* die Kategorie `BdP Template` aus. Es werden dir alle Konfigurationen angezeigt, die du am Template vornehmen kannst. Nach Änderungen klicke auf das Speicher-Symbol (Diskette) am oberen Bildschirmrand. Bei  der ersten Installation ist es sinnvoll den kompletten Inhalt von  `bdp_template/Configuration/TypoScript/Constants/base.ts` in die Konstanten zu kopieren und anzupassen.
+* Wechsele noch in das Menü *Web/Seite* und editiere die Anfangsseite(Weltkugel). Im Reiter Ressourcen findest du das Feld *Seiten-TSconfig* (PageTS). Kopiere dort den Inhalt von  `bdp_template/Configuration/PageTS/page.ts` herein und speichere die Seite.
+* Nach Änderungen am Template ist es sinnvoll, zwischengespeicherte Versionen der Webseite zu löschen. Klicke hierfür auf das Blitz-Symbol rechts oben und wähle *Frontend-Caches leeren* und *Allgemeinen Case leeren*.
+
+## Hinweise
+
+### Titel Bilder
+
+### Bilder
 
 ## Fragen & Antworten
 

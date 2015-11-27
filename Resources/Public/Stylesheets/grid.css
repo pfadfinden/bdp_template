@@ -25,7 +25,7 @@
 
     * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
     */
-    font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    font-family: 'Open Sans', verdana, arial, sans-serif;
     /*
     Use flexbox when possible to avoid `letter-spacing` side-effects.
 
@@ -66,7 +66,7 @@ this the same font stack that Normalize.css sets for the `body`.
 */
 
 .grid-g [class *= "yui3-u"] {
-    font-family: sans-serif;
+    font-family: 'Open Sans', verdana, arial, sans-serif;
 }
 
 .grid-u-1,

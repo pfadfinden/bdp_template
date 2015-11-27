@@ -20,6 +20,9 @@ p, ul li {
     background: #b3d4fc;
     text-shadow: none;
 }
+figure {
+    margin:0;
+}
 
 /*
  * A better looking default horizontal rule

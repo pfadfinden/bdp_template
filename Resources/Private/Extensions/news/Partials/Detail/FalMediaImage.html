@@ -1,6 +1,6 @@
 {namespace n=GeorgRinger\News\ViewHelpers}
 
-<div class="mediaelement mediaelement-image">
+<figure class="mediaelement mediaelement-image">
 	<f:if condition="{mediaElement.link}">
 		<f:then>
 			<f:link.page pageUid="{mediaElement.link}" target="{n:targetLink(link:mediaElement.link)}">
@@ -20,9 +20,11 @@
 			</f:if>
 		</f:else>
 	</f:if>
-</div>
-<f:if condition="{mediaElement.description}">
-	<p class="news-img-caption">
-		{mediaElement.description}
-	</p>
-</f:if>
+	<f:if condition="{mediaElement.description}">
+		<figcaption>
+			<p class="news-img-caption">
+				{mediaElement.description}
+			</p>
+		</figcaption>
+	</f:if>
+</figure>
