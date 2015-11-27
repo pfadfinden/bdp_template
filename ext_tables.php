@@ -7,7 +7,4 @@ if (!defined('TYPO3_MODE')) {
 	'Configuration/TypoScript',
 	'BdP Website Template'
 );
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig(
-	'<INCLUDE_TYPOSCRIPT: source="FILE:EXT:' . $_EXTKEY . '/Configuration/PageTS/page.ts">'
-);
 ?>
