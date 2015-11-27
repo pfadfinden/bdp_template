@@ -17,6 +17,11 @@
    width: 100%;
 }
 
+.news-single .news-img-wrap .mediaelement-image img {
+    max-width: 100%;
+    height: auto;
+}
+
 .news-list-view .news-img-wrap img {
    max-width:100%;
    height: auto;

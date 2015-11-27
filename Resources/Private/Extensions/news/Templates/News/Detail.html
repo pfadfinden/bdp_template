@@ -30,7 +30,10 @@
       </header>
 
 
+      <div class="csc-default">
 
+      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
+      <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
         <p>
           <!-- date -->
           <span class="news-list-date">
@@ -57,12 +60,6 @@
             </span>
           </f:if>
         </p>
-
-
-      <div class="csc-default">
-
-      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
-      <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
 
       <!-- main text -->
       <main class="news-text-wrap">
