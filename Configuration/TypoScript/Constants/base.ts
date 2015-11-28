@@ -10,14 +10,14 @@ plugin.tx_bdptemplate {
     # cat=bdp/010; type=string; label= Basis URL
     domain = www.pfadfinden.de
     # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
-    region =
+    region = Stamm Weiße Dose
     # cat=bdp/010; type=string; label= Name der Organisation
-    organisation = Bund der Pfadfinderinnen und Pfadfinder e.V.
+    organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), | Stamm Weiße Dose e.V.
   }
 
   contact {
     # cat=bdp/contact/010; type=string; label= Name der Organisation
-    name = BdP Bundesamt
+    name = BdP Stamm Weiße Dose
     # cat=bdp/contact/012; type=string; label= Anschrift
     address = Kesselhaken 23, 34376 Immenhausen, DE
     # cat=bdp/contact/020; type=string; label= Telefonnummer
@@ -88,9 +88,9 @@ plugin.tx_bdptemplate {
 
     opengraph {
       site_name = Bund der Pfadfinderinnen und Pfadfinder e.V.
-      email < plugin.tx_bdptemplate.contact.email
-      phone_number < plugin.tx_bdptemplate.contact.phone
-      fax_number < plugin.tx_bdptemplate.contact.fax
+      email = info@pfadfinden.de
+      phone_number =
+      fax_number =
       latitude =
       longitude =
       street-address = Kesselhaken 23
