@@ -1,7 +1,7 @@
 #nav-secondary {
 	background: rgb(56, 46, 35);
 	background: rgba(56, 46, 35, 0.7);
-	padding: 50px 15px 15px 20px;
+	padding: 35px 15px 15px 20px;
 }
 
 .nav-secondary__section {
@@ -12,7 +12,7 @@
 	margin: 0 0 0.25em 0em;
 	color: #FFCB04;
 	font-family: Immenhausen, serif;
-	font-size: 16px;
+	font-size: 1.3rem;
 	font-weight: normal;
 	letter-spacing: 0.02em;
 }
