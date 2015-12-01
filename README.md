@@ -1,6 +1,6 @@
 #  Bund der Pfadfinderinnen und Pfadfinder - TYPO3 Template
 
-v1.1.0-stable
+v2.0.0-pre-alpha
 
 BdP Webseiten Layout als Extension für das Content Management System TYPO3
 
