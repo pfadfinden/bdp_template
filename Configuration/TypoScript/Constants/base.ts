@@ -11,6 +11,8 @@ plugin.tx_bdptemplate {
     domain = www.pfadfinden.de
     # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
     region = Stamm Weiße Dose
+    # cat=bdp/020; type=string; label= Regional Branding Image
+    regionBranding = EXT:bdp_template/Resources/Public/Images/dose.png
     # cat=bdp/010; type=string; label= Name der Organisation
     organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), | Stamm Weiße Dose e.V.
   }

@@ -45,6 +45,7 @@
   #wrap, #footer {background-image: none; }
   #nav-left {position:relative; width: 100%; margin: 0 0 1em 0; padding: 0;left: auto; top: auto; right: auto;}
   .csc-header {margin-left: 1em; margin-right: 1em;}
+  #branding__region__logo {display: none;}
   #nav-primary__menu {padding: 0 0 1em 0; display: none;}
   #main {margin: 0; padding: 0; min-height: 0;}
   #footer {width: 100%; box-sizing: border-box; height: auto; margin: 0; padding: 1em; background-image: none; background-color: #FFCB04; box-shadow: 0px -5px 5px rgba(0,0,0,0.3);}

@@ -1,0 +1,9 @@
+#branding__region__logo {
+    background: rgb(56, 46, 35);
+    background: rgba(56, 46, 35, 0.7);
+    padding-top: 35px;
+}
+#branding__region__logo figure img {
+    display: block;
+    margin: 0 auto;
+}

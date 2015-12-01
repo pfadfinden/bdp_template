@@ -31,6 +31,7 @@ page {
 
     settings {
       region = {$plugin.tx_bdptemplate.config.region}
+      regionlogo = {$plugin.tx_bdptemplate.config.regionBranding}
       search = {$plugin.tx_bdptemplate.page.search}
     }
   }

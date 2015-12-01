@@ -3,6 +3,7 @@ page {
     main               = {$plugin.tx_bdptemplate.filepaths.css}main.css
     content            = {$plugin.tx_bdptemplate.filepaths.css}blocks/content.css
     branding           = {$plugin.tx_bdptemplate.filepaths.css}blocks/branding.css
+    region-branding    = {$plugin.tx_bdptemplate.filepaths.css}blocks/region-branding.css
     nav-primary        = {$plugin.tx_bdptemplate.filepaths.css}blocks/nav-primary.css
     nav-secondary      = {$plugin.tx_bdptemplate.filepaths.css}blocks/nav-secondary.css
     nav-footer         = {$plugin.tx_bdptemplate.filepaths.css}blocks/nav-footer.css
