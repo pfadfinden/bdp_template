@@ -102,5 +102,8 @@ plugin.tx_bdptemplate {
       country-name = Germany
     }
   }
+  cal {
+    storageFolder =
+  }
 
 }

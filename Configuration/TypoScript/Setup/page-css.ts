@@ -10,6 +10,7 @@ page {
     csc-content        = {$plugin.tx_bdptemplate.filepaths.css}blocks/csc-content.css
     teaser             = {$plugin.tx_bdptemplate.filepaths.css}blocks/teaser.css
     ext-news           = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-news.css
+    ext-cal            = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-cal.css
     grid               = {$plugin.tx_bdptemplate.filepaths.css}grid.css
     searchbox          = {$plugin.tx_bdptemplate.filepaths.css}blocks/searchbox.css
     fancybox           = {$plugin.tx_bdptemplate.filepaths.javascript}Library/fancybox/jquery.fancybox.css

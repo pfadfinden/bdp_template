@@ -1,0 +1,119 @@
+.cal-title {
+    font-family: akachen, serif;
+    color: #1d4899;
+    font-size: 23px;
+    margin: 0 auto;
+    width: 60%;
+}
+
+.cal-title a {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.title-wrapper {
+    vertical-align: middle;
+}
+
+.tx-cal-controller .list-view .cal-row .month-wrapper{
+    border-right: 1px solid #1d4899;
+    height: 100%;
+    padding: 0 1em;
+}
+
+.slick-prev, .slick-next {
+    position: absolute;
+    top: 50%;
+    display: block;
+    margin-top: -10px;
+    padding: 0.25em;
+    cursor: pointer;
+    color: none;
+    border: none;
+    outline: none;
+    background: #FFCA28;
+}
+
+.slick-prev:before, .slick-next:before {
+    font-family: 'Glyphicons Halflings';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #1d4899;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-next {
+    right: -1em;
+}
+
+.slick-next:before {
+    content: "\e080";
+}
+
+.slick-prev {
+    left: -1em;
+}
+
+.slick-prev:before {
+    content: "\e079";
+}
+
+.tx-cal-controller .list-view .month-wrapper h2{
+    margin: 0.25em 0 0.5em 0;
+    padding: 0;
+}
+
+.tx-cal-controller .list-view .vevent {
+    clear: both;
+    margin-bottom: 0.5em;
+}
+
+.tx-cal-controller .list-view .vevent abbr{
+    border: 0;
+    font-style: italic;
+}
+
+.tx-cal-controller .list-view .vevent .dtstart-container {
+    float: left;
+}
+
+.tx-cal-controller .list-view .vevent .summary {
+    margin-left: 4.25em;
+    word-break: break-word;
+}
+
+.tx-cal-controller .list-view .vevent .summary .location {
+    display: none;
+}
+
+/* Jahres Listendarstellung BEGIN*/
+.tx-cal-controller .cal-list {
+}
+.tx-cal-controller .cal-list .vevent {
+    padding: 0.25em;
+}
+
+.tx-cal-controller .cal-list .vevent abbr{
+    border: 0;
+    text-decoration: none;
+}
+
+.tx-cal-controller .cal-list .vevent.even {
+    background: #FFF5D9;
+}
+
+.tx-cal-controller .cal-list .vevent .dtstart-container {
+    float: left;
+}
+
+.tx-cal-controller .cal-list .vevent .summary {
+    margin-left: 10em;
+}
+
+.tx-cal-controller .cal-list .vevent .summary .url {
+    display: block;
+}
+/* Jahres Listendarstellung END*/
