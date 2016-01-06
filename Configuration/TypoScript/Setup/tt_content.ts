@@ -59,5 +59,5 @@ tt_content.uploads {
 
 lib.stdheader.10 {
 	80 < .1
-	80.dataWrap = <div class="header-blaugelb">|</div>
+	80.dataWrap = <h2 class="header-blaugelb">|</h2>
 }

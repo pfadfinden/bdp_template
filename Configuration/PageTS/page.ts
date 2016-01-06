@@ -15,6 +15,10 @@ TCEFORM.tt_content {
         addItems.101 = Weisse Box 2
         addItems.105 = Weise Box 3
     }
+    header_layout {
+        addItems.80 = Blau/Gelb
+    }
+    header_position.disabled = 1
 }
 tx_gridelements {
     # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
