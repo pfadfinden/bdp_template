@@ -1,7 +1,5 @@
 lib.nav-secondary = COA
 lib.nav-secondary {
-  wrap = <div id="nav-secondary">|</div>
-
   10 = HMENU
   10 {
     special = directory

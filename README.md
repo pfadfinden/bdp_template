@@ -18,6 +18,7 @@ Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit Bd
 | EXT gridelements | 3.2.0 - 3.9.99 | nein       |
 | EXT realurl      | 1.13.1 - 1.99.99 | ja     |
 | EXT filemetadata | 6.2.0 - 6.2.99 | nein     |
+| EXT cal | 1.10.2 - 1.99.99 | nein     |
 
 ## Installation
 1. Lade die aktuelle Version des Templates unter [Github Releases](https://github.com/pfadfinden/bdp_template/releases) als `.zip` Datei herunter.
