@@ -1,7 +1,5 @@
 /* Header */
-.csc-default h1, .csc-default h2, .csc-default h3, .csc-default h4,
-.csc-header h1, .csc-header h2, .csc-header h3, .csc-header h4, .csc-header h5,
-.csc-textpicHeader h1, .csc-textpicHeader h2, .csc-textpicHeader h3, .csc-textpicHeader h4, .csc-textpicHeader h5{
+h1, h2, h3, h4, h5 {
 	font-family: Immenhausen, serif;
 	color: #ffffff;
 	font-weight: normal;
@@ -14,7 +12,6 @@ h1 span, h2 span, h3 span, h4 span, h5 span {
    padding: 0.2em 0.25em;
    margin: 0;
 }
-
 .csc-default h1, .csc-default h2, .csc-default h3 {
 	color: #0D53A5;
 	/* padding: 0 0.25em; */
@@ -141,4 +138,8 @@ h1 {
 }
 .csc-uploads-footer a {
 	display: block;
+}
+
+.ce-above .ce-gallery {
+	margin-bottom: 0px;
 }

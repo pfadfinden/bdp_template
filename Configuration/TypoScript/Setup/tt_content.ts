@@ -1,17 +1,22 @@
-# Wrappe alle Absaetze eines Textelements, ausgenommen Header
-# tt_content.text.20.wrap = <div class="csc-article">|</div>
-# Kein Wrapping der Textelemente bei Textpic
-tt_content.textpic.20.text.20.wrap = |
-
+tt_content.stdWrap.innerWrap.cObject = CASE
 tt_content.stdWrap.innerWrap.cObject {
-	25 =< tt_content.stdWrap.innerWrap.cObject.default
-	25.20.10.value = csc-frame csc-frame-frame3
-	100 = TEXT
-	100.value = <div class="csc-frame csc-frame-frame4">|</div>
-	101 = TEXT
-	101.value = <div class="csc-frame-frame5">|</div>
-	105 = TEXT
-	105.value = <div class="csc-frame csc-frame-frame6">|</div>
+	key.field = layout
+	default = TEXT
+	default.value = <div class="csc-default">|</div>
+	1 = TEXT
+	1.value = <div class="csc-frame csc-frame-frame1">|</div>
+	2 = TEXT
+	2.value = <div class="csc-frame csc-frame-frame2">|</div>
+	3 = TEXT
+	3.value = <div class="csc-frame csc-frame-frame3">|</div>
+	4 = TEXT
+	4.value = <div class="csc-frame csc-frame-frame4">|</div>
+	5 = TEXT
+	5.value = <div class="csc-frame-frame5">|</div>
+	6 = TEXT
+	6.value = <div class="csc-frame csc-frame-frame6">|</div>
+	7 = TEXT
+	7.value = |
 }
 
 tt_content.image.20.1.imageLinkWrap {
@@ -55,9 +60,4 @@ tt_content.uploads {
 
 	# 20.stdWrap.dataWrap = <ul class="csc-uploads csc-uploads-{field:layout}">|</ul>
 	20.stdWrap.dataWrap = <div class="masonry-container">|</div>
-}
-
-lib.stdheader.10 {
-	80 < .1
-	80.dataWrap = <h2 class="header-blaugelb">|</h2>
 }

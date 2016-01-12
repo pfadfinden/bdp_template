@@ -25,8 +25,24 @@ page {
     variables {
       layout = TEXT
       layout.data = register:pageLayout
-      content < styles.content.get
-      content-border < styles.content.getBorder
+      content = CONTENT
+      content {
+        table = tt_content
+        select {
+          orderBy = sorting
+          where = colPos=0
+          languageField = sys_language_uid
+        }
+      }
+      content-border = CONTENT
+      content-border {
+        table = tt_content
+        select {
+          orderBy = sorting
+          where = colPos=3
+          languageField = sys_language_uid
+        }
+      }
     }
 
     settings {
