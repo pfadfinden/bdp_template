@@ -13,6 +13,7 @@ plugin.tx_bdptemplate {
     region = Stamm Weiße Dose
     # cat=bdp/020; type=string; label= Regional Branding Image
     regionBranding = EXT:bdp_template/Resources/Public/Images/dose.png
+    favicon = EXT:bdp_template/Resources/Public/Images/favicon.png
     # cat=bdp/010; type=string; label= Name der Organisation
     organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), | Stamm Weiße Dose e.V.
   }
@@ -59,6 +60,7 @@ plugin.tx_bdptemplate {
   }
 
   meta {
+    site-name = Bund der Pfadfinderinnen und Pfadfinder e.V.
     # cat=bdp/meta/010; type=string; label= Description: Kurzbeschreibung der Webseite.
     description = Bund der Pfadfinderinnen und Pfadfinder e.V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
     # cat=bdp/meta/015; type=string; label= Keywords: Stichwörter der Webseite.
@@ -73,6 +75,8 @@ plugin.tx_bdptemplate {
     revisit = 7
     # cat=bdp/meta/015; type=small; label= Language
     language = de
+    locale = de_DE
+    og-type = website
   }
 
   analytics {
@@ -105,5 +109,9 @@ plugin.tx_bdptemplate {
   cal {
     storageFolder =
   }
-
+}
+styles.content.imgtext.linkWrap {
+  lightboxEnabled = 1
+  lightboxRelAttribute = lightbox{field:uid}
+  lightboxCssClass = lightbox
 }

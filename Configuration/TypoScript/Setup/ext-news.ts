@@ -24,6 +24,7 @@ plugin.tx_news {
       showSocialShareButtons = 0
       media.image.maxWidth = 671
       media.image.maxHeigt = 328
+      media.image.lightbox.rel = gallery
     }
     list {
       media.image.maxWidth = 597

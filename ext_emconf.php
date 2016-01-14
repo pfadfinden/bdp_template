@@ -2,7 +2,7 @@
 
 $EM_CONF[$_EXTKEY] = array(
 	'title' => 'BdP Template',
-	'description' => 'test',
+	'description' => 'BdP Webseiten Layout als Extension für das Content Management System TYPO3',
 	'category' => 'templates',
 	'author' => 'Philipp Steinmetzger',
 	'author_email' => 'philipp.steinmetzger@pfadfinden.de',
@@ -18,6 +18,7 @@ $EM_CONF[$_EXTKEY] = array(
 			'filemetadata' => '7.6.0 - 7.6.99',
 			'gridelements' => '7.0.0 - 7.9.99',
 			'cal' => '1.10.2 - 1.99.99',
+			'fluid_styled_content' => '7.6.0 - 7.6.99',
 		),
 		'conflicts' => array(),
 		'suggests' => array(),

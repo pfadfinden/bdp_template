@@ -28,12 +28,17 @@
       <header class="csc-header">
         <h1>{newsItem.title}</h1>
       </header>
-
-
       <div class="csc-default">
-
-      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
-      <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
+        <f:if condition="{newsItem.falMediaPreviews}">
+          <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+            <f:if condition="{mediaElement.originalResource.type} == 2">
+              <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+            </f:if>
+            <f:if condition="{mediaElement.originalResource.type} == 4">
+              <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}" />
+            </f:if>
+          </f:alias>
+        </f:if>
         <p>
           <!-- date -->
           <span class="news-list-date">
@@ -182,7 +187,7 @@
         </f:if>
       </div>
       </div>
-
+      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
     </f:then>
     <f:else>
 

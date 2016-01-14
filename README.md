@@ -11,9 +11,10 @@ Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit Bd
 
 | Anwendung        | Version        | Optional |
 | ---------------- | -------------- | -------- |
-| TYPO3 CMS        | 6.2.0 - 6.2.99 | nein     |
-| EXT extbase      | 1.3 - 6.2.99   | nein     |
-| EXT fluid        | 1.3 - 6.2.99   | nein     |
+| TYPO3 CMS        | 7.6.0 - 7.6.99 | nein     |
+| EXT extbase      | 7.6.0 - 7.6.99 | nein     |
+| EXT fluid        | 7.6.0 - 7.6.99 | nein     |
+| EXT fluid_styled_content |  7.6.0 - 7.6.99   | nein     |
 | EXT news         | 3.2.0 - 3.9.99 | nein       |
 | EXT gridelements | 3.2.0 - 3.9.99 | nein       |
 | EXT realurl      | 1.13.1 - 1.99.99 | ja     |

@@ -18,10 +18,10 @@ $(document).ready(function() {
     navSecondary();
   });
 
+  $(".lightbox").fancybox();
 });
 
 $(function() {
-  $(".fancybox").fancybox();
 
   $("#bookmarkme").click(function() {
     if (window.sidebar) { // Mozilla Firefox Bookmark
