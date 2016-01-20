@@ -1,0 +1,22 @@
+<div id="calendar-event">
+	<f:if condition="{event}">
+		<f:render partial="Event/event" arguments="{event:event, settings:settings, eventView:eventView}" />
+	</f:if>
+</div>
+<f:if condition="{eventView.master_array}">
+	<p class="related"><f:translate key="LLL:EXT:cal/Resources/Private/Language/locallang.xml:l_category_relatedevents" /></p>
+	<dl>
+		<f:for each="{eventView.master_array}" as="entriesOfADay" key="day">
+			<f:if
+				condition="{day} >= {f:format.date(format:'Ymd' date:'@{eventView.starttime.time}')}">
+				<f:for each="{entriesOfADay}" as="entriesOfAnHour">
+					<f:for each="{entriesOfAnHour}" as="event">
+						<f:render partial="List/event"
+							arguments="{event:event, settings:settings, eventView:eventView}" />
+					</f:for>
+				</f:for>
+			</f:if>
+		</f:for>
+	</dl>
+</f:if>
+<div id="calendar-event-backlink"><a href="javascript:history.back();"><f:translate key="LLL:EXT:cal/Resources/Private/Language/locallang.xml:l_back" /></a></div>

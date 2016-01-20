@@ -1,6 +1,7 @@
 # customcategory=bdp=BdP Template
 # customsubcategory=tracking=Tracking
 # customsubcategory=news=News
+# customsubcategory=cal=Kalender
 # customsubcategory=meta=Metadaten
 # customsubcategory=paths=Pfadangaben
 # customsubcategory=contact=Kontakt & Impressum
@@ -13,8 +14,9 @@ plugin.tx_bdptemplate {
     region = Stamm Weiße Dose
     # cat=bdp/020; type=string; label= Regional Branding Image
     regionBranding = EXT:bdp_template/Resources/Public/Images/dose.png
+    # cat=bdp/030; type=string; label= Favicon
     favicon = EXT:bdp_template/Resources/Public/Images/favicon.png
-    # cat=bdp/010; type=string; label= Name der Organisation
+    # cat=bdp/040; type=string; label= Name der Organisation
     organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), | Stamm Weiße Dose e.V.
   }
 
@@ -34,11 +36,11 @@ plugin.tx_bdptemplate {
   }
 
   page {
-    # cat=bdp/links/010; type=int+; label= Impressum
+    # cat=bdp/links/010; type=int+; label= Impressum id
     imprint =
-    # cat=bdp/links/020; type=int+; label= Suche
+    # cat=bdp/links/020; type=int+; label= Suche id
     search =
-    # cat=bdp/links/030; type=int+; label= Untermenü
+    # cat=bdp/links/030; type=int+; label= Untermenü id
     nav-secondary =
   }
 
@@ -60,6 +62,7 @@ plugin.tx_bdptemplate {
   }
 
   meta {
+    # cat=bdp/meta/010; type=string; label= Seitenname
     site-name = Bund der Pfadfinderinnen und Pfadfinder e.V.
     # cat=bdp/meta/010; type=string; label= Description: Kurzbeschreibung der Webseite.
     description = Bund der Pfadfinderinnen und Pfadfinder e.V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
@@ -75,7 +78,9 @@ plugin.tx_bdptemplate {
     revisit = 7
     # cat=bdp/meta/015; type=small; label= Language
     language = de
+    # cat=bdp/meta/015; type=small; label= locale
     locale = de_DE
+    # cat=bdp/meta/015; type=small; label= Open Graph Protocal Type
     og-type = website
   }
 
@@ -93,7 +98,9 @@ plugin.tx_bdptemplate {
     detailPid =
 
     opengraph {
+      # cat=bdp/news/030; type=string; label= News Opengraph Protocol Seitenname
       site_name = Bund der Pfadfinderinnen und Pfadfinder e.V.
+      # cat=bdp/news/030; type=string; label= News Opengraph Protocol E-mail
       email = info@pfadfinden.de
       phone_number =
       fax_number =
@@ -102,11 +109,12 @@ plugin.tx_bdptemplate {
       street-address = Kesselhaken 23
       locality = Immenhausen
       region =
-      postal-code = Kesselhaken 23
+      postal-code = 34376
       country-name = Germany
     }
   }
   cal {
+    # cat=bdp/cal/030; type=int+; label= Kalendar Sys Folder
     storageFolder =
   }
 }
