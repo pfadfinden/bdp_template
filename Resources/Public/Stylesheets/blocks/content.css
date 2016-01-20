@@ -137,3 +137,7 @@
 .contenttable-1 .td-1 {
     min-width: 18em;
 }
+.masonry-item img {
+  max-width: 100%;
+  height: auto;
+}
