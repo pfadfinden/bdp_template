@@ -1,6 +1,6 @@
 page = PAGE
 page {
-  shortcutIcon = {$plugin.tx_bdptemplate.filepaths.cdn}gfx/icons/favicon.ico
+  shortcutIcon = {$plugin.tx_bdptemplate.config.favicon}
   1 = LOAD_REGISTER
   1 {
     pageLayout.cObject = TEXT

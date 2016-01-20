@@ -15,7 +15,7 @@ plugin.tx_bdptemplate {
     # cat=bdp/020; type=string; label= Regional Branding Image
     regionBranding = EXT:bdp_template/Resources/Public/Images/dose.png
     # cat=bdp/030; type=string; label= Favicon
-    favicon = EXT:bdp_template/Resources/Public/Images/favicon.png
+    favicon = EXT:bdp_template/Resources/Public/Images/favicon.ico
     # cat=bdp/040; type=string; label= Name der Organisation
     organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), | Stamm Weiße Dose e.V.
   }
