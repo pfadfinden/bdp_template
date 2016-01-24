@@ -2,19 +2,21 @@
 	<!-- fal media files -->
 	<div class="masonry-container">
 		<f:for each="{media}" as="mediaElement">
-			<div class="masonry-item masonry-item-3">
-				<div class="csc-default">
-					<f:if condition="{mediaElement.originalResource.type} == 2">
-						<f:render partial="Detail/FalMediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
-					</f:if>
-					<f:if condition="{mediaElement.originalResource.type} == 4">
-						<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
-					</f:if>
-					<f:if condition="{mediaElement.originalResource.type} == 5">
-						<f:render partial="Detail/FalMediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
-					</f:if>
+			<f:if condition="{mediaElement.showinpreview} == 0">
+				<div class="masonry-item masonry-item-3">
+					<div class="csc-default">
+						<f:if condition="{mediaElement.originalResource.type} == 2">
+							<f:render partial="Detail/FalMediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+						</f:if>
+						<f:if condition="{mediaElement.originalResource.type} == 4">
+							<f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+						</f:if>
+						<f:if condition="{mediaElement.originalResource.type} == 5">
+							<f:render partial="Detail/FalMediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+						</f:if>
+					</div>
 				</div>
-			</div>
+			</f:if>
 		</f:for>
 	</div>
 </f:if>
