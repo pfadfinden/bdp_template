@@ -1,5 +1,27 @@
+$(document).ready(function() {
+  function navSecondary() {
+    if(window.innerWidth <= 768) {
+      $('#nav-secondary').insertAfter('#main').show();
+    }
+    if(window.innerWidth > 768) {
+      $('#nav-secondary').appendTo('#nav-left');
+    }
+  }
+  function navPrimary() {
+    if(window.innerWidth > 768) {
+      $('#nav-primary__menu').show();
+    }
+  }
+  navSecondary();
+  $(window).resize(function() {
+    navPrimary();
+    navSecondary();
+  });
+
+  $(".lightbox").fancybox();
+});
+
 $(function() {
-  $(".fancybox").fancybox();
 
   $("#bookmarkme").click(function() {
     if (window.sidebar) { // Mozilla Firefox Bookmark
@@ -19,10 +41,6 @@ $(function() {
 
   $('#responsivemenu a').click(function() {
     $('#nav-primary__menu').slideToggle("fast");
-  });
-  
-  $(window).resize(function() {
-    if($(window).width() > 768) $('#nav-primary__menu').show();
   });
 
 });

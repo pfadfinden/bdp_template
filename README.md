@@ -1,6 +1,6 @@
 #  Bund der Pfadfinderinnen und Pfadfinder - TYPO3 Template
 
-v1.1.0-stable
+v2.0.0-beta
 
 BdP Webseiten Layout als Extension für das Content Management System TYPO3
 
@@ -11,19 +11,23 @@ Optionale Anwendungen sind nicht zwingend für den Betrieb einer Webseite mit Bd
 
 | Anwendung        | Version        | Optional |
 | ---------------- | -------------- | -------- |
-| TYPO3 CMS        | 6.2.0 - 6.2.99 | nein     |
-| EXT extbase      | 1.3 - 6.2.99   | nein     |
-| EXT fluid        | 1.3 - 6.2.99   | nein     |
-| EXT news         | 3.2.0 - 3.9.99 | nein       |
+| TYPO3 CMS        | 7.6.0 - 7.6.99 | nein     |
+| EXT extbase      | 7.6.0 - 7.6.99 | nein     |
+| EXT fluid        | 7.6.0 - 7.6.99 | nein     |
+| EXT fluid_styled_content |  7.6.0 - 7.6.99   | nein     |
+| EXT news         | 4.0.0 - 4.1.99 | nein       |
 | EXT gridelements | 3.2.0 - 3.9.99 | nein       |
 | EXT realurl      | 1.13.1 - 1.99.99 | ja     |
-| EXT filemetadata | 6.2.0 - 6.2.99 | nein     |
+| EXT filemetadata | 7.6.0 - 7.6.99 | nein     |
+| EXT cal | 1.10.2 - 1.99.99 | nein     |
 
 ## Installation
 1. Lade die aktuelle Version des Templates unter [Github Releases](https://github.com/pfadfinden/bdp_template/releases) als `.zip` Datei herunter.
 2. Logge dich als Administrator im Backend deiner TYPO3 Installation an und wähle den Menüpunkt *Adminwerkzeuge/Erweiterungen*.
 3. Am oberen Bildschirmrand findest du das kleine Upload Icon "Erweiterung hochladen", klicke dies an. Es erscheint ein Formular in dem du die zuvor heruntergeladenen zip-Datei des Templates angibst und auf *Hochladen* klickst.
 4. In der Liste "Erweiterungen verwalten" findest du nun die Erweiterung `BdP Template`. Aktiviere diese Klick auf das Bausteinsymbol vor dem Dateinamen.
+
+**Achtung: Bitte deaktiviert die Erweiterung css_styled_content, bei Migration aus einer alten Installation sollte der Migrationsassistent von fluid_styled_content ausgeführt werden.**
 
 ## Update
 Beachte bei neuen Versionen des Templates besonders Hinweise zu geänderten Abhängigkeiten in den Releasenotes. Der Update des Extension erfolgt wie die Installation. Es ist in Schritt 3 lediglich zu beachten, dass die Checkbox *Überschreiben* gewählt ist, damit die alten Dateien ersetzt werden.

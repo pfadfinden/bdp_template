@@ -1,4 +1,11 @@
 <section id="nav-left">
-<f:cObject typoscriptObjectPath="lib.nav-primary" />
-<f:cObject typoscriptObjectPath="lib.nav-secondary" />
+    <f:cObject typoscriptObjectPath="lib.nav-primary" />
+    <div id="nav-secondary">
+        <f:if condition="{settings.regionlogo} != ''">
+            <f:then>
+                <f:render partial="regionBranding" />
+            </f:then>
+        </f:if>
+        <f:cObject typoscriptObjectPath="lib.nav-secondary" />
+    </div>
 </section>

@@ -1,5 +1,5 @@
 .news {
-  margin-bottom: 2em;
+  margin-bottom: 2rem;
 }
 
 .news_item {
@@ -8,8 +8,11 @@
 }
 
 .news_item .csc-default{
-  margin-bottom: 1em;
-  padding-bottom: 0em;
+  margin-bottom: 1rem;
+  padding-bottom: 0rem;
+}
+.masonry-item .csc-default{
+    margin-bottom: 1rem;
 }
 
 .news-list-view .news-img-wrap {

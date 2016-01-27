@@ -2,6 +2,7 @@
 	background: rgb(56, 46, 35);
 	background: rgba(56, 46, 35, 0.7);
 	padding: 35px 15px 15px 20px;
+	box-sizing: border-box;
 }
 
 .nav-secondary__section {

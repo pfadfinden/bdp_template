@@ -24,6 +24,7 @@ plugin.tx_news {
       showSocialShareButtons = 0
       media.image.maxWidth = 671
       media.image.maxHeigt = 328
+      media.image.lightbox.rel = gallery
     }
     list {
       media.image.maxWidth = 597
@@ -32,7 +33,15 @@ plugin.tx_news {
     opengraph {
       type = article
     }
-    link.skipControllerAndAction = 1
+    link {
+      skipControllerAndAction = 1
+      hrDate = 1
+      hrDate {
+        year = Y
+        month = m
+        day = d
+      }
+    }
     listPid = {$plugin.tx_bdptemplate.news.startingpoint}
     defaultDetailPid = {$plugin.tx_bdptemplate.news.detailPid}
   }

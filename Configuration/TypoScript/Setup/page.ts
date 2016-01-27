@@ -1,6 +1,6 @@
 page = PAGE
 page {
-  shortcutIcon = {$plugin.tx_bdptemplate.filepaths.cdn}gfx/icons/favicon.ico
+  shortcutIcon = {$plugin.tx_bdptemplate.config.favicon}
   1 = LOAD_REGISTER
   1 {
     pageLayout.cObject = TEXT
@@ -25,12 +25,29 @@ page {
     variables {
       layout = TEXT
       layout.data = register:pageLayout
-      content < styles.content.get
-      content-border < styles.content.getBorder
+      content = CONTENT
+      content {
+        table = tt_content
+        select {
+          orderBy = sorting
+          where = colPos=0
+          languageField = sys_language_uid
+        }
+      }
+      content-border = CONTENT
+      content-border {
+        table = tt_content
+        select {
+          orderBy = sorting
+          where = colPos=3
+          languageField = sys_language_uid
+        }
+      }
     }
 
     settings {
       region = {$plugin.tx_bdptemplate.config.region}
+      regionlogo = {$plugin.tx_bdptemplate.config.regionBranding}
       search = {$plugin.tx_bdptemplate.page.search}
     }
   }

@@ -1,7 +1,7 @@
 /*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
 
 .grid-g {
-    letter-spacing: -0.31em;
+    letter-spacing: -0.4rem;
     /* Webkit: collapse white-space between units */
     *letter-spacing: normal;
     /* reset IE < 8 */
