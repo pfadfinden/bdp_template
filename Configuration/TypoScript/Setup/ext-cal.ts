@@ -1,7 +1,6 @@
 plugin.tx_cal_controller {
     pidList = {$plugin.tx_bdptemplate.cal.storageFolder}
     view {
-
         list {
             listTemplate = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/cal/Templates/defaultList.tmpl
             heading >
