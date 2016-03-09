@@ -25,7 +25,7 @@ plugin.tx_news {
       media {
         image {
           maxWidth = 671
-          maxHeight = 328
+          maxHeight = 671
           lightbox {
             enabled = 1
             rel = gallery
