@@ -4,6 +4,9 @@ html {
     font-size: 81.3%;
     font-family: verdana, arial, sans-serif;
 }
+html.fancybox-lock {
+    overflow: visible !important;
+}
 
 p, ul li {
     line-height: 1.5;

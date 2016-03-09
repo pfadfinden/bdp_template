@@ -1,7 +1,6 @@
 plugin.tx_cal_controller {
     pidList = {$plugin.tx_bdptemplate.cal.storageFolder}
     view {
-
         list {
             listTemplate = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/cal/Templates/defaultList.tmpl
             heading >
@@ -72,5 +71,15 @@ plugin.tx_cal_controller {
         ics {
             icsTemplate = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/cal/Templates/ics.tmpl
         }
+    }
+}
+
+# dirty fix for rendering description in fluid_styles_content
+tt_content.text{
+    20 = TEXT
+    20 {
+        field = bodytext
+        required = 1
+        description.parseFunc = < lib.parseFunc_RTE
     }
 }

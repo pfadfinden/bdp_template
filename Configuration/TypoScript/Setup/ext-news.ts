@@ -22,9 +22,17 @@ plugin.tx_news {
     }
     detail {
       showSocialShareButtons = 0
-      media.image.maxWidth = 671
-      media.image.maxHeigt = 328
-      media.image.lightbox.rel = gallery
+      media {
+        image {
+          maxWidth = 671
+          maxHeight = 328
+          lightbox {
+            enabled = 1
+            rel = gallery
+          }
+        }
+
+      }
     }
     list {
       media.image.maxWidth = 597
