@@ -73,3 +73,13 @@ plugin.tx_cal_controller {
         }
     }
 }
+
+# dirty fix for rendering description in fluid_styles_content
+tt_content.text{
+    20 = TEXT
+    20 {
+        field = bodytext
+        required = 1
+        description.parseFunc = < lib.parseFunc_RTE
+    }
+}
