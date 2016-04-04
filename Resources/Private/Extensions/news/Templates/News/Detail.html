@@ -44,26 +44,6 @@
           <span class="news-list-date">
             <n:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</n:format.date>
           </span>
-
-          <f:if condition="{newsItem.categories}">
-            <f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
-          </f:if>
-
-          <f:if condition="{newsItem.tags}">
-            <!-- Tags -->
-            <span class="news-list-tags">
-            <f:for each="{newsItem.tags}" as="tag">
-              {tag.title}
-            </f:for>
-            </span>
-          </f:if>
-
-          <f:if condition="{newsItem.author}">
-            <!-- author -->
-            <span class="news-list-author">
-              <f:translate key="author" arguments="{0:newsItem.author}"></f:translate>
-            </span>
-          </f:if>
         </p>
 
       <!-- main text -->
