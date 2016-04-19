@@ -39,12 +39,12 @@ tx_gridelements {
                             1 {
                                 name = Spalte 1
                                 colPos = 10
-                                allowed = header,textmedia,table,list,html,menu
+                                allowed = header,textmedia,table,list,html,menu,uploads
                             }
                             2 {
                                 name = Spalte 2
                                 colPos = 20
-                                allowed = header,textmedia,table,list,html,menu
+                                allowed = header,textmedia,table,list,html,menu,uploads
                             }
                         }
                     }
