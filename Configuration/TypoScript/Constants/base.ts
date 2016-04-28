@@ -2,6 +2,7 @@
 # customsubcategory=tracking=Tracking
 # customsubcategory=news=News
 # customsubcategory=cal=Kalender
+# customsubcategory=address=Adressen
 # customsubcategory=meta=Metadaten
 # customsubcategory=paths=Pfadangaben
 # customsubcategory=contact=Kontakt & Impressum
@@ -139,6 +140,10 @@ plugin.tx_bdptemplate {
   }
   cal {
     # cat=bdp/cal/030; type=int+; label= Kalendar Sys Folder
+    storageFolder =
+  }
+  address {
+    # cat=bdp/address/030; type=int+; label= Address Sys Folder
     storageFolder =
   }
 }
