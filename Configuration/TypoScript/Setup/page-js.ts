@@ -7,7 +7,7 @@ page {
     t3     = {$plugin.tx_bdptemplate.filepaths.javascript}t3default.js
   }
   includeJSFooterlibs {
-    fancybox         = {$plugin.tx_bdptemplate.filepaths.javascript}Library/fancybox/jquery.fancybox.pack.js
+    photoswipe       = {$plugin.tx_bdptemplate.filepaths.javascript}Library/photoswipe/jquery.photoswipe-global.js
     masonry          = {$plugin.tx_bdptemplate.filepaths.javascript}Library/masonry.pkgd.min.js
     imagesLoaded     = {$plugin.tx_bdptemplate.filepaths.javascript}Library/imagesLoaded.pkgd.min.js
   }

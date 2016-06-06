@@ -14,7 +14,8 @@ page {
     ext-address            = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-address.css
     grid               = {$plugin.tx_bdptemplate.filepaths.css}grid.css
     searchbox          = {$plugin.tx_bdptemplate.filepaths.css}blocks/searchbox.css
-    fancybox           = {$plugin.tx_bdptemplate.filepaths.javascript}Library/fancybox/jquery.fancybox.css
+    photoswipe         = {$plugin.tx_bdptemplate.filepaths.css}libary/photoswipe/photoswipe.css
+    photoswipeUI       = {$plugin.tx_bdptemplate.filepaths.css}libary/photoswipe/default-skin.css
     responsive         = {$plugin.tx_bdptemplate.filepaths.css}responsive.css
   }
   includeCSSLibs {
