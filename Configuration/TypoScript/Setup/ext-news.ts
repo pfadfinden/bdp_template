@@ -29,6 +29,8 @@ plugin.tx_news {
           lightbox {
             enabled = 1
             rel = gallery
+            maxWidth = 1600
+            maxHeight = 1600
           }
         }
 
