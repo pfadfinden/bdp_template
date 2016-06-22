@@ -10,7 +10,7 @@
 		<f:else>
 			<f:if condition="{settings.detail.media.image.lightbox.enabled}">
 				<f:then>
-					<f:debug>{mediaElement}</f:debug>
+					<a href="{f:uri.image(src:'{mediaElement.uid}', treatIdAsReference:1, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaElement.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
 						<f:image
 								src="{mediaElement.uid}"
 								treatIdAsReference="1"
@@ -21,6 +21,7 @@
 								data="{original-src:'{f:uri.image(src:mediaElement.uid, treatIdAsReference:1, maxWidth:settings.detail.media.image.lightbox.maxWidth, maxHeight:settings.detail.media.image.lightbox.maxHeight)}'}"
 								class="{settings.detail.media.image.lightbox.class}"
 						/>
+					</a>
 				</f:then>
 				<f:else>
 					<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
