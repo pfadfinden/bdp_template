@@ -11,7 +11,7 @@ page {
     teaser             = {$plugin.tx_bdptemplate.filepaths.css}blocks/teaser.css
     ext-news           = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-news.css
     ext-cal            = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-cal.css
-    ext-address            = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-address.css
+    ext-address        = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-address.css
     grid               = {$plugin.tx_bdptemplate.filepaths.css}grid.css
     searchbox          = {$plugin.tx_bdptemplate.filepaths.css}blocks/searchbox.css
     photoswipe         = {$plugin.tx_bdptemplate.filepaths.css}libary/photoswipe/photoswipe.css

@@ -50,6 +50,7 @@ h1 {
 .csc-default, .csc-frame-frame1, .csc-frame-frame2, .csc-frame-frame3 {
 	margin: 0 0 2em 0;
 	overflow: hidden;
+	position: relative;
 }
 
 .csc-default a, .csc-default a:visited, .csc-frame a, .csc-frame a:visited {text-decoration: none; color: #0D53A5;}
@@ -64,6 +65,7 @@ h1 {
 	background-color: #ffffff;
 	padding: 1em 1em;
 	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+	position: relative;
 }
 
 .csc-frame-frame1 {
@@ -104,6 +106,7 @@ h1 {
 	background-color: transparent;
 	box-shadow: none;
 	border: 0;
+	position: relative;
 }
 
 .csc-frame-frame5 {
