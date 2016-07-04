@@ -19,11 +19,11 @@ tt_content.stdWrap.innerWrap.cObject {
 	7.value = |
 }
 
-tt_content.image.20.1.imageLinkWrap {
+lib.fluidContent.settings.media.popup {
 	JSwindow = 0
 	directImageLink = 1
 	linkParams.ATagParams {
-		dataWrap = class="fancybox" rel="lightbox{field:uid}"
+		dataWrap = class="lightbox"
 	}
 }
 
