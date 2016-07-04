@@ -14,12 +14,10 @@ page {
     ext-address        = {$plugin.tx_bdptemplate.filepaths.css}blocks/ext-address.css
     grid               = {$plugin.tx_bdptemplate.filepaths.css}grid.css
     searchbox          = {$plugin.tx_bdptemplate.filepaths.css}blocks/searchbox.css
-    photoswipe         = {$plugin.tx_bdptemplate.filepaths.css}libary/photoswipe/photoswipe.css
-    photoswipeUI       = {$plugin.tx_bdptemplate.filepaths.css}libary/photoswipe/default-skin.css
     responsive         = {$plugin.tx_bdptemplate.filepaths.css}responsive.css
   }
   includeCSSLibs {
-    normalize = //cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css
+    normalize = //cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css
     normalize.external = 1
     normalize.disableCompression = 1
     normalize.excludeFromConcatenation = 1
@@ -27,5 +25,13 @@ page {
     font-immenhausen.external = 1
     font-immenhausen.disableCompression = 1
     font-immenhausen.excludeFromConcatenation = 1
+    photoswipe         = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/photoswipe.css
+    photoswipe.external = 1
+    photoswipe.disableCompression = 1
+    photoswipe.excludeFromConcatenation = 1
+    photoswipeUI       = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/default-skin.css
+    photoswipeUI.external = 1
+    photoswipeUI.disableCompression = 1
+    photoswipeUI.excludeFromConcatenation = 1
     }
 }

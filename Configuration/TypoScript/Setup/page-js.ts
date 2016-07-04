@@ -7,11 +7,25 @@ page {
     t3     = {$plugin.tx_bdptemplate.filepaths.javascript}t3default.js
   }
   includeJSFooterlibs {
-    photoswipe       = {$plugin.tx_bdptemplate.filepaths.javascript}Library/photoswipe/jquery.photoswipe-global.js
-    masonry          = {$plugin.tx_bdptemplate.filepaths.javascript}Library/masonry.pkgd.min.js
-    imagesLoaded     = {$plugin.tx_bdptemplate.filepaths.javascript}Library/imagesLoaded.pkgd.min.js
+    //jQuery              = https://code.jquery.com/jquery-2.2.4.min.js
+    //jQuery.external     = 1
+    //jQuery.integrity    = sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=
+    //jQuery.forceOnTop   = 1
+    //jQuery.excludeFromConcatenation = 1
+    //jQuery.disableCompression = 1
+    //jQuery.crossorigin = anonymous
+    photoswipe          = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/jquery.photoswipe-global.js
+    photoswipe.external = 1
+    photoswipe.excludeFromConcatenation = 1
+    photoswipe.disableCompression = 1
+    masonry             = {$plugin.tx_bdptemplate.filepaths.cdn}libs/masonry/masonry.pkgd.min.js
+    masonry.external    = 1
+    masonry.excludeFromConcatenation = 1
+    masonry.disableCompression = 1
+    imagesLoaded        = {$plugin.tx_bdptemplate.filepaths.javascript}Library/imagesLoaded.pkgd.min.js
   }
 
+  // jquery muss auf Grund von crossorigin so eingebundne werden
   899 = TEXT
   899.value = <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   //fallback
