@@ -6,6 +6,7 @@
 # customsubcategory=meta=Metadaten
 # customsubcategory=paths=Pfadangaben
 # customsubcategory=contact=Kontakt & Impressum
+# customsubcategory=lightbox=Lightbox
 
 plugin.tx_bdptemplate {
   config {
@@ -48,17 +49,17 @@ plugin.tx_bdptemplate {
   filepaths {
     # cat=bdp/paths/010; type=string; label= Template Dateien
     templates = EXT:bdp_template/Resources/Private/
-    # cat=bdp/paths/010; type=string; label= CSS Dateien
+    # cat=bdp/paths/020; type=string; label= CSS Dateien
     css = EXT:bdp_template/Resources/Public/Stylesheets/
-    # cat=bdp/paths/010; type=string; label= Bild Dateien
+    # cat=bdp/paths/030; type=string; label= Bild Dateien
     images = EXT:bdp_template/Resources/Public/Images/
-    # cat=bdp/paths/010; type=string; label= JavaScript Dateien
+    # cat=bdp/paths/040; type=string; label= JavaScript Dateien
     javascript = EXT:bdp_template/Resources/Public/JavaScript/
-    # cat=bdp/paths/010; type=string; label= Webfont Dateien
+    # cat=bdp/paths/050; type=string; label= Webfont Dateien
     font = EXT:bdp_template/Resources/Public/Fonts/
-    # cat=bdp/paths/010; type=string; label= Extensiontemplates
+    # cat=bdp/paths/060; type=string; label= Extensiontemplates
     extensiontemplates = EXT:bdp_template/Resources/Private/Extensions/
-    # cat=bdp/paths/010; type=string; label= CDN Pfad: URL zu Content Delivery Network
+    # cat=bdp/paths/070; type=string; label= CDN Pfad: URL zu Content Delivery Network
     cdn = //cdn.pfadfinden.de/
   }
 
@@ -89,23 +90,23 @@ plugin.tx_bdptemplate {
   meta {
     # cat=bdp/meta/010; type=string; label= Seitenname
     site-name = Bund der Pfadfinderinnen und Pfadfinder e.V.
-    # cat=bdp/meta/010; type=string; label= Description: Kurzbeschreibung der Webseite.
+    # cat=bdp/meta/020; type=string; label= Description: Kurzbeschreibung der Webseite.
     description = Bund der Pfadfinderinnen und Pfadfinder e.V. ist der größte interkonfessionelle Verband für Pfadfinderinnen und Pfadfinder in Deutschland.
-    # cat=bdp/meta/015; type=string; label= Keywords: Stichwörter der Webseite.
+    # cat=bdp/meta/030; type=string; label= Keywords: Stichwörter der Webseite.
     keywords = jugend, pfadfinder, pfadfinderin, pfadfinden, bdp, scout
-    # cat=bdp/meta/015; type=small; label= Robots
+    # cat=bdp/meta/040; type=small; label= Robots
     robots = all
-    # cat=bdp/meta/015; type=string; label= Copyright
+    # cat=bdp/meta/050; type=string; label= Copyright
     copyright = Bund der Pfadfinderinnen und Pfadfinder e. V.
-    # cat=bdp/meta/015; type=string; label= Author
+    # cat=bdp/meta/060; type=string; label= Author
     author = Bund der Pfadfinderinnen und Pfadfinder e. V.
-    # cat=bdp/meta/015; type=small; label= Revisit
+    # cat=bdp/meta/070; type=small; label= Revisit
     revisit = 7
-    # cat=bdp/meta/015; type=small; label= Language
+    # cat=bdp/meta/080; type=small; label= Language
     language = de
-    # cat=bdp/meta/015; type=small; label= locale
+    # cat=bdp/meta/090; type=small; label= locale
     locale = de_DE
-    # cat=bdp/meta/015; type=small; label= Open Graph Protocal Type
+    # cat=bdp/meta/100; type=small; label= Open Graph Protocal Type
     og-type = website
   }
 
@@ -119,22 +120,31 @@ plugin.tx_bdptemplate {
   news {
     # cat=bdp/news/030; type=int+; label= Ausgangspunkt
     startingpoint =
-    # cat=bdp/news/030; type=int+; label= Detailseite
+    # cat=bdp/news/040; type=int+; label= Detailseite
     detailPid =
 
     opengraph {
-      # cat=bdp/news/030; type=string; label= News Opengraph Protocol Seitenname
+      # cat=bdp/news/050; type=string; label= News Opengraph Protocol Seitenname
       site_name = Bund der Pfadfinderinnen und Pfadfinder e.V.
-      # cat=bdp/news/030; type=string; label= News Opengraph Protocol E-mail
+      # cat=bdp/news/051; type=string; label= News Opengraph Protocol E-mail
       email = info@pfadfinden.de
+      # cat=bdp/news/052; type=string; label= News Opengraph Protocol Telefonnummer
       phone_number =
+      # cat=bdp/news/053; type=string; label= News Opengraph Protocol Fax
       fax_number =
+      # cat=bdp/news/054; type=string; label= News Opengraph Protocol latitude
       latitude =
+      # cat=bdp/news/055; type=string; label= News Opengraph Protocol longitude
       longitude =
+      # cat=bdp/news/056; type=string; label= News Opengraph Protocol Straße
       street-address = Kesselhaken 23
+      # cat=bdp/news/057; type=string; label= News Opengraph Protocol Stadt
       locality = Immenhausen
+      # cat=bdp/news/058; type=string; label= News Opengraph Protocol Region
       region =
+      # cat=bdp/news/059; type=string; label= News Opengraph Protocol PLZ
       postal-code = 34376
+      # cat=bdp/news/060; type=string; label= News Opengraph Protocol Land
       country-name = Germany
     }
   }
@@ -148,6 +158,7 @@ plugin.tx_bdptemplate {
   }
 }
 styles.content.imgtext.linkWrap {
+  # cat=bdp/lightbox/010; type=int; label= Aktiviere Lightbox
   lightboxEnabled = 1
   lightboxRelAttribute = lightbox{field:uid}
   lightboxCssClass = lightbox

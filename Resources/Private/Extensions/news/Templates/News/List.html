@@ -1,5 +1,6 @@
 {namespace n=Tx_News_ViewHelpers}
 <f:layout name="General" />
+
 <f:section name="content">
   <f:if condition="{news}">
     <f:then>
@@ -7,13 +8,13 @@
             <f:then>
               <div class="masonry-container">
                 <div class="news-list-view">
-              <f:for each="{news}" as="newsItem" iteration="iterator">
-                <article class="masonry-item masonry-item-3">
-                  <div class="news_item">
-                    <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                  </div>
-                </article>
-              </f:for>
+                  <f:for each="{news}" as="newsItem" iteration="iterator">
+                    <article class="masonry-item masonry-item-3">
+                      <div class="news_item">
+                        <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                      </div>
+                    </article>
+                  </f:for>
                 </div>
               </div>
             </f:then>
@@ -21,13 +22,13 @@
               <n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
                 <div class="masonry-container">
                   <div class="news-list-view">
-                <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-                  <article class="masonry-item masonry-item-3">
-                    <div class="news_item">
-                      <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                    </div>
-                  </article>
-                </f:for>
+                    <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
+                      <article class="masonry-item masonry-item-3">
+                        <div class="news_item">
+                          <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                        </div>
+                      </article>
+                    </f:for>
                   </div>
                 </div>
               </n:widget.paginate>
