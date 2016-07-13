@@ -39,6 +39,11 @@ plugin.tx_news {
     list {
       media.image.maxWidth = 597
       media.image.maxHeight = 292
+      paginate{
+        itemsPerPage = 9
+        insertAbove = 0
+        insertBelow = 1
+      }
     }
     opengraph {
       type = article
