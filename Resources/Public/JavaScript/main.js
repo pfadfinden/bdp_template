@@ -18,24 +18,18 @@ $(document).ready(function() {
     navSecondary();
   });
 
-  $(".lightbox")
-      .fancybox({
-        padding : 0,
-        afterShow: function() {
-          $(".fancybox-title").wrapInner('<div />').show();
+  var slideSelector = '.lightbox',
+      options     = {
+        bgOpacity: 0.8,
+        shareButtons: [
+          {id:'facebook', label:'Share on Facebook', url:'https://www.facebook.com/sharer/sharer.php?u={{url}}'},
+          {id:'twitter', label:'Tweet', url:'https://twitter.com/intent/tweet?text={{text}}&url={{url}}'},
+          {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
+        ]
+      },
+      events      = {};
 
-          $(".fancybox-wrap").hover(function() {
-            $(".fancybox-title").show();
-          }, function() {
-            $(".fancybox-title").hide();
-          });
-        },
-        helpers : {
-          title: {
-            type: 'over'
-          }
-        }
-      });
+  $('#wrap').photoSwipe(slideSelector, options, events);
 });
 
 $(function() {

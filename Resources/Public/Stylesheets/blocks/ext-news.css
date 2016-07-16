@@ -67,3 +67,31 @@
 	color:#0D53A5;
 	font-family: Immenhausen, serif;
 }
+
+.page-navigation, .page-navigation p, .page-navigation ul, .page-navigation ul li, .page-navigation ul li a {
+    font-family: 'Immenhausen', serif;
+    font-size: 1.3rem;
+    color: #FFFFFF;
+    margin: 0;
+    padding: 0;
+}
+.page-navigation {
+    text-align: center;
+}
+.page-navigation p{
+   display: inline-block;
+}
+.page-navigation ul {
+    display: inline-block;
+}
+.page-navigation .f3-widget-paginator li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 0.5rem;
+}
+.page-navigation .f3-widget-paginator .current  {
+    font-size: 2.5rem;
+}
+.page-navigation .f3-widget-paginator li a {
+    text-decoration: none;
+}

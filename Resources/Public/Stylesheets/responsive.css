@@ -60,6 +60,7 @@
   #responsivemenu a {color: #0d53a5; text-decoration: none; }
   #responsivemenu a span {font-size: 0.85em; color: #000000;}
   #content-fw, #content {margin-left: 1em; margin-top: 0}
+  .nav-secondary__section img{width:125px;}
 }
 
 /* Big smartphones (portrait) (ie: Galaxy 3 has 360)*/

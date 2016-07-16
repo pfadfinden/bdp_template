@@ -32,7 +32,23 @@
         <f:if condition="{newsItem.falMediaPreviews}">
           <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
             <f:if condition="{mediaElement.originalResource.type} == 2">
-              <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+              <f:if condition="{settings.detail.media.image.lightbox.enabled}">
+                <f:then>
+                  <f:image
+                          class="lightbox"
+                          src="{mediaElement.uid}"
+                          treatIdAsReference="1"
+                          title="{mediaElement.originalResource.title}"
+                          alt="{mediaElement.originalResource.alternative}"
+                          maxWidth="{settings.detail.media.image.maxWidth}"
+                          maxHeight="{settings.detail.media.image.maxHeight}"
+                          data="{original-src:'{f:uri.image(src:mediaElement.uid, treatIdAsReference:1, maxWidth:settings.detail.media.image.lightbox.maxWidth, maxHeight:settings.detail.media.image.lightbox.maxHeight)}'}"
+                  />
+                </f:then>
+                <f:else>
+                  <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+                </f:else>
+              </f:if>
             </f:if>
             <f:if condition="{mediaElement.originalResource.type} == 4">
               <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}" />

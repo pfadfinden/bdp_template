@@ -29,6 +29,8 @@ plugin.tx_news {
           lightbox {
             enabled = 1
             rel = gallery
+            maxWidth = 1600
+            maxHeight = 1600
           }
         }
 
@@ -37,6 +39,11 @@ plugin.tx_news {
     list {
       media.image.maxWidth = 597
       media.image.maxHeight = 292
+      paginate{
+        itemsPerPage = 9
+        insertAbove = 0
+        insertBelow = 1
+      }
     }
     opengraph {
       type = article

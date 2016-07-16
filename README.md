@@ -1,6 +1,6 @@
 #  Bund der Pfadfinderinnen und Pfadfinder - TYPO3 Template
 
-v2.0.0
+v2.1.0 stable
 
 BdP Webseiten Layout als Extension für das Content Management System TYPO3
 
@@ -12,11 +12,12 @@ BdP Webseiten Layout als Extension für das Content Management System TYPO3
 | EXT extbase      | 7.6.0 - 7.6.99 | nein     |
 | EXT fluid        | 7.6.0 - 7.6.99 | nein     |
 | EXT fluid_styled_content |  7.6.0 - 7.6.99   | nein     |
-| EXT news         | 4.0.0 - 4.1.99 | nein       |
+| EXT news         | 4.3.0 - 4.99.99 | nein       |
 | EXT gridelements | 3.2.0 - 3.9.99 | nein       |
-| EXT realurl      | 2.0.13 - 2.99.99 | ja     |
+| EXT realurl      | 2.0.14 - 2.99.99 | ja     |
 | EXT filemetadata | 7.6.0 - 7.6.99 | nein     |
 | EXT cal | 1.10.3 - 1.99.99 | nein     |
+| EXT tt_address | 3.0.3 - 3.99.99 | ja     |
 
 ## Dokumentation
 
