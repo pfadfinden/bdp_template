@@ -8,7 +8,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author_email' => 'philipp.steinmetzger@pfadfinden.de',
 	'author_company' => 'Bund der Pfadfinderinnen und Pfadfinder e.V.',
 	'state' => 'stable',
-	'version' => '2.1.0',
+	'version' => '2.1.1',
 	'constraints' => array(
 		'depends' => array(
 			'typo3' => '7.6.0 - 7.6.99',
@@ -21,8 +21,11 @@ $EM_CONF[$_EXTKEY] = array(
 			'fluid_styled_content' => '7.6.0 - 7.6.99',
 		),
 		'conflicts' => array(
+		    'css_styled_content' => '',
 		),
-		'suggests' => array(),
+		'suggests' => array(
+		    'realurl' => '2.0.14 - 2.99.99',
+		),
 	),
 );
 

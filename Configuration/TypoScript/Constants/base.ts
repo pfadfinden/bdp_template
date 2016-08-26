@@ -28,9 +28,9 @@ plugin.tx_bdptemplate {
     # cat=bdp/contact/012; type=string; label= Anschrift
     address = Kesselhaken 23, 34376 Immenhausen, DE
     # cat=bdp/contact/020; type=string; label= Telefonnummer
-    phone = +49 5673 9957284-0
+    phone = +49 5673 99584-0
     # cat=bdp/contact/025; type=string; label= Faxnummer
-    fax = +49 5673 9957284-44
+    fax = +49 5673 99584-44
     # cat=bdp/contact/030; type=string; label= E-Mail Adresse
     email = info@pfadfinden.de
     # cat=bdp/contact/035; type=string; label= Webseite
