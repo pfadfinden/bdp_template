@@ -11,8 +11,23 @@
   margin-bottom: 1rem;
   padding-bottom: 0rem;
 }
-.masonry-item .csc-default{
+.masonry-item .csc-default {
     margin-bottom: 1rem;
+}
+
+.news_item .teaser-text {
+    margin-top: 0.75rem;
+}
+.news_item .teaser-text .news-list-date {
+    font-weight: bold;
+    display: inline;
+}
+.news_item .teaser-text .description {
+    display: inline;
+}
+
+.news_item .teaser-text .description p:first-child {
+    display: inline;
 }
 
 .news-list-view .news-img-wrap {

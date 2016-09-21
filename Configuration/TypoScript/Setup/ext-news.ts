@@ -39,6 +39,7 @@ plugin.tx_news {
     list {
       media.image.maxWidth = 597
       media.image.maxHeight = 292
+      showDate = {$plugin.tx_bdptemplate.news.list.showDate}
       paginate{
         itemsPerPage = 9
         insertAbove = 0

@@ -122,6 +122,8 @@ plugin.tx_bdptemplate {
     startingpoint =
     # cat=bdp/news/040; type=int+; label= Detailseite
     detailPid =
+    # cat=bdp/news/041; type=boolean; label= Anzeige des Datums auf der News Kachel
+    list.showDate = 0
 
     opengraph {
       # cat=bdp/news/050; type=string; label= News Opengraph Protocol Seitenname
