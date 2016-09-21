@@ -17,6 +17,7 @@
 
 .news_item .teaser-text {
     margin-top: 0.75rem;
+    margin-bottom: 0.75rem;
 }
 .news_item .teaser-text .news-list-date {
     font-weight: bold;
@@ -28,6 +29,9 @@
 
 .news_item .teaser-text .description p:first-child {
     display: inline;
+}
+.news_item .teaser-text .description p:last-child {
+    margin-bottom: 0;
 }
 
 .news-list-view .news-img-wrap {
