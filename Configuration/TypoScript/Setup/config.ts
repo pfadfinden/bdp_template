@@ -56,8 +56,3 @@ config {
   pageTitleSeparator = |
   pageTitleSeparator.noTrimWrap = | | |
 }
-
-config.baseURL = http://{$plugin.tx_bdptemplate.config.domain}/
-[globalString = IENV:TYPO3_SITE_URL=https://{$config.domain}/]
-config.baseURL = https://{$plugin.tx_bdptemplate.config.domain}/
-[global]
