@@ -1,0 +1,81 @@
+#branding {
+  background-color: $primary-color;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  @media #{$medium-and-up} {
+    z-index: 7;
+    position: relative;
+    margin-left: 240px;
+    margin-bottom: -10px;
+    padding-bottom: 0;
+    width: 425px;
+    height: 145px;
+    box-shadow: none;
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 22px;
+      bottom: 0;
+      z-index: 1;
+      height: 143px;
+      width: 457px;
+      background: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIGhlaWdodD0nMzAwJyB3aWR0aD0nNDcwJyB2aWV3Qm94PScwIDAgMzAwIDQyNScgcHJlc2VydmVBc3BlY3RSYXRpbz0neE1pbllNaW4gbWVldCc+DQogICAgPGRlZnM+DQogICAgPGxpbmVhckdyYWRpZW50IGlkPSd2ZXJsYXVmJyB4MT0nMCUnIHkxPScwJScgeDI9JzAlJyB5Mj0nMTQwJSc+DQogICAgICA8c3RvcCBvZmZzZXQ9JzAlJyBzdG9wLWNvbG9yPSdibGFjaycgc3RvcC1vcGFjaXR5PScwLjcnIC8+DQogICAgICA8c3RvcCBvZmZzZXQ9JzUwJScgc3RvcC1jb2xvcj0nYmxhY2snIHN0b3Atb3BhY2l0eT0nMC40JyAvPg0KICAgICAgPHN0b3Agb2Zmc2V0PSc4MCUnIHN0b3AtY29sb3I9J2JsYWNrJyBzdG9wLW9wYWNpdHk9JzAuMScgLz4NCiAgICAgIDxzdG9wIG9mZnNldD0nMTAwJScgc3RvcC1jb2xvcj0iYmxhY2siIHN0b3Atb3BhY2l0eT0nMC4wJyAvPg0KICAgIDwvbGluZWFyR3JhZGllbnQ+DQogIDwvZGVmcz4NCiAgICA8cGF0aCBkPSdNMTAsMjAwIEMxNTAsMTcwIDQ1MCwxODAgNjE1LDE5MCBMNjA4LDAwIEwxNSwwIFonIHN0eWxlPSdzdHJva2U6bm9uZTsnIGZpbGw9J3VybCgjdmVybGF1ZiknPjwvcGF0aD48L3N2Zz4=") no-repeat scroll center top;
+    }
+  }
+  #branding__logo {
+    padding: 1rem;
+    margin: 0 3.5rem 0 0;
+    text-align: left;
+    line-height: 1rem;
+    img {
+      max-width: 250px;
+    }
+    @media #{$medium-and-up} {
+      position: relative;
+      z-index: 20;
+      margin: 0;
+      padding: 0;
+      background-color: $primary-color;
+      line-height: 115px;
+      text-align: center;
+      img {
+        max-width: 100%;
+      }
+      &.no_region {
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+  #branding__region {
+    a {
+      display: block;
+      font-size: 18px;
+      padding-left: 0.75rem;
+      background: $secondary-color;
+      color: $primary-color;
+      line-height: 30px;
+      font-family: Immenhausen,serif;
+      letter-spacing: 1px;
+      word-spacing: 2px;
+      text-decoration: none;
+    }
+    @media #{$medium-and-up} {
+      position: relative;
+      z-index: 20;
+      a {
+        text-align: center;
+      }
+    }
+  }
+  #responsivemenu {
+    display: inline;
+    position: absolute;
+    top: 1em;
+    right: 1em;
+    @media #{$medium-and-up} {
+      display: none;
+    }
+  }
+
+}

@@ -1,0 +1,40 @@
+#nav-secondary {
+  background: rgba(56,46,35,0.7);
+  padding: 35px 15px 15px 20px;
+  display: none;
+  @media #{$medium-and-up} {
+    display: block;
+  }
+
+  #branding__region__logo {
+    figure {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  .nav-secondary__section {
+    padding: 1rem 0;
+    h4 {
+      margin: 0 0 0.25rem 0;
+      padding: 0;
+      color: $primary-color;
+      font-size: 1.3rem;
+      font-weight: normal;
+      letter-spacing: 0.02rem;
+    }
+    ul {
+      li {
+        a {
+          color: #ffffff;
+          font-family: "Georgia", serif;
+          font-style: italic;
+          &:visited {
+            color:#ffffff;
+          }
+        }
+      }
+    }
+  }
+}

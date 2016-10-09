@@ -5,7 +5,7 @@
 	=====================
 		Partials/List/Item.html
 -->
-<div class="csc-default article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
+<div class="box article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="http://schema.org/Article">
   <n:excludeDisplayedNews newsItem="{newsItem}"/>
 
   <f:if condition="{newsItem.falMedia}">
