@@ -1,6 +1,6 @@
 page {
   includeCSS {
-    buena               = {$plugin.tx_bdptemplate.filepaths.css}css/buena.css
+    buena               = {$plugin.tx_bdptemplate.filepaths.css}buena.css
     buena.disableCompression = 1
     buena.excludeFromConcatenation = 1
   }
@@ -13,6 +13,10 @@ page {
     font-immenhausen.external = 1
     font-immenhausen.disableCompression = 1
     font-immenhausen.excludeFromConcatenation = 1
+    materialize-icons = //fonts.googleapis.com/icon?family=Material+Icons
+    materialize-icons.external = 1
+    materialize-icons.disableCompression = 1
+    materialize-icons.excludeFromConcatenation = 1
     photoswipe         = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/photoswipe.css
     photoswipe.external = 1
     photoswipe.disableCompression = 1

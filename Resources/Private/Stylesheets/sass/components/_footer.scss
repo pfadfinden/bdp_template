@@ -18,7 +18,7 @@
         }
       }
     }
-    .nav-footer__content{
+    .nav-footer__content {
       font-size: 0.85rem;
       #nav-footer__menu {
         li {
@@ -61,3 +61,55 @@
 
   }
 }
+@media #{$medium-and-up} {
+  #footer {
+    position: relative;
+    margin-top: -286px;
+    padding: 0;
+    height: 286px;
+    clear: both;
+    overflow: hidden;
+    box-shadow: none;
+    background: url(//cdn.pfadfinden.de/gfx/objects/kochtopf_1.png) no-repeat right bottom;
+    #nav-footer {
+      height: 299px;
+      width: 712px;
+      background: url(//cdn.pfadfinden.de/gfx/objects/briefumschlag_1.png) no-repeat;
+      padding: 1em 2em 0 2em;
+      margin-left: 240px;
+      margin-top: 0;
+      .nav-footer__title {
+        color: $primary-color;
+        width: 100%;
+        text-align: center;
+        height: 125px;
+        padding: 0 1rem;
+        .nav-footer__titleLine {
+          &:first-child {
+            line-height: 1.5;
+            padding-top: 0.5rem;
+          }
+          &:only-child {
+            padding-top: 2.5rem;
+          }
+        }
+      }
+      .nav-footer__content {
+        margin: 0 2rem;
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+}
+@media #{$medium-only} {
+  #footer {
+    #nav-footer {
+      position: relative;
+      margin-right: 25px;
+      margin-left: auto;
+    }
+  }
+}
+

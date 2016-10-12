@@ -22,7 +22,7 @@ audio, canvas, img, svg, video {
 figure {
   margin: 0;
 }
-img {
+.responsive-img {
   max-width: 100%;
   height: auto;
 }
@@ -33,4 +33,26 @@ ul {
   li {
     list-style: none;
   }
+}
+p {
+  margin: 0.75rem 0;
+  padding: 0;
+  // Automatische Silbentrennung
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+  -moz-hyphenate-limit-chars: 10 4 4;
+  -o-hyphenate-limit-chars: 10 4 4;
+  -webkit-hyphenate-limit-chars: 10 4 4;
+  -ms-hyphenate-limit-chars: 10 4 4;
+  hyphenate-limit-chars: 10 4 4;
+
+  -moz-hyphenate-limit-lines: 2;
+  -o-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
 }

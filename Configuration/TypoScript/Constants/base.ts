@@ -50,9 +50,9 @@ plugin.tx_bdptemplate {
     # cat=bdp/paths/010; type=string; label= Template Dateien
     templates = EXT:bdp_template/Resources/Private/
     # cat=bdp/paths/020; type=string; label= CSS Dateien
-    css = EXT:bdp_template/Resources/Public/Stylesheets/
+    css = EXT:bdp_template/Resources/Public/Media/css/
     # cat=bdp/paths/030; type=string; label= Bild Dateien
-    images = EXT:bdp_template/Resources/Public/Images/
+    images = EXT:bdp_template/Resources/Public/Media/Images/
     # cat=bdp/paths/040; type=string; label= JavaScript Dateien
     javascript = EXT:bdp_template/Resources/Public/JavaScript/
     # cat=bdp/paths/050; type=string; label= Webfont Dateien

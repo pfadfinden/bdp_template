@@ -1,6 +1,6 @@
 lib.footer = COA
 lib.footer {
-	wrap = <footer id="footer"><div id="nav-footer">|</div></footer>
+	wrap = <footer id="footer"><div id="nav-footer" class="container">|</div></footer>
 
   10 = TEXT
   10.value = {$plugin.tx_bdptemplate.config.organisation}
@@ -10,12 +10,12 @@ lib.footer {
     1.current = 1
     1.wrap = <div class="nav-footer__titleLine">|</div> |*| | |*| |
   }
-  10.wrap = <div class="nav-footer__title">|</div><div class="grid-g nav-footer__content">
+  10.wrap = <div class="nav-footer__title">|</div><div class="row nav-footer__content">
 
   20 < lib.nav-footer
 
   30 = COA
-  30.wrap = <div class="grid-u-1-2"><div itemscope itemtype="http://schema.org/Organization">|</div></div></div>
+  30.wrap = <div class="col s12 m6 l6"><div itemscope itemtype="http://schema.org/Organization">|</div></div></div>
 
   30.10 = TEXT
   30.10.value = {$plugin.tx_bdptemplate.contact.name}

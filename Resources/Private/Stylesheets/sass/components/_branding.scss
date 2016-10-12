@@ -73,6 +73,12 @@
     position: absolute;
     top: 1em;
     right: 1em;
+    .button-collapse {
+      color: #000000;
+      .material-icons {
+        font-size: 4rem;
+      }
+    }
     @media #{$medium-and-up} {
       display: none;
     }
