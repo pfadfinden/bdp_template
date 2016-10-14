@@ -13,6 +13,10 @@ page {
     font-immenhausen.external = 1
     font-immenhausen.disableCompression = 1
     font-immenhausen.excludeFromConcatenation = 1
+    font-roboto = //fonts.googleapis.com/css?family=Roboto
+    font-roboto.external = 1
+    font-roboto.disableCompression = 1
+    font-roboto.excludeFromConcatenation = 1
     materialize-icons = //fonts.googleapis.com/icon?family=Material+Icons
     materialize-icons.external = 1
     materialize-icons.disableCompression = 1

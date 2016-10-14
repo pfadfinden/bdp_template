@@ -11,17 +11,21 @@ a {
 
 html{
   line-height: 1.5;
-  font-size: 81.3%;
-  font-family: "Verdana", "Arial", sans-serif;
+  font-size: 14px;
+  font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
   color: #000000;
 }
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Immenhausen", serif;
+  font-family: 'Immenhausen', serif;
   font-weight: 400;
   line-height: 1.1;
   margin: 1.1rem 0 0.5rem 0;
   color: #ffffff;
   padding: 0 13px;
+
+  -o-box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
   @media #{$medium-and-up} {
     padding: 0;
   }

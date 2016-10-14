@@ -39,7 +39,7 @@
               <f:if condition="{settings.detail.media.image.lightbox.enabled}">
                 <f:then>
                   <f:image
-                          class="lightbox"
+                          class="lightbox responsive-img"
                           src="{mediaElement.uid}"
                           treatIdAsReference="1"
                           title="{mediaElement.originalResource.title}"
@@ -50,7 +50,7 @@
                   />
                 </f:then>
                 <f:else>
-                  <f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
+                  <f:image class="responsive-img" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
                 </f:else>
               </f:if>
             </f:if>

@@ -71,12 +71,12 @@
   #responsivemenu {
     display: inline;
     position: absolute;
-    top: 1em;
-    right: 1em;
+    top: 1rem;
+    right: 1rem;
     .button-collapse {
       color: #000000;
       .material-icons {
-        font-size: 4rem;
+        font-size: 3rem;
       }
     }
     @media #{$medium-and-up} {

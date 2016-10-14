@@ -1,5 +1,12 @@
 #nav-left {
   margin: 0 0 1rem 0;
+  ul {
+    margin: 0;
+    padding: 0;
+    li {
+      list-style: none;
+    }
+  }
   @media #{$medium-and-up} {
     position: absolute;
     top: 120px;

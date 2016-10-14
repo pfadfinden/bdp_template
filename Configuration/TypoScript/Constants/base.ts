@@ -50,7 +50,7 @@ plugin.tx_bdptemplate {
     # cat=bdp/paths/010; type=string; label= Template Dateien
     templates = EXT:bdp_template/Resources/Private/
     # cat=bdp/paths/020; type=string; label= CSS Dateien
-    css = EXT:bdp_template/Resources/Public/Media/css/
+    css = EXT:bdp_template/Resources/Public/Media/Css/
     # cat=bdp/paths/030; type=string; label= Bild Dateien
     images = EXT:bdp_template/Resources/Public/Media/Images/
     # cat=bdp/paths/040; type=string; label= JavaScript Dateien
