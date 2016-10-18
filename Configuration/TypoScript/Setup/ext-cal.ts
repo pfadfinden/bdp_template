@@ -25,10 +25,10 @@ plugin.tx_cal_controller {
                 alldayTitle.dataWrap >
                 startdate.dataWrap = |<br>
                 enddate.dataWrap >
-                description.dataWrap = <div class="csc-default">|</div>
+                description.dataWrap = <div class="box">|</div>
 
-                location.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><div class="header-blaugelb">%%%LOCATION%%%</div></div>|</div>
-                organizer.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><div class="header-blaugelb">%%%ORGANIZER%%%</div></div>|</div>
+                location.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><h3 class="bdp-yellow">%%%LOCATION%%%</h3></div>|</div>
+                organizer.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><h3 class="bdp-yellow">%%%ORGANIZER%%%</h3></div>|</div>
 
                 attachment =< tt_content.uploads
                 attachment {
@@ -36,7 +36,7 @@ plugin.tx_cal_controller {
                     showFileSize = 1
                     filePath = {$plugin.tx_cal_controller.uploadPath.media}
                     20.stdWrap.if.isTrue.field = media
-                    20.stdWrap.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><div class="header-blaugelb">%%%ATTACHMENT_LABEL%%%</div></div>|</div>
+                    20.stdWrap.dataWrap = <div class="box"><div class="csc-header csc-header-n1"><h3 class="bdp-yellow">%%ATTACHMENT_LABEL%%%</h3></div>|</div>
                 }
 
                 ics.typolink.parameter.wrap >

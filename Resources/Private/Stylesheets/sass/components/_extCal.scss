@@ -1,0 +1,113 @@
+.tx-cal-controller {
+  .cal-list {
+    .vevent {
+      padding: 0.25em;
+      abbr {
+        border: 0;
+        text-decoration: none;
+      }
+      &.even {
+        background: lighten($primary-color, 40);
+      }
+      .dtstart-container {
+        float: left;
+      }
+      .summary {
+        margin-left: 10em;
+        .url {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+//@extend-elements
+//original selectors
+//.slick-prev, .slick-next
+%extend_cal_slick {
+  position: absolute;
+  top: 50%;
+  display: block;
+  margin-top: -10px;
+  padding: 0.25em;
+  cursor: pointer;
+  color: none;
+  border: none;
+  outline: none;
+  background: #ffca28;
+}
+
+//original selectors
+//.slick-prev:before, .slick-next:before
+%extend_arrow {
+  font-family: 'Glyphicons Halflings';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #1d4899;
+}
+
+
+.cal-title {
+  font-family: Immenhausen, serif;
+  color: #1d4899;
+  font-size: 23px;
+  margin: 0 auto;
+  width: 60%;
+  a {
+    position: absolute;
+    top: 50%;
+    //Instead of the line below you could use @include transform($scale, $rotate, $transx, $transy, $skewx, $skewy, $originx, $originy)
+    transform: translateY(-50%);
+  }
+}
+.title-wrapper {
+  vertical-align: middle;
+}
+.slick-prev {
+  @extend %extend_cal_slick;
+  left: -1em;
+  &:before {
+    @extend %extend_arrow;
+    content: "\e079";
+  }
+}
+.slick-next {
+  @extend %extend_cal_slick;
+  right: -1em;
+  &:before {
+    @extend %extend_arrow;
+    content: "\e080";
+  }
+}
+.tx-cal-controller .list-view {
+  .vevent {
+    clear: both;
+    margin-bottom: 0.5em;
+    abbr {
+      border: 0;
+      font-style: italic;
+    }
+    .dtstart-container {
+      float: left;
+    }
+    .summary {
+      margin-left: 4.25em;
+      //Instead of the line below you could use @include word-break($value)
+      word-break: break-word;
+      .location {
+        display: none;
+      }
+    }
+  }
+  .cal-row .month-wrapper {
+    border-right: 1px solid #1d4899;
+    height: 100%;
+    padding: 0 1em;
+  }
+  .month-wrapper h2 {
+    margin: 0.25em 0 0.5em 0;
+    padding: 0;
+  }
+}

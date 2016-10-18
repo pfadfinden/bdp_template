@@ -33,7 +33,7 @@
   }
 
   &.with-padding {
-    margin-right: 1rem;
+    margin-right: 0;
     padding: 1rem 1rem;
   }
   &.without-padding {
@@ -49,6 +49,9 @@
   .ce-gallery {
     margin-bottom: 0 !important;
   }
+}
+#designelement {
+  display: none;
 }
 @media #{$small-only} {
   .container {
@@ -85,5 +88,12 @@
     top: 0;
     right: -220px;
     width: 200px;
+  }
+}
+@media #{$large-and-up} {
+  #designelement {
+    position: absolute;
+    top: 0;
+    right: 0;
   }
 }

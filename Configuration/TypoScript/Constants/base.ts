@@ -39,6 +39,8 @@ plugin.tx_bdptemplate {
 
   page {
     # cat=bdp/links/010; type=int+; label= Impressum id
+    home = 1
+    # cat=bdp/links/010; type=int+; label= Impressum id
     imprint =
     # cat=bdp/links/020; type=int+; label= Suche id
     search =

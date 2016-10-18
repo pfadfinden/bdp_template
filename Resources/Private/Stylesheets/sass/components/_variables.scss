@@ -10,6 +10,7 @@
  *  4. Tables
  *  5. Typography
  *  6. Footer
+ *  7. Tables
  */
 
 
@@ -78,5 +79,12 @@ $h6-fontsize: 1rem !default;
    ========================================================================== */
 
 $footer-bg-color: $primary-color !default;
+
+/* 7. Tables
+   ========================================================================== */
+
+$table-border-color: #d0d0d0 !default;
+$table-striped-color: #f2f2f2 !default;
+
 
 

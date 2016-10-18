@@ -1,0 +1,20 @@
+.tx-ttaddress-pi1 {
+  .vcard {
+    overflow: hidden;
+    .photo {
+      float: left;
+    }
+    .address {
+      margin-left: 114px;
+      .name {
+        @extend h3;
+        @extend .bdp-yellow;
+        color: $secondary-color;
+      }
+      .title {
+        margin: 0.25em 0 1em 0;
+        font-style: italic;
+      }
+    }
+  }
+}
