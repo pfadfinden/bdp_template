@@ -13,18 +13,27 @@
   background-color: #ffffff;
   padding: 1em 1em;
   box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   h1 {
     color: $secondary-color;
     padding: 0;
+    &.bdp-yellow {
+      color: color("bdp-blue", "base");
+    }
   }
   h2 {
     color: $secondary-color;
     padding: 0;
+    &.bdp-yellow {
+      color: color("bdp-blue", "base");
+    }
   }
   h3 {
     color: $secondary-color;
     padding: 0;
+    &.bdp-yellow {
+      color: color("bdp-blue", "base");
+    }
   }
 
   &.transparent {
@@ -34,6 +43,7 @@
 
   &.with-padding {
     margin-right: 0;
+    margin-bottom: 0;
     padding: 1rem 1rem;
   }
   &.without-padding {

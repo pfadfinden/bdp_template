@@ -22,10 +22,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 1.1rem 0 0.5rem 0;
   color: #ffffff;
   padding: 0 13px;
-
-  -o-box-decoration-break: clone;
-  -webkit-box-decoration-break: clone;
-  box-decoration-break: clone;
   @media #{$medium-and-up} {
     padding: 0;
   }
@@ -40,9 +36,84 @@ h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($
 h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
 h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
 
+
+%extend_yellow_h {
+  color: color("bdp-blue", "base");
+  display: inline;
+  padding: 4px 4px 2px 4px !important;
+  margin: 0.5em 0 0.5em -2px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  -o-box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+h1 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h2 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h3 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h4 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h5 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h6 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+.headline {
+  @extend h3;
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+
 // Text Styles
 em { font-style: italic; }
 strong { font-weight: 500; }
 small { font-size: 75%; }
 .light { font-weight: 300; }
 .thin { font-weight: 200; }
+
+p {
+  margin: 0.75rem 0;
+  padding: 0;
+}
+%extend_hyphens{
+  // Automatische Silbentrennung
+  -moz-hyphens: auto;
+  -o-hyphens: auto;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+
+  -moz-hyphenate-limit-chars: 10 4 4;
+  -o-hyphenate-limit-chars: 10 4 4;
+  -webkit-hyphenate-limit-chars: 10 4 4;
+  -ms-hyphenate-limit-chars: 10 4 4;
+  hyphenate-limit-chars: 10 4 4;
+
+  -moz-hyphenate-limit-lines: 2;
+  -o-hyphenate-limit-lines: 2;
+  -webkit-hyphenate-limit-lines: 2;
+  -ms-hyphenate-limit-lines: 2;
+  hyphenate-limit-lines: 2;
+}

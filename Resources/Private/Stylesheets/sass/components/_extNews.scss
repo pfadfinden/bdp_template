@@ -14,6 +14,7 @@
             @extend .bdp-yellow;
             color: $secondary-color;
             letter-spacing: 0;
+            margin-left: 0;
             &:hover {
               text-decoration: none;
             }
