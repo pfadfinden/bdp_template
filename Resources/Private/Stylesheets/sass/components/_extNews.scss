@@ -83,3 +83,10 @@
     }
   }
 }
+.news-link-to-archiv {
+  @extend %extend_page_navigation;
+  text-align: center;
+  a {
+    color: #ffffff !important;
+  }
+}

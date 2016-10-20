@@ -47,5 +47,10 @@
       </div>
     </f:else>
   </f:if>
+  <f:if condition="{settings.templateLayout} == 20">
+    <div class="news-link-to-archiv">
+      <f:link.page pageUid="{settings.list.archivPageId}">Archiv</f:link.page>
+    </div>
+  </f:if>
 </f:section>
 </html>

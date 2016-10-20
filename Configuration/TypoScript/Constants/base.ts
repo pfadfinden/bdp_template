@@ -124,8 +124,15 @@ plugin.tx_bdptemplate {
     startingpoint =
     # cat=bdp/news/040; type=int+; label= Detailseite
     detailPid =
-    # cat=bdp/news/041; type=boolean; label= Anzeige des Datums auf der News Kachel
-    list.showDate = 0
+    list {
+      # cat=bdp/news/041; type=boolean; label= Anzeige des Datums auf der News Kachel
+      showDate = 0
+      # cat=bdp/news/042; type=boolean; label= Global: Anzeige des Links zur Archiv Seite
+      linkToArchivPage = 0
+      # cat=bdp/news/043; type=int+; label= Page Id der Archiv Seite
+      archivPageId =
+    }
+
 
     opengraph {
       # cat=bdp/news/050; type=string; label= News Opengraph Protocol Seitenname

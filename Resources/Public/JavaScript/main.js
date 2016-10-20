@@ -1,4 +1,10 @@
 $(document).ready(function() {
+
+  $('#responsivemenubutton').click(function() {
+    $('#nav-primary__menu').slideToggle("fast");
+    return false;
+  });
+
   function navSecondary() {
     if(window.innerWidth <= 768) {
       $('#nav-secondary').insertAfter('#main').show();
@@ -48,10 +54,6 @@ $(function() {
   var $containerMasonry = $('.masonry-container');
   $containerMasonry.imagesLoaded( function() {
     $containerMasonry.masonry({itemSelector: '.masonry-item'});
-  });
-
-  $('#responsivemenu a').click(function() {
-    $('#nav-primary__menu').slideToggle("fast");
   });
 
 });
