@@ -13,7 +13,7 @@
   background-color: #ffffff;
   padding: 1em 1em;
   box-shadow: 0 5px 5px rgba(0,0,0,0.1);
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   h1 {
     color: $secondary-color;
     padding: 0;
@@ -47,7 +47,7 @@
     padding: 1rem 1rem;
   }
   &.without-padding {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 0;
   }
   &.float-50 {
