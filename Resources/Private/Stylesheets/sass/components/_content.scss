@@ -79,6 +79,7 @@
   #main {
     padding-bottom: 286px;
     min-height: 400px;
+    min-height: calc(100vh - 327px);
     margin-bottom: 150px;
   }
   #content {
