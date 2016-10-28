@@ -1,7 +1,6 @@
 <div class="searchbox">
-  <form action="/index.php?id={settings.search}" method="POST">
-  <input type="submit" class="searchbox__submit" value="Suche" />
-  <input type="text" name="tx_indexedsearch[sword]" class="searchbox__input">
+  <form action="{f:uri.page(pageUid: settings.search)}" method="POST">
+    <input id="tx-indexedsearch-searchbox-button-submit" type="submit" class="searchbox__submit" name="tx_indexedsearch[submitButton]" value="{f:translate(key: 'search')}" />
+    <input id="tx-indexedsearch-searchbox-sword" type="text" name="tx_indexedsearch[sword]" class="searchbox__input">
   </form>
-
 </div>

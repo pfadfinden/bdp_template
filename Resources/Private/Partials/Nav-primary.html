@@ -6,6 +6,11 @@
                 <f:render partial="regionBranding" />
             </f:then>
         </f:if>
+        <f:if condition="{settings.languages.menu} != ''">
+            <f:then>
+                <f:render partial="languageMenu" />
+            </f:then>
+        </f:if>
         <f:cObject typoscriptObjectPath="lib.nav-secondary" />
     </div>
 </section>

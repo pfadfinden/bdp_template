@@ -10,7 +10,9 @@
         </f:else>
       </f:if>
 
-        <a href="/"><img class="responsive-img" src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
+      <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.root')}" noCache="0" accesskey="h">
+        <img class="responsive-img" src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/>
+      </f:link.page>
       </div>
       <div id="responsivemenu">
         <a id="responsivemenubutton" href="#" data-activates="mobile-nav" class="button-collapse">
@@ -21,7 +23,11 @@
         <div id="branding__region"><a href="/">{settings.region}</a></div>
       </f:if>
     </div>
-    <f:render partial="searchbox" arguments="{settings : settings}" />
+    <f:if condition="{settings.search} != ''">
+      <f:then>
+        <f:render partial="searchbox" arguments="{settings : settings}" />
+      </f:then>
+    </f:if>
   </header>
   <section id="main">
     <f:render partial="nav-primary" />

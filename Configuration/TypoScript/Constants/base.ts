@@ -1,4 +1,5 @@
 # customcategory=bdp=BdP Template
+# customsubcategory=languages=Sprachen
 # customsubcategory=tracking=Tracking
 # customsubcategory=news=News
 # customsubcategory=cal=Kalender
@@ -46,6 +47,16 @@ plugin.tx_bdptemplate {
     search =
     # cat=bdp/links/030; type=int+; label= Untermenü id
     nav-secondary =
+  }
+
+  languages {
+    # cat=bdp/languages/010; type=boolean; label= Aktiviere das Sprachwechseler Menü
+    menu = 1
+    # cat=bdp/languages/020; type=string; label= Sprache IDs
+    ids = 0,1,2
+    # cat=bdp/languages/030; type=string; label= Benennung zu den einzelnen Sprach IDs
+    names = Deutsch || English || Français
+
   }
 
   filepaths {

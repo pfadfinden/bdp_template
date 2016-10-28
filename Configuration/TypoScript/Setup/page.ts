@@ -56,6 +56,11 @@ page {
       region = {$plugin.tx_bdptemplate.config.region}
       regionlogo = {$plugin.tx_bdptemplate.config.regionBranding}
       search = {$plugin.tx_bdptemplate.page.search}
+      languages {
+        menu = {$plugin.tx_bdptemplate.languages.menu}
+      }
     }
+    extbase.pluginName = bdp_template
+    extbase.controllerExtensionName = bdp_template
   }
 }
