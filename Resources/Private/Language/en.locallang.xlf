@@ -4,8 +4,8 @@
         <header/>
         <body>
             <trans-unit id="languages" xml:space="preserve">
-                <source>Sprachen</source>
-                <target>Languages</target>
+                <source>International</source>
+                <target>International</target>
             </trans-unit>
             <trans-unit id="languages.de" xml:space="preserve">
                 <source>German</source>
