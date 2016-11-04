@@ -13,6 +13,8 @@ plugin.tx_bdptemplate {
   config {
     # cat=bdp/010; type=string; label= Basis URL
     domain = www.pfadfinden.de
+    # cat=bdp/012; type=string; label= URL Prefix
+    absRefPrefix = /
     # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
     region = Stamm Weiße Dose
     # cat=bdp/020; type=string; label= Regional Branding Image

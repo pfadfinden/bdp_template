@@ -16,6 +16,7 @@ config {
   no_cache = 0
 
   // URL Settings
+  absRefPrefix = {$plugin.tx_bdptemplate.config.absRefPrefix}
   tx_realurl_enable = 1
   simulateStaticDocuments = 0
 
