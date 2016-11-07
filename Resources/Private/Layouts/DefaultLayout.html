@@ -20,7 +20,11 @@
         </a>
       </div>
       <f:if condition="{settings.region} != ''">
-        <div id="branding__region"><a href="/">{settings.region}</a></div>
+        <div id="branding__region">
+          <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.root')}" noCache="0">
+            {settings.region}
+          </f:link.page>
+        </div>
       </f:if>
     </div>
     <f:if condition="{settings.search} != ''">

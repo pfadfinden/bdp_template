@@ -103,6 +103,7 @@
 }
 @media #{$large-and-up} {
   #designelement {
+    display: block;
     position: absolute;
     top: 0;
     right: 0;
