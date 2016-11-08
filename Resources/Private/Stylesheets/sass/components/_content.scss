@@ -1,12 +1,10 @@
 #content {
   p {
-    @extend %extend_hyphens;
   }
 }
 
 #content-fw {
   p {
-    @extend %extend_hyphens;
   }
 }
 .box {
