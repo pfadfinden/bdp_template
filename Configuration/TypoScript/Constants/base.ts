@@ -53,7 +53,7 @@ plugin.tx_bdptemplate {
 
   languages {
     # cat=bdp/languages/010; type=boolean; label= Aktiviere das Sprachwechseler Menü
-    menu = 1
+    menu = 0
     # cat=bdp/languages/020; type=string; label= Sprache IDs
     ids = 0,1,2
     # cat=bdp/languages/030; type=string; label= Benennung zu den einzelnen Sprach IDs
