@@ -1,0 +1,41 @@
+.teaser {
+  position: relative;
+  margin: 0 0 1rem 0;
+  display: inline-block;
+  img {
+    width: 100%;
+    height: auto;
+    max-width: 1300px;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.3);
+  }
+  .teaser__title {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    .teaser__titleline {
+      background: rgba(56,46,35,0.7);
+      padding: 0.05em 0.25em;
+      display: inline;
+      margin-bottom: 0.25em;
+      font-size: 2rem;
+      font-family: Immenhausen, serif;
+      color: $primary-color;
+    }
+  }
+  @media #{$medium-and-up} {
+    &+ #content {
+      margin-top: 1rem;
+    }
+    &+ #content-fw {
+      margin-top: 1rem;
+    }
+    .teaser__title {
+      position: absolute;
+      left: 240px;
+      bottom: 1em;
+      .teaser__titleline {
+        font-size: 4rem;
+      }
+    }
+  }
+}

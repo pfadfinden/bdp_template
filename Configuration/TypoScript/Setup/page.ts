@@ -16,11 +16,19 @@ page {
 
   10 = FLUIDTEMPLATE
   10 {
-    file = EXT:bdp_template/Resources/Private/Templates/defaultTemplate.html
-    layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/
-    partialRootPath = EXT:bdp_template/Resources/Private/Partials/
-    templateRootPath = EXT:bdp_template/Resources/Private/Templates/
-
+    templateName = defaultTemplate
+    layoutRootPaths {
+      10 = EXT:frontend/Resources/Private/Layouts
+      20 = EXT:bdp_template/Resources/Private/Layouts/
+    }
+    partialRootPaths {
+      10 = EXT:frontend/Resources/Private/Partials
+      20 = EXT:bdp_template/Resources/Private/Partials/
+    }
+    templateRootPaths {
+      10 = EXT:frontend/Resources/Private/Templates
+      20 = EXT:bdp_template/Resources/Private/Templates/
+    }
     variables {
       layout = TEXT
       layout.data = register:pageLayout
@@ -48,6 +56,11 @@ page {
       region = {$plugin.tx_bdptemplate.config.region}
       regionlogo = {$plugin.tx_bdptemplate.config.regionBranding}
       search = {$plugin.tx_bdptemplate.page.search}
+      languages {
+        menu = {$plugin.tx_bdptemplate.languages.menu}
+      }
     }
+    extbase.pluginName = bdp_template
+    extbase.controllerExtensionName = bdp_template
   }
 }

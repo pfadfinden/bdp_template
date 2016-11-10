@@ -1,4 +1,5 @@
 # customcategory=bdp=BdP Template
+# customsubcategory=languages=Sprachen
 # customsubcategory=tracking=Tracking
 # customsubcategory=news=News
 # customsubcategory=cal=Kalender
@@ -12,6 +13,8 @@ plugin.tx_bdptemplate {
   config {
     # cat=bdp/010; type=string; label= Basis URL
     domain = www.pfadfinden.de
+    # cat=bdp/012; type=string; label= URL Prefix
+    absRefPrefix = /
     # cat=bdp/020; type=string; label= Regionalzeile: Angabe des Landesverbands, Bezirk oder Stamm unter Wort-Bild Marke.
     region = Stamm Weiße Dose
     # cat=bdp/020; type=string; label= Regional Branding Image
@@ -39,6 +42,8 @@ plugin.tx_bdptemplate {
 
   page {
     # cat=bdp/links/010; type=int+; label= Impressum id
+    home = 1
+    # cat=bdp/links/010; type=int+; label= Impressum id
     imprint =
     # cat=bdp/links/020; type=int+; label= Suche id
     search =
@@ -46,13 +51,23 @@ plugin.tx_bdptemplate {
     nav-secondary =
   }
 
+  languages {
+    # cat=bdp/languages/010; type=boolean; label= Aktiviere das Sprachwechseler Menü
+    menu = 0
+    # cat=bdp/languages/020; type=string; label= Sprache IDs
+    ids = 0,1,2
+    # cat=bdp/languages/030; type=string; label= Benennung zu den einzelnen Sprach IDs
+    names = Deutsch || English || Français
+
+  }
+
   filepaths {
     # cat=bdp/paths/010; type=string; label= Template Dateien
     templates = EXT:bdp_template/Resources/Private/
     # cat=bdp/paths/020; type=string; label= CSS Dateien
-    css = EXT:bdp_template/Resources/Public/Stylesheets/
+    css = EXT:bdp_template/Resources/Public/Media/Css/
     # cat=bdp/paths/030; type=string; label= Bild Dateien
-    images = EXT:bdp_template/Resources/Public/Images/
+    images = EXT:bdp_template/Resources/Public/Media/Images/
     # cat=bdp/paths/040; type=string; label= JavaScript Dateien
     javascript = EXT:bdp_template/Resources/Public/JavaScript/
     # cat=bdp/paths/050; type=string; label= Webfont Dateien
@@ -122,6 +137,15 @@ plugin.tx_bdptemplate {
     startingpoint =
     # cat=bdp/news/040; type=int+; label= Detailseite
     detailPid =
+    list {
+      # cat=bdp/news/041; type=boolean; label= Anzeige des Datums auf der News Kachel
+      showDate = 0
+      # cat=bdp/news/042; type=boolean; label= Global: Anzeige des Links zur Archiv Seite
+      linkToArchivPage = 0
+      # cat=bdp/news/043; type=int+; label= Page Id der Archiv Seite
+      archivPageId =
+    }
+
 
     opengraph {
       # cat=bdp/news/050; type=string; label= News Opengraph Protocol Seitenname

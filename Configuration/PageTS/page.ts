@@ -87,3 +87,8 @@ tx_gridelements {
 
     }
 }
+
+//news Templates
+tx_news.templateLayouts {
+    20 = Mit Archiv Link
+}

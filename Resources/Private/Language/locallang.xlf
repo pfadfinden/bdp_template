@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.0">
+    <file source-language="de" datatype="plaintext" original="messages" date="2016-10-26T00:00:00Z" product-name="bdp_template">
+        <header/>
+        <body>
+            <trans-unit id="languages" xml:space="preserve">
+                <source>International</source>
+            </trans-unit>
+            <trans-unit id="languages.de" xml:space="preserve">
+                <source>Deutsch</source>
+            </trans-unit>
+            <trans-unit id="languages.en" xml:space="preserve">
+                <source>Englisch</source>
+            </trans-unit>
+            <trans-unit id="imprint" xml:space="preserve">
+                <source>Impressum</source>
+            </trans-unit>
+            <trans-unit id="search" xml:space="preserve">
+                <source>Suche</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

@@ -1,6 +1,6 @@
 lib.nav-footer = COA
 lib.nav-footer {
-	wrap = <div class="grid-u-1-2"><ul id="nav-footer__menu">|</ul></div>
+	wrap = <div class="col s12 m6 l6"><ul id="nav-footer__menu">|</ul></div>
 
 	7 = TEXT
 	7.wrap = <li class="footer_privacy">|</li>

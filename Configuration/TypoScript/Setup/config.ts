@@ -16,6 +16,7 @@ config {
   no_cache = 0
 
   // URL Settings
+  absRefPrefix = {$plugin.tx_bdptemplate.config.absRefPrefix}
   tx_realurl_enable = 1
   simulateStaticDocuments = 0
 
@@ -56,8 +57,3 @@ config {
   pageTitleSeparator = |
   pageTitleSeparator.noTrimWrap = | | |
 }
-
-config.baseURL = http://{$plugin.tx_bdptemplate.config.domain}/
-[globalString = IENV:TYPO3_SITE_URL=https://{$config.domain}/]
-config.baseURL = https://{$plugin.tx_bdptemplate.config.domain}/
-[global]

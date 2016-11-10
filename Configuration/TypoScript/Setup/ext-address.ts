@@ -8,7 +8,7 @@ plugin.tx_ttaddress_pi1 {
 
     templates.landesverbaende {
         # supports the hcard microformats standard
-        allWrap = <div class="masonry-container">|</div>
+        allWrap = <div class="masonry-container row">|</div>
         first_name {
             innerWrap = <span class="fn">|
             innerWrap.if.isFalse.field = middle_name
@@ -105,7 +105,7 @@ plugin.tx_ttaddress_pi1 {
     }
 
     templates.mitarbeitende {
-        allWrap = <div class="masonry-container">|</div>
+        allWrap = <div class="masonry-container row">|</div>
 
         image {
             params = class="photo"
@@ -121,11 +121,11 @@ plugin.tx_ttaddress_pi1 {
         }
 
         first_name {
-            innerWrap = <div class="fn"><div class="header-blaugelb">|
+            innerWrap = <div class="fn"><div class="name">|
             innerWrap.if.isFalse.field = middle_name
             innerWrap2 = <span class="given-name">|</span>
             innerWrap2.if.isTrue.field = middle_name
-            outerWrap = <div class="fn n"><div class="header-blaugelb">|
+            outerWrap = <div class="fn n"><div class="name">|
             outerWrap.if.isTrue.field = middle_name
         }
 

@@ -1,0 +1,99 @@
+a {
+  color: $secondary-color;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:visited {
+    color: $secondary-color;
+  }
+}
+
+html{
+  line-height: 1.5;
+  font-size: 14px;
+  font-family: 'Roboto', 'Verdana', 'Arial', sans-serif;
+  color: #000000;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Immenhausen', serif;
+  font-weight: 400;
+  line-height: 1.1;
+  margin: 1.1rem 0 0.5rem 0;
+  color: #ffffff;
+  padding: 0 13px;
+  @media #{$medium-and-up} {
+    padding: 0;
+  }
+}
+
+// Header Styles
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
+h1 { font-size: $h1-fontsize; line-height: 110%; margin: ($h1-fontsize / 2) 0 ($h1-fontsize / 2.5) 0;}
+h2 { font-size: $h2-fontsize; line-height: 110%; margin: ($h2-fontsize / 2) 0 ($h2-fontsize / 2.5) 0;}
+h3 { font-size: $h3-fontsize; line-height: 110%; margin: ($h3-fontsize / 2) 0 ($h3-fontsize / 2.5) 0;}
+h4 { font-size: $h4-fontsize; line-height: 110%; margin: ($h4-fontsize / 2) 0 ($h4-fontsize / 2.5) 0;}
+h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($h5-fontsize / 2.5) 0;}
+h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
+
+
+%extend_yellow_h {
+  color: color("bdp-blue", "base");
+  display: inline;
+  padding: 4px 4px 3px 4px !important;
+  margin: 0.5em 0 0.5em -2px;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  -o-box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+h1 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h2 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h3 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h4 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h5 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+h6 {
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+.headline {
+  @extend h3;
+  &.bdp-yellow {
+    @extend %extend_yellow_h;
+  }
+}
+
+// Text Styles
+em { font-style: italic; }
+strong { font-weight: 500; }
+small { font-size: 75%; }
+.light { font-weight: 300; }
+.thin { font-weight: 200; }
+
+p {
+  margin: 0.75rem 0;
+  padding: 0;
+}

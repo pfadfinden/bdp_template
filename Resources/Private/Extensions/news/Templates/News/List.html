@@ -12,10 +12,10 @@
     <f:then>
       <f:if condition="{settings.hidePagination}">
         <f:then>
-          <div class="masonry-container">
+          <div class="masonry-container row">
             <div class="news-list-view">
               <f:for each="{news}" as="newsItem" iteration="iterator">
-                <article class="masonry-item masonry-item-3">
+                <article class="masonry-item col s12 m6 l4">
                   <div class="news_item">
                     <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                   </div>
@@ -26,10 +26,10 @@
         </f:then>
         <f:else>
           <n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit}">
-            <div class="masonry-container">
+            <div class="masonry-container row">
               <div class="news-list-view">
                 <f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-                  <article class="masonry-item masonry-item-3">
+                  <article class="masonry-item col s12 m6 l4">
                     <div class="news_item">
                       <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                     </div>
@@ -46,6 +46,11 @@
         <f:translate key="list_nonewsfound" />
       </div>
     </f:else>
+  </f:if>
+  <f:if condition="{settings.templateLayout} == 20">
+    <div class="news-link-to-archiv">
+      <f:link.page pageUid="{settings.list.archivPageId}">Archiv</f:link.page>
+    </div>
   </f:if>
 </f:section>
 </html>

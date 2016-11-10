@@ -18,6 +18,7 @@
 						}">
 						<a href="{f:uri.image(src:'{mediaElement.uid}', treatIdAsReference:1, maxWidth:'{settings.detail.media.image.lightbox.maxWidth}', maxHeight:'{settings.detail.media.image.lightbox.maxHeight}')}" title="{mediaElement.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
 							<f:image
+									class="responsive-img"
 									src="{mediaElement.uid}"
 									treatIdAsReference="1"
 									title="{mediaElement.title}"
@@ -30,7 +31,7 @@
 					</f:alias>
 				</f:then>
 				<f:else>
-					<f:image src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
+					<f:image class="responsive-img" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{settings.list.media.image.maxWidth}" maxHeight="{settings.list.media.image.maxHeight}" />
 				</f:else>
 			</f:if>
 		</f:else>

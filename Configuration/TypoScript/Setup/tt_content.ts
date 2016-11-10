@@ -2,19 +2,19 @@ tt_content.stdWrap.innerWrap.cObject = CASE
 tt_content.stdWrap.innerWrap.cObject {
 	key.field = layout
 	default = TEXT
-	default.value = <div class="csc-default">|</div>
+	default.value = <div class="box">|</div>
 	1 = TEXT
-	1.value = <div class="csc-frame csc-frame-frame1">|</div>
+	1.value = <div class="box bdp-yellow">|</div>
 	2 = TEXT
-	2.value = <div class="csc-frame csc-frame-frame2">|</div>
+	2.value = <div class="box bdp-blue">|</div>
 	3 = TEXT
-	3.value = <div class="csc-frame csc-frame-frame3">|</div>
+	3.value = <div class="box bdp-red">|</div>
 	4 = TEXT
-	4.value = <div class="csc-frame csc-frame-frame4">|</div>
+	4.value = <div class="box transparent with-padding">|</div>
 	5 = TEXT
-	5.value = <div class="csc-frame-frame5">|</div>
+	5.value = <div class="box without-padding">|</div>
 	6 = TEXT
-	6.value = <div class="csc-frame csc-frame-frame6">|</div>
+	6.value = <div class="box float-50">|</div>
 	7 = TEXT
 	7.value = |
 }
@@ -29,7 +29,7 @@ lib.fluidContent.settings.media.popup {
 
 tt_content.uploads {
 	# 20.renderObj.wrap.cObject.20.value = <li class="{register:oddEvenClass} {register:elementClass}">|</li>
-	20.renderObj.wrap.cObject.20.value = <div class="masonry-item masonry-item-2"><div class="csc-default">|</div></div>
+	20.renderObj.wrap.cObject.20.value = <div class="masonry-item masonry-item-2"><div class="box">|</div></div>
 	20.renderObj.20.wrap = <h2 class="csc-uploads-title">|</h2>
 
 	20.renderObj {

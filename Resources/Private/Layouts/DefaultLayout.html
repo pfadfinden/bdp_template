@@ -10,20 +10,30 @@
         </f:else>
       </f:if>
 
-        <a href="/"><img src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/></a>
+      <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.root')}" noCache="0" accesskey="h">
+        <img class="responsive-img" src="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png" width="390" height="79" srcset="//cdn.pfadfinden.de/gfx/logos/bundeszeichen_1.png 1x, //cdn.pfadfinden.de/gfx/logos/bundeszeichen_1@2x.png 2x" alt="Bund der Pfadfinderinnen und Pfadfinder"/>
+      </f:link.page>
       </div>
       <div id="responsivemenu">
-        <a href="javascript:void(0);">
-          <img alt="Suche und Navigation zeigen" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAAU0lEQVRYhe3UMQrAIBBE0Y/HE+/fGSToOZJKYmHKTZP/YMFudhEGJD0KcABX8FQg7xY4Pwif02ZoWhZY39G2WQUYxF/fefkCyR6wByR7wB6Q/ukGPHLwi9CjDYcAAAAASUVORK5CYII="/><span aria-hidden="true"><br>Menü</span>
+        <a id="responsivemenubutton" href="#" data-activates="mobile-nav" class="button-collapse">
+          <i class="material-icons">menu</i>
         </a>
       </div>
       <f:if condition="{settings.region} != ''">
-        <div id="branding__region"><a href="/">{settings.region}</a></div>
+        <div id="branding__region">
+          <f:link.page pageUid="{f:cObject(typoscriptObjectPath: 'lib.root')}" noCache="0">
+            {settings.region}
+          </f:link.page>
+        </div>
       </f:if>
     </div>
-    <f:render partial="searchbox" arguments="{settings : settings}" />
+    <f:if condition="{settings.search} != ''">
+      <f:then>
+        <f:render partial="searchbox" arguments="{settings : settings}" />
+      </f:then>
+    </f:if>
   </header>
-  <section id="main" class="clearfix">
+  <section id="main">
     <f:render partial="nav-primary" />
     <f:render partial="{layout}" arguments="{_all}"/>
   </section>

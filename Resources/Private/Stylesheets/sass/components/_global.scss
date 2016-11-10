@@ -1,0 +1,28 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html{
+  background: url(//cdn.pfadfinden.de/gfx/backgrounds/holzhintergrund_1.jpg);
+}
+@media #{$medium-and-up} {
+  #wrap {
+    background: url(//cdn.pfadfinden.de/gfx/objects/klufthemd_1.png) no-repeat;
+  }
+}
+
+audio, canvas, img, svg, video {
+  vertical-align: middle;
+}
+
+figure {
+  margin: 0;
+}
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+}

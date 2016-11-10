@@ -1,0 +1,87 @@
+// Utility Color Classes
+
+// Bund der Pfadfinderinnen und Pfadfinder e.V. Color Palette defined: https://meinbdp.de/display/OeArbeit/Schriften+und+Farbe
+
+$bdp-blue:(
+        "base":   #1d4899,
+        "light":  #009ddd,
+);
+
+$bdp-yellow:(
+        "base":   #ffcb04,
+);
+
+$bdp-red:(
+        "base":   #d30014,
+);
+
+$bdp-brown:(
+        "base":   #6b5c48,
+);
+
+
+$colors: (
+        "bdp-yellow": $bdp-yellow,
+        "bdp-blue": $bdp-blue,
+        "bdp-red": $bdp-red,
+        "bdp-brown": $bdp-brown,
+);
+
+
+// Color Classes
+
+@each $color_name, $color in $colors {
+  @each $color_type, $color_value in $color {
+    @if $color_type == "base" {
+      .#{$color_name} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text {
+        color: $color_value !important;
+      }
+    }
+    @else if $color_name != "shades" {
+      .#{$color_name}.#{$color_type} {
+        background-color: $color_value !important;
+      }
+      .#{$color_name}-text.text-#{$color_type} {
+        color: $color_value !important;
+      }
+    }
+  }
+}
+
+
+// usage: color("name_of_color", "type_of_color")
+// to avoid to repeating map-get($colors, ...)
+
+@function color($color, $type) {
+  @if map-has-key($colors, $color) {
+    $curr_color: map-get($colors, $color);
+    @if map-has-key($curr_color, $type) {
+      @return map-get($curr_color, $type);
+    }
+  }
+  @warn "Unknown `#{name}` in $colors.";
+  @return null;
+}
+.bdp-yellow {
+  h1,h2,h3,h4,h5,h6 {
+    color: #ffffff !important;
+  }
+}
+.bdp-blue {
+  color: #ffffff;
+  h1,h2,h3,h4,h5,h6 {
+    color: #ffffff !important;
+  }
+  a {
+    color: #ffffff !important;
+  }
+}
+.bdp-red {
+  color: #ffffff;
+  h1,h2,h3,h4,h5,h6 {
+    color: #ffffff !important;
+  }
+}
