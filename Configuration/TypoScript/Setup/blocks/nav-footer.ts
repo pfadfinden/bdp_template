@@ -1,6 +1,6 @@
 lib.nav-footer = COA
 lib.nav-footer {
-	wrap = <div class="col s12 m6 l6"><ul id="nav-footer__menu">|</ul></div>
+	wrap = <div class="col s12 m6 l6 no-print"><ul id="nav-footer__menu">|</ul></div>
 
 	7 = TEXT
 	7.wrap = <li class="footer_privacy">|</li>
@@ -13,4 +13,8 @@ lib.nav-footer {
 	30 = TEXT
 	30.value = <a id="bookmarkme" href="#">Seite zu den Favoriten hinzuf&uuml;gen</a>
 	30.wrap = <li class="footer_favorite">|</li>
+
+	40 = TEXT
+	40.value = <a href="/typo3/">Login</a>
+	40.wrap = <li class="footer_login">|</li>
 }
