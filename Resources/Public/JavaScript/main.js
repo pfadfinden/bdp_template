@@ -33,7 +33,7 @@ $(document).ready(function() {
           {id:'pinterest', label:'Pin it', url:'http://www.pinterest.com/pin/create/button/?url={{url}}&media={{image_url}}&description={{text}}'}
         ]
       },
-      events      = {};
+      events      = { };
 
   $('#wrap').photoSwipe(slideSelector, options, events);
 });
@@ -50,10 +50,19 @@ $(function() {
       return true;
     }
   });
-  
-  var $containerMasonry = $('.masonry-container');
-  $containerMasonry.imagesLoaded( function() {
-    $containerMasonry.masonry({itemSelector: '.masonry-item'});
+
+
+  // init Masonry
+  var $containerMasonry = $('.masonry-container').masonry({
+      // set itemSelector so .grid-sizer is not used in layout
+      itemSelector: '.masonry-item',
+      // use element for option
+      columnWidth: '.masonry-item',
+      percentPosition: true
+  });
+  // layout Masonry after each image loads
+  $containerMasonry.imagesLoaded().progress( function() {
+      $containerMasonry.masonry('layout');
   });
 
 });

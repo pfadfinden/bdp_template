@@ -1,0 +1,46 @@
+@media print {
+  @page {
+    size: A4;
+    margin: 1.0cm;
+  }
+
+  html, body {
+    width: 210mm;
+    height: 297mm;
+  }
+  body {
+    padding-bottom: 1cm;
+    padding-left: 0.5cm;
+    padding-right: 0.5cm;
+    padding-top: 1cm;
+    margin: 0;
+  }
+  #wrap, #content, #content-fw {
+    //width:  80rem;
+  }
+  #content {
+    margin: 0 !important;
+  }
+  #branding {
+    #branding__region a {
+      color: #000000;
+      background: none;
+    }
+  }
+  .masonry-container {
+    .masonry-item {
+      position: static !important;
+      display: inline-block;
+    }
+  }
+  .news {
+    .news-list-view {
+      .news_item {
+        .news-img-wrap {
+          page-break-inside: avoid;
+        }
+      }
+    }
+  }
+
+}
