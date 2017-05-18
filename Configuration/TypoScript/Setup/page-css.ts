@@ -29,5 +29,10 @@ page {
     photoswipeUI.external = 1
     photoswipeUI.disableCompression = 1
     photoswipeUI.excludeFromConcatenation = 1
+    gutenberg         = https://unpkg.com/gutenberg-css@0.4
+    gutenberg.external = 1
+    gutenberg.disableCompression = 1
+    gutenberg.excludeFromConcatenation = 1
+    gutenberg.media = print
     }
 }

@@ -37,8 +37,7 @@ h5 { font-size: $h5-fontsize; line-height: 110%; margin: ($h5-fontsize / 2) 0 ($
 h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($h6-fontsize / 2.5) 0;}
 
 
-%extend_yellow_h {
-  color: color("bdp-blue", "base");
+%extend_h {
   display: inline;
   padding: 4px 4px 3px 4px !important;
   margin: 0.5em 0 0.5em -2px;
@@ -49,6 +48,19 @@ h6 { font-size: $h6-fontsize; line-height: 110%; margin: ($h6-fontsize / 2) 0 ($
   box-decoration-break: clone;
 }
 
+%extend_yellow_h {
+  @extend %extend_h;
+  color: color("bdp-blue", "base");
+}
+%extend_red_h {
+  @extend %extend_h;
+  color: #ffffff;
+}
+%extend_blue_h {
+  @extend %extend_h;
+  color: #ffffff;
+}
+
 h1 {
   &.bdp-yellow {
     @extend %extend_yellow_h;
@@ -57,6 +69,12 @@ h1 {
 h2 {
   &.bdp-yellow {
     @extend %extend_yellow_h;
+  }
+  &.bdp-red {
+    @extend %extend_red_h;
+  }
+  &.bdp-blue {
+    @extend %extend_blue_h;
   }
 }
 h3 {

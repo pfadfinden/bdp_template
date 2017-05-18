@@ -18,6 +18,8 @@ TCEFORM.tt_content {
 
     header_layout {
         addItems.80 = Blau/Gelb
+        addItems.81 = Weiß/Rot
+        addItems.82 = Weiß/Blau
     }
     header_position.disabled = 1
 }

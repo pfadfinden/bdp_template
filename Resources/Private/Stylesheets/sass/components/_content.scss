@@ -25,6 +25,12 @@
     &.bdp-yellow {
       color: color("bdp-blue", "base");
     }
+    &.bdp-red {
+      color: #ffffff;
+    }
+    &.bdp-blue {
+      color: #ffffff;
+    }
   }
   h3 {
     color: $secondary-color;
