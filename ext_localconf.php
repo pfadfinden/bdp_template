@@ -5,5 +5,5 @@ if (!defined('TYPO3_MODE')) {
 
 if (TYPO3_MODE === 'BE') {
 	// Register backend layout data provider
-	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['BackendLayoutDataProvider']['bdptemplate'] = 'bdp\\BdpTemplate\\Provider\\FileProvider';
+	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['BackendLayoutDataProvider']['bdptemplate'] = 'Pfadfinden\\BdpTemplate\\Provider\\FileProvider';
 }
