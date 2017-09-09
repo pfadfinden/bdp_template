@@ -1,6 +1,6 @@
 <?php
 
-namespace bdp\BdpTemplate\Provider;
+namespace Pfadfinden\BdpTemplate\Provider;
 
 /***************************************************************
  *  Copyright notice

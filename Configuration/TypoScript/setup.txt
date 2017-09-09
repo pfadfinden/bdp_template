@@ -1,2 +1,3 @@
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/" extensions="ts">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/blocks/" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Extensions/" extensions="ts">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Blocks/" extensions="ts">

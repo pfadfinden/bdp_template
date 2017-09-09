@@ -1,9 +1,9 @@
 plugin.tx_news {
   _CSS_DEFAULT_STYLE >
   view {
-    templateRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Templates/
-    partialRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Partials/
-    layoutRootPaths.1 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Layouts/
+    templateRootPaths.3 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Templates/
+    partialRootPaths.3 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Partials/
+    layoutRootPaths.3 = {$plugin.tx_bdptemplate.filepaths.templates}Extensions/news/Layouts/
   }
   settings {
     cssFile >

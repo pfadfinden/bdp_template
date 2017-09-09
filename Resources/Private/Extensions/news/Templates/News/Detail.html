@@ -29,25 +29,45 @@
         </f:if>
         <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
       </n:format.nothing>
-      <div class="csc-header">
+      <f:if condition="{settings.detail.showPrevNext}">
+        <n:simplePrevNext pidList="{newsItem.pid}" news="{newsItem}" as="paginated" sortField="datetime">
+          <f:if condition="{paginated}">
+            <ul class="pager">
+              <f:if condition="{paginated.prev}">
+                <li class="previous">
+                  <n:link newsItem="{paginated.prev}" settings="{settings}">
+                    <span aria-hidden="true">&larr; </span>{paginated.prev.title}
+                  </n:link>
+                </li>
+              </f:if>
+              <f:if condition="{paginated.next}">
+                <li class="next">
+                  <n:link newsItem="{paginated.next}" settings="{settings}" class="next">
+                    {paginated.next.title} <span aria-hidden="true"> &rarr;</span>
+                  </n:link>
+                </li>
+              </f:if>
+            </ul>
+          </f:if>
+        </n:simplePrevNext>
+      </f:if>
+      <div class="header">
         <h1 itemprop="headline">{newsItem.title}</h1>
       </div>
       <div class="box">
-        <f:if condition="{newsItem.falMediaPreviews}">
-          <f:alias map="{mediaElement: newsItem.falMediaPreviews.0}">
+        <f:if condition="{newsItem.mediaPreviews}">
+          <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
             <f:if condition="{mediaElement.originalResource.type} == 2">
               <f:if condition="{settings.detail.media.image.lightbox.enabled}">
                 <f:then>
                   <f:image
                           class="lightbox responsive-img"
-                          src="{mediaElement.uid}"
-                          treatIdAsReference="1"
+                          image="{mediaElement}"
                           title="{mediaElement.originalResource.title}"
                           alt="{mediaElement.originalResource.alternative}"
                           maxWidth="{settings.detail.media.image.maxWidth}"
                           maxHeight="{settings.detail.media.image.maxHeight}"
-                          data="{original-src:'{f:uri.image(src:mediaElement.uid, treatIdAsReference:1, maxWidth:settings.detail.media.image.lightbox.maxWidth, maxHeight:settings.detail.media.image.lightbox.maxHeight)}'}"
-                  />
+                          data="{original-src:'{f:uri.image(image:mediaElement, maxWidth:settings.detail.media.image.lightbox.maxWidth, maxHeight:settings.detail.media.image.lightbox.maxHeight)}', original-src-width: '{mediaElement.originalResource.originalFile.properties.width}', original-src-height: '{mediaElement.originalResource.originalFile.properties.height}'}" />
                 </f:then>
                 <f:else>
                   <f:image class="responsive-img" src="{mediaElement.uid}" treatIdAsReference="1" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{settings.detail.media.image.maxWidth}" maxHeight="{settings.detail.media.image.maxHeight}" />
@@ -55,7 +75,7 @@
               </f:if>
             </f:if>
             <f:if condition="{mediaElement.originalResource.type} == 4">
-              <f:render partial="Detail/FalMediaVideo" arguments="{mediaElement: mediaElement}" />
+              <f:render partial="Detail/mediaVideo" arguments="{mediaElement: mediaElement}" />
             </f:if>
           </f:alias>
         </f:if>
@@ -70,7 +90,8 @@
 					</span>
           </p>
         </div>
-
+        <!-- what ist this -->
+        <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
         <f:if condition="{newsItem.teaser}">
           <!-- teaser -->
           <div class="teaser-text" itemprop="description">
@@ -87,6 +108,7 @@
         <main class="news-text-wrap" itemprop="articleBody">
           <f:format.html>{newsItem.bodytext}</f:format.html>
         </main>
+      </n:renderMedia>
 
         <f:if condition="{settings.backPid}">
           <!-- Link Back -->
@@ -104,22 +126,7 @@
             and it will be used automatically!
           </f:comment>
           <n:extensionLoaded extensionKey="rx_shariff">
-            <f:then>
-              <f:render partial="Detail/Shariff" />
-            </f:then>
-            <f:else>
-              <div class="social">
-                <div class="like">
-                  <n:social.facebook.like />
-                </div>
-                <div class="share">
-                  <n:social.facebook.share />
-                </div>
-                <div class="twitter">
-                  <n:social.twitter>Twitter</n:social.twitter>
-                </div>
-              </div>
-            </f:else>
+            <f:render partial="Detail/Shariff" />
           </n:extensionLoaded>
         </f:if>
 
@@ -153,14 +160,14 @@
             </div>
           </f:if>
 
-          <f:if condition="{newsItem.falRelatedFiles}">
-            <!-- FAL related files -->
+          <f:if condition="{newsItem.relatedFiles}">
+            <!-- related files -->
             <div class="news-related news-related-files">
               <h4>
                 <f:translate key="related-files" />
               </h4>
               <ul>
-                <f:for each="{newsItem.falRelatedFiles}" as="relatedFile">
+                <f:for each="{newsItem.relatedFiles}" as="relatedFile">
                   <li>
 									<span class="news-related-files-link">
 										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
@@ -194,7 +201,7 @@
           </f:if>
         </div>
       </div>
-      <f:render partial="Detail/FalMediaContainer" arguments="{media: newsItem.falMedia, settings:settings}" />
+      <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.media, settings:settings}" />
     </f:then>
     <f:else>
 

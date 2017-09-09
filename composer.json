@@ -1,0 +1,41 @@
+{
+  "name": "pfadfinden/bdptemplate",
+  "type": "typo3-cms-extension",
+  "version": "2.4.0",
+  "description": "BdP Webseiten Layout als Extension für das Content Management System TYPO3",
+  "keywords": [
+    "TYPO3",
+    "extension",
+    "Pfadfinden",
+    "BdP"
+  ],
+  "homepage": "http://www.pfadfinden.de",
+  "authors": [
+    {
+      "name": "Christian Schrebe",
+      "role": "Developer",
+      "email": "christian.schrebe@pfadfinden.de",
+      "homepage": "https://christian.schrebe.de"
+    },
+    {
+      "name": "Philipp Steinmetzger",
+      "role": "Developer",
+      "email": "philipp.steinmetzger@pfadfinden.de"
+    }
+  ],
+  "license": [
+    "MIT"
+  ],
+  "require": {
+    "typo3/cms-core": "^7.6.18 || >=8.7.0 <9"
+  },
+  "suggest": {
+  },
+  "require-dev": {
+  },
+  "autoload": {
+    "psr-4": {
+      "Pfadfinden\\BdpTemplate\\": "Classes"
+    }
+  }
+}
