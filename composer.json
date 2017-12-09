@@ -1,7 +1,7 @@
 {
   "name": "pfadfinden/bdptemplate",
   "type": "typo3-cms-extension",
-  "version": "2.4.0",
+  "version": "3.0.0",
   "description": "BdP Webseiten Layout als Extension für das Content Management System TYPO3",
   "keywords": [
     "TYPO3",
@@ -27,7 +27,7 @@
     "MIT"
   ],
   "require": {
-    "typo3/cms-core": "^7.6.18 || >=8.7.0 <9"
+    "typo3/cms-core": "^8.7.8 || >=8.7.0 <9"
   },
   "suggest": {
   },
