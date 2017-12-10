@@ -18,7 +18,7 @@ page {
     photoswipe.external = 1
     photoswipe.excludeFromConcatenation = 1
     photoswipe.disableCompression = 1
-    masonry             = {$plugin.tx_bdptemplate.filepaths.cdn}libs/masonry/masonry.pkgd.min.js
+    masonry             = {$plugin.tx_bdptemplate.filepaths.cdn}library/masonry/4.2.0/masonry.pkgd.min.js
     masonry.external    = 1
     masonry.excludeFromConcatenation = 1
     masonry.disableCompression = 1
