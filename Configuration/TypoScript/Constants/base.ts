@@ -75,30 +75,30 @@ plugin.tx_bdptemplate {
     # cat=bdp/paths/060; type=string; label= Extensiontemplates
     extensiontemplates = EXT:bdp_template/Resources/Private/Extensions/
     # cat=bdp/paths/070; type=string; label= CDN Pfad: URL zu Content Delivery Network
-    cdn = //cdn.pfadfinden.de/
+    cdn = https://cdn.pfadfinden.de/
   }
 
   favicon {
-    apple-touch-icon-57x57 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-57x57.png
-    apple-touch-icon-60x60 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-60x60.png
-    apple-touch-icon-72x72 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-72x72.png
-    apple-touch-icon-76x76 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-76x76.png
-    apple-touch-icon-114x114 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-114x114.png
-    apple-touch-icon-120x120 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-120x120.png
-    apple-touch-icon-144x144 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-144x144.png
-    apple-touch-icon-152x152 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-152x152.png
-    apple-touch-icon-180x180 = //cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-180x180.png
-    favicon-32x32 = //cdn.pfadfinden.de/gfx/favicons/bdp/favicon-32x32.png
-    android-chrome-192x192 = //cdn.pfadfinden.de/gfx/favicons/bdp/android-chrome-192x192.png
-    favicon-96x96 = //cdn.pfadfinden.de/gfx/favicons/bdp/favicon-96x96.png
-    favicon-16x16 = //cdn.pfadfinden.de/gfx/favicons/bdp/favicon-16x16.png
-    manifest = //cdn.pfadfinden.de/gfx/favicons/bdp/manifest.json
-    safari-pinned-tab = //cdn.pfadfinden.de/gfx/favicons/bdp/safari-pinned-tab.svg
+    apple-touch-icon-57x57 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-57x57.png
+    apple-touch-icon-60x60 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-60x60.png
+    apple-touch-icon-72x72 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-72x72.png
+    apple-touch-icon-76x76 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-76x76.png
+    apple-touch-icon-114x114 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-114x114.png
+    apple-touch-icon-120x120 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-120x120.png
+    apple-touch-icon-144x144 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-144x144.png
+    apple-touch-icon-152x152 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-152x152.png
+    apple-touch-icon-180x180 = https://cdn.pfadfinden.de/gfx/favicons/bdp/apple-touch-icon-180x180.png
+    favicon-32x32 = https://cdn.pfadfinden.de/gfx/favicons/bdp/favicon-32x32.png
+    android-chrome-192x192 = https://cdn.pfadfinden.de/gfx/favicons/bdp/android-chrome-192x192.png
+    favicon-96x96 = https://cdn.pfadfinden.de/gfx/favicons/bdp/favicon-96x96.png
+    favicon-16x16 = https://cdn.pfadfinden.de/gfx/favicons/bdp/favicon-16x16.png
+    manifest = https://cdn.pfadfinden.de/gfx/favicons/bdp/manifest.json
+    safari-pinned-tab = https://cdn.pfadfinden.de/gfx/favicons/bdp/safari-pinned-tab.svg
     safari-color = #1d4899
-    favicon = //cdn.pfadfinden.de/gfx/favicons/bdp/favicon.ico
+    favicon = https://cdn.pfadfinden.de/gfx/favicons/bdp/favicon.ico
     msapplication-TileColor = #ffcb04
-    msapplication-TileImage = //cdn.pfadfinden.de/gfx/favicons/bdp/mstile-144x144.png
-    browserconfig = //cdn.pfadfinden.de/gfx/favicons/bdp/browserconfig.xml
+    msapplication-TileImage = https://cdn.pfadfinden.de/gfx/favicons/bdp/mstile-144x144.png
+    browserconfig = https://cdn.pfadfinden.de/gfx/favicons/bdp/browserconfig.xml
     theme-color = #ffcb04
   }
 
