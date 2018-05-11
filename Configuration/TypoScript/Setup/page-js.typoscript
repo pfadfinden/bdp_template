@@ -1,0 +1,40 @@
+page {
+  includeJS >
+  includeJSlibs >
+
+  includeJSFooter {
+    base   = {$plugin.tx_bdptemplate.filepaths.javascript}main.js
+    t3     = {$plugin.tx_bdptemplate.filepaths.javascript}t3default.js
+  }
+  includeJSFooterlibs {
+    jquery = https://code.jquery.com/jquery-2.2.4.min.js
+    jquery {
+      external     = 1
+      integrity    = sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=
+      forceOnTop   = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+
+    photoswipe = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/jquery.photoswipe-global.js
+    photoswipe {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+
+    masonry = {$plugin.tx_bdptemplate.filepaths.cdn}library/masonry/4.2.0/masonry.pkgd.min.js
+    masonry {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+    imagesLoaded  = {$plugin.tx_bdptemplate.filepaths.javascript}Library/imagesLoaded.pkgd.min.js
+    imagesLoaded {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+  }
+
+}

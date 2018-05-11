@@ -1,0 +1,58 @@
+page {
+  includeCSS {
+    buena               = {$plugin.tx_bdptemplate.filepaths.css}buena.min.css
+    buena.disableCompression = 1
+    buena.excludeFromConcatenation = 1
+  }
+  includeCSSLibs {
+    normalize = https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css
+    normalize {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    font-immenhausen = {$plugin.tx_bdptemplate.filepaths.cdn}fonts/immenhausen/immenhausen.css
+    font-immenhausen {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    font-roboto = https://fonts.googleapis.com/css?family=Roboto
+    font-roboto {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    materialize-icons = https://fonts.googleapis.com/icon?family=Material+Icons
+    materialize-icons {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    photoswipe = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/photoswipe.css
+    photoswipe {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    photoswipeUI = {$plugin.tx_bdptemplate.filepaths.cdn}libs/photoswipe/default-skin.css
+    photoswipeUI {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+
+    gutenberg = https://unpkg.com/gutenberg-css@0.4.4/dist/gutenberg.min.css
+    gutenberg {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+      media = print
+    }
+  }
+}
