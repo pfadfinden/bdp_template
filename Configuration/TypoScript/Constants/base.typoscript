@@ -41,10 +41,12 @@ plugin.tx_bdptemplate {
   }
 
   page {
-    # cat=bdp/links/010; type=int+; label= Impressum id
+    # cat=bdp/links/010; type=int+; label= Home Seiten id
     home = 1
-    # cat=bdp/links/010; type=int+; label= Impressum id
+    # cat=bdp/links/011; type=int+; label= Impressum id
     imprint =
+    # cat=bdp/links/012; type=int+; label= Datenschutzerklärung id
+    privacy =
     # cat=bdp/links/020; type=int+; label= Suche id
     search =
     # cat=bdp/links/030; type=int+; label= Untermenü id
