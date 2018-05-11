@@ -28,7 +28,6 @@ lib.fluidContent.settings.media.popup {
 }
 
 tt_content.uploads {
-	# 20.renderObj.wrap.cObject.20.value = <li class="{register:oddEvenClass} {register:elementClass}">|</li>
 	20.renderObj.wrap.cObject.20.value = <div class="masonry-item masonry-item-2"><div class="box">|</div></div>
 	20.renderObj.20.wrap = <h2 class="csc-uploads-title">|</h2>
 
@@ -57,7 +56,5 @@ tt_content.uploads {
 			}
 
 	}
-
-	# 20.stdWrap.dataWrap = <ul class="csc-uploads csc-uploads-{field:layout}">|</ul>
 	20.stdWrap.dataWrap = <div class="masonry-container">|</div>
 }
