@@ -14,9 +14,9 @@ $EM_CONF[$_EXTKEY] = array(
 			'typo3' => '8.7.8 - 8.7.99',
 			'extbase' => '8.7.0 - 8.7.99',
 			'fluid' => '8.7.0 - 8.7.99',
-			'news' => '6.1.0 - 6.99.99',
+			'news' => '7.0.0 - 7.99.99',
 			'filemetadata' => '8.7.0 - 8.7.99',
-			'gridelements' => '7.1.0 - 7.7.99',
+			'gridelements' => '8.2.1 - 8.99.99',
 			'cal' => '1.11.1 - 1.99.99',
 			'fluid_styled_content' => '8.7.0 - 8.7.99',
 		),
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
 		    'css_styled_content' => '',
 		),
 		'suggests' => array(
-		    'realurl' => '2.2.1 - 2.99.99',
+		    'realurl' => '2.3.2 - 2.99.99',
 		),
 	),
 );
