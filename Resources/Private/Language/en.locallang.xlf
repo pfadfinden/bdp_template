@@ -15,7 +15,11 @@
             </trans-unit>
             <trans-unit id="imprint" xml:space="preserve">
                 <source>Impressum</source>
-                <target>Imprint</target>
+                <target>Legal Notice</target>
+            </trans-unit>
+            <trans-unit id="privacy" xml:space="preserve">
+                <source>Datenschutzerklärung</source>
+                <target>Privacy policy</target>
             </trans-unit>
             <trans-unit id="search" xml:space="preserve">
                 <source>Suche</source>
