@@ -7,7 +7,7 @@ $EM_CONF[$_EXTKEY] = array(
 	'author' => 'Christian Schrebe',
 	'author_email' => 'christian.schrebe@pfadfinden.de',
 	'author_company' => 'Bund der Pfadfinderinnen und Pfadfinder e.V.',
-	'state' => 'alpha',
+	'state' => 'stable',
 	'version' => '3.0.0',
 	'constraints' => array(
 		'depends' => array(
@@ -24,7 +24,7 @@ $EM_CONF[$_EXTKEY] = array(
 		    'css_styled_content' => '',
 		),
 		'suggests' => array(
-		    'realurl' => '2.3.2 - 2.99.99',
+		    'realurl' => '2.4.0 - 2.99.99',
 		),
 	),
 );
