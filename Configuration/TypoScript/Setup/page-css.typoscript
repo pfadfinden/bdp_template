@@ -3,6 +3,7 @@ page {
     buena               = {$plugin.tx_bdptemplate.filepaths.css}buena.min.css
     buena.disableCompression = 1
     buena.excludeFromConcatenation = 1
+    mindshapecookiehint >
   }
   includeCSSLibs {
     normalize = https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css
