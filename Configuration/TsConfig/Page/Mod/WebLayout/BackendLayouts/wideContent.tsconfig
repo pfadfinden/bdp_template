@@ -1,0 +1,30 @@
+#
+# BACKENDLAYOUT: WideContent
+#
+mod {
+    web_layout {
+        BackendLayouts {
+            wide_content {
+                title = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.wide_content
+                icon = EXT:bdp_template/Resources/Public/Images/BackendLayouts/wide_content.svg
+                config {
+                    backend_layout {
+                        colCount = 1
+                        rowCount = 1
+                        rows {
+                            1 {
+                                columns {
+                                    1 {
+                                        name = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.content
+                                        colPos = 0
+                                        colspan = 1
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

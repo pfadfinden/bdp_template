@@ -1,3 +1,20 @@
+######################
+#### DEPENDENCIES ####
+######################
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElement/setup.typoscript">
+
+
+################
+#### HELPER ####
+################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/ParseFunc.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/Block.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/FrontendEditing.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/PageClass.typoscript">
+
+
+
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/" extensions="typoscript">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Extensions/" extensions="typoscript">
 <INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Blocks/" extensions="typoscript">

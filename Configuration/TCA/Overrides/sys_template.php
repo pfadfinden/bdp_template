@@ -9,11 +9,11 @@ call_user_func(function()
     $extensionKey = 'bdp_template';
 
     /**
-     * Default PageTS for BdpTemplate
+     * Default TypoScript for BdpTemplate
      */
-    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
         $extensionKey,
-        'Configuration/TsConfig/Page/All.tsconfig',
+        'Configuration/TypoScript',
         'BdP Template'
     );
 });

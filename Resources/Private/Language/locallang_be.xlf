@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--
+  ~
+  ~ This file is part of the package pfadfinden/bdp_template.
+  ~
+  ~ For the full copyright and license information, please read
+  ~ the LICENSE file that was distributed with this source code.
+  -->
+
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2018-11-24UTC06:17:100">
+        <header>
+            <authorName>Christian Schrebe</authorName>
+            <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="backend_layout.default">
+                <source>Default</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.wide_content">
+                <source>Wide Content</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.content">
+                <source>Content</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.aside">
+                <source>Sidebar</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

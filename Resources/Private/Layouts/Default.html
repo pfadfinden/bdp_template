@@ -1,0 +1,25 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:spaceless>
+    <div id="wrap">
+        <header id="header">
+            <f:render partial="Structure/Branding" arguments="{_all}"/>
+            <f:render partial="Navigation/MobileNavigation" arguments="{_all}"/>
+            <f:render partial="Structure/Region" arguments="{_all}"/>
+            <f:render partial="Structure/Searchbox" arguments="{_all}"/>
+        </header>
+        <section id="main">
+            <f:render partial="Navigation/Main" arguments="{_all}"/>
+            <!--TYPO3SEARCH_begin-->
+            <f:render partial="Structure/Teaser" arguments="{_all}"/>
+            <f:render section="Main"/>
+            <f:render section="Border" optional="true"/>
+            <!--TYPO3SEARCH_end-->
+        </section>
+        <footer id="footer">
+            <f:render partial="Structure/Footer" arguments="{_all}"/>
+        </footer>
+        <f:render partial="Structure/CookieConsent" arguments="{_all}"/>
+    </div>
+</f:spaceless>
+</html>
+

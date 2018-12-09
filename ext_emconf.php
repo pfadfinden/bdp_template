@@ -1,9 +1,10 @@
 <?php
-/*
- * Copyright This file is part of the package pfadfinden/bdp_template.
+/**
  *
- * For the full copyright and license information, please read the
- * LICENSE file that was distributed with this source code.
+ * This file is part of the package pfadfinden/bdp_template.
+ *
+ * For the full copyright and license information, please read
+ * the LICENSE file that was distributed with this source code.
  */
 
 $EM_CONF[$_EXTKEY] = array(
@@ -21,7 +22,8 @@ $EM_CONF[$_EXTKEY] = array(
 	'constraints' => array(
 		'depends' => array(
             'typo3' => '9.5.0-9.5.99',
-            'rte_ckeditor' => '9.5.0-9.5.99'
+            'rte_ckeditor' => '9.5.0-9.5.99',
+			'fluid_styled_content' => '9.5.0-9.5.99',
 		),
 		'conflicts' => array(
 		    'css_styled_content' => '*',

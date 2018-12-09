@@ -1,28 +1,3 @@
-TCEFORM.tt_content {
-    layout {
-        # Umbenennen
-        altLabels {
-            0 = Weißer Hintergund
-            1 = Gelber Hintergrund
-            2 = Blauer Hintergrund
-            3 = Roter Hintergrund
-        }
-
-        # add new frame
-        addItems.4 = Transparent mit Innenabst.
-        addItems.5 = Weiß ohne Innenabst.
-        addItems.6 = Weiß 50% Float
-        addItems.7 = Ohne Hintergrund
-
-    }
-
-    header_layout {
-        addItems.80 = Blau/Gelb
-        addItems.81 = Weiß/Rot
-        addItems.82 = Weiß/Blau
-    }
-    header_position.disabled = 1
-}
 tx_gridelements {
     # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
     overruleRecords = 1

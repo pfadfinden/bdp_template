@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--
+  ~
+  ~ This file is part of the package pfadfinden/bdp_template.
+  ~
+  ~ For the full copyright and license information, please read
+  ~ the LICENSE file that was distributed with this source code.
+  -->
+
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2018-11-24UTC06:17:100">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2018-11-24UTC06:17:100">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
@@ -8,21 +16,27 @@
         <body>
             <trans-unit id="languages" xml:space="preserve">
                 <source>International</source>
+                <target>International</target>
             </trans-unit>
             <trans-unit id="languages.de" xml:space="preserve">
                 <source>German</source>
+                <target>Deutsch</target>
             </trans-unit>
             <trans-unit id="languages.en" xml:space="preserve">
                 <source>English</source>
+                <target>Englisch</target>
             </trans-unit>
             <trans-unit id="legal-notice" xml:space="preserve">
                 <source>Legal Notice</source>
+                <target>Impressum</target>
             </trans-unit>
             <trans-unit id="privacy" xml:space="preserve">
                 <source>Privacy policy</source>
+                <target>Datenschutzerklärung</target>
             </trans-unit>
             <trans-unit id="search" xml:space="preserve">
                 <source>Search</source>
+                <target>Suche</target>
             </trans-unit>
         </body>
     </file>
