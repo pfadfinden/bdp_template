@@ -6,7 +6,7 @@ const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 
 module.exports = {
     entry: {
-        buena: './Resources/Private/Stylesheets/sass/buena.scss',
+        buena: './Resources/Public/Scss/pfadfinden.scss',
     },
     output: {
         path: path.resolve(__dirname, 'Resources/Public'),

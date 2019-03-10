@@ -1,0 +1,13 @@
+tt_content {
+    bdptemplate_textimageblock < lib.contentElement
+    bdptemplate_textimageblock {
+        templateName = TextImageBlock.html
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = assets
+            }
+
+        }
+    }
+}

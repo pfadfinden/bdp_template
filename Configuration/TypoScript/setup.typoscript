@@ -1,20 +1,21 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElement/setup.typoscript">
-
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TypoScript/Setup/ContentElements/ContentElements.typoscript">
 
 ################
 #### HELPER ####
 ################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/ParseFunc.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/Block.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/DynamicContent.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/FrontendEditing.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/PageClass.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TypoScript/Helper/ParseFunc.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TypoScript/Helper/FrontendEditing.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TypoScript/Helper/PageClass.typoscript">
 
 
 
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Extensions/" extensions="typoscript">
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TypoScript/Setup/Blocks/" extensions="typoscript">
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdptemplate/Configuration/TypoScript/Setup/" extensions="typoscript">
+#<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdptemplate/Configuration/TypoScript/Setup/Extensions/" extensions="typoscript">
+#<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdptemplate/Configuration/TypoScript/Setup/Blocks/" extensions="typoscript">
+
+

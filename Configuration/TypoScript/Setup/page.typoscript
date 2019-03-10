@@ -1,66 +1,222 @@
+##############
+#### PAGE ####
+##############
 page = PAGE
 page {
-  1 = LOAD_REGISTER
-  1 {
-    pageLayout.cObject = TEXT
-    pageLayout.cObject {
-      data = levelfield:-1, backend_layout_next_level, slide
-      override.field = backend_layout
-      split {
-        token = bdptemplate__
-        1.current = 1
-        1.wrap = |
-      }
-    }
-  }
+  typeNum = 0
+  shortcutIcon = EXT:bdptemplate/Resources/Public/Icons/favicon.ico
 
   10 = FLUIDTEMPLATE
   10 {
-    templateName = defaultTemplate
-    layoutRootPaths {
-      10 = EXT:frontend/Resources/Private/Layouts
-      20 = EXT:bdp_template/Resources/Private/Layouts/
-    }
-    partialRootPaths {
-      10 = EXT:frontend/Resources/Private/Partials
-      20 = EXT:bdp_template/Resources/Private/Partials/
+    # Template names will be generated automaticly by converting the applied
+    # backend_layout, there is no explicit mapping nessesary anymore.
+    #
+    # BackendLayout Key
+    # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    #
+    # Backend Record
+    # uid: 1 -> 1.html
+    #
+    # Database Entry
+    # value: -1 -> None.html
+    # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    templateName = TEXT
+    templateName {
+      cObject = TEXT
+      cObject {
+        data = pagelayout
+        required = 1
+        case = uppercamelcase
+        split {
+          token = pagets__
+          cObjNum = 1
+          1.current = 1
+        }
+      }
+
+
+      ifEmpty = Default
     }
     templateRootPaths {
-      10 = EXT:frontend/Resources/Private/Templates
-      20 = EXT:bdp_template/Resources/Private/Templates/
+      0 = EXT:bdptemplate/Resources/Private/Templates/Page/
+      1 = {$page.fluidtemplate.templateRootPath}
     }
-    variables {
-      layout = TEXT
-      layout.data = register:pageLayout
-      content = CONTENT
-      content {
-        table = tt_content
-        select {
-          orderBy = sorting
-          where = colPos=0
-          languageField = sys_language_uid
-        }
+    partialRootPaths {
+      0 = EXT:bdptemplate/Resources/Private/Partials/Page/
+      1 = {$page.fluidtemplate.partialRootPath}
+    }
+    layoutRootPaths {
+      0 = EXT:bdptemplate/Resources/Private/Layouts/Page/
+      1 = {$page.fluidtemplate.layoutRootPath}
+    }
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      10 {
+        references.fieldName = media
       }
-      content-border = CONTENT
-      content-border {
-        table = tt_content
-        select {
-          orderBy = sorting
-          where = colPos=3
-          languageField = sys_language_uid
-        }
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        entryLevel = 0
+        levels = 3
+        as = mainnavigation
+        cache_period = 86400
+        titleField = nav_title // title
       }
+      30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      30 {
+        special = directory
+        special.value = {$page.settings.secondnavigation}
+        levels = 2
+        includeSpacer = 1
+        cache_period = 86400
+        as = secondnavigation
+        titleField = nav_title // title
+      }
+
+      50 = TYPO3\CMS\Frontend\DataProcessing\SplitProcessor
+      50 {
+        if.isTrue.field = subtitle
+        delimiter = |
+        fieldName = subtitle
+        removeEmptyEntries = 1
+        filterIntegers = 0
+        as = teasertitle
+      }
+    }
+  }
+
+
+  meta {
+    viewport = {$page.meta.viewport}
+    robots = {$page.meta.robots}
+    apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+    description = {$page.meta.description}
+    description {
+      override.field = description
+    }
+    author = {$page.meta.author}
+    author {
+      override.field = author
+    }
+    keywords = {$page.meta.keywords}
+    keywords {
+      override.field = keywords
+    }
+    X-UA-Compatible = {$page.meta.compatible}
+    X-UA-Compatible {
+      attribute = http-equiv
     }
 
-    settings {
-      region = {$plugin.tx_bdptemplate.config.region}
-      regionlogo = {$plugin.tx_bdptemplate.config.regionBranding}
-      search = {$plugin.tx_bdptemplate.page.search}
-      languages {
-        menu = {$plugin.tx_bdptemplate.languages.menu}
+    # OpenGraph Tags
+    og:title {
+      attribute = property
+      field = title
+    }
+    og:site_name {
+      attribute = property
+      data = TSFE:tmpl|setup|sitetitle
+    }
+    og:description = {$page.meta.description}
+    og:description {
+      attribute = property
+      field = description
+    }
+    og:image {
+      attribute = property
+      stdWrap.cObject = FILES
+      stdWrap.cObject {
+        references {
+          data = levelfield:-1, media, slide
+        }
+        maxItems = 1
+        renderObj = COA
+        renderObj {
+          10 = IMG_RESOURCE
+          10 {
+            file {
+              import.data = file:current:uid
+              treatIdAsReference = 1
+              width = 1280c
+              height = 720c
+            }
+            stdWrap {
+              typolink {
+                parameter.data = TSFE:lastImgResourceInfo|3
+                returnLast = url
+                forceAbsoluteUrl = 1
+              }
+            }
+          }
+        }
       }
     }
-    extbase.pluginName = bdp_template
-    extbase.controllerExtensionName = bdp_template
   }
+
+  includeCSSLibs {
+    normalize = https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.min.css
+    normalize {
+      external = 1
+      disableCompression = 1
+      excludeFromConcatenation = 1
+    }
+    font-immmenhausen < normalize
+    font-immenhausen = {$page.cdn}fonts/immenhausen/immenhausen.css
+
+    font-roboto < normalize
+    font-roboto = https://fonts.googleapis.com/css?family=Roboto
+
+    materialize-icons < normalize
+    materialize-icons = https://fonts.googleapis.com/icon?family=Material+Icons
+
+    photoswipe < normalize
+    photoswipe = {$page.cdn}libs/photoswipe/photoswipe.css
+
+    photoswipeUI < normalize
+    photoswipeUI = {$page.cdn}libs/photoswipe/default-skin.css
+
+  }
+
+  includeCSS {
+    buena               = EXT:bdptemplate/Resources/Public/Css/buena.min.css
+    buena.disableCompression = 1
+    buena.excludeFromConcatenation = 1
+  }
+
+  includeJSLibs {
+
+  }
+
+  includeJS {
+
+  }
+
+  includeJSFooterlibs {
+    jquery = https://code.jquery.com/jquery-2.2.4.min.js
+    jquery {
+      external     = 1
+      integrity    = sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=
+      forceOnTop   = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+
+    photoswipe = {$page.cdn}libs/photoswipe/jquery.photoswipe-global.js
+    photoswipe {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+
+    masonry = {$page.cdn}library/masonry/4.2.0/masonry.pkgd.min.js
+    masonry {
+      external = 1
+      excludeFromConcatenation = 1
+      disableCompression = 1
+    }
+  }
+
+  includeJSFooter {
+    #bdptemplate_scripts = EXT:bdptemplate/Resources/Public/JavaScript/Dist/scripts.js
+  }
+
 }

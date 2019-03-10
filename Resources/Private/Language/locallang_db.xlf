@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<!--
+  ~
+  ~ This file is part of the package pfadfinden/bdptemplate.
+  ~
+  ~ For the full copyright and license information, please read
+  ~ the LICENSE file that was distributed with this source code.
+  -->
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2018-11-24UTC06:17:100">
         <header>

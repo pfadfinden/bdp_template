@@ -31,7 +31,7 @@ $EM_CONF[$_EXTKEY] = array(
 	),
     'autoload' => [
         'psr-4' => [
-            'Pfadfinden\\BdpTemplate\\' => 'Classes'
+            'Pfadfinden\\Bdptemplate\\' => 'Classes'
         ],
     ],
 );

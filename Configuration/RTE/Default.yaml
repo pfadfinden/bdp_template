@@ -5,7 +5,7 @@ imports:
 
 editor:
     config:
-        contentsCss: "EXT:bdp_template/Resources/Public/Css/rte.css"
+        #contentsCss: "EXT:bdptemplate/Resources/Public/Css/rte.css"
 
         stylesSet:
             - { name: "Lead", element: "p", attributes: { 'class': 'lead' } }

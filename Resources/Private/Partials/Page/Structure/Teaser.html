@@ -1,0 +1,21 @@
+<f:if condition="{files.0}">
+    <div class="teaser">
+        <picture>
+            <source media="(max-width: 480px)" srcset="{f:uri.image(image: files.0, width: '480c', height: '300c')}">
+            <source media="(max-width: 575px)" srcset="{f:uri.image(image: files.0, width: '575c', height: '300c')}">
+            <source media="(max-width: 767px)" srcset="{f:uri.image(image: files.0, width: '767c', height: '384c')}">
+            <source media="(max-width: 1200px)" srcset="{f:uri.image(image: files.0, width: '1200c', height: '600c')}">
+            <source media="(min-width: 1800px)" srcset="{f:uri.image(image: files.0, width: '1600c', height: '900c')}">
+            <f:image image="{files.0}" width="1300c" height="650c" />
+        </picture>
+        <f:if condition="{teasertitle.0}">
+            <h1 class="teaser__title">
+                <f:for each="{teasertitle}" as="teaserline">
+                    <div class="teaser__title__line">
+                        <div class="teaser__title__line-text">{teaserline}</div>
+                    </div>
+                </f:for>
+            </h1>
+        </f:if>
+    </div>
+</f:if>

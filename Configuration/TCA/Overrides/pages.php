@@ -6,7 +6,7 @@ call_user_func(function()
     /**
      * Temporary variables
      */
-    $extensionKey = 'bdp_template';
+    $extensionKey = 'bdptemplate';
 
     /**
      * Default PageTS for BdpTemplate

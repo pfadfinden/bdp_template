@@ -1,39 +1,46 @@
-<!--
-  ~ // TODO
-  ~ This file is part of the package pfadfinden/bdp_template.
-  ~
-  ~ For the full copyright and license information, please read
-  ~ the LICENSE file that was distributed with this source code.
-  -->
+<section id="nav-footer" class="section">
+    <div class="nav-footer__title">
+        <div class="nav-footer__titleLine">Bund der Pfadfinderinnen und Pfadfinder e.V. (BdP)</div>
+    </div>
+    <div class="row nav-footer__content">
+        <div class="col s12 m6 l6 no-print">
+            <ul id="nav-footer__menu">
+                <li class="footer_privacy"><a href="/impressum/">Impressum</a></li>
+                <li class="footer_print"><a href="javascript:window.print()">Seite ausdrucken</a></li>
+                <li class="footer_privacy"><a href="/datenschutzerklaerung/">Datenschutzerklärung</a></li>
+                <li class="footer_login"><a href="/typo3/">Login</a></li>
+            </ul>
+        </div>
+        <div class="col s12 m6 l6">
+            <p>BdP Bundesamt</p>
+            <p>Kesselhaken 23, 34376 Immenhausen, DE</p>
+            <p>Telefon: <span>+49 5673 99584-0</span>
+                <br>Telefax: <span>+49 5673 99584-44</span>
+                <br>E-Mail: <span><a href="mailto:">info@pfadfinden.de</a></span>
+                <br>Internet: <span><a href="https://www.pfadfinden.de">https://www.pfadfinden.de</a></span>
+            </p>
+        </div>
+    </div>
 
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
-
-<section class="section footer-section footer-section-meta">
-    <div class="frame frame-background-none frame-space-before-none frame-space-after-none">
-        <div class="frame-container">
-            <div class="frame-inner">
                 <f:if condition="{theme.meta.enable}">
                     <div class="footer-meta">
-                        <f:render partial="Navigation/Meta" arguments="{_all}" />
+                        <f:render partial="Navigation/Meta" arguments="{_all}"/>
                     </div>
                 </f:if>
                 <f:if condition="{theme.language.enable}">
                     <div class="footer-language">
-                        <f:render partial="Navigation/Language" arguments="{_all}" />
+                        <f:render partial="Navigation/Language" arguments="{_all}"/>
                     </div>
                 </f:if>
                 <f:if condition="{theme.copyright.enable}">
                     <div class="footer-copyright">
-                        <f:render partial="Structure/Copyright" arguments="{_all}" />
+                        <f:render partial="Structure/Copyright" arguments="{_all}"/>
                     </div>
                 </f:if>
                 <f:if condition="{theme.socialmedia.enable}">
                     <div class="footer-sociallinks">
-                        <f:render partial="Structure/SocialLinks" arguments="{_all}" />
+                        <f:render partial="Structure/SocialLinks" arguments="{_all}"/>
                     </div>
                 </f:if>
-            </div>
-        </div>
-    </div>
+
 </section>
-</html>

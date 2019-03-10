@@ -1,0 +1,24 @@
+#
+# CONTENTELEMENT: TEXTIMAGEBLOCK
+#
+mod {
+    wizards {
+        newContentElement {
+            wizardItems {
+                common {
+                    elements {
+                        bdptemplate_textimageblock {
+                            iconIdentifier = bdptemplate-contentelement-textimageblock
+                            title = LLL:EXT:bdptemplate/Resources/Private/Language/Tca.xlf:bdptemplate_textimageblock.wizard.title
+                            description = LLL:EXT:bdptemplate/Resources/Private/Language/Tca.xlf:bdptemplate_textimageblock.wizard.description
+                            tt_content_defValues {
+                                CType = bdptemplate_textimageblock
+                            }
+                        }
+                    }
+                    show := addToList(bdptemplate_textimageblock)
+                }
+            }
+        }
+    }
+}

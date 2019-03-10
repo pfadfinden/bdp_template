@@ -30,5 +30,10 @@ TCEFORM {
         }
         header_position.disabled = 1
 
+        frame_class {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
+        }
+        frame_class.disabled = 1
+
     }
 }

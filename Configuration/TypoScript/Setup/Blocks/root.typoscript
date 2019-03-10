@@ -1,2 +1,2 @@
-lib.root = TEXT
-lib.root.data = leveluid : 0
+lib.rootpid = TEXT
+lib.rootpid.data = leveluid : 0

@@ -3,6 +3,6 @@
 #############
 RTE {
     default {
-        preset = bdp_template
+        preset = bdptemplate
     }
 }

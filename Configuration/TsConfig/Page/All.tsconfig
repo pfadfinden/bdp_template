@@ -1,7 +1,8 @@
 #
 # PageTS for BdP Template
 #
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/Page/RTE.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/Page/TCEFORM.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+#<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TsConfig/Page/RTE.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TsConfig/Page/TCEFORM.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TsConfig/Page/TCEMAIN.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdptemplate/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements.tsconfig">

@@ -9,3 +9,12 @@
  */
 
 defined('TYPO3_MODE') || die();
+
+$iconRegistry = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(
+    \TYPO3\CMS\Core\Imaging\IconRegistry::class
+);
+$iconRegistry->registerIcon(
+    'bdptemplate-contentelement-textimageblock',
+    \TYPO3\CMS\Core\Imaging\IconProvider\SvgIconProvider::class,
+    ['source' => 'EXT:bdptemplate/Resources/Public/Icons/ContentElements/bdptemplate-contentelement-textimageblock.svg']
+);

@@ -8,23 +8,20 @@
   -->
 
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2018-11-24UTC06:17:100">
+    <file source-language="en" datatype="plaintext" original="messages" date="2019-02-23UTC06:17:100">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
         </header>
         <body>
-            <trans-unit id="backend_layout.default">
-                <source>Default</source>
+            <trans-unit id="bdptemplate_textimageblock" xml:space="preserve">
+                <source>Text block with image</source>
             </trans-unit>
-            <trans-unit id="backend_layout.wide_content">
-                <source>Wide Content</source>
+            <trans-unit id="bdptemplate_textimageblock.wizard.title" xml:space="preserve">
+                <source>Text block with image</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.content">
-                <source>Content</source>
-            </trans-unit>
-            <trans-unit id="backend_layout.column.aside">
-                <source>Sidebar</source>
+            <trans-unit id="bdptemplate_textimageblock.wizard.description" xml:space="preserve">
+                <source>Text block with image on the right or left side</source>
             </trans-unit>
         </body>
     </file>
