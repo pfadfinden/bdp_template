@@ -1,0 +1,22 @@
+<nav id="pfadfinden-menu" class="main-navigation" aria-label="Main">
+    <ul class="main-navigation__list">
+        <f:for each="{mainNavigation}" as="mainnavigationItem">
+            <li class="main-navigation__list__item{f:if(condition: mainnavigationItem.current, then:' current')}{f:if(condition: mainnavigationItem.active, then:' active')}">
+                <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" class="main-navigation__list__item__link{f:if(condition: mainnavigationItem.active, then:' active')}{f:if(condition: mainnavigationItem.current, then:' current')}"{f:if(condition: mainnavigationItem.current, then:' aria-current="page"')}{f:if(condition: '{child.data.doktype} == 3', then:' rel="noreferer noopener"')}>
+                {mainnavigationItem.title}
+                </a>
+                <f:if condition="{mainnavigationItem.children}">
+                    <ul class="main-navigation__list__item__list">
+                        <f:for each="{mainnavigationItem.children}" as="child">
+                            <li class="main-navigation__list__item__list__item{f:if(condition: child.active, then:' active')}"{f:if(condition: child.current, then:' aria-current="page"')}>
+                                <a href="{child.link}" target="{child.target}" class="main-navigation__list__item__list__item__link{f:if(condition: child.current, then:' current')}"{f:if(condition: '{child.data.doktype} == 3', then:' rel="noreferer noopener"')}>
+                                    {child.title}
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </f:if>
+            </li>
+        </f:for>
+    </ul>
+</nav>

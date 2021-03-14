@@ -1,0 +1,29 @@
+<div class="mainheader__language">
+    <f:for each="{languageNavigation}" as="item">
+        <f:if condition="{item.active}">
+            <div class="mainheader__language__current" aria-controls="language-menu" tabindex="0">
+                {item.navigationTitle}
+            </div>
+        </f:if>
+    </f:for>
+    <nav id="language-menu" class="mainheader__language__menu" aria-label="{f:translate(key: 'language.aria', extensionName: 'BdpTemplate')}">
+        <ul class="mainheader__language__menu__list">
+            <f:for each="{languageNavigation}" as="item">
+                <li class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
+                    <f:if condition="{item.available}">
+                        <f:then>
+                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                <span>{item.navigationTitle}</span>
+                            </a>
+                        </f:then>
+                        <f:else>
+                            <a href="{f:uri.page(pageUid: site.rootPageId, additionalParams: '{L: item.languageId}')}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                <span>{item.navigationTitle}</span>
+                            </a>
+                        </f:else>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</div>

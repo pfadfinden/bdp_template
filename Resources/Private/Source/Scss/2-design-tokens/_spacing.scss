@@ -1,0 +1,49 @@
+@import "../1-settings/variables";
+
+$spacers: (
+  extra-small: 1rem,
+  small: 2rem,
+  medium: 3rem,
+  large: 4rem,
+  extra-large: 8rem
+);
+
+@each $name, $value in $spacers {
+  .bdp-b-#{$name} {
+    padding-bottom: $value;
+  }
+  .bdp-t-#{$name} {
+    padding-top: $value;
+  }
+}
+
+@media (min-width: $md) {
+  @each $name, $value in $spacers {
+    .bdp-b-md-#{$name} {
+      padding-bottom: $value;
+    }
+    .bdp-t-md-#{$name} {
+      padding-top: $value;
+    }
+  }
+}
+
+@media (min-width: $lg) {
+  @each $name, $value in $spacers {
+    .bdp-b-lg-#{$name} {
+      padding-bottom: $value;
+    }
+    .bdp-t-lg-#{$name} {
+      padding-top: $value;
+    }
+  }
+}
+
+@media (min-width: $xxl) {
+  .bdp-b-extra-large {
+    padding-bottom: 10rem;
+  }
+  .bdp-t-extra-large {
+    padding-top: 10rem;
+  }
+}

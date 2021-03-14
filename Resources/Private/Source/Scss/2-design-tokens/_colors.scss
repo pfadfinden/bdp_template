@@ -1,0 +1,24 @@
+$bdp-blue:(
+  "base":   #1d4899,
+  "light":  #009ddd,
+);
+
+$bdp-yellow:(
+  "base":   #ffcb04,
+);
+
+$bdp-red:(
+  "base":   #d30014,
+);
+
+$bdp-brown:(
+  "base":   #6b5c48,
+);
+
+
+$colors: (
+  "bdp-yellow": $bdp-yellow,
+  "bdp-blue": $bdp-blue,
+  "bdp-red": $bdp-red,
+  "bdp-brown": $bdp-brown,
+);

@@ -1,0 +1,28 @@
+@import "../1-settings/variables";
+html {
+  background: url('Images/holzhintergrund_1.jpg');
+}
+.page {
+  &__header {
+    &--region {
+      ~ .page__content {
+        padding-top: 75px;
+      }
+    }
+  }
+  &__content {
+    display: block;
+    min-height: 25rem;
+    padding-top: 3.25rem;
+    overflow-x: hidden;
+    @include media-breakpoint-up(md) {
+      min-height: 100vh;
+    }
+    &__main {
+      @include media-breakpoint-up(md) {
+        margin-top: 3rem;
+        margin-left: 15rem;
+      }
+    }
+  }
+}

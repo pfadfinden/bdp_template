@@ -1,0 +1,26 @@
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        bdp1x12Column {
+            title = Single background container
+            description = Ein einspaltiges Inhaltselement
+            topLevelLayout = 1
+            frame = 3
+            config {
+                colCount = 1
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colPos = 10
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

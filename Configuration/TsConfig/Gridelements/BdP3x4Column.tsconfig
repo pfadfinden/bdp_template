@@ -1,0 +1,34 @@
+tx_gridelements {
+    # TS Elemente haben Vorrang vor Datensätzen mit gleichen IDs
+    overruleRecords = 1
+    setup {
+        bdp3x4Column {
+            title = 3x4 background container
+            description = Ein dreispaltiges Inhaltselement
+            topLevelLayout = 1
+            frame = 3
+            config {
+                colCount = 3
+                rowCount = 1
+                rows {
+                    1 {
+                        columns {
+                            1 {
+                                name = Inhalt
+                                colPos = 10
+                            }
+                            2 {
+                                name = Inhalt
+                                colPos = 20
+                            }
+                            3 {
+                                name = Inhalt
+                                colPos = 30
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+#
+# TCEFORM
+#
+TCEFORM {
+    pages {
+        layout {
+            altLabels {
+                0 = small content
+                1 = big content
+            }
+            removeItems = 2,3
+        }
+
+    }
+    tt_content {
+        layout {
+            altLabels {
+                0 = Weißer Hintergund
+                1 = Gelber Hintergrund
+                2 = Blauer Hintergrund
+                3 = Roter Hintergrund
+            }
+            addItems {
+                4 = Transparent
+            }
+        }
+        header_position {
+            removeItems = left,right
+        }
+    }
+}

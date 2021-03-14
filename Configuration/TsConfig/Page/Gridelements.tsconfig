@@ -1,0 +1,4 @@
+#
+# GRIDELEMENTS
+#
+<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TsConfig/Page/Gridelements" extensions="tsconfig">

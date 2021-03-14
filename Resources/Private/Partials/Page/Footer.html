@@ -1,0 +1,63 @@
+<footer class="page__footer">
+    <div class="page__footer__title">
+        Bund der Pfadfinderinnen und Pfadfinder Landesverband Bayern e.V.
+    </div>
+    <div class="page__footer__content">
+        <div class="page__footer__content__section">
+        </div>
+        <div class="page__footer__content__section cell-md-4">
+            <div class="footer-content__contact-headline">
+                {f:translate(key: 'footer.contact', extensionName: 'ZentrumPfadfinden')}
+            </div>
+            <div class="footer-content__contact-name">
+                {f:translate(key: 'footer.contact.name', extensionName: 'ZentrumPfadfinden')}
+            </div>
+            <div class="footer-content__contact-address">
+                <div>Kesselhaken 23,</div>
+                <div>34376 Immenhausen, DE</div>
+            </div>
+            <div class="footer-content__contact-phone">
+                <div>Tel.: <a href="tel:+495673995840">+49 5673 99584-0</a></div>
+                <div>Fax.: +49 5673 99584-44</div>
+                <div>{f:translate(key: 'footer.contact.email', extensionName: 'ZentrumPfadfinden')}: <a href="mailto:zentrum@pfadfinden.de">zentrum@pfadfinden.de</a></div>
+            </div>
+        </div>
+        <div class="page__footer__content__section cell-md-4">
+            <div class="footer-content__navigation__wrapper">
+                <f:if condition="{languageNavigation -> f:count()} > 1">
+                    <nav class="footer-content__navigation__language-menu" aria-label="{f:translate(key: 'language.aria', extensionName: 'ZentrumPfadfinden')}">
+                        <ul class="footer-content__navigation__language-menu__list">
+                            <f:for each="{languageNavigation}" as="item">
+                                <li class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
+                                    <f:if condition="{item.available}">
+                                        <f:then>
+                                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                                <span>{item.navigationTitle}</span>
+                                            </a>
+                                        </f:then>
+                                        <f:else>
+                                            <a href="{f:uri.page(pageUid: site.rootPageId, additionalParams: '{L: item.languageId}')}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
+                                                <span>{item.navigationTitle}</span>
+                                            </a>
+                                        </f:else>
+                                    </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </nav>
+                </f:if>
+                <nav class="footer-content__navigation__meta">
+                    <ul>
+                        <f:for each="{footernavigation}" as="footernavtigationItem">
+                            <li class="{f:if(condition: footernavtigationItem.active, then:'active')}">
+                                <a href="{footernavtigationItem.link}" target="{footernavtigationItem.target}" title="{footernavtigationItem.title}"{f:if(condition: footernavtigationItem.current, then:' aria-current="page"')}>
+                                    {footernavtigationItem.title}
+                                </a>
+                            </li>
+                        </f:for>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+</footer>

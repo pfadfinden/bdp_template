@@ -1,0 +1,70 @@
+.page .main-navigation {
+  background-color: get-color('bdp-yellow', 'base');
+  &__list {
+    display: block;
+    padding: 0.625rem 0 2.5rem;
+    margin: 0;
+    list-style: none;
+    &__item {
+      display: block;
+      font-family: $font-family-immenhausen;
+      font-size: 1.125rem;
+      letter-spacing: .01em;
+      &__link {
+        display: block;
+        padding: 0.5rem 1rem;
+        color: get-color('bdp-brown', 'base');
+        &:visited {
+          color: get-color('bdp-brown', 'base');
+        }
+        &:hover {
+          color: #000000;
+        }
+        &.active {
+          color: #000000;
+        }
+        &.current {
+          color: #ffffff;
+        }
+      }
+      &__list {
+        display: none;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        &__item {
+          padding: 0.3125rem 0.3125rem 0.3125rem 1.5625rem;
+          display: block;
+          text-decoration: none;
+          font-family: $font-family-serif;
+          font-style: italic;
+          font-size: 0.75rem;
+          &__link {
+            color: #000000;
+            &:visited {
+              color: #000000;
+            }
+            &:hover {
+              color: get-color('bdp-brown', 'base');
+            }
+            &.current {
+              color: #ffffff;
+            }
+          }
+        }
+      }
+      &.active {
+        border-bottom: 1px solid #9f7515;
+        border-top: 1px solid #9f7515;
+        padding: .5rem 0 .5em;
+        margin: .5rem 0;
+        background-color: #e1af22;
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr="#E0CB84",endColorstr="#ffffff");
+        background-image: linear-gradient(#9f7515,#e1af22);
+        .main-navigation__list__item__list {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,6 @@
+# Removing the "Select & Upload Files" button from Page properties
+setup.override.edit_docModuleUpload = 0
+# Hide 'file upload' and 'create folder' in link- and element browser
+options.folderTree.uploadFieldsInLinkBrowser = 0
+options.folderTree.hideCreateFolder = 1
+options.createFoldersInEB = 1

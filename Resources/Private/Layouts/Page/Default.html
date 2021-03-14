@@ -1,0 +1,15 @@
+<f:spaceless>
+    <div class="page">
+        <f:render partial="Header" arguments="{_all}"/>
+        <section class="page__navigation">
+            <f:render partial="MainNavigation" arguments="{_all}" />
+            <f:render partial="SideNavigation" arguments="{_all}" />
+        </section>
+        <main class="page__content container-bdp">
+            <section class="page__content__main">
+                <f:render section="Main" />
+            </section>
+        </main>
+        <f:render partial="Footer" arguments="{_all}"/>
+    </div>
+</f:spaceless>

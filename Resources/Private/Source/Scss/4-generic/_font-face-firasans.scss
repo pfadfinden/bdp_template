@@ -1,0 +1,20 @@
+/* fira-sans-regular - latin-ext_latin */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/typo3conf/ext/bdp_template/Resources/Public/Fonts/fira-sans/fira-sans-v10-latin-ext_latin-regular.woff2') format('woff2'),
+  url('/typo3conf/ext/bdp_template/Resources/Public/Fonts/fira-sans/fira-sans-v10-latin-ext_latin-regular.woff') format('woff');
+}
+
+/* fira-sans-700 - latin-ext_latin */
+@font-face {
+  font-family: 'Fira Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('/typo3conf/ext/bdp_template/Resources/Public/Fonts/fira-sans/fira-sans-v10-latin-ext_latin-700.woff2') format('woff2'),
+  url('/typo3conf/ext/bdp_template/Resources/Public/Fonts/fira-sans/fira-sans-v10-latin-ext_latin-700.woff') format('woff');
+}
+
