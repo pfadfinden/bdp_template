@@ -16,7 +16,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
 
 Encore
     // directory where compiled assets will be stored
-    .setOutputPath('Resources/Public/build/')
+    .setOutputPath('Resources/Public/Build/')
     // public path used by the web server to access the output path
     .setPublicPath('/typo3conf/ext/bdp_template/Resources/Public/Build')
     // only needed for CDN's or sub-directory deploy
