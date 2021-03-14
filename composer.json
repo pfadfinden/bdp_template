@@ -19,7 +19,9 @@
   "require": {
     "typo3/cms-core": "^10.4",
     "typo3/cms-rte-ckeditor": "^10.4",
-    "typo3/cms-fluid-styled-content": "^10.4"
+    "typo3/cms-fluid-styled-content": "^10.4",
+    "ssch/typo3-encore": "^3.0",
+    "zeroseven/z7-semantilizer": "^2.1"
   },
   "autoload": {
     "psr-4": {
