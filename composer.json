@@ -21,7 +21,8 @@
     "typo3/cms-rte-ckeditor": "^10.4",
     "typo3/cms-fluid-styled-content": "^10.4",
     "ssch/typo3-encore": "^3.0",
-    "zeroseven/z7-semantilizer": "^2.1"
+    "zeroseven/z7-semantilizer": "^2.1",
+    "b13/container": "^1.2"
   },
   "autoload": {
     "psr-4": {
@@ -30,6 +31,9 @@
   },
   "replace": {
     "typo3-ter/bdp_template": "self.version"
+  },
+  "suggest": {
+    "georgringer/news": "^8.5"
   },
   "extra": {
     "typo3/cms": {

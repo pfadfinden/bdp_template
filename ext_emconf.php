@@ -9,9 +9,10 @@ $EM_CONF['bdp_template'] = [
     'category' => 'templates',
     'constraints' => [
         'depends' => [
-            'typo3' => '10.2.0-10.4.99',
-            'fluid_styled_content' => '10.2.0-10.4.99',
-            'rte_ckeditor' => '10.2.0-10.4.99',
+            'typo3' => '10.4.0-10.4.99',
+            'fluid_styled_content' => '10.4.0-10.4.99',
+            'rte_ckeditor' => '10.4.0-10.4.99',
+            'container' => "1.2.0-1.2.99"
         ],
         'conflicts' => [
         ],
