@@ -106,7 +106,7 @@ call_user_func(static function()
                 [
                     [
                         'name' => 'Inhalt',
-                        'colPos' => 10,
+                        'colPos' => 101,
                         'colspan' => 1,
                     ]
                 ]

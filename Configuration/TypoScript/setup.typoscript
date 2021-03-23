@@ -3,6 +3,13 @@
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
 
+###################
+#### Container ####
+###################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x8-1x4-container.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x12-container.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-2x6-container.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-3x3-container.typoscript">
 
 ################
 #### HELPER ####
