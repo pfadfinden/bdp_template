@@ -1,3 +1,6 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/breakpoints";
+
 .side-navigation {
   display: block;
   &__list {
@@ -5,7 +8,7 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       display: block;
     }
     &__section {
@@ -14,10 +17,10 @@
       margin: 0;
       list-style: none;
       width: 100%;
-      @include media-breakpoint-up(sm) {
+      @include breakpoints.media-breakpoint-up(sm) {
         width: 50%;
       }
-      @include media-breakpoint-up(md) {
+      @include breakpoints.media-breakpoint-up(md) {
         width: 100%;
       }
 
@@ -38,7 +41,7 @@
           margin: 0;
           list-style: none;
           &__link {
-            font-family: $font-family-serif;
+            font-family: fonts.$font-family-serif;
             color: #ffffff;
             font-style: italic;
             &__image {

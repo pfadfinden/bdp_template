@@ -1,8 +1,10 @@
+@use "../3-tools/breakpoints";
+
 .mainheader__language {
   color: #000000;
   height: 3.25rem;
   position: relative;
-  @include media-breakpoint-up(md){
+  @include breakpoints.media-breakpoint-up(md){
     position: absolute;
     left: 0;
     top: 0;
@@ -16,7 +18,7 @@
     padding: 0;
     margin: 0;
     z-index: 40;
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       padding-left: 0.5rem;
     }
     &__list {
@@ -35,11 +37,11 @@
         line-height: 1;
         min-width: 6rem;
         transition:.2s linear;
-        @include media-breakpoint-up(md){
+        @include breakpoints.media-breakpoint-up(md){
           padding-top: 0.5rem;
           padding-bottom: 0.5rem;
         }
-        @include media-breakpoint-up(xl) {
+        @include breakpoints.media-breakpoint-up(xl) {
           padding-right: 3rem;
         }
         &:hover, &:focus {
@@ -60,7 +62,7 @@
     margin-right: 0.25rem;
     cursor: pointer;
     font-size: 0.875rem;
-    @include media-breakpoint-up(xl){
+    @include breakpoints.media-breakpoint-up(xl){
       padding: 0 1.25rem 0 1rem;
     }
     &:after {
@@ -77,7 +79,7 @@
       right: 0;
       bottom: 4px;
       transform: rotate(45deg);
-      @include media-breakpoint-up(md) {
+      @include breakpoints.media-breakpoint-up(md) {
         width: 8px;
         height: 8px;
         border-right-width: 2px;

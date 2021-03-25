@@ -1,3 +1,5 @@
+@use "../2-design-tokens/fonts";
+
 .page .main-navigation {
   background-color: get-color('bdp-yellow', 'base');
   &__list {
@@ -7,7 +9,7 @@
     list-style: none;
     &__item {
       display: block;
-      font-family: $font-family-immenhausen;
+      font-family: fonts.$font-family-immenhausen;
       font-size: 1.125rem;
       letter-spacing: .01em;
       &__link {
@@ -36,7 +38,7 @@
           padding: 0.3125rem 0.3125rem 0.3125rem 1.5625rem;
           display: block;
           text-decoration: none;
-          font-family: $font-family-serif;
+          font-family: fonts.$font-family-serif;
           font-style: italic;
           font-size: 0.75rem;
           &__link {

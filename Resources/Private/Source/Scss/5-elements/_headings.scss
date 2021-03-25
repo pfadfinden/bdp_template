@@ -1,6 +1,8 @@
+@use "../2-design-tokens/fonts";
+
 h1,
 h2,
 h3,
 h4 {
-  font-family: $font-family-immenhausen;
+  font-family: fonts.$font-family-immenhausen;
 }

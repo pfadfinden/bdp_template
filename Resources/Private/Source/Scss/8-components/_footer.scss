@@ -1,37 +1,40 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/breakpoints";
+
 .page__footer {
   width: 100%;
   padding: 1em;
   background-color: get-color('bdp-yellow', 'base');
   box-shadow: 0 -5px 5px rgba(0,0,0,.3);
-  @include media-breakpoint-up(md) {
+  @include breakpoints.media-breakpoint-up(md) {
     background: rgba(56, 46, 35, 0.7);
     color: #eee;
     box-shadow: none;
   }
   &__title {
-    font-family: $font-family-immenhausen;
+    font-family: fonts.$font-family-immenhausen;
     font-size: 1.5625rem;
     padding: 0 0 0.54375rem;
     color: get-color('bdp-blue', 'base');
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       color: get-color('bdp-yellow', 'base');
     }
   }
   &__content {
     font-size: 0.75rem;
     color: #000000;
-    @include media-breakpoint-up(sm) {
+    @include breakpoints.media-breakpoint-up(sm) {
       display: flex;
       flex-wrap: wrap;
     }
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       color: #ffffff;
     }
     &__section {
-      @include media-breakpoint-up(sm) {
+      @include breakpoints.media-breakpoint-up(sm) {
         width: 50%;
       }
-      @include media-breakpoint-up(lg) {
+      @include breakpoints.media-breakpoint-up(lg) {
         width: percentage(3 / 12);
       }
     }

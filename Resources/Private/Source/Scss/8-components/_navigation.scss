@@ -1,6 +1,8 @@
+@use "../3-tools/breakpoints";
+
 .page__navigation {
   display: none;
-  @include media-breakpoint-up(md) {
+  @include breakpoints.media-breakpoint-up(md) {
     display: block;
     position: absolute;
     top: 7.5rem;
@@ -18,7 +20,7 @@
     line-height: 1.1875rem;
   }
 }
-@include media-breakpoint-up(md) {
+@include breakpoints.media-breakpoint-up(md) {
   #mm-pfadfinden-menu {
     display: none !important;
   }

@@ -1,3 +1,6 @@
+@use "../3-tools/breakpoints";
+@use "../2-design-tokens/fonts";
+
 .mainheader {
   background-color: get-color('bdp-yellow', 'base');
   position: fixed;
@@ -5,7 +8,7 @@
   width: 100%;
   z-index: 999;
   box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14),0 1px 10px 0 rgba(0,0,0,0.12),0 2px 4px -1px rgba(0,0,0,0.3);
-  @include media-breakpoint-up(md){
+  @include breakpoints.media-breakpoint-up(md){
     display: block;
     position: relative;
     box-shadow: none;
@@ -28,7 +31,7 @@
     width: 100%;
     z-index: 20;
     background: get-color('bdp-blue', 'base');
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       display: none;
     }
     &__link {
@@ -36,7 +39,7 @@
       padding-left: 0.75rem;
       color: get-color('bdp-yellow', 'base');
       line-height: 1.875rem;
-      font-family: $font-family-immenhausen;
+      font-family: fonts.$font-family-immenhausen;
       letter-spacing: 1px;
       word-spacing: 2px;
       &:hover,
@@ -82,7 +85,7 @@
     border-radius: 1px;
     margin: 5px auto;
   }
-  @include media-breakpoint-up(md){
+  @include breakpoints.media-breakpoint-up(md){
     display: none;
   }
 }

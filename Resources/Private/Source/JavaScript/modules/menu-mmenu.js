@@ -20,7 +20,7 @@ import scrollBugFix from 'mmenu-js/dist/core/scrollbugfix/mmenu.scrollbugfix';
 //	Add-ons
 import keyboardNavigation from 'mmenu-js/dist/addons/keyboardnavigation/mmenu.keyboardnavigation';
 
-import '@/Scss/7-components/_mmenu.scss';
+import '@/Scss/8-components/_mmenu.scss';
 
 Mmenu.addons = {
     //	Core add-ons

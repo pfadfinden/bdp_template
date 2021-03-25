@@ -1,3 +1,4 @@
+@use "../functions";
 // scss-docs-start grid-breakpoints
 $grid-breakpoints: (
         xs: 0,
@@ -9,8 +10,8 @@ $grid-breakpoints: (
 ) !default;
 // scss-docs-end grid-breakpoints
 
-@include _assert-ascending($grid-breakpoints, "$grid-breakpoints");
-@include _assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+@include functions.assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include functions.assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
 
 
 // Grid containers
@@ -27,4 +28,4 @@ $container-max-widths: (
 ) !default;
 // scss-docs-end container-max-widths
 
-@include _assert-ascending($container-max-widths, "$container-max-widths");
+@include functions.assert-ascending($container-max-widths, "$container-max-widths");

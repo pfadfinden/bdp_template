@@ -1,3 +1,5 @@
+@use "../2-design-tokens/fonts";
+
 html {
-  font-family: $font-family-sans-serif;
+  font-family: fonts.$font-family-sans-serif;
 }

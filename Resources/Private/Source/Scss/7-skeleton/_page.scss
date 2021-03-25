@@ -1,4 +1,5 @@
-@import "../1-settings/variables";
+@use "../3-tools/breakpoints";
+
 html {
   background: url('Images/holzhintergrund_1.jpg');
 }
@@ -15,11 +16,11 @@ html {
     min-height: 25rem;
     padding-top: 3.25rem;
     overflow-x: hidden;
-    @include media-breakpoint-up(md) {
+    @include breakpoints.media-breakpoint-up(md) {
       min-height: 100vh;
     }
     &__main {
-      @include media-breakpoint-up(md) {
+      @include breakpoints.media-breakpoint-up(md) {
         margin-top: 3rem;
         margin-left: 15rem;
       }
