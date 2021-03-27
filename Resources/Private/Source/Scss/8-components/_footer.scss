@@ -1,10 +1,11 @@
 @use "../2-design-tokens/fonts";
 @use "../3-tools/breakpoints";
+@use "../3-tools/colors";
 
 .page__footer {
   width: 100%;
   padding: 1em;
-  background-color: get-color('bdp-yellow', 'base');
+  background-color: colors.get-color('bdp-yellow', 'base');
   box-shadow: 0 -5px 5px rgba(0,0,0,.3);
   @include breakpoints.media-breakpoint-up(md) {
     background: rgba(56, 46, 35, 0.7);
@@ -15,9 +16,9 @@
     font-family: fonts.$font-family-immenhausen;
     font-size: 1.5625rem;
     padding: 0 0 0.54375rem;
-    color: get-color('bdp-blue', 'base');
+    color: colors.get-color('bdp-blue', 'base');
     @include breakpoints.media-breakpoint-up(md) {
-      color: get-color('bdp-yellow', 'base');
+      color: colors.get-color('bdp-yellow', 'base');
     }
   }
   &__content {

@@ -1,8 +1,9 @@
-@use "../3-tools/breakpoints";
 @use "../2-design-tokens/fonts";
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
 
 .mainheader {
-  background-color: get-color('bdp-yellow', 'base');
+  background-color: colors.get-color('bdp-yellow', 'base');
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,21 +31,21 @@
     display: block;
     width: 100%;
     z-index: 20;
-    background: get-color('bdp-blue', 'base');
+    background: colors.get-color('bdp-blue', 'base');
     @include breakpoints.media-breakpoint-up(md) {
       display: none;
     }
     &__link {
       font-size: 1.125rem;
       padding-left: 0.75rem;
-      color: get-color('bdp-yellow', 'base');
+      color: colors.get-color('bdp-yellow', 'base');
       line-height: 1.875rem;
       font-family: fonts.$font-family-immenhausen;
       letter-spacing: 1px;
       word-spacing: 2px;
       &:hover,
       &:visited {
-        color: get-color('bdp-yellow', 'base');
+        color: colors.get-color('bdp-yellow', 'base');
       }
       &:hover {
         text-decoration: none;

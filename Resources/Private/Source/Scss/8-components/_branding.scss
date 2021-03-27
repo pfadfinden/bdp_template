@@ -1,5 +1,6 @@
-@use "../3-tools/breakpoints";
 @use "../2-design-tokens/fonts";
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
 
 .brand {
   position: relative;
@@ -14,7 +15,7 @@
     display: block;
     height: 100%;
     @include breakpoints.media-breakpoint-up(md){
-      background-color: get-color('bdp-yellow', 'base');
+      background-color: colors.get-color('bdp-yellow', 'base');
       z-index: 7;
       position: relative;
       margin-left: 15rem;
@@ -46,7 +47,7 @@
         height: auto;
         margin: 0;
         padding: 1.25rem 1.09375rem 0.625rem 1.09375rem;
-        background-color: get-color('bdp-yellow', 'base');
+        background-color: colors.get-color('bdp-yellow', 'base');
         line-height: 115px;
         text-align: center;
       }
@@ -77,8 +78,8 @@
         display: block;
         font-size: 1.125rem;
         padding-left: 0.75rem;
-        background: get-color('bdp-blue', 'base');
-        color: get-color('bdp-yellow', 'base');
+        background: colors.get-color('bdp-blue', 'base');
+        color: colors.get-color('bdp-yellow', 'base');
         line-height: 1.875rem;
         font-family: fonts.$font-family-immenhausen;
         letter-spacing: 1px;

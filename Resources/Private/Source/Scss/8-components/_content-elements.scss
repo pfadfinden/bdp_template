@@ -1,3 +1,5 @@
+@use "../3-tools/colors";
+
 .bdp-ce {
   padding: 1rem;
   margin-bottom: 1rem;
@@ -9,22 +11,24 @@
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
     }
     &-1 {
-      background-color: get-color('bdp-yellow', 'base');
+      background-color: colors.get-color('bdp-yellow', 'base');
       color: #000000;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
     }
     &-2 {
-      background-color: get-color('bdp-blue', 'base');
+      background-color: colors.get-color('bdp-blue', 'base');
       color: #ffffff;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
     }
     &-3 {
-      background-color: get-color('bdp-red', 'base');
+      background-color: colors.get-color('bdp-red', 'base');
       color: #ffffff;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
     }
     &-4 {
       padding: 0;
+      background-color: transparent;
+      color: #ffffff;
     }
   }
 }

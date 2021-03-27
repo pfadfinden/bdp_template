@@ -30,6 +30,7 @@
 @use "5-elements/link" as elements_link;
 
 // 6. Layout Utilities
+@use "6-layout/container" as layout_container;
 @use "6-layout/grid" as layout_grid;
 
 // 7. Skeleton

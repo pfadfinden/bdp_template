@@ -1,6 +1,8 @@
+@use "../2-design-tokens/colors";
+
 @function get-color($color, $type) {
-  @if map-has-key($colors, $color) {
-    $curr_color: map-get($colors, $color);
+  @if map-has-key(colors.$colors, $color) {
+    $curr_color: map-get(colors.$colors, $color);
     @if map-has-key($curr_color, $type) {
       @return map-get($curr_color, $type);
     }

@@ -1,8 +1,10 @@
+@use "../3-tools/colors";
+
 a {
-  color: get-color('bdp-blue', 'base');
+  color: colors.get-color('bdp-blue', 'base');
   text-decoration: none;
   &:visited {
-    color: get-color('bdp-blue', 'base');
+    color: colors.get-color('bdp-blue', 'base');
   }
   &:active {
     text-decoration: none;

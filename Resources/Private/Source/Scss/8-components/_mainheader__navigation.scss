@@ -1,7 +1,8 @@
 @use "../2-design-tokens/fonts";
+@use "../3-tools/colors";
 
 .page .main-navigation {
-  background-color: get-color('bdp-yellow', 'base');
+  background-color: colors.get-color('bdp-yellow', 'base');
   &__list {
     display: block;
     padding: 0.625rem 0 2.5rem;
@@ -15,9 +16,9 @@
       &__link {
         display: block;
         padding: 0.5rem 1rem;
-        color: get-color('bdp-brown', 'base');
+        color: colors.get-color('bdp-brown', 'base');
         &:visited {
-          color: get-color('bdp-brown', 'base');
+          color: colors.get-color('bdp-brown', 'base');
         }
         &:hover {
           color: #000000;
@@ -47,7 +48,7 @@
               color: #000000;
             }
             &:hover {
-              color: get-color('bdp-brown', 'base');
+              color: colors.get-color('bdp-brown', 'base');
             }
             &.current {
               color: #ffffff;

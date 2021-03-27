@@ -1,8 +1,34 @@
 @use "../2-design-tokens/fonts";
-
-h1,
-h2,
-h3,
-h4 {
+//TODO
+%__headings {
   font-family: fonts.$font-family-immenhausen;
+  font-weight: 400;
+}
+
+h1, .h1 {
+  @extend %__headings;
+  font-size: 2.1875rem;
+  line-height: 1.1;
+  margin-bottom: 0.875rem;
+  margin-top: 1.125rem;
+}
+
+h2, .h2 {
+  @extend %__headings;
+  font-size: 1.3125rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  box-decoration-break: clone;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+}
+
+h3, .h3 {
+  @extend %__headings;
+  font-size: 1.1875rem;
+}
+
+h4, .h4 {
+  @extend %__headings;
+  font-size: 1rem;
 }
