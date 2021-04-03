@@ -6,13 +6,15 @@
         </f:if>
         <div class="mainheader__container__i">
             <div class="brand">
-                <f:link.page pageUid="{site.rootPageId}" class="brand__box brand__box--region">
-                    <div class="brand__box__logo brand__box__logo--region">
+                <f:link.page pageUid="{site.rootPageId}" class="brand__box{f:if(condition: settings.branding.region.enable, then: ' brand__box--region')}">
+                    <div class="brand__box__logo{f:if(condition: settings.branding.region.enable, then: ' brand__box__logo--region')}">
                         <f:image src="EXT:bdp_template/Resources/Public/Images/bundeszeichen.png" alt="Pfadfinden Logo" class="brand__box__logo__image"/>
                     </div>
-                    <div class="brand__box__region">
-                        Stamm Rote Dose
-                    </div>
+                    <f:if condition="{settings.branding.region.enable}">
+                        <div class="brand__box__region">
+                            {settings.branding.region.value}
+                        </div>
+                    </f:if>
                 </f:link.page>
             </div>
             <button id="mobile-bdp-menu-toggler" class="mobile-menu-opener" data-open="Open the menu" data-close="Close the menu">
@@ -22,10 +24,10 @@
             </button>
         </div>
     </div>
-    <f:if condition="true">
+    <f:if condition="{settings.branding.region.enable}">
         <div class="mainheader__region">
             <f:link.page pageUid="{site.rootPageId}" class="mainheader__region__link">
-                Stamm Rote Dose
+                {settings.branding.region.value}
             </f:link.page>
         </div>
     </f:if>
