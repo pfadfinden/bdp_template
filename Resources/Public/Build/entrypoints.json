@@ -2,11 +2,11 @@
   "entrypoints": {
     "pfadfinden": {
       "js": [
-        "/typo3conf/ext/bdp_template/Resources/Public/Build/817.560fc069.js",
-        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.f245bad0.js"
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/817.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.js"
       ],
       "css": [
-        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.bd7b1f77.css"
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.css"
       ]
     }
   }
