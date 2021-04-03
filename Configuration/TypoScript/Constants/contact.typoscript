@@ -1,0 +1,19 @@
+# customcategory=bdp=BdP Template
+# customsubcategory=contact=Kontakt
+
+bdp {
+    contact {
+        # cat=bdp/contact/a; type=string; label=Name der Organisation
+        name = BdP Stamm Weiße Dose
+        # cat=bdp/contact/b; type=string; label=Anschrift
+        address = Kesselhaken 23, 34376 Immenhausen, DE
+        # cat=bdp/contact/c; type=string; label=Telefonnummer
+        phone = +49 5673 99584-0
+        # cat=bdp/contact/d; type=string; label=Faxnummer
+        fax = +49 5673 99584-44
+        # cat=bdp/contact/e; type=string; label=E-Mail
+        email = info@pfadfinden.de
+        # cat=bdp/contact/f; type=string; label=Website
+        website = https://www.pfadfinden.de
+    }
+}

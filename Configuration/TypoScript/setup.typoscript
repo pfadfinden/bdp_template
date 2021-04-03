@@ -110,6 +110,42 @@ page {
                 references.fieldName = media
             }
         }
+
+        settings {
+            branding {
+                region {
+                    enable = {$bdp.branding.region.enable}
+                    value = {$bdp.branding.region.value}
+                }
+                region-image {
+                    enable = {$bdp.branding.region-image.enable}
+                    value = {$bdp.branding.region-image.value}
+                }
+                organisation = {$bdp.branding.organisation}
+            }
+            contact {
+                name = {$bdp.contact.name}
+                address = {$bdp.contact.address}
+                phone = {$bdp.contact.phone}
+                fax = {$bdp.contact.fax}
+                email = {$bdp.contact.email}
+                website = {$bdp.contact.website}
+            }
+            social {
+                facebook {
+                    enable = {$bdp.social.facebook.enable}
+                    value = {$bdp.social.facebook.value}
+                }
+                instagram {
+                    enable = {$bdp.social.instagram.enable}
+                    value = {$bdp.social.instagram.value}
+                }
+                youtube {
+                    enable = {$bdp.social.youtube.enable}
+                    value = {$bdp.social.youtube.value}
+                }
+            }
+        }
     }
 
     meta {
