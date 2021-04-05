@@ -7,7 +7,11 @@ html {
   &__header {
     &--region {
       ~ .page__content {
-        padding-top: 75px;
+        padding-top: 82px;
+        @include breakpoints.media-breakpoint-up(md) {
+          min-height: 100vh;
+          padding-top: 0;
+        }
       }
     }
   }
@@ -18,10 +22,11 @@ html {
     overflow-x: hidden;
     @include breakpoints.media-breakpoint-up(md) {
       min-height: 100vh;
+      padding-top: 0;
     }
     &__main {
       @include breakpoints.media-breakpoint-up(md) {
-        margin-top: 3rem;
+        margin-top: 2.625rem;
         margin-left: 15rem;
       }
     }

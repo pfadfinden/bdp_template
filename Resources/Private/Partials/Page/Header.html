@@ -1,6 +1,6 @@
 {namespace encore = Ssch\Typo3Encore\ViewHelpers}
 <f:spaceless>
-<header id="mainheader" class="page__header page__header--region mainheader">
+<header id="mainheader" class="page__header mainheader{f:if(condition: settings.branding.region.enable, then: ' page__header--region')}">
     <div class="mainheader__container">
         <f:if condition="{languageNavigation -> f:count()} >= 1">
             <f:render partial="Navigation/LanguageNavigation" arguments="{languageNavigation: languageNavigation, site: site}" />
