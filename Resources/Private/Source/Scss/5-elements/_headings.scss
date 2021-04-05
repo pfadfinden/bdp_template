@@ -1,7 +1,16 @@
 @use "../2-design-tokens/fonts";
+@use "../3-tools/colors";
 %__headings {
   font-family: fonts.$font-family-immenhausen;
   font-weight: 400;
+}
+%__lines {
+  display: inline;
+  padding: 0.1875rem 0.25rem 0.1875rem 0.25rem;
+  margin: 0.625rem 0 .625rem -0.125rem;
+  line-height: 1.4;
+  letter-spacing: 1px;
+  box-decoration-break: clone;
 }
 
 h1, .ce-header--1 {
@@ -30,4 +39,31 @@ h3, .ce-header--3 {
 h4, .ce-header--4 {
   @extend %__headings;
   font-size: 1rem;
+}
+.ce-header {
+  &--80 {
+    @extend %__lines;
+    background-color: colors.get-color('bdp-yellow', 'base');
+    color: colors.get-color('bdp-blue', 'base');
+  }
+  &--81 {
+    @extend %__lines;
+    background-color: colors.get-color('bdp-red', 'base');
+    color: #ffffff;
+  }
+  &--82 {
+    @extend %__lines;
+    background-color: colors.get-color('bdp-blue', 'base');
+    color: #ffffff;
+  }
+  &--83 {
+    @extend %__lines;
+    background-color: colors.get-color('bdp-blue', 'base');
+    color: colors.get-color('bdp-yellow', 'base');
+  }
+  &--84 {
+    @extend %__lines;
+    background-color: #ffffff;
+    color: colors.get-color('bdp-red', 'base');
+  }
 }

@@ -20,6 +20,7 @@ html {
     min-height: 25rem;
     padding-top: 3.25rem;
     overflow-x: hidden;
+    margin-bottom: 3.25rem;
     @include breakpoints.media-breakpoint-up(md) {
       min-height: 100vh;
       padding-top: 0;
