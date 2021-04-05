@@ -1,16 +1,23 @@
 @use "../2-design-tokens/fonts";
 @use "../3-tools/breakpoints";
 @use "../3-tools/colors";
+@use "../6-layout/container";
+@use "../6-layout/grid";
 
 .page__footer {
+  @extend .container-fluid;
   width: 100%;
-  padding: 1em;
+  padding-top: 1rem;
+  padding-bottom: 2.5rem;
   background-color: colors.get-color('bdp-yellow', 'base');
   box-shadow: 0 -5px 5px rgba(0,0,0,.3);
   @include breakpoints.media-breakpoint-up(md) {
     background: rgba(56, 46, 35, 0.7);
-    color: #eee;
+    color: #ffffff;
     box-shadow: none;
+    padding-top: 1.825rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
   }
   &__title {
     font-family: fonts.$font-family-immenhausen;
@@ -22,21 +29,105 @@
     }
   }
   &__content {
+    @extend .row;
     font-size: 0.75rem;
     color: #000000;
-    @include breakpoints.media-breakpoint-up(sm) {
-      display: flex;
-      flex-wrap: wrap;
+    line-height: 1.5;
+    a {
+      color: colors.get-color('bdp-blue', 'base');
+      font-style: italic;
+      &:hover {
+        color: colors.get-color('bdp-blue', 'base');
+        text-decoration: underline;
+      }
     }
     @include breakpoints.media-breakpoint-up(md) {
       color: #ffffff;
+      a {
+        color: #dcdcdc;
+        &:hover {
+          color: #dcdcdc;
+        }
+      }
     }
     &__section {
+      flex: 0 0 auto;
+      width: 100%;
+      margin-top: 0.625rem;
       @include breakpoints.media-breakpoint-up(sm) {
         width: 50%;
       }
       @include breakpoints.media-breakpoint-up(lg) {
         width: percentage(3 / 12);
+      }
+      &--address {
+        order: 1;
+      }
+      &--contact {
+        order: 2;
+      }
+      &--nav {
+        order: 4;
+        @include breakpoints.media-breakpoint-up(sm) {
+          order: 3;
+        }
+      }
+      &--social {
+        order: 3;
+        @include breakpoints.media-breakpoint-up(sm) {
+          order: 4;
+        }
+      }
+      &__address {
+        &__name {
+          margin-bottom: 0.625rem;
+        }
+      }
+      &__contact {
+        &__item {
+          &__value {
+            color: colors.get-color('bdp-blue', 'base');
+            font-family: fonts.$font-family-serif;
+            @include breakpoints.media-breakpoint-up(md) {
+              color: #dcdcdc;
+            }
+          }
+        }
+      }
+      &__nav {
+        &__list {
+          margin: 0;
+          padding: 0;
+          &__item {
+            font-size: 0.875rem;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            font-family: fonts.$font-family-serif;
+            &__icon {
+              display: inline-block;
+              vertical-align: middle;
+            }
+            &__link {
+              display: inline-block;
+              margin-left: 0.25rem;
+            }
+          }
+        }
+      }
+      &__social {
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: -0.5rem;
+        margin-right: -0.5rem;
+        &__item {
+          padding-left: 0.5rem;
+          padding-right: 0.5rem;
+          &__link {
+            display: block;
+          }
+        }
       }
     }
   }

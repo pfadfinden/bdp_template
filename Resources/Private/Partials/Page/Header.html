@@ -1,3 +1,4 @@
+{namespace encore = Ssch\Typo3Encore\ViewHelpers}
 <f:spaceless>
 <header id="mainheader" class="page__header page__header--region mainheader">
     <div class="mainheader__container">
@@ -8,7 +9,7 @@
             <div class="brand">
                 <f:link.page pageUid="{site.rootPageId}" class="brand__box{f:if(condition: settings.branding.region.enable, then: ' brand__box--region')}">
                     <div class="brand__box__logo{f:if(condition: settings.branding.region.enable, then: ' brand__box__logo--region')}">
-                        <f:image src="EXT:bdp_template/Resources/Public/Images/bundeszeichen.png" alt="Pfadfinden Logo" class="brand__box__logo__image"/>
+                        <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/bundeszeichen.png')}" alt="Pfadfinden Logo" class="brand__box__logo__image"/>
                     </div>
                     <f:if condition="{settings.branding.region.enable}">
                         <div class="brand__box__region">

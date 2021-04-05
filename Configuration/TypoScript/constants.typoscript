@@ -39,6 +39,8 @@ page {
     }
     config {
         sideNavigationPid = 7
+        legalNoticePid = 10
+        privacyPid = 12
     }
 }
 

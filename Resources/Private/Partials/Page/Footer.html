@@ -1,63 +1,71 @@
+{namespace encore = Ssch\Typo3Encore\ViewHelpers}
 <footer class="page__footer">
     <div class="page__footer__title">
-        Bund der Pfadfinderinnen und Pfadfinder Landesverband Bayern e.V.
+        {settings.branding.organisation}
     </div>
     <div class="page__footer__content">
-        <div class="page__footer__content__section">
-        </div>
-        <div class="page__footer__content__section cell-md-4">
-            <div class="footer-content__contact-headline">
-                {f:translate(key: 'footer.contact', extensionName: 'ZentrumPfadfinden')}
-            </div>
-            <div class="footer-content__contact-name">
-                {f:translate(key: 'footer.contact.name', extensionName: 'ZentrumPfadfinden')}
-            </div>
-            <div class="footer-content__contact-address">
-                <div>Kesselhaken 23,</div>
-                <div>34376 Immenhausen, DE</div>
-            </div>
-            <div class="footer-content__contact-phone">
-                <div>Tel.: <a href="tel:+495673995840">+49 5673 99584-0</a></div>
-                <div>Fax.: +49 5673 99584-44</div>
-                <div>{f:translate(key: 'footer.contact.email', extensionName: 'ZentrumPfadfinden')}: <a href="mailto:zentrum@pfadfinden.de">zentrum@pfadfinden.de</a></div>
+        <div class="page__footer__content__section page__footer__content__section--address">
+            <div class="page__footer__content__section__address">
+                <div class="page__footer__content__section__address__name">{settings.contact.name}</div>
+                <div class="page__footer__content__section__address__value">{settings.contact.address}</div>
             </div>
         </div>
-        <div class="page__footer__content__section cell-md-4">
-            <div class="footer-content__navigation__wrapper">
-                <f:if condition="{languageNavigation -> f:count()} > 1">
-                    <nav class="footer-content__navigation__language-menu" aria-label="{f:translate(key: 'language.aria', extensionName: 'ZentrumPfadfinden')}">
-                        <ul class="footer-content__navigation__language-menu__list">
-                            <f:for each="{languageNavigation}" as="item">
-                                <li class="{f:if(condition: item.active, then: 'active')}{f:if(condition: item.available, else: ' text-muted')}">
-                                    <f:if condition="{item.available}">
-                                        <f:then>
-                                            <a href="{item.link}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
-                                                <span>{item.navigationTitle}</span>
-                                            </a>
-                                        </f:then>
-                                        <f:else>
-                                            <a href="{f:uri.page(pageUid: site.rootPageId, additionalParams: '{L: item.languageId}')}" hreflang="{item.hreflang}" title="{item.navigationTitle}">
-                                                <span>{item.navigationTitle}</span>
-                                            </a>
-                                        </f:else>
-                                    </f:if>
-                                </li>
-                            </f:for>
-                        </ul>
-                    </nav>
+        <div class="page__footer__content__section page__footer__content__section--contact">
+            <div class="page__footer__content__section__contact">
+                <f:if condition="{settings.contact.phone}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Telefon: </span>
+                        <span class="page__footer__content__section__contact__item__value"><a href="tel:{settings.contact.phone}">{settings.contact.phone}</a></span>
+                    </div>
                 </f:if>
-                <nav class="footer-content__navigation__meta">
-                    <ul>
-                        <f:for each="{footernavigation}" as="footernavtigationItem">
-                            <li class="{f:if(condition: footernavtigationItem.active, then:'active')}">
-                                <a href="{footernavtigationItem.link}" target="{footernavtigationItem.target}" title="{footernavtigationItem.title}"{f:if(condition: footernavtigationItem.current, then:' aria-current="page"')}>
-                                    {footernavtigationItem.title}
-                                </a>
-                            </li>
-                        </f:for>
-                    </ul>
-                </nav>
+                <f:if condition="{settings.contact.fax}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Telefax: </span>
+                        <span class="page__footer__content__section__contact__item__value">{settings.contact.fax}</span>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.contact.email}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">E-Mail: </span>
+                        <span class="page__footer__content__section__contact__item__value"><f:link.email email="{settings.contact.email}">{settings.contact.email}</f:link.email></span>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.contact.website}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Internet: </span>
+                        <span class="page__footer__content__section__contact__item__value">
+                            <f:link.external uri="{settings.contact.website}">{settings.contact.website}</f:link.external>
+                        </span>
+                    </div>
+                </f:if>
             </div>
+        </div>
+        <div class="page__footer__content__section page__footer__content__section--nav">
+            <nav aria-label="Footer" class="page__footer__content__section__nav">
+                <ul class="page__footer__content__section__nav__list">
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" />
+                        </span>
+                        <f:link.page pageUid="{settings.legalNotice}" class="page__footer__content__section__nav__list__item__link">Impressum</f:link.page>
+                    </li>
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" />
+                        </span>
+                        <f:link.page pageUid="{settings.privacy}" class="page__footer__content__section__nav__list__item__link">Datenschutzerklärung</f:link.page>
+                    </li>
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/login_1.png')}" />
+                        </span>
+                        <a href="/typo3" class="page__footer__content__section__nav__list__item__link" rel="nofollow">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page__footer__content__section page__footer__content__section--social">
+            <f:render partial="FooterSocial" arguments="{_all}" />
         </div>
     </div>
 </footer>

@@ -145,6 +145,8 @@ page {
                     value = {$bdp.social.youtube.value}
                 }
             }
+            privacy = {$page.config.privacyPid}
+            legalNotice = {$page.config.legalNoticePid}
         }
     }
 
