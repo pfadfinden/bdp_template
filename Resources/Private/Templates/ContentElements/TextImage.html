@@ -1,0 +1,17 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+<f:section name="Header" />
+<f:section name="Main">
+    <div class="ce-textimage">
+        <div class="ce-textimage__picture">
+            <f:if condition="{files.0}">
+                <f:image image="{files.0}" width="552c" height="552c" class="ce-textimage__picture__image" loading="lazy" />
+            </f:if>
+        </div>
+        <div class="ce-textimage__content">
+            <f:render partial="Header/All" arguments="{_all}" />
+            <f:format.html>{data.bodytext}</f:format.html>
+        </div>
+    </div>
+</f:section>
+</html>

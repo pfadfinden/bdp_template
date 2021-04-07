@@ -117,3 +117,16 @@ call_user_func(static function()
     //->setIcon('EXT:container_example/Resources/Public/Icons/b13-2cols-with-header-container.svg')
     );
 });
+
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:bdp_template/Resources/Private/Language/locallang_db.xlf:bdp_text-image.title',
+        'bdp_text-image',
+        'content-beside-text-img-centered-right',
+    ],
+    'textmedia',
+    'after'
+);
+

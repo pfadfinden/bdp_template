@@ -12,6 +12,11 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-2x6-container.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-3x3-container.typoscript">
 
+##########################
+#### Content Elements ####
+##########################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript">
+
 ################
 #### HELPER ####
 ################

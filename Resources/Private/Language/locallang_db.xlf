@@ -6,6 +6,9 @@
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
         </header>
         <body>
+            <trans-unit id="bdp_text-image.title">
+                <source>Text with Image</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>
