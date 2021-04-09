@@ -2,7 +2,7 @@
 <f:layout name="Default" />
 <f:section name="Header" />
 <f:section name="Main">
-    <div class="ce-textimage">
+    <div class="ce-textimage{f:if(condition: '{data.image_position} == \'1\'', then: ' ce-textimage--right')}">
         <div class="ce-textimage__picture">
             <f:if condition="{files.0}">
                 <f:image image="{files.0}" width="552c" height="552c" class="ce-textimage__picture__image" loading="lazy" />

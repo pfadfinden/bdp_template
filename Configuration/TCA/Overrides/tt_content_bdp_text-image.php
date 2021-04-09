@@ -1,5 +1,38 @@
 <?php
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
 defined('TYPO3_MODE') || die();
+
+ExtensionManagementUtility::addTCAcolumns('tt_content',
+    [
+        'image_position' => [
+            'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient',
+            'config' => [
+                'type' => 'select',
+                'renderType' => 'selectSingle',
+                'items' => [
+                    [
+                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.10',
+                        0,
+                        'content-beside-text-img-left'
+                    ],
+                    [
+                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.9',
+                        1,
+                        'content-beside-text-img-right'
+                    ],
+                ],
+                'default' => 0,
+                'fieldWizard' => [
+                    'selectIcons' => [
+                        'disabled' => false,
+                    ],
+                ],
+            ]
+        ]
+    ]
+);
+
 $GLOBALS['TCA']['tt_content']['types']['bdp_text-image'] = [
     'previewRenderer' => \TYPO3\CMS\Backend\Preview\StandardContentPreviewRenderer::class,
     'showitem' => '
@@ -10,6 +43,7 @@ $GLOBALS['TCA']['tt_content']['types']['bdp_text-image'] = [
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.images,
             image,
             --palette--;;mediaAdjustments,
+            image_position,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
             --palette--;;frames,
             --palette--;;appearanceLinks,

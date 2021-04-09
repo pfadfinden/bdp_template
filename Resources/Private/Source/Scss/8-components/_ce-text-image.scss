@@ -55,4 +55,16 @@
       max-width: 50%;
     }
   }
+  &--right {
+    @include breakpoints.media-breakpoint-up(sm) {
+      .ce-textimage {
+        &__picture {
+          order: 2
+        }
+        &__content {
+          order: 1;
+        }
+      }
+    }
+  }
 }
