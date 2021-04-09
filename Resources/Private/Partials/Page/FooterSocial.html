@@ -3,21 +3,21 @@
     <f:if condition="{settings.social.instagram.enable}">
         <div class="page__footer__content__section__social__item">
             <f:link.external uri="{settings.social.instagram.value}" target="_blank" rel="noopener" title="Instagram" class="page__footer__content__section__social__item__link">
-                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/ig.svg')}" width="50" height="50" class="page__footer__content__section__social__item__icon" alt="Instagram Icon"/>
+                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/ig.svg')}" width="50" height="50" class="page__footer__content__section__social__item__icon" alt="Instagram Icon" loading="lazy"/>
             </f:link.external>
         </div>
     </f:if>
     <f:if condition="{settings.social.facebook.enable}">
         <div class="page__footer__content__section__social__item">
             <f:link.external uri="{settings.social.facebook.value}" target="_blank" rel="noopener" title="Facebook" class="page__footer__content__section__social__item__link">
-                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/fb.svg')}" width="50" height="50" class="page__footer__content__section__social__item__icon" alt="Facebook Icon"/>
+                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/fb.svg')}" width="50" height="50" class="page__footer__content__section__social__item__icon" alt="Facebook Icon" loading="lazy"/>
             </f:link.external>
         </div>
     </f:if>
     <f:if condition="{settings.social.youtube.enable}">
         <div class="page__footer__content__section__social__item">
             <f:link.external uri="{settings.social.youtube.value}" target="_blank" rel="noopener" title="Youtube" class="page__footer__content__section__social__item__link">
-                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/yt.svg')}" width="70" height="50" class="page__footer__content__section__social__item__icon" alt="Youtube Icon"/>
+                <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/sc/yt.svg')}" width="70" height="50" class="page__footer__content__section__social__item__icon" alt="Youtube Icon" loading="lazy"/>
             </f:link.external>
         </div>
     </f:if>
