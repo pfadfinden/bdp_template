@@ -9,6 +9,9 @@
             <trans-unit id="bdp_text-image.title">
                 <source>Text with Image</source>
             </trans-unit>
+            <trans-unit id="bdp_teaser-image.title">
+                <source>Header image</source>
+            </trans-unit>
         </body>
     </file>
 </xliff>

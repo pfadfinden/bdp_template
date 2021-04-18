@@ -130,3 +130,16 @@ call_user_func(static function()
     'after'
 );
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:bdp_template/Resources/Private/Language/locallang_db.xlf:bdp_teaser-image.title',
+        'bdp_teaser-image',
+        'gallery',
+    ],
+    'textmedia',
+    'after'
+);
+
+

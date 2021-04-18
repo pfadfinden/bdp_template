@@ -1,7 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{data.frame_class} != none">
     <f:then>
-
         <div id="c{data.uid}" class="bdp-ce bdp-ce-{data.frame_class} bdp-ce__type-{data.CType} bdp-ce--layout-{data.layout}{f:if(condition: data.space_before_class, then: ' bdp-ce--sb-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' bdp-ce--sa-{data.space_after_class}')}">
             <f:if condition="{data._LOCALIZED_UID}">
                 <a id="c{data._LOCALIZED_UID}"></a>

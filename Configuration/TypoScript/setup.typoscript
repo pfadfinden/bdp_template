@@ -16,6 +16,7 @@
 #### Content Elements ####
 ##########################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElements/TeaserImage.typoscript">
 
 ################
 #### HELPER ####
