@@ -23,6 +23,11 @@ $container-max-widths: (
       md: 950px,
       xxl: 1180px,
 );
+$container-wide-max-widths: (
+      md: 1260px,
+      xxl: 1460px,
+);
 // scss-docs-end container-max-widths
 
 @include functions.assert-ascending($container-max-widths, "$container-max-widths");
+@include functions.assert-ascending($container-wide-max-widths, "$container-max-widths");

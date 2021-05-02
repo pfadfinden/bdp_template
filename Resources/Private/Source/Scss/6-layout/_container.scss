@@ -21,6 +21,14 @@
     }
   }
 }
+.container-bdp--wide {
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in breakpoints-variables.$container-wide-max-widths {
+    @include breakpoints.media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
 
 
 

@@ -25,7 +25,15 @@ html {
       min-height: 100vh;
       padding-top: 0;
     }
+    &__header {
+      + .page__content__main {
+        @include breakpoints.media-breakpoint-up(md) {
+          margin-top: 2rem;
+        }
+      }
+    }
     &__main {
+      margin-top: 1rem;
       @include breakpoints.media-breakpoint-up(md) {
         margin-top: 2.625rem;
         margin-left: 0;

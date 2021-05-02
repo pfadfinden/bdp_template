@@ -8,18 +8,19 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
+    "masonry-layout": "^4.2.2",
     "@symfony/webpack-encore": "^1.1.2",
     "autoprefixer": "^10.2.5",
     "compression-webpack-plugin": "^7.1.2",
-    "core-js": "^3.9.1",
+    "core-js": "^3.11.1",
     "element-closest-polyfill": "^1.0.2",
     "eventslibjs": "^1.2.0",
     "fibers": "^5.0.0",
-    "file-loader": "^6.0.0",
-    "imagemin-webp-webpack-plugin": "^3.3.3",
+    "file-loader": "^6.2.0",
+    "imagemin-webp-webpack-plugin": "^3.3.4",
     "mmenu-js": "^8.5.21",
     "postcss-loader": "^5.2.0",
-    "sass": "^1.32.8",
+    "sass": "^1.32.12",
     "sass-loader": "^11.0.1"
   },
   "scripts": {
@@ -35,5 +36,8 @@
     "Firefox ESR",
     "not dead",
     "edge 18"
-  ]
+  ],
+  "dependencies": {
+    "lightgallery": "^1.10.0"
+  }
 }

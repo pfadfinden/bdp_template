@@ -6,7 +6,7 @@
             <f:render partial="SideNavigation" arguments="{_all}" />
         </section>
         <main class="page__content">
-            <section class="page__content__main container-bdp">
+            <section class="page__content__main container-bdp{f:if(condition: '{data.layout} == \'1\'', then:' container-bdp--wide')}">
                 <f:render section="Main" />
             </section>
         </main>
