@@ -1,0 +1,51 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.ce-address__lv {
+  &__items {
+    @include tools-grid.make-row(1rem);
+    overflow: hidden;
+    &__item {
+      @include tools-grid.make-col-ready();
+      margin-bottom: 1rem;
+      @include breakpoints.media-breakpoint-up(sm) {
+        @include tools-grid.make-col(6, 12);
+      }
+      @include breakpoints.media-breakpoint-up(xl) {
+        @include tools-grid.make-col(4, 12);
+      }
+      &__box {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1rem;
+        font-size: 0.875rem;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+        &__headline {
+          margin-bottom: 0.625rem;
+          &__title {
+            display: inline;
+            padding: 0.1875rem 0.25rem 0.1875rem 0.25rem;
+            margin: 0.625rem 0 .625rem -0.125rem;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            box-decoration-break: clone;
+            background-color: colors.get-color('bdp-yellow', 'base');
+            color: colors.get-color('bdp-blue', 'base');
+          }
+        }
+        &__numbers {
+          padding: 0;
+          list-style: none;
+          margin: 1rem 0;
+        }
+        &__internet {
+          padding: 0;
+          list-style: none;
+          margin: 1rem 0;
+        }
+      }
+    }
+  }
+}

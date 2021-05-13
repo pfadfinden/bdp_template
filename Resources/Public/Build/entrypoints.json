@@ -29,6 +29,26 @@
       "css": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-news-detail.css"
       ]
+    },
+    "pfadfinden-address-list": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/751.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-list.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-list.css"
+      ]
+    },
+    "pfadfinden-address-lv": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/751.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-lv.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-lv.css"
+      ]
     }
   }
 }

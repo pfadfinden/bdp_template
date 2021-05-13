@@ -54,6 +54,13 @@
         padding: 1rem;
         font-size: 0.875rem;
         box-shadow: 0 5px 5px rgba(0,0,0,.1);
+        .mediaelement {
+          margin: 0;
+          padding: 0;
+          &__link {
+            display: block;
+          }
+        }
         img {
           width: 100%;
           height: auto;

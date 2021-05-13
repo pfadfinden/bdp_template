@@ -1,0 +1,35 @@
+<div class="ce-address__list__items__item">
+    <div class="ce-address__list__items__item__box">
+        <f:if condition="{address.image}">
+            <div class="ce-address__list__items__item__box__picture">
+                <f:media file="{address.firstImage}" width="100c" height="150" class="ce-address__list__items__item__box__picture__image"
+                         alt="{address.firstImage.originalResource.alt}"
+                         title="{address.fullName}"/>
+            </div>
+        </f:if>
+        <div class="ce-address__list__items__item__box__content">
+            <h3 class="ce-address__list__items__item__box__content__name">{address.fullName}</h3>
+            <f:if condition="{address.position}">
+                <div class="ce-address__list__items__item__box__content__job">
+                    {address.position}
+                </div>
+            </f:if>
+            <ul class="ce-address__list__items__item__box__content__info">
+                <f:if condition="{address.email}">
+                    <li><f:link.email email="{address.email}" /></li>
+                </f:if>
+                <f:if condition="{address.phone}">
+                    <li>
+                        {f:translate(key:'label.telephone')}: <a href="tel:{address.cleanedPhone}">{address.phone}</a>
+                    </li>
+                </f:if>
+                <f:if condition="{address.fax}">
+                    <li>{f:translate(key:'label.fax')}: {address.fax}</li>
+                </f:if>
+            </ul>
+            <div class="ce-address__list__items__item__box__content__description">
+                {address.description -> f:format.html()}
+            </div>
+        </div>
+    </div>
+</div>

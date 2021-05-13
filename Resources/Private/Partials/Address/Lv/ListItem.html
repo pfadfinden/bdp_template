@@ -1,0 +1,40 @@
+<div class="ce-address__lv__items__item">
+    <div class="ce-address__lv__items__item__box">
+        <div class="ce-address__lv__items__item__box__headline">
+            <h3 class="ce-address__lv__items__item__box__headline__title">{address.fullName}</h3>
+        </div>
+        <f:if condition="{address.address}">
+            <address class="ce-address__lv__items__item__box__address">
+                <f:if condition="{address.organisation}">
+                    <div>{address.organisation}</div>
+                </f:if>
+                <div>{address.address}</div>
+                <div>{address.zip}&nbsp;{address.city}</div>
+            </address>
+        </f:if>
+        <f:if condition="{address.phone} || {address.fax}">
+            <ul class="ce-address__lv__items__item__box__numbers">
+                <f:if condition="{address.phone}">
+                    <li>
+                        {f:translate(key:'label.telephone')}: <a href="tel:{address.cleanedPhone}">{address.phone}</a>
+                    </li>
+                </f:if>
+                <f:if condition="{address.fax}">
+                    <li>{f:translate(key:'label.fax')}: {address.fax}</li>
+                </f:if>
+            </ul>
+        </f:if>
+        <f:if condition="{address.email} || {address.www}">
+            <ul class="ce-address__lv__items__item__box__internet">
+                <f:if condition="{address.email}">
+                    <li>E-Mail: <f:link.email email="{address.email}" /></li>
+                </f:if>
+                <f:if condition="{address.www}">
+                    <li>
+                        Internet: <f:link.typolink parameter="{address.www}">{address.wwwSimplified}</f:link.typolink>
+                    </li>
+                </f:if>
+            </ul>
+        </f:if>
+    </div>
+</div>

@@ -1,0 +1,70 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.ce-address__list {
+  &__items {
+    @include tools-grid.make-row(1rem);
+    overflow: hidden;
+    &__item {
+      @include tools-grid.make-col-ready();
+      margin-bottom: 1rem;
+      @include breakpoints.media-breakpoint-up(lg) {
+        @include tools-grid.make-col(6, 12);
+      }
+      &__box {
+        display: flex;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1rem;
+        font-size: 0.875rem;
+        box-shadow: 0 5px 5px rgba(0, 0, 0, .1);
+        &:first-child {
+          margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+        &__picture {
+          flex: 0 0 100px;
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        &__content {
+          flex: 1 1 auto;
+          margin-left: 1rem;
+          font-size: 0.875rem;
+          &__name {
+            display: inline;
+            padding: 0.1875rem 0.25rem 0.1875rem 0.25rem;
+            margin: 0.625rem 0 .625rem -0.125rem;
+            line-height: 1.4;
+            letter-spacing: 1px;
+            box-decoration-break: clone;
+            background-color: colors.get-color('bdp-yellow', 'base');
+            color: colors.get-color('bdp-blue', 'base');
+          }
+          &__job {
+            font-family: fonts.$font-family-serif;
+            font-style: italic;
+            margin-top: 0.25rem;
+            margin-bottom: 1rem;
+          }
+          &__info {
+            padding: 0;
+            list-style: none;
+            margin: 1rem 0;
+          }
+          &__description {
+            ul {
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

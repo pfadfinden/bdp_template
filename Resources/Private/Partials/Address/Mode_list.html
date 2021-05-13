@@ -1,0 +1,36 @@
+{namespace encore = Ssch\Typo3Encore\ViewHelpers}
+<encore:renderWebpackLinkTags entryName="pfadfinden-address-list" />
+<encore:renderWebpackScriptTags entryName="pfadfinden-address-list" />
+<div class="ce-address__list">
+    <f:if condition="{settings.hidePagination}">
+        <f:then>
+            <div class="ce-address__list__items">
+                <f:for each="{addresses}" as="address" iteration="iterator">
+                    <f:render partial="List/ListItem" arguments="{_all}"/>
+                </f:for>
+            </div>
+        </f:then>
+        <f:else if="{newPagination}">
+            <f:if condition="{settings.paginate.insertAbove}">
+                <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+            </f:if>
+            <div class="ce-address__list__items">
+                <f:for each="{pagination.paginator.paginatedItems}" as="address" iteration="iterator">
+                    <f:render partial="List/ListItem" arguments="{_all}"/>
+                </f:for>
+            </div>
+            <f:if condition="{settings.paginate.insertBelow}">
+                <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+            </f:if>
+        </f:else>
+        <f:else>
+            <f:widget.paginate objects="{addresses}" as="paginatedAdresses" configuration="{settings.paginate}">
+                <div class="ce-address__list__items">
+                    <f:for each="{paginatedAdresses}" as="address" iteration="iterator">
+                        <f:render partial="List/ListItem" arguments="{_all}"/>
+                    </f:for>
+                </div>
+            </f:widget.paginate>
+        </f:else>
+    </f:if>
+</div>

@@ -32,5 +32,14 @@ TCEFORM {
         header_position {
             removeItems = left,right
         }
+        pi_flexform {
+            ttaddress_listview {
+                sDISPLAY {
+                    settings\.displayMode.addItems {
+                        lv = Landesverbände
+                    }
+                }
+            }
+        }
     }
 }

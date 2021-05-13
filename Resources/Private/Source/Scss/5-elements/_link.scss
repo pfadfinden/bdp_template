@@ -6,6 +6,12 @@ a {
   &:visited {
     color: colors.get-color('bdp-blue', 'base');
   }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
   &:active {
     text-decoration: none;
   }

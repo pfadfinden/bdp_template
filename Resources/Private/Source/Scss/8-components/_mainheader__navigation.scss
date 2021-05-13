@@ -22,6 +22,11 @@
         }
         &:hover {
           color: #000000;
+          text-decoration: none;
+        }
+        &:focus {
+          color: #000000;
+          text-decoration: none;
         }
         &.active {
           color: #000000;
@@ -49,6 +54,11 @@
             }
             &:hover {
               color: colors.get-color('bdp-brown', 'base');
+              text-decoration: none;
+            }
+            &:focus {
+              color: colors.get-color('bdp-brown', 'base');
+              text-decoration: none;
             }
             &.current {
               color: #ffffff;
