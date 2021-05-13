@@ -1,5 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 <f:layout name="General" />
 <!--
@@ -11,7 +12,9 @@
 	<!--TYPO3SEARCH_end-->
 	<f:if condition="{news}">
 		<f:then>
-			<div class="news-list" id="news-container-{contentObjectData.uid}">
+            <encore:renderWebpackLinkTags entryName="pfadfinden-news-list" />
+            <encore:renderWebpackScriptTags entryName="pfadfinden-news-list" />
+            <div class="news-list" id="news-container-{contentObjectData.uid}">
 				<f:if condition="{settings.hidePagination}">
 					<f:then>
 						<f:for each="{news}" as="newsItem" iteration="iterator">

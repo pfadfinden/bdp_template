@@ -25,7 +25,7 @@ plugin.tx_news {
             }
         }
 
-        cropMaxCharacters = 250
+        cropMaxCharacters = 220
 
         link {
             hrDate = 1
@@ -60,6 +60,16 @@ plugin.tx_news {
                 templatePath =
                 prevNextHeaderTags = 1
                 maximumNumberOfLinks = 3
+            }
+        }
+
+        detail {
+            media {
+                image {
+                    lightbox {
+                        enabled = 1
+                    }
+                }
             }
         }
     }

@@ -1,10 +1,13 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
 <f:layout name="Detail" />
 <f:section name="content">
+    <encore:renderWebpackLinkTags entryName="pfadfinden-news-detail" />
+    <encore:renderWebpackScriptTags entryName="pfadfinden-news-detail" />
 	<f:if condition="{newsItem}">
         <article class="news-article">
             <n:format.nothing>
@@ -38,16 +41,16 @@
                     <div class="news-article__box">
                         <f:if condition="{newsItem.mediaPreviews}">
                             <f:then>
-                                <div class="news-list__item__header__media">
+                                <div class="news-article__box__media">
                                     <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
                                         <f:if condition="{mediaElement.originalResource.type} == 2">
-                                            <f:image class="news-list__item__header__media__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                            <f:image class="news-article__box__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
                                         </f:if>
                                         <f:if condition="{mediaElement.originalResource.type} == 4">
                                             <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
                                         </f:if>
                                         <f:if condition="{mediaElement.originalResource.type} == 5">
-                                            <f:image class="news-list__item__header__media__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                            <f:image class="news-article__box__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
                                         </f:if>
                                     </f:alias>
                                 </div>

@@ -49,15 +49,15 @@ Encore
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
     .addEntry('pfadfinden', './Resources/Private/Source/JavaScript/main.js')
-    //.addEntry('page1', './assets/page1.js')
-    //.addEntry('page2', './assets/page2.js')
+    .addEntry('pfadfinden-news-list', './Resources/Private/Source/JavaScript/news/news-list.js')
+    .addEntry('pfadfinden-news-detail', './Resources/Private/Source/JavaScript/news/news-detail.js')
 
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 
     // will require an extra script tag for runtime.js
     // but, you probably want this, unless you're building a single-page app
-    .disableSingleRuntimeChunk()
+    .enableSingleRuntimeChunk()
 
     /*
      * FEATURE CONFIG

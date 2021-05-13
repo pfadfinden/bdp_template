@@ -2,7 +2,7 @@
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
-<div class="mediaelement mediaelement-image">
+<figure class="mediaelement mediaelement-image">
 	<f:if condition="{mediaElement.link}">
 		<f:then>
 			<f:link.typolink parameter="{mediaElement.link}" target="{n:targetLink(link:mediaElement.link)}">
@@ -12,7 +12,7 @@
 		<f:else>
 			<f:if condition="{settings.detail.media.image.lightbox.enabled}">
 				<f:then>
-					<a href="{f:uri.image(image:mediaElement, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaElement.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
+					<a href="{f:uri.image(image:mediaElement, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaElement.title}" class="mediaelement__link" rel="{settings.detail.media.image.lightbox.rel}"">
 						<f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
 					</a>
 				</f:then>
@@ -22,10 +22,12 @@
 			</f:if>
 		</f:else>
 	</f:if>
-</div>
-<f:if condition="{mediaElement.description}">
-	<p class="news-img-caption">
-		{mediaElement.description}
-	</p>
-</f:if>
+    <f:if condition="{mediaElement.description}">
+        <figcaption class="mediaelement__caption">
+            <p class="news-img-caption">
+                {mediaElement.description}
+            </p>
+        </figcaption>
+    </f:if>
+</figure>
 </html>
