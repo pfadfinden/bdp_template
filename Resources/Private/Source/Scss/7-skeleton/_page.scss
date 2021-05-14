@@ -1,0 +1,44 @@
+@use "../3-tools/breakpoints";
+
+html {
+  background: url('Images/holzhintergrund_1.jpg');
+}
+.page {
+  &__header {
+    &--region {
+      ~ .page__content {
+        padding-top: 82px;
+        @include breakpoints.media-breakpoint-up(md) {
+          min-height: 100vh;
+          padding-top: 0;
+        }
+      }
+    }
+  }
+  &__content {
+    display: block;
+    min-height: 25rem;
+    padding-top: 3.25rem;
+    overflow-x: hidden;
+    margin-bottom: 3.25rem;
+    @include breakpoints.media-breakpoint-up(md) {
+      min-height: 100vh;
+      padding-top: 0;
+    }
+    &__header {
+      + .page__content__main {
+        @include breakpoints.media-breakpoint-up(md) {
+          margin-top: 2rem;
+        }
+      }
+    }
+    &__main {
+      margin-top: 1rem;
+      @include breakpoints.media-breakpoint-up(md) {
+        margin-top: 2.625rem;
+        margin-left: 0;
+        padding-left: 15.75rem;
+      }
+    }
+  }
+}

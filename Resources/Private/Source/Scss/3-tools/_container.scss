@@ -1,0 +1,12 @@
+@use "../1-settings/variables";
+@use "../2-design-tokens/grid" as grid-variables;
+
+$container-padding-x: grid-variables.$grid-gutter-width / 2;
+
+@mixin make-container($gutter: $container-padding-x) {
+  width: 100%;
+  padding-right: var(--#{variables.$variable-prefix}gutter-x, #{$gutter});
+  padding-left: var(--#{variables.$variable-prefix}gutter-x, #{$gutter});
+  margin-right: auto;
+  margin-left: auto;
+}

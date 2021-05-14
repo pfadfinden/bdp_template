@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{media}">
+	<div class="news-article__media">
+		<f:for each="{media}" as="mediaElement">
+			<div class="news-article__media__item">
+                <div class="news-article__media__item__box">
+                    <f:if condition="{mediaElement.originalResource.type} == 2">
+                        <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 3">
+                        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 4">
+                        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 5">
+                        <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                </div>
+			</div>
+		</f:for>
+	</div>
+</f:if>
+</html>

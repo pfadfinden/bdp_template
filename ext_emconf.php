@@ -1,32 +1,33 @@
 <?php
 
-$EM_CONF[$_EXTKEY] = array(
-	'title' => 'BdP Template',
-	'description' => 'BdP Webseiten Layout als Extension für das Content Management System TYPO3',
-	'category' => 'templates',
-	'author' => 'Christian Schrebe',
-	'author_email' => 'christian.schrebe@pfadfinden.de',
-	'author_company' => 'Bund der Pfadfinderinnen und Pfadfinder e.V.',
-	'state' => 'stable',
-	'version' => '3.0.0',
-	'constraints' => array(
-		'depends' => array(
-			'typo3' => '8.7.8 - 8.7.99',
-			'extbase' => '8.7.0 - 8.7.99',
-			'fluid' => '8.7.0 - 8.7.99',
-			'news' => '7.0.0 - 7.99.99',
-			'filemetadata' => '8.7.0 - 8.7.99',
-			'gridelements' => '8.2.1 - 8.99.99',
-			'cal' => '1.11.1 - 1.99.99',
-			'fluid_styled_content' => '8.7.0 - 8.7.99',
-		),
-		'conflicts' => array(
-		    'css_styled_content' => '',
-		),
-		'suggests' => array(
-		    'realurl' => '2.4.0 - 2.99.99',
-		),
-	),
-);
-
-?>
+/**
+ * Extension Manager/Repository config file for ext "bdptemplate".
+ */
+$EM_CONF['bdp_template'] = [
+    'title' => 'BdP Template',
+    'description' => '',
+    'category' => 'templates',
+    'constraints' => [
+        'depends' => [
+            'typo3' => '10.4.0-10.4.99',
+            'fluid_styled_content' => '10.4.0-10.4.99',
+            'rte_ckeditor' => '10.4.0-10.4.99',
+            'container' => "1.2.0-1.2.99"
+        ],
+        'conflicts' => [
+        ],
+    ],
+    'autoload' => [
+        'psr-4' => [
+            'Pfadfinden\\BdpTemplate\\' => 'Classes',
+        ],
+    ],
+    'state' => 'stable',
+    'uploadfolder' => 0,
+    'createDirs' => '',
+    'clearCacheOnLoad' => 1,
+    'author' => 'Christian Schrebe',
+    'author_email' => 'christian.schrebe@pfadfinden.de',
+    'author_company' => 'Pfadfinden',
+    'version' => '1.0.0',
+];

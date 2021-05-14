@@ -1,26 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="de" datatype="plaintext" original="messages" date="2016-10-26T00:00:00Z" product-name="bdp_template">
-        <header/>
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+        <header>
+            <authorName>Christian Schrebe</authorName>
+            <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
+        </header>
         <body>
-            <trans-unit id="languages" xml:space="preserve">
-                <source>International</source>
-            </trans-unit>
-            <trans-unit id="languages.de" xml:space="preserve">
-                <source>Deutsch</source>
-            </trans-unit>
-            <trans-unit id="languages.en" xml:space="preserve">
-                <source>Englisch</source>
-            </trans-unit>
-            <trans-unit id="imprint" xml:space="preserve">
-                <source>Impressum</source>
-            </trans-unit>
-            <trans-unit id="privacy" xml:space="preserve">
-                <source>Datenschutzerklärung</source>
-            </trans-unit>
-            <trans-unit id="search" xml:space="preserve">
-                <source>Suche</source>
-            </trans-unit>
         </body>
     </file>
 </xliff>

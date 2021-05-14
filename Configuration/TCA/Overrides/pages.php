@@ -1,12 +1,19 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
-}
+defined('TYPO3_MODE') || die();
 
-if (TYPO3_MODE === 'BE') {
-	\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
-            'bdp_template',
-            'Configuration/PageTS/page.ts',
-            'BdP Root PageTS'
+call_user_func(static function()
+{
+    /**
+     * Temporary variables
+     */
+    $extensionKey = 'bdp_template';
+
+    /**
+     * Default PageTS for Bdptemplate
+     */
+    \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::registerPageTSConfigFile(
+        $extensionKey,
+        'Configuration/TsConfig/Page/All.tsconfig',
+        'bdpTemplate'
     );
-}
+});

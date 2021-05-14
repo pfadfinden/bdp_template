@@ -1,0 +1,25 @@
+# customcategory=bdp=BdP Template
+# customsubcategory=social=Social Media
+
+bdp {
+    social {
+        facebook {
+            # cat=bdp/social/a1; type=boolean; label=Aktiviere Facebook Profil Verlinkung
+            enable = 1
+            # cat=bdp/social/a2; type=string; label=Facebook Profil
+            value = https://www.facebook.com/pfadfinden
+        }
+        instagram {
+            # cat=bdp/social/b1; type=boolean; label=Aktiviere Instagram Profil Verlinkung
+            enable = 1
+            # cat=bdp/social/b2; type=string; label=Instagram Profil
+            value = https://www.instagram.com/pfadfinden/
+        }
+        youtube {
+            # cat=bdp/social/c1; type=boolean; label=Aktiviere Youtube Channel Verlinkung
+            enable = 1
+            # cat=bdp/social/c2; type=string; label=Youtube Channel
+            value = https://www.youtube.com/user/BdPpfadfinden
+        }
+    }
+}

@@ -1,0 +1,33 @@
+<aside class="page__navigation__side">
+    <nav id="side-navigation" class="side-navigation" aria-label="Secondary">
+        <ul class="side-navigation__list">
+            <f:for each="{sideNavigation}" as="sideNavigationItem">
+                <li class="side-navigation__list__section{f:if(condition: sideNavigationItem.current, then:' current')}{f:if(condition: sideNavigationItem.active, then:' active')}">
+                    <h4 class="side-navigation__list__section__title">
+                    {sideNavigationItem.title}
+                    </h4>
+                    <f:if condition="{sideNavigationItem.children}">
+                        <ul class="side-navigation__list__section__list">
+                            <f:for each="{sideNavigationItem.children}" as="child">
+                                <li class="side-navigation__list__section__list__item{f:if(condition: child.active, then:' active')}"{f:if(condition: child.current, then:' aria-current="page"')}>
+                                <f:if condition="{child.files.0}">
+                                    <f:then>
+                                        <a href="{child.link}" target="{child.target}"{f:if(condition: '{child.data.doktype} == 3', then:' rel="noreferer noopener"')} class="side-navigation__list__section__list__item__link side-navigation__list__section__list__item__link--image">
+                                            <f:image image="{child.files.0}" width="125c" maxWidth="125" class="side-navigation__list__section__list__item__link__image" alt="{child.title}" />
+                                        </a>
+                                    </f:then>
+                                    <f:else>
+                                        <a href="{child.link}" target="{child.target}" class="side-navigation__list__section__list__item__link"{f:if(condition: '{child.data.doktype} == 3', then:' rel="noreferer noopener"')}>
+                                            {child.title}
+                                        </a>
+                                    </f:else>
+                                </f:if>
+                                </li>
+                            </f:for>
+                        </ul>
+                    </f:if>
+                </li>
+            </f:for>
+        </ul>
+    </nav>
+</aside>

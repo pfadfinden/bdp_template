@@ -1,0 +1,33 @@
+@use "../functions";
+// scss-docs-start grid-breakpoints
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1400px
+) !default;
+// scss-docs-end grid-breakpoints
+
+@include functions.assert-ascending($grid-breakpoints, "$grid-breakpoints");
+@include functions.assert-starts-at-zero($grid-breakpoints, "$grid-breakpoints");
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+// scss-docs-start container-max-widths
+$container-max-widths: (
+      md: 950px,
+      xxl: 1180px,
+);
+$container-wide-max-widths: (
+      md: 1260px,
+      xxl: 1460px,
+);
+// scss-docs-end container-max-widths
+
+@include functions.assert-ascending($container-max-widths, "$container-max-widths");
+@include functions.assert-ascending($container-wide-max-widths, "$container-max-widths");

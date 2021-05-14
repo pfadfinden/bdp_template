@@ -1,0 +1,34 @@
+@use "../2-design-tokens/media-breakpoints" as breakpoints-variables;
+@use "../3-tools/breakpoints";
+@use "../3-tools/container";
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+// Single container class with breakpoint max-widths
+.container-bdp,
+  // 100% wide container at all breakpoints
+.container-fluid {
+  @include container.make-container();
+}
+
+.container-bdp {
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in breakpoints-variables.$container-max-widths {
+    @include breakpoints.media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
+.container-bdp--wide {
+  // Responsive containers that are 100% wide until a breakpoint
+  @each $breakpoint, $container-max-width in breakpoints-variables.$container-wide-max-widths {
+    @include breakpoints.media-breakpoint-up($breakpoint) {
+      max-width: $container-max-width;
+    }
+  }
+}
+
+
+

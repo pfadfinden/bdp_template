@@ -1,0 +1,90 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+<f:section name="content">
+    <encore:renderWebpackLinkTags entryName="pfadfinden-news-detail" />
+    <encore:renderWebpackScriptTags entryName="pfadfinden-news-detail" />
+	<f:if condition="{newsItem}">
+        <article class="news-article">
+            <n:format.nothing>
+                <n:excludeDisplayedNews newsItem="{newsItem}" />
+                <f:if condition="{settings.detail.showMetaTags}">
+                    <f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+                </f:if>
+                <f:if condition="{newsItem.alternativeTitle}">
+                    <f:then>
+                        <n:titleTag>
+                            <f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+                        </n:titleTag>
+                    </f:then>
+                    <f:else>
+                        <n:titleTag>
+                            <f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+                        </n:titleTag>
+                    </f:else>
+                </f:if>
+            </n:format.nothing>
+            <f:if condition="{newsItem.contentElements}">
+                <f:then>
+                    <div class="news_article__ce">
+                        <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+                    </div>
+                </f:then>
+                <f:else>
+                    <header class="header">
+                        <h1 class="ce-header">{newsItem.title}</h1>
+                    </header>
+                    <div class="news-article__box">
+                        <f:if condition="{newsItem.mediaPreviews}">
+                            <f:then>
+                                <div class="news-article__box__media">
+                                    <f:alias map="{mediaElement: newsItem.mediaPreviews.0}">
+                                        <f:if condition="{mediaElement.originalResource.type} == 2">
+                                            <f:image class="news-article__box__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                        </f:if>
+                                        <f:if condition="{mediaElement.originalResource.type} == 4">
+                                            <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+                                        </f:if>
+                                        <f:if condition="{mediaElement.originalResource.type} == 5">
+                                            <f:image class="news-article__box__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.details.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.list.media.image.maxHeight)}"/>
+                                        </f:if>
+                                    </f:alias>
+                                </div>
+                            </f:then>
+                        </f:if>
+                        <div class="news-article__box__time">
+                            <time datetime="{f:format.date(date:newsItem.datetime, format:'Y-m-d')}">
+                                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                            </time>
+			            </div>
+                        <div class="news-article__box__content">
+                            <f:if condition="{newsItem.teaser}">
+                                <div class="news-article__box__content__teaser">
+                                    {newsItem.teaser -> f:format.html()}
+                                </div>
+                            </f:if>
+                            <div class="news-article__box__content__main">
+                                {newsItem.bodytext -> f:format.html()}
+                            </div>
+                        </div>
+                        <f:if condition="{settings.backPid}">
+                            <div class="news-article__box__back">
+                                <f:link.page pageUid="{settings.backPid}" class="news-article__box__back__link">
+                                    <f:translate key="back-link" />
+                                </f:link.page>
+                            </div>
+                        </f:if>
+                    </div>
+                    <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+                        <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                    </n:renderMedia>
+                </f:else>
+            </f:if>
+        </article>
+	</f:if>
+</f:section>
+</html>

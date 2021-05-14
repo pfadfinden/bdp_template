@@ -1,0 +1,19 @@
+{namespace bdp=Pfadfinden\BdpTemplate\ViewHelpers}
+<f:if condition="{files.0}">
+    <div class="ce-teaserimage">
+        <picture class="ce-teaserimage__picture">
+            <f:image image="{files.0}" width="1500c" height="750c" class="ce-textimage__picture__image" loading="lazy" />
+        </picture>
+        <div class="ce-teaserimage__overlay">
+            <f:if condition="{data.header}">
+                <h1 class="ce-teaserimage__overlay__title">
+                    <f:for as="line" each="{data.header -> bdp:pipeBreak()}">
+                        <span class="ce-teaserimage__overlay__title__line">
+                            <span class="ce-teaserimage__overlay__title__line__t">{line}</span>
+                        </span>
+                    </f:for>
+                </h1>
+            </f:if>
+        </div>
+    </div>
+</f:if>

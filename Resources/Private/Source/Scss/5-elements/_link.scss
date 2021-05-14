@@ -1,0 +1,18 @@
+@use "../3-tools/colors";
+
+a {
+  color: colors.get-color('bdp-blue', 'base');
+  text-decoration: none;
+  &:visited {
+    color: colors.get-color('bdp-blue', 'base');
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: none;
+  }
+}

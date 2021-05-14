@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+    <file source-language="en" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+        <header>
+            <authorName>Christian Schrebe</authorName>
+            <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
+        </header>
+        <body>
+            <trans-unit id="bdp_text-image.title">
+                <source>Text with Image</source>
+            </trans-unit>
+            <trans-unit id="bdp_teaser-image.title">
+                <source>Header image</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

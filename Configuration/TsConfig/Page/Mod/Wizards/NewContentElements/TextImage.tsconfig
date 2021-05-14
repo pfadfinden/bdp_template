@@ -1,0 +1,21 @@
+mod {
+    wizards {
+        newContentElement {
+            wizardItems {
+                common {
+                    elements {
+                        bdp_text-image {
+                            iconIdentifier = content-beside-text-img-centered-right
+                            title = Text with image
+                            description = Create a text with image
+                            tt_content_defValues {
+                                CType = bdp_text-image
+                            }
+                        }
+                    }
+                    show := addToList(bdp_text-image)
+                }
+            }
+        }
+    }
+}

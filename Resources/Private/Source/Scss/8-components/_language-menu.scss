@@ -1,0 +1,101 @@
+@use "../3-tools/breakpoints";
+
+.mainheader__language {
+  color: #000000;
+  height: 3.25rem;
+  position: relative;
+  @include breakpoints.media-breakpoint-up(md){
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 40;
+  }
+  &__menu {
+    display: none;
+    position: absolute;
+    float: left;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    z-index: 40;
+    @include breakpoints.media-breakpoint-up(md) {
+      padding-left: 0.5rem;
+    }
+    &__list {
+      background-color: #000000;
+      z-index: 40;
+      list-style: none inside none;
+      padding: 0;
+      margin: 0;
+      li {
+        position: relative;
+      }
+      a {
+        display: block;
+        color: #ffffff;
+        padding: 0.625rem 2.5rem 0.625rem 1rem;
+        line-height: 1;
+        min-width: 6rem;
+        transition:.2s linear;
+        @include breakpoints.media-breakpoint-up(md){
+          padding-top: 0.5rem;
+          padding-bottom: 0.5rem;
+        }
+        @include breakpoints.media-breakpoint-up(xl) {
+          padding-right: 3rem;
+        }
+        &:hover, &:focus {
+          text-decoration: none;
+          background-color: #CCCCCC;
+          color: #000000;
+          transition:.2s linear
+        }
+      }
+    }
+  }
+  &__current {
+    color: #000000;
+    height: 3.25rem;
+    line-height: 3.25rem;
+    padding: 0 1rem 0 0.5rem;
+    position: relative;
+    margin-right: 0.25rem;
+    cursor: pointer;
+    font-size: 0.875rem;
+    @include breakpoints.media-breakpoint-up(xl){
+      padding: 0 1.25rem 0 1rem;
+    }
+    &:after {
+      content: '';
+      border-right: 1px solid #000000;
+      border-bottom: 1px solid #000000;
+      box-sizing: content-box;
+      display: block;
+      width: 6px;
+      height: 6px;
+      margin: auto;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 4px;
+      transform: rotate(45deg);
+      @include breakpoints.media-breakpoint-up(md) {
+        width: 8px;
+        height: 8px;
+        border-right-width: 2px;
+        border-bottom-width: 2px;
+        right: 2px;
+      }
+    }
+  }
+  &:hover, &:focus {
+    .mainheader__language__menu {
+      display: block;
+    }
+  }
+  &:focus-within {
+    .mainheader__language__menu {
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,10 @@
+@use "spacers";
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           1.5rem;
+$grid-row-columns:            6;
+
+$gutters: spacers.$spacers;

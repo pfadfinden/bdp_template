@@ -1,0 +1,10 @@
+{namespace encore = Ssch\Typo3Encore\ViewHelpers}
+<encore:renderWebpackLinkTags entryName="pfadfinden-address-lv" />
+<encore:renderWebpackScriptTags entryName="pfadfinden-address-lv" />
+<div class="ce-address__lv">
+    <div class="ce-address__lv__items">
+        <f:for each="{addresses}" as="address" iteration="iterator">
+            <f:render partial="Lv/ListItem" arguments="{_all}" />
+        </f:for>
+    </div>
+</div>

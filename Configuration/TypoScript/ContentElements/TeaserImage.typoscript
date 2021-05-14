@@ -1,0 +1,21 @@
+tt_content {
+    bdp_teaser-image =< lib.contentElement
+    bdp_teaser-image {
+        templateName = TeaserImage
+        dataProcessing {
+            10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+            10 {
+                references.fieldName = assets
+            }
+        }
+        templateRootPaths {
+            200 = EXT:bdp_template/Resources/Private/Templates/ContentElements/
+        }
+        partialRootPaths {
+            200 = EXT:bdp_template/Resources/Private/Partials/ContentElements/
+        }
+        layoutRootPaths {
+            200 = EXT:bdp_template/Resources/Private/Layouts/ContentElements/
+        }
+    }
+}

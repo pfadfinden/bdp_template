@@ -1,0 +1,71 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.news-article {
+  &__box {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+    color: #000000;
+    box-shadow: 0 5px 5px rgba(0,0,0,.1);
+    &__media {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &__time {
+      margin-top: 0.625rem;
+      margin-bottom: 0.625rem;
+      width: 100%;
+      font-weight: 700;
+    }
+    &__content {
+      &__teaser {
+        font-weight: 600;
+      }
+      &__main {
+        > * {
+          &:last-child {
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &__media {
+    @include tools-grid.make-row(1rem);
+    overflow: hidden;
+    &__item {
+      @include tools-grid.make-col-ready();
+      margin-bottom: 1rem;
+      @include breakpoints.media-breakpoint-up(sm) {
+        @include tools-grid.make-col(6, 12);
+      }
+      @include breakpoints.media-breakpoint-up(lg) {
+        @include tools-grid.make-col(4, 12);
+      }
+      &__box {
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1rem;
+        font-size: 0.875rem;
+        box-shadow: 0 5px 5px rgba(0,0,0,.1);
+        .mediaelement {
+          margin: 0;
+          padding: 0;
+          &__link {
+            display: block;
+          }
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

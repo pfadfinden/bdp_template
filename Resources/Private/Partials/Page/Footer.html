@@ -1,0 +1,71 @@
+{namespace encore = Ssch\Typo3Encore\ViewHelpers}
+<footer class="page__footer">
+    <div class="page__footer__title">
+        {settings.branding.organisation}
+    </div>
+    <div class="page__footer__content">
+        <div class="page__footer__content__section page__footer__content__section--address">
+            <div class="page__footer__content__section__address">
+                <div class="page__footer__content__section__address__name">{settings.contact.name}</div>
+                <div class="page__footer__content__section__address__value">{settings.contact.address}</div>
+            </div>
+        </div>
+        <div class="page__footer__content__section page__footer__content__section--contact">
+            <div class="page__footer__content__section__contact">
+                <f:if condition="{settings.contact.phone}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Telefon: </span>
+                        <span class="page__footer__content__section__contact__item__value"><a href="tel:{settings.contact.phone}">{settings.contact.phone}</a></span>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.contact.fax}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Telefax: </span>
+                        <span class="page__footer__content__section__contact__item__value">{settings.contact.fax}</span>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.contact.email}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">E-Mail: </span>
+                        <span class="page__footer__content__section__contact__item__value"><f:link.email email="{settings.contact.email}">{settings.contact.email}</f:link.email></span>
+                    </div>
+                </f:if>
+                <f:if condition="{settings.contact.website}">
+                    <div class="page__footer__content__section__contact__item">
+                        <span class="page__footer__content__section__contact__item__id">Internet: </span>
+                        <span class="page__footer__content__section__contact__item__value">
+                            <f:link.external uri="{settings.contact.website}">{settings.contact.website}</f:link.external>
+                        </span>
+                    </div>
+                </f:if>
+            </div>
+        </div>
+        <div class="page__footer__content__section page__footer__content__section--nav">
+            <nav aria-label="Footer" class="page__footer__content__section__nav">
+                <ul class="page__footer__content__section__nav__list">
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy"/>
+                        </span>
+                        <f:link.page pageUid="{settings.legalNotice}" class="page__footer__content__section__nav__list__item__link">Impressum</f:link.page>
+                    </li>
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy" />
+                        </span>
+                        <f:link.page pageUid="{settings.privacy}" class="page__footer__content__section__nav__list__item__link">Datenschutzerklärung</f:link.page>
+                    </li>
+                    <li class="page__footer__content__section__nav__list__item">
+                        <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
+                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/login_1.png')}" loading="lazy"/>
+                        </span>
+                        <a href="/typo3" class="page__footer__content__section__nav__list__item__link" rel="nofollow">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="page__footer__content__section page__footer__content__section--social">
+            <f:render partial="FooterSocial" arguments="{_all}" />
+        </div>
+    </div>
+</footer>

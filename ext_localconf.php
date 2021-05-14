@@ -1,9 +1,20 @@
 <?php
-if (!defined('TYPO3_MODE')) {
-	die ('Access denied.');
-}
+defined('TYPO3_MODE') || die();
 
-if (TYPO3_MODE === 'BE') {
-	// Register backend layout data provider
-	$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['BackendLayoutDataProvider']['bdptemplate'] = 'Pfadfinden\\BdpTemplate\\Provider\\FileProvider';
-}
+/***************
+ * Add default RTE configuration
+ */
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bdptemplate'] = 'EXT:bdp_template/Configuration/RTE/Default.yaml';
+
+/***************
+ * PageTS
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/Page/All.tsconfig">');
+
+/***************
+ * UserTs
+ */
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TsConfig/User/Default.tsconfig">');
+
+//$GLOBALS['TYPO3_CONF_VARS']['EXT']['z7_semantilizer']['fixedPageTitle'][0] = \Pfadfinden\BdpTemplate\Hooks\RootPageTitleHook::class;
+//$GLOBALS['TYPO3_CONF_VARS']['EXT']['z7_semantilizer']['fixedPageTitle'][1] = \Zeroseven\Semantilizer\FixedTitle\PageTitle::class;
