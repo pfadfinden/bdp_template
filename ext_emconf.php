@@ -29,5 +29,5 @@ $EM_CONF['bdp_template'] = [
     'author' => 'Christian Schrebe',
     'author_email' => 'christian.schrebe@pfadfinden.de',
     'author_company' => 'Pfadfinden',
-    'version' => '1.0.0',
+    'version' => '4.0.0',
 ];

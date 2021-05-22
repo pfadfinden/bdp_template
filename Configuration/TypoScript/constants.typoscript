@@ -59,7 +59,7 @@ config {
 
 plugin.tx_typo3encore {
     settings {
-        entrypointJsonPath = EXT:bdp_template/Resources/Public/build/entrypoints.json
-        manifestJsonPath = EXT:bdp_template/Resources/Public/build/manifest.json
+        entrypointJsonPath = EXT:bdp_template/Resources/Public/Build/entrypoints.json
+        manifestJsonPath = EXT:bdp_template/Resources/Public/Build/manifest.json
     }
 }

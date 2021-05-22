@@ -4,7 +4,7 @@
 mod {
     web_layout {
         BackendLayouts {
-            headerWithOneColumn {
+            header_with_one_column {
                 title = LLL:EXT:zentrum_pfadfinden/Resources/Private/Language/locallang_be.xlf:backend_layout.headerWithOneColumn
                 config {
                     backend_layout {
