@@ -23,6 +23,7 @@ Encore
     .setManifestKeyPrefix('typo3conf/ext/bdp_template/Resources/Public/Build')
     .addAliases({
         '@': path.resolve( __dirname,'Resources/Private/Source/'),
+        Scss: path.resolve( __dirname,'Resources/Private/Source/Scss/'),
         Images: path.resolve( __dirname,'Resources/Private/Source/Images/'),
         Fonts: path.resolve( __dirname,'Resources/Private/Source/Fonts/')
     })

@@ -4,7 +4,7 @@
  * Licensed under the GPL-2.0-or-later license
  */
 // css
-import '../Scss/layout.scss'
+import 'Scss/layout.scss'
 
 // libs
 

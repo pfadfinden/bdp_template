@@ -6,7 +6,7 @@ mod {
                     elements {
                         bdp_teaser-image {
                             iconIdentifier = content-beside-text-img-centered-right
-                            title = Header image
+                            title = Teaser
                             description = Create a big teaser image or media
                             tt_content_defValues {
                                 CType = bdp_teaser-image

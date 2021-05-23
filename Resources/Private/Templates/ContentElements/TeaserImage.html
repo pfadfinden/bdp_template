@@ -1,9 +1,18 @@
 {namespace bdp=Pfadfinden\BdpTemplate\ViewHelpers}
-<f:if condition="{files.0}">
+<f:if condition="{files.0} && ({files.0.type} == 2 || {files.0.type} == 4)">
     <div class="ce-teaserimage">
-        <picture class="ce-teaserimage__picture">
-            <f:image image="{files.0}" width="1500c" height="750c" class="ce-textimage__picture__image" loading="lazy" />
-        </picture>
+        <f:if condition="{files.0.type} == 4">
+            <f:then>
+                <div class="ce-textimage__video">
+                    <f:media file="{files.0}" width="1500" height="750" class="ce-textimage__video__container" additionalConfig="{loop: '1', autoplay: '1', muted: '1'}" />
+                </div>
+            </f:then>
+            <f:else if="{files.0.type} == 2">
+                <picture class="ce-teaserimage__picture">
+                    <f:image image="{files.0}" width="1500c" height="750c" class="ce-textimage__picture__image" loading="lazy" />
+                </picture>
+            </f:else>
+        </f:if>
         <div class="ce-teaserimage__overlay">
             <f:if condition="{data.header}">
                 <h1 class="ce-teaserimage__overlay__title">
