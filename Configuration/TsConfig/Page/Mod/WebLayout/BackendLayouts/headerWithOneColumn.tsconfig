@@ -5,7 +5,7 @@ mod {
     web_layout {
         BackendLayouts {
             header_with_one_column {
-                title = LLL:EXT:zentrum_pfadfinden/Resources/Private/Language/locallang_be.xlf:backend_layout.headerWithOneColumn
+                title = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.headerWithOneColumn
                 config {
                     backend_layout {
                         colCount = 1
@@ -14,7 +14,7 @@ mod {
                             1 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:zentrum_pfadfinden/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
+                                        name = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
                                         colPos = 5
                                     }
                                 }
@@ -22,7 +22,7 @@ mod {
                             2 {
                                 columns {
                                     1 {
-                                        name = LLL:EXT:zentrum_pfadfinden/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
+                                        name = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
                                         colPos = 0
                                     }
                                 }
@@ -30,7 +30,7 @@ mod {
                         }
                     }
                 }
-                icon = EXT:zentrum_pfadfinden/Resources/Public/Images/BackendLayouts/headerWithOneColumn.png
+                icon = EXT:bdp_template/Resources/Public/Images/BackendLayouts/headerWithOneColumn.png
             }
         }
     }

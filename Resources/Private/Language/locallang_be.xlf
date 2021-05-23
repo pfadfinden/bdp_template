@@ -9,6 +9,12 @@
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
+            <trans-unit id="backend_layout.headerWithOneColumn">
+                <source>Header with Content</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
+            </trans-unit>
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
             </trans-unit>
