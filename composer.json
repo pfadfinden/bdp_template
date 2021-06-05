@@ -22,7 +22,8 @@
     "typo3/cms-fluid-styled-content": "^10.4",
     "ssch/typo3-encore": "^3.0",
     "zeroseven/z7-semantilizer": "^2.1",
-    "b13/container": "^1.2"
+    "b13/container": "^1.2",
+    "opfaff/om-cookie-manager": "^10.0.2"
   },
   "autoload": {
     "psr-4": {
