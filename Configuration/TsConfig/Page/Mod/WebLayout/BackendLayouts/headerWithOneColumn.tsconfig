@@ -16,6 +16,10 @@ mod {
                                     1 {
                                         name = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.header
                                         colPos = 5
+                                        allowed {
+                                            CType = bdp_teaser-image
+                                        }
+                                        maxitems = 1
                                     }
                                 }
                             }
@@ -24,6 +28,9 @@ mod {
                                     1 {
                                         name = LLL:EXT:bdp_template/Resources/Private/Language/locallang_be.xlf:backend_layout.column.normal
                                         colPos = 0
+                                        disallowed {
+                                            CType = bdp_teaser-image
+                                        }
                                     }
                                 }
                             }
