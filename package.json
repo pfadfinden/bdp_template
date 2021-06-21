@@ -13,16 +13,16 @@
     "npm": ">=6.0.0"
   },
   "devDependencies": {
-    "masonry-layout": "^4.2.2",
-    "@symfony/webpack-encore": "^1.4.0",
+    "@symfony/webpack-encore": "^1.5.0",
     "autoprefixer": "^10.2.6",
     "compression-webpack-plugin": "^7.1.2",
-    "core-js": "^3.14.0",
+    "core-js": "^3.15.0",
     "element-closest-polyfill": "^1.0.4",
     "eventslibjs": "^1.2.0",
     "fibers": "^5.0.0",
     "file-loader": "^6.2.0",
     "imagemin-webp-webpack-plugin": "^3.3.4",
+    "masonry-layout": "^4.2.2",
     "mmenu-js": "^8.5.23",
     "postcss-loader": "^5.3.0",
     "sass": "1.32.13",
@@ -43,6 +43,6 @@
     "edge 18"
   ],
   "dependencies": {
-    "lightgallery": "^2.1.2"
+    "lightgallery": "^2.1.5"
   }
 }
