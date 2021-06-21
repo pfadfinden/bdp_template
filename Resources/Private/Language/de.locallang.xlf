@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
@@ -8,24 +8,31 @@
         <body>
             <trans-unit id="footer.contact.phone">
                 <source>Phone</source>
+                <target>Telefon</target>
             </trans-unit>
             <trans-unit id="footer.contact.fax">
                 <source>Fax</source>
+                <target>Telefax</target>
             </trans-unit>
             <trans-unit id="footer.contact.email">
                 <source>Email</source>
+                <target>E-Mail</target>
             </trans-unit>
             <trans-unit id="footer.contact.internet">
                 <source>Internet</source>
+                <target>Internet</target>
             </trans-unit>
             <trans-unit id="footer.navigation.legalNotice">
                 <source>Legal notice</source>
+                <target>Impressum</target>
             </trans-unit>
             <trans-unit id="footer.navigation.privacy">
                 <source>Privacy policy</source>
+                <target>Datenschutzerklärung</target>
             </trans-unit>
             <trans-unit id="footer.navigation.login">
                 <source>Login</source>
+                <target>Login</target>
             </trans-unit>
         </body>
     </file>
