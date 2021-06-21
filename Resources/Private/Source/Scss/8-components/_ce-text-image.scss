@@ -44,6 +44,9 @@
   }
   &__content {
     padding: 1rem;
+    @include breakpoints.media-breakpoint-up(xxl) {
+      padding: 1.25rem;
+    }
     > * {
       &:last-child {
         margin-bottom: 0;
