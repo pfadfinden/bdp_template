@@ -14,25 +14,25 @@
             <div class="page__footer__content__section__contact">
                 <f:if condition="{settings.contact.phone}">
                     <div class="page__footer__content__section__contact__item">
-                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.phone', default: 'Telefon')}: </span>
+                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.phone', extensionName: 'bdp_template', default: 'Telefon')}: </span>
                         <span class="page__footer__content__section__contact__item__value"><a href="tel:{settings.contact.phone}">{settings.contact.phone}</a></span>
                     </div>
                 </f:if>
                 <f:if condition="{settings.contact.fax}">
                     <div class="page__footer__content__section__contact__item">
-                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.fax', default: 'Telefax')}: </span>
+                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.fax', extensionName: 'bdp_template', default: 'Telefax')}: </span>
                         <span class="page__footer__content__section__contact__item__value">{settings.contact.fax}</span>
                     </div>
                 </f:if>
                 <f:if condition="{settings.contact.email}">
                     <div class="page__footer__content__section__contact__item">
-                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.email', default: 'E-Mail')}: </span>
+                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.email', extensionName: 'bdp_template', default: 'E-Mail')}: </span>
                         <span class="page__footer__content__section__contact__item__value"><f:link.email email="{settings.contact.email}">{settings.contact.email}</f:link.email></span>
                     </div>
                 </f:if>
                 <f:if condition="{settings.contact.website}">
                     <div class="page__footer__content__section__contact__item">
-                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.internet', default: 'Internet')}: </span>
+                        <span class="page__footer__content__section__contact__item__id">{f:translate(key: 'footer.contact.internet', extensionName: 'bdp_template', default: 'Internet')}: </span>
                         <span class="page__footer__content__section__contact__item__value">
                             <f:link.external uri="{settings.contact.website}">{settings.contact.website}</f:link.external>
                         </span>
@@ -47,19 +47,19 @@
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
                             <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy"/>
                         </span>
-                        <f:link.page pageUid="{settings.legalNotice}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.legalNotice', default: 'Impressum')}</f:link.page>
+                        <f:link.page pageUid="{settings.legalNotice}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.legalNotice', extensionName: 'bdp_template', default: 'Impressum')}</f:link.page>
                     </li>
                     <li class="page__footer__content__section__nav__list__item">
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
                             <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy" />
                         </span>
-                        <f:link.page pageUid="{settings.privacy}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.privacy', default: 'Datenschutzerklärung')}</f:link.page>
+                        <f:link.page pageUid="{settings.privacy}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.privacy', extensionName: 'bdp_template', default: 'Datenschutzerklärung')}</f:link.page>
                     </li>
                     <li class="page__footer__content__section__nav__list__item">
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
                             <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/login_1.png')}" loading="lazy"/>
                         </span>
-                        <a href="/typo3" class="page__footer__content__section__nav__list__item__link" rel="nofollow">{f:translate(key: 'footer.navigation.login', default: 'Login')}</a>
+                        <a href="/typo3" class="page__footer__content__section__nav__list__item__link" rel="nofollow">{f:translate(key: 'footer.navigation.login', extensionName: 'bdp_template', default: 'Login')}</a>
                     </li>
                 </ul>
             </nav>
