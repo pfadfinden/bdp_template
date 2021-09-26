@@ -37,9 +37,6 @@
       flex-shrink: 0;
       width: 50%;
       max-width: 50%;
-      &:before {
-        display: none;
-      }
     }
   }
   &__content {
@@ -48,6 +45,9 @@
       padding: 1.25rem;
     }
     > * {
+      &:first-child {
+        margin-top: 0;
+      }
       &:last-child {
         margin-bottom: 0;
       }
