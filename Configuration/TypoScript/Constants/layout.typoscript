@@ -1,0 +1,9 @@
+# customcategory=bdp=BdP Template
+# customsubcategory=layout=Layout
+
+bdp {
+    layout {
+        # cat=bdp/layout/a; type=string; label=Content min height on Desktop
+        content-min-height = 100vh
+    }
+}

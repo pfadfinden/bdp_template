@@ -229,6 +229,11 @@ page {
         }
     }
 
+    cssInline {
+        10 = TEXT
+        10.value = :root{--bdp-desktop-min-height:{$bdp.layout.content-min-height};}
+    }
+
     includeCSSLibs {
 
     }

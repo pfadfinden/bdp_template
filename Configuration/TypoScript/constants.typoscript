@@ -6,6 +6,7 @@
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/branding.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/contact.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/social-media.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/layout.typoscript">
 
 ##############################
 #### FLUID STYLED CONTENT ####
