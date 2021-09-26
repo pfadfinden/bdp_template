@@ -23,9 +23,10 @@
 ################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/DynamicContent.typoscript">
 
-################
+####################
 #### Extensions ####
-################
+####################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Z7Semantilizer.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/News.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript">
 

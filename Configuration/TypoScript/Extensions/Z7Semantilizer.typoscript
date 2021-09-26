@@ -1,0 +1,8 @@
+tx_semantilizer {
+    disableOnPages = 0
+    ignoreCTypes := addToList(div,html)
+    colPosOrdering {
+        pagets__default = 0
+        pagets__header_with_one_column = 5,0
+    }
+}
