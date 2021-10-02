@@ -9,7 +9,7 @@
     overflow: hidden;
     &__item {
       @include tools-grid.make-col-ready();
-      margin-bottom: 1rem;
+      padding-bottom: 1rem;
       @include breakpoints.media-breakpoint-up(sm) {
         @include tools-grid.make-col(6, 12);
       }
