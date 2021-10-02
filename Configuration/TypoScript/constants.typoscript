@@ -2,11 +2,18 @@
 #### DEPENDENCIES ####
 ######################
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3_encore/Configuration/TypoScript/constants.typoscript">
 
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/branding.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/contact.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/social-media.typoscript">
 <INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/layout.typoscript">
+
+####################
+#### Extensions ####
+####################
+<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/Extensions/Omcookiemanager.typoscript">
+
 
 ##############################
 #### FLUID STYLED CONTENT ####
@@ -52,7 +59,7 @@ page {
 config {
     no_cache = 0
     removeDefaultJS = 1
-    admPanel = 1
+    admPanel = 0
     prefixLocalAnchors = all
     headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
     sendCacheHeaders = 0

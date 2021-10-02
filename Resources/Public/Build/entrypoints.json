@@ -3,6 +3,8 @@
     "pfadfinden": {
       "js": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/237.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/318.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/817.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.js"
       ],
@@ -34,6 +36,7 @@
       "js": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/751.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/237.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-list.js"
       ],
       "css": [
@@ -44,10 +47,22 @@
       "js": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/751.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/237.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-lv.js"
       ],
       "css": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-address-lv.css"
+      ]
+    },
+    "pfadfinden-cookieconsent": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/237.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/318.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-cookieconsent.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-cookieconsent.css"
       ]
     }
   }

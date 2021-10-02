@@ -54,7 +54,7 @@ Encore
     .addEntry('pfadfinden-news-detail', './Resources/Private/Source/JavaScript/news/news-detail.js')
     .addEntry('pfadfinden-address-list', './Resources/Private/Source/JavaScript/address/list.js')
     .addEntry('pfadfinden-address-lv', './Resources/Private/Source/JavaScript/address/lv.js')
-
+    .addEntry('pfadfinden-cookieconsent', './Resources/Private/Source/JavaScript/cookieconsent/om.js')
     // When enabled, Webpack "splits" your files into smaller pieces for greater optimization.
     .splitEntryChunks()
 

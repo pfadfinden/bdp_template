@@ -1,0 +1,162 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+[data-omcookie-panel-show] {
+  cursor: pointer;
+}
+
+.om-cookie-panel {
+  padding: 25px;
+  z-index: 9999;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  box-sizing: border-box;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  font-size: 0.875rem;
+  transform: translateY(100%) translateX(0);
+  transition: transform 0.5s ease;
+  text-align: center;
+  @include breakpoints.media-breakpoint-up(lg) {
+    width: 80vw;
+    left: 50%;
+    transform: translateY(100%) translateX(-50%);
+  }
+  @include breakpoints.media-breakpoint-up(xl) {
+    width: 50vw;
+  }
+
+  &.active {
+    transform: translateY(0) translateX(0);
+    @include breakpoints.media-breakpoint-up(lg) {
+      transform: translateY(0) translateX(-50%);
+    }
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  p {
+    margin: 0;
+    padding: 1rem 0;
+  }
+
+  .cookie-panel__checkbox {
+    display: none;
+  }
+
+  .cookie-panel__checkbox + label {
+    cursor: pointer;
+    line-height: 1.1;
+    font-weight: 400;
+    display: block;
+  }
+
+  .cookie-panel__checkbox + label::before {
+    width: 15px;
+    height: 15px;
+    border: 2px solid colors.get-color('bdp-blue', 'base');
+    background-color: #fff;
+    display: block;
+    content: "";
+    float: left;
+    margin-right: 5px;
+  }
+
+  .cookie-panel__checkbox:checked + label::before {
+    box-shadow: inset 0 0 0 3px #fff;
+    background-color: colors.get-color('bdp-blue', 'base');
+  }
+
+  .cookie-panel__checkbox--state-inactiv + label::before {
+    border-color: #666;
+  }
+
+  .cookie-panel__checkbox--state-inactiv:checked + label::before {
+    background-color: #666;
+  }
+
+  .cookie-panel__checkbox-wrap {
+    display: inline-block;
+    line-height: 1.1;
+
+    + .cookie-panel__checkbox-wrap {
+      margin-left: 15px;
+    }
+  }
+
+  .cookie-panel__description {
+    clear: both;
+  }
+
+  .cookie-panel__link {
+    padding-top: 1em;
+  }
+
+  .cookie-panel__button {
+    background: #666;
+    color: #fff;
+    padding: 5px 10px;
+    border: none;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+    font-size: 1.1em;
+
+    + .cookie-panel__button {
+      margin-top: 15px;
+    }
+
+    @include breakpoints.media-breakpoint-up(lg) {
+      width: auto;
+      display: inline-block;
+      + .cookie-panel__button {
+        margin-top: 0;
+      }
+    }
+  }
+
+  .cookie-panel__button--color--green {
+    background-color: colors.get-color('bdp-blue', 'base');
+  }
+
+  .cookie-panel__attribution {
+    position: absolute;
+    bottom: 5px;
+    right: 25px;
+    font-size: 9px;
+    font-style: italic;
+    text-align: center;
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+  }
+}
+
+.om-cookie-info {
+  table {
+    border: 1px solid black;
+    border-collapse: collapse;
+
+    th, td {
+      padding: 10px 5px;
+      border: 1px solid black;
+    }
+
+    p {
+      margin-top: 0;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+  }
+}
