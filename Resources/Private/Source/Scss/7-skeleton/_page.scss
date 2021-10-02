@@ -24,6 +24,7 @@ html {
     margin-bottom: 3.25rem;
     @include breakpoints.media-breakpoint-up(md) {
       min-height: 100vh;
+      min-height: var(--bdp-desktop-min-height, 100vh);
       padding-top: 0;
     }
     &__header {
