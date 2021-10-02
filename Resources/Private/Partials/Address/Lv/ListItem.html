@@ -8,7 +8,7 @@
                 <f:if condition="{address.organisation}">
                     <div>{address.organisation}</div>
                 </f:if>
-                <div>{address.address}</div>
+                <div>{address.address -> f:format.nl2br()}</div>
                 <div>{address.zip}&nbsp;{address.city}</div>
             </address>
         </f:if>
