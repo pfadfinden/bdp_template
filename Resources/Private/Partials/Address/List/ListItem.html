@@ -23,6 +23,11 @@
                         {f:translate(key:'label.telephone')}: <a href="tel:{address.cleanedPhone}">{address.phone}</a>
                     </li>
                 </f:if>
+                <f:if condition="{address.mobile}">
+                    <li>
+                        {f:translate(key:'label.mobile')}: <a href="tel:{address.cleanedMobile}">{address.mobile}</a>
+                    </li>
+                </f:if>
                 <f:if condition="{address.fax}">
                     <li>{f:translate(key:'label.fax')}: {address.fax}</li>
                 </f:if>
