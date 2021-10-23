@@ -18,6 +18,7 @@
 ##########################
 @import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TeaserImage.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/CallToActionButton.typoscript'
 
 ################
 #### HELPER ####
@@ -27,7 +28,6 @@
 ####################
 #### Extensions ####
 ####################
-@import 'FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Z7Semantilizer.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/News.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Omcookiemanager.typoscript'
