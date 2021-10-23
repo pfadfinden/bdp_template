@@ -1,4 +1,4 @@
 #
 # custom content elements
 #
-<INCLUDE_TYPOSCRIPT: source="DIR:EXT:bdp_template/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements" extensions="tsconfig">
+@import 'EXT:bdp_template/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements/*.tsconfig'

@@ -1,36 +1,36 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:z7_semantilizer/Configuration/TypoScript/setup.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3_encore/Configuration/TypoScript/setup.typoscript">
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:z7_semantilizer/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:typo3_encore/Configuration/TypoScript/setup.typoscript'
 
 ###################
 #### Container ####
 ###################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x8-1x4-container.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x12-container.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-2x6-container.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Container/bdp-3x3-container.typoscript">
+@import 'EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x8-1x4-container.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Container/bdp-1x12-container.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Container/bdp-2x6-container.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Container/bdp-3x3-container.typoscript'
 
 ##########################
 #### Content Elements ####
 ##########################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/ContentElements/TeaserImage.typoscript">
+@import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TeaserImage.typoscript'
 
 ################
 #### HELPER ####
 ################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Helper/DynamicContent.typoscript">
+@import 'EXT:bdp_template/Configuration/TypoScript/Helper/DynamicContent.typoscript'
 
 ####################
 #### Extensions ####
 ####################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Z7Semantilizer.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/News.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Omcookiemanager.typoscript">
+@import 'FILE:EXT:bdp_template/Configuration/TypoScript/Extensions/Z7Semantilizer.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Extensions/News.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Omcookiemanager.typoscript'
 
 
 ##############
