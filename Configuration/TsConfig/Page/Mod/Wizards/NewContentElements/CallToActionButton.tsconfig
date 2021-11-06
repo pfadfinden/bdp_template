@@ -1,0 +1,21 @@
+mod {
+    wizards {
+        newContentElement {
+            wizardItems {
+                common {
+                    elements {
+                        bdp_cta {
+                            iconIdentifier = content-certificate
+                            title = Call to action Button
+                            description = Create a cool button
+                            tt_content_defValues {
+                                CType = bdp_cta
+                            }
+                        }
+                    }
+                    show := addToList(bdp_cta)
+                }
+            }
+        }
+    }
+}

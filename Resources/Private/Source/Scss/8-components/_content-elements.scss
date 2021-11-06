@@ -5,6 +5,9 @@
   padding: 1rem;
   margin-bottom: 1rem;
   font-size: 0.875rem;
+  &--boxless {
+    padding: 0;
+  }
   &--layout {
     &-0 {
       background-color: #ffffff;

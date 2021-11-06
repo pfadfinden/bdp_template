@@ -31,6 +31,14 @@ TCEFORM {
         }
         header_position {
             removeItems = left,right
+            types {
+                bdp_cta {
+                    addItems {
+                        left = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.3
+                        right = LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:header_position.I.2
+                    }
+                }
+            }
         }
         pi_flexform {
             ttaddress_listview {

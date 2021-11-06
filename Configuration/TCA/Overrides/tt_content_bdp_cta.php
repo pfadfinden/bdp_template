@@ -1,14 +1,17 @@
 <?php
 defined('TYPO3_MODE') || die();
 
-$GLOBALS['TCA']['tt_content']['types']['bdp_teaser-image'] = [
+$GLOBALS['TCA']['tt_content']['types']['bdp_cta'] = [
     'previewRenderer' => \TYPO3\CMS\Backend\Preview\StandardContentPreviewRenderer::class,
     'showitem' => '
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:general,
             --palette--;;general,
-            --palette--;;headers,
-            assets,
+            header,
+            header_link,
+            header_position,
+            layout,
         --div--;LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:tabs.appearance,
+            space_before_class, space_after_class,
             --palette--;;appearanceLinks,
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:language,
             --palette--;;language,
@@ -22,11 +25,8 @@ $GLOBALS['TCA']['tt_content']['types']['bdp_teaser-image'] = [
         --div--;LLL:EXT:core/Resources/Private/Language/Form/locallang_tabs.xlf:extended,
             ',
     'columnsOverrides' => [
-        'assets' => [
-            'config' => [
-                'minitems' => 1,
-                'maxitems' => 1,
-            ]
-        ]
+        'header' => [
+            'label' => 'LLL:EXT:bdp_template/Resources/Private/Language/locallang_db.xlf:bdp_cta.text',
+        ],
     ]
 ];
