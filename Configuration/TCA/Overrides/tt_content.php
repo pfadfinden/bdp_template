@@ -141,5 +141,16 @@ call_user_func(static function()
     'textmedia',
     'after'
 );
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:bdp_template/Resources/Private/Language/locallang_db.xlf:bdp_cta.title',
+        'bdp_cta',
+        'content-certificate',
+    ],
+    'textmedia',
+    'after'
+);
 
 
