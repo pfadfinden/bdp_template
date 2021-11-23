@@ -52,6 +52,43 @@
       }
     }
   }
+  &__cta {
+    display: none;
+    @include breakpoints.media-breakpoint-up(lg){
+      display: block;
+      position: absolute;
+      top: 1.25rem;
+      left: 46rem;
+    }
+    @include breakpoints.media-breakpoint-up(xl){
+      left: 60rem;
+    }
+    @include breakpoints.media-breakpoint-up(xxl){
+      left: 70rem;
+    }
+    &__button {
+      display: block;
+      background-color: colors.get-color('bdp-blue', 'base');
+      box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      padding: 0.875rem;
+      text-align: center;
+      outline: none;
+      transition: background-color 0.3s ease;
+      &__text {
+        font-size: 1.3125rem;
+        font-family: fonts.$font-family-immenhausen;
+        color: #ffffff;
+        padding: 0.625rem 1rem;
+        border: 1px solid #ffffff;
+        transition: color 0.3s ease, border-color 0.3s ease;;
+      }
+      &:focus, &:hover, &:active {
+        background-color: darken(colors.get-color('bdp-blue', 'base'), 10%);
+        text-decoration: none;
+        outline: none;
+      }
+    }
+  }
 }
 
 .mobile-menu-opener {

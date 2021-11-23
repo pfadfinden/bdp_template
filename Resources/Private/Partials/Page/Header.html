@@ -32,5 +32,12 @@
             </f:link.page>
         </div>
     </f:if>
+    <f:if condition="{cta-header.0.data.bdp_button_link} && {cta-header.0.data.bdp_button_value} && {f:uri.typolink(parameter: cta-header.0.data.bdp_button_link)}">
+        <div class="mainheader__cta">
+            <f:link.typolink parameter="{cta-header.0.data.bdp_button_link}" class="mainheader__cta__button">
+                <div class="mainheader__cta__button__text">{cta-header.0.data.bdp_button_value}</div>
+            </f:link.typolink>
+        </div>
+    </f:if>
 </header>
 </f:spaceless>
