@@ -124,6 +124,15 @@ page {
             60 {
                 references.fieldName = media
             }
+
+            70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+            70 {
+                table = pages
+                selectFields = pages.bdp_button_value, pages.bdp_button_link
+                uidInList.data = leveluid:0
+                pidInList = 0
+                as = cta-header
+            }
         }
 
         settings {
