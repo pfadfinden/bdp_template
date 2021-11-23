@@ -281,7 +281,7 @@ config {
     pageTitleFirst = 1
     pageTitleSeparator = |
     pageTitleSeparator.noTrimWrap = | | |
-    linkVars = L(0)
+    linkVars = L(0-1)
     prefixLocalAnchors = {$config.prefixLocalAnchors}
     renderCharset = utf-8
     metaCharset = utf-8
@@ -290,7 +290,7 @@ config {
     inlineStyle2TempFile = 1
     admPanel = {$config.admPanel}
     debug = 0
-    cache_period = 86400
+    cache_period = 604800
     sendCacheHeaders = {$config.sendCacheHeaders}
     intTarget =
     extTarget =

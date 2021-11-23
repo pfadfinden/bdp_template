@@ -15,20 +15,12 @@
             <encore:renderWebpackLinkTags entryName="pfadfinden-news-list" />
             <encore:renderWebpackScriptTags entryName="pfadfinden-news-list" />
             <div class="news-list" id="news-container-{contentObjectData.uid}">
-				<f:if condition="{settings.hidePagination}">
-					<f:then>
-						<f:for each="{news}" as="newsItem" iteration="iterator">
-							<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-						</f:for>
-					</f:then>
-					<f:else>
-						<n:widget.paginate objects="{news}" as="paginatedNews" configuration="{settings.list.paginate}" initial="{offset:settings.offset,limit:settings.limit,recordId:contentObjectData.uid}">
-							<f:for each="{paginatedNews}" as="newsItem" iteration="iterator">
-								<f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-							</f:for>
-						</n:widget.paginate>
-					</f:else>
-				</f:if>
+                <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                    <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                </f:for>
+                <f:if condition="{settings.hidePagination} == 1">
+                    <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                </f:if>
 			</div>
 		</f:then>
 		<f:else>
