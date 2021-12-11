@@ -11,6 +11,12 @@
   line-height: 1.4;
   letter-spacing: 1px;
   box-decoration-break: clone;
+  > a {
+    color: inherit;
+    &:visited {
+      color: inherit;
+    }
+  }
 }
 
 h1, .ce-header--1 {
@@ -19,6 +25,9 @@ h1, .ce-header--1 {
   line-height: 1.1;
   margin-bottom: 0.875rem;
   margin-top: 1.125rem;
+  > a {
+    color: inherit;
+  }
 }
 
 h2, .ce-header--2 {
@@ -29,11 +38,17 @@ h2, .ce-header--2 {
   box-decoration-break: clone;
   margin-top: 0.625rem;
   margin-bottom: 0.625rem;
+  > a {
+    color: inherit;
+  }
 }
 
 h3, .ce-header--3 {
   @extend %__headings;
   font-size: 1.1875rem;
+  > a {
+    color: inherit;
+  }
 }
 
 h4, .ce-header--4 {
@@ -50,6 +65,7 @@ h4, .ce-header--4 {
     @extend %__lines;
     background-color: colors.get-color('bdp-red', 'base');
     color: #ffffff;
+
   }
   &--82 {
     @extend %__lines;

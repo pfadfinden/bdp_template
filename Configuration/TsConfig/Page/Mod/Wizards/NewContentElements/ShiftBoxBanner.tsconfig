@@ -1,0 +1,21 @@
+mod {
+    wizards {
+        newContentElement {
+            wizardItems {
+                common {
+                    elements {
+                        bdp_shift-box-banner {
+                            iconIdentifier = content-beside-text-img-centered-right
+                            title = Shift Box Banner
+                            description = Create Banner with a shifted text box
+                            tt_content_defValues {
+                                CType = bdp_shift-box-banner
+                            }
+                        }
+                    }
+                    show := addToList(bdp_shift-box-banner)
+                }
+            }
+        }
+    }
+}

@@ -19,6 +19,7 @@
 @import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TextImage.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/TeaserImage.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/CallToActionButton.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/ContentElements/ShiftBoxBanner.typoscript'
 
 ################
 #### HELPER ####
