@@ -12,11 +12,20 @@
             <trans-unit id="bdp_teaser-image.title">
                 <source>Header image</source>
             </trans-unit>
+            <trans-unit id="bdp_shift-box-banner.title">
+                <source>Shift Box Banner</source>
+            </trans-unit>
             <trans-unit id="bdp_cta.title">
                 <source>Call to Action Button</source>
             </trans-unit>
             <trans-unit id="bdp_cta.text">
                 <source>Button value</source>
+            </trans-unit>
+            <trans-unit id="bdp_shift-box-banner.link">
+                <source>Box Link</source>
+            </trans-unit>
+            <trans-unit id="bdp_shift-box-banner.text">
+                <source>Text</source>
             </trans-unit>
         </body>
     </file>

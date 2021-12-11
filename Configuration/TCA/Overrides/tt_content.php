@@ -153,4 +153,16 @@ call_user_func(static function()
     'after'
 );
 
+\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addTcaSelectItem(
+    'tt_content',
+    'CType',
+    [
+        'LLL:EXT:bdp_template/Resources/Private/Language/locallang_db.xlf:bdp_shift-box-banner.title',
+        'bdp_shift-box-banner',
+        'content-beside-text-img-centered-right',
+    ],
+    'textmedia',
+    'after'
+);
+
 
