@@ -1,12 +1,14 @@
-<div class="row">
-    <div class="col-12 col-sm-8">
-        <f:for each="{children_101}" as="record">
-            {record.renderedContent -> f:format.raw()}
-        </f:for>
-    </div>
-    <div class="col-12 col-sm-4">
-        <f:for each="{children_102}" as="record">
-            {record.renderedContent -> f:format.raw()}
-        </f:for>
+<div id="c{data.uid}" class="bdp-ce-container bdp-ce-container--layout-{data.layout}{f:if(condition: data.space_before_class, then: ' bdp-ce--sb-{data.space_before_class}')}{f:if(condition: data.space_after_class, then: ' bdp-ce--sa-{data.space_after_class}')}">
+    <div class="row">
+        <div class="col-12 col-sm-8">
+            <f:for each="{children_101}" as="record">
+                {record.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
+        <div class="col-12 col-sm-4">
+            <f:for each="{children_102}" as="record">
+                {record.renderedContent -> f:format.raw()}
+            </f:for>
+        </div>
     </div>
 </div>
