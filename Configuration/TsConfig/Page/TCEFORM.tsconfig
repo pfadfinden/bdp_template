@@ -23,6 +23,32 @@ TCEFORM {
             addItems {
                 4 = Transparent
             }
+            types {
+                bdp-1x12-container {
+                    altLabels {
+                        0 = Transparent
+                        4 = Weißer Hintergund
+                    }
+                }
+                bdp-2x6-container {
+                    altLabels {
+                        0 = Transparent
+                        4 = Weißer Hintergund
+                    }
+                }
+                bdp-3x3-container {
+                    altLabels {
+                        0 = Transparent
+                        4 = Weißer Hintergund
+                    }
+                }
+                bdp-1x8-1x4-container {
+                    altLabels {
+                        0 = Transparent
+                        4 = Weißer Hintergund
+                    }
+                }
+            }
         }
         header_layout {
             addItems.80 = Blau/Gelb
