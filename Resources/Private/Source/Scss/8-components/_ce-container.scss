@@ -9,6 +9,34 @@
       background-color: colors.get-color('bdp-yellow', 'base');
       color: #000000;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      .bdp-ce {
+        &--layout {
+          &-0 {
+            box-shadow: none;
+          }
+          &-1 {
+            box-shadow: none;
+          }
+          &-2 {
+            box-shadow: none;
+          }
+          &-3 {
+            box-shadow: none;
+          }
+          &-4 {
+            color: #000000;
+          }
+        }
+      }
+      > .row {
+        > * {
+          > * {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
     &-2 {
       padding: 1rem;
@@ -16,6 +44,31 @@
       background-color: colors.get-color('bdp-blue', 'base');
       color: #ffffff;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      .bdp-ce {
+        &--layout {
+          &-0 {
+            box-shadow: none;
+          }
+          &-1 {
+            box-shadow: none;
+          }
+          &-2 {
+            box-shadow: none;
+          }
+          &-3 {
+            box-shadow: none;
+          }
+        }
+      }
+      > .row {
+        > * {
+          > * {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
     &-3 {
       padding: 1rem;
@@ -23,6 +76,31 @@
       background-color: colors.get-color('bdp-red', 'base');
       color: #ffffff;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      .bdp-ce {
+        &--layout {
+          &-0 {
+            box-shadow: none;
+          }
+          &-1 {
+            box-shadow: none;
+          }
+          &-2 {
+            box-shadow: none;
+          }
+          &-3 {
+            box-shadow: none;
+          }
+        }
+      }
+      > .row {
+        > * {
+          > * {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
     &-4 {
       padding: 1rem;
@@ -30,6 +108,34 @@
       background-color: #ffffff;
       color: #000000;
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      .bdp-ce {
+        &--layout {
+          &-0 {
+            box-shadow: none;
+          }
+          &-1 {
+            box-shadow: none;
+          }
+          &-2 {
+            box-shadow: none;
+          }
+          &-3 {
+            box-shadow: none;
+          }
+          &-4 {
+            color: #000000;
+          }
+        }
+      }
+      > .row {
+        > * {
+          > * {
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
     }
   }
 }
