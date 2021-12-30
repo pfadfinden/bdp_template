@@ -32,6 +32,7 @@
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/News.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Omcookiemanager.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Instagram.typoscript'
 
 
 ##############

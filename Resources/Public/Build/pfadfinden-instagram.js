@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunk_pfadfinden_bdp_template=self.webpackChunk_pfadfinden_bdp_template||[]).push([[616],{6229:function(){}},function(e){var n;n=6229,e(e.s=n)}]);

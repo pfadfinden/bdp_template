@@ -1,0 +1,31 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:instagram="http://typo3.org/ns/In2code/Instagram/ViewHelpers"
+      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<encore:renderWebpackLinkTags entryName="pfadfinden-instagram" />
+<div class="ce-social">
+    <div class="ce-social__i">
+        <f:for each="{feed.data}" as="image" iteration="iteration">
+            <f:if condition="{iteration.cycle} <= {settings.limit}">
+                <instagram:isLocalImageExisting id="{image.id}">
+                    <div class="ce-social__i__item">
+                        <f:link.external uri="{image.permalink}" title="Instagram profile {settings.username}" target="_blank" rel="noopener" class="ce-social__i__item__box">
+                            <picture>
+                                <img
+                                    src="{f:uri.image(src:'/typo3temp/assets/tx_instagram/{image.id}.jpg', width:'332c', height:'332c')}"
+                                    title="{image.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+                                    alt="{image.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+                                    class="ce-social__i__item__box__image"
+                                    width="332"
+                                    height="332"
+                                    loading="lazy" />
+                            </picture>
+                        </f:link.external>
+                    </div>
+                </instagram:isLocalImageExisting>
+            </f:if>
+        </f:for>
+    </div>
+</div>
+
+</html>
