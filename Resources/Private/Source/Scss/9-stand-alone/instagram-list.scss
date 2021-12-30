@@ -1,0 +1,66 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.ce-social{
+  &__i {
+    @include tools-grid.make-row(1rem);
+    &__item {
+      @include tools-grid.make-col-ready();
+      @include tools-grid.make-col(6, 12);
+      padding-bottom: 1rem;
+      @include breakpoints.media-breakpoint-up(lg) {
+        @include tools-grid.make-col(4, 12);
+      }
+      @include breakpoints.media-breakpoint-up(xxl) {
+        @include tools-grid.make-col(3, 12);
+      }
+      &__box {
+        display: block;
+        position: relative;
+        background-color: #ffffff;
+        color: #000000;
+        padding: 1rem;
+        font-size: 0.875rem;
+        text-decoration: none;
+        &:hover {
+          color: #000000;
+          text-decoration: none;
+        }
+        &:visited {
+          color: #000000;
+          text-decoration: none;
+        }
+        &:focus {
+          color: #000000;
+          text-decoration: none;
+        }
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          right: 1.5rem;
+          bottom: 1.5rem;
+          z-index: 2;
+          background-image: url("Images/Icons/sc/ig.svg");
+          width: 30px;
+          height: 30px;
+          @include breakpoints.media-breakpoint-up(sm) {
+            right: 2rem;
+            bottom: 2rem;
+            width: 40px;
+            height: 40px;
+          }
+        }
+        &__image {
+          display: block;
+          user-select: none;
+          width: 100%;
+          height: auto;
+          z-index: 1;
+        }
+      }
+    }
+  }
+}

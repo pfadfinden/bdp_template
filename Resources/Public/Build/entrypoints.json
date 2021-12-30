@@ -64,6 +64,15 @@
       "css": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-cookieconsent.css"
       ]
+    },
+    "pfadfinden-instagram": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-instagram.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-instagram.css"
+      ]
     }
   }
 }
