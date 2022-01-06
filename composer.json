@@ -21,10 +21,10 @@
     "typo3/cms-rte-ckeditor": "^10.4",
     "typo3/cms-fluid-styled-content": "^10.4",
     "ssch/typo3-encore": "^3.0",
-    "zeroseven/z7-semantilizer": "^2.1",
+    "zeroseven/z7-semantilizer": "^2.2",
     "b13/container": "^1.4",
     "opfaff/om-cookie-manager": "^11.0.0",
-    "ichhabrecht/content-defender": "^3.1.3"
+    "ichhabrecht/content-defender": "^3.2.1"
   },
   "autoload": {
     "psr-4": {
