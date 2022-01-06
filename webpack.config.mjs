@@ -80,13 +80,32 @@ Encore
         config.useBuiltIns = 'usage';
         config.corejs = 3;
     })
+    .configureImageRule({
+        // common values: asset, asset/resource, asset/inline
+        // Using "asset" will allow smaller images to be "inlined"
+        // instead of copied.
+        // javascript/auto can be used to disable asset images (see next example)
+        type: 'asset/resource',
+
+        // applicable when for "type: asset": files smaller than this
+        // size will be "inlined" into CSS, larger files will be extracted
+        // into independent files
+        //maxSize: 4 * 1024, // 4 kb
+
+        // control the output filename of images
+        filename: 'images/[name].[hash:8][ext]',
+
+        // you can also fully disable the image rule if you want
+        // to control things yourself
+        enabled: true,
+    })
 
     // enables Sass/SCSS support
     .enableSassLoader(() => {}, {
-        resolveUrlLoader: false,
+        resolveUrlLoader: true,
         resolveUrlLoaderOptions: {
             debug: true,
-            root: true
+            root: false
         }
     })
     .enablePostCssLoader()
