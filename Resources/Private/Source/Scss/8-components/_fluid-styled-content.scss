@@ -1,0 +1,222 @@
+.ce-align-left {
+  text-align: left;
+}
+.ce-align-center {
+  text-align: center;
+}
+.ce-align-right {
+  text-align: right;
+}
+.ce-table {
+  width: 100%;
+  max-width: 100%;
+  td {
+    vertical-align: top;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    border-top: 1px solid #dadada;
+  }
+  th {
+    vertical-align: top;
+    padding: 0.5em 0.75em;
+    vertical-align: top;
+    border-top: 1px solid #dadada;
+  }
+  thead th {
+    border-bottom: 2px solid #dadada;
+  }
+}
+.ce-textpic {
+  overflow: hidden;
+}
+.ce-image {
+  overflow: hidden;
+  .ce-gallery {
+    margin-bottom: 0;
+  }
+}
+.ce-gallery {
+  overflow: hidden;
+  figure {
+    display: table;
+    margin: 0;
+  }
+  figcaption {
+    display: table-caption;
+    caption-side: bottom;
+  }
+  img {
+    display: block;
+  }
+  iframe {
+    border-width: 0;
+  }
+}
+.ce-row {
+  overflow: hidden;
+  margin-bottom: 10px;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+.ce-uploads {
+  margin: 0;
+  padding: 0;
+  li {
+    overflow: hidden;
+    list-style: none outside none;
+    margin: 1em 0;
+  }
+  div {
+    overflow: hidden;
+  }
+  img {
+    float: left;
+    padding-right: 1em;
+    vertical-align: top;
+  }
+  span {
+    display: block;
+  }
+}
+.ce-column {
+  float: left;
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.ce-center {
+  .ce-outer {
+    position: relative;
+    float: right;
+    right: 50%;
+  }
+  .ce-inner {
+    position: relative;
+    float: right;
+    right: -50%;
+  }
+}
+.ce-border {
+  img {
+    border: 2px solid #000000;
+    padding: 0;
+  }
+  iframe {
+    border: 2px solid #000000;
+    padding: 0;
+  }
+}
+.ce-intext {
+  &.ce-left {
+    .ce-gallery {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+    ol {
+      padding-left: 40px;
+      overflow: auto;
+    }
+    ul {
+      padding-left: 40px;
+      overflow: auto;
+    }
+  }
+  &.ce-right .ce-gallery {
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+}
+.ce-above {
+  .ce-gallery {
+    margin-bottom: 10px;
+  }
+  .ce-bodytext {
+    clear: both;
+  }
+}
+.ce-headline-left {
+  text-align: left;
+}
+.ce-headline-center {
+  text-align: center;
+}
+.ce-headline-right {
+  text-align: right;
+}
+.ce-table-bordered {
+  th {
+    border: 1px solid #dadada;
+  }
+  td {
+    border: 1px solid #dadada;
+  }
+}
+.frame-space-before-extra-small {
+  margin-top: 1rem;
+}
+.frame-space-before-small {
+  margin-top: 2rem;
+}
+.frame-space-before-medium {
+  margin-top: 3rem;
+}
+.frame-space-before-large {
+  margin-top: 4rem;
+}
+.frame-space-before-extra-large {
+  margin-top: 5rem;
+}
+.frame-space-after-extra-small {
+  margin-bottom: 1rem;
+}
+.frame-space-after-small {
+  margin-bottom: 2rem;
+}
+.frame-space-after-medium {
+  margin-bottom: 3rem;
+}
+.frame-space-after-large {
+  margin-bottom: 4rem;
+}
+.frame-space-after-extra-large {
+  margin-bottom: 5rem;
+}
+.frame-indent {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+.frame-indent-left {
+  margin-left: 33%;
+}
+.frame-indent-right {
+  margin-right: 33%;
+}
+.ce-nowrap .ce-bodytext {
+  overflow: hidden;
+}
+.ce-left .ce-gallery {
+  float: left;
+}
+.ce-right .ce-gallery {
+  float: right;
+}
+.ce-below .ce-gallery {
+  margin-top: 10px;
+}
+.ce-table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0,0,0,.05);
+}
+.frame-ruler-before:before {
+  content: '';
+  display: block;
+  border-top: 1px solid rgba(0,0,0,0.25);
+  margin-bottom: 2em;
+}
+.frame-ruler-after:after {
+  content: '';
+  display: block;
+  border-bottom: 1px solid rgba(0,0,0,0.25);
+  margin-top: 2em;
+}
