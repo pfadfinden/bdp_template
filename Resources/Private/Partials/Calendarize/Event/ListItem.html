@@ -1,0 +1,26 @@
+{namespace c=HDNET\Calendarize\ViewHelpers}
+
+<f:alias map="{event: index.originalObject}">
+    <div class="bdp-cal__event-list__events__event bdp-cal__event-list__events__event--state-{index.state}">
+        <div class="bdp-cal__event-list__events__event__date">
+            {index.startDate -> f:format.date(format: settings.dateFormat)}
+            <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} != {index.endDate -> f:format.date(format: 'd.m.Y')}">
+                    - {index.endDate -> f:format.date(format: settings.dateFormat)}
+            </f:if>
+            <f:if condition="!{index.allDay}">
+                <f:format.date format="{settings.timeFormat}">{index.startDateComplete}</f:format.date>
+                <f:if condition="!{index.openEndTime}">
+                    <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
+                        -
+                    </f:if>
+                    <f:format.date format="{settings.timeFormat}">{index.endDateComplete}</f:format.date>
+                </f:if>
+            </f:if>
+        </div>
+        <div class="bdp-cal__event-list__events__event__content">
+            <c:link.index index="{index}">
+                <f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}" />
+            </c:link.index>
+        </div>
+    </div>
+</f:alias>

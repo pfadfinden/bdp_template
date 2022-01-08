@@ -1,0 +1,142 @@
+{namespace c=HDNET\Calendarize\ViewHelpers}
+
+<f:alias map="{event: index.originalObject}">
+    <div class="bdp-cal__detail__event">
+        <header class="header">
+            <h1 class="ce-header"><f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}"/></h1>
+            <c:titleTag><f:render partial="{index.configuration.partialIdentifier}/Title" arguments="{index: index}"/></c:titleTag>
+        </header>
+        <f:if condition="{event.images.0}">
+            <div class="bdp-cal__detail__event__asset">
+                <div class="bdp-cal__detail__event__asset__media">
+                    <f:alias map="{mediaElement: event.images.0}">
+                        <f:if condition="{mediaElement.originalResource.type} == 2">
+                            <f:image class="bdp-cal__detail__event__asset__media__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{f:if(condition: '{pageData.layout} == 1', then: '1164c', else: '884c')}" height="{f:if(condition: '{pageData.layout} == 1', then: 655, else: 498)}"/>
+                        </f:if>
+                        <f:if condition="{mediaElement.originalResource.type} == 4">
+                            <f:media file="{mediaElement}" class="bdp-cal__detail__event__asset__box__media__video" />
+                        </f:if>
+                        <f:if condition="{mediaElement.originalResource.type} == 5">
+                            <f:image class="bdp-cal__detail__event__asset__media__image" image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="{f:if(condition: '{pageData.layout} == 1', then: '1164c', else: '884c')}" height="{f:if(condition: '{pageData.layout} == 1', then: 655, else: 498)}"/>
+                        </f:if>
+                    </f:alias>
+                </div>
+            </div>
+        </f:if>
+        <div class="bdp-cal__detail__event__information">
+            <div class="bdp-cal__detail__event__information__data">
+                <div class="bdp-cal__detail__event__box">
+                    <f:if condition="{index.state}=='canceled'">
+                        <div class="bdp-cal__detail__event__information__data__section">
+                            <div class="bdp-cal__detail__event__information__data__section__heading">
+                                <h3 class="bdp-cal__detail__event__information__data__section__heading__title bdp-cal__detail__event__information__data__section__heading__title--canceled">{f:translate(key: 'canceled')}</h3>
+                            </div>
+                        </div>
+                    </f:if>
+                    <div class="bdp-cal__detail__event__information__data__section">
+                        <div class="bdp-cal__detail__event__information__data__section__heading">
+                            <h3 class="bdp-cal__detail__event__information__data__section__heading__title">{f:translate(key: 'date')}</h3>
+                        </div>
+                        <div class="bdp-cal__detail__event__information__data__section__content">
+                            <strong>{index.startDate -> f:format.date(format: settings.dateFormat)}
+                            <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} != {index.endDate -> f:format.date(format: 'd.m.Y')}">
+                                    - {index.endDate -> f:format.date(format: settings.dateFormat)}
+                            </f:if>
+                            </strong>
+                        </div>
+                    </div>
+                    <div class="bdp-cal__detail__event__information__data__section">
+                        <div class="bdp-cal__detail__event__information__data__section__heading">
+                            <h3 class="bdp-cal__detail__event__information__data__section__heading__title">{f:translate(key: 'time')}</h3>
+                        </div>
+                        <div class="bdp-cal__detail__event__information__data__section__content">
+                            <f:if condition="{index.allDay}">
+                                <f:then>
+                                    <f:translate key="all_day" />
+                                </f:then>
+                                <f:else>
+                                    <f:format.date format="{settings.timeFormat}">{index.startDateComplete}</f:format.date>
+                                    <f:if condition="{index.openEndTime}">
+                                        <f:then>
+                                            <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
+                                                -
+                                            </f:if>
+                                            <f:translate key="open_end" />
+                                        </f:then>
+                                        <f:else>
+                                            <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
+                                                -
+                                            </f:if>
+                                            <f:format.date format="{settings.timeFormat}">{index.endDateComplete}</f:format.date>
+                                        </f:else>
+                                    </f:if>
+                                </f:else>
+                            </f:if>
+                        </div>
+                    </div>
+                    <f:if condition="{event.location}">
+                        <div class="bdp-cal__detail__event__information__data__section">
+                            <div class="bdp-cal__detail__event__information__data__section__heading">
+                                <h3 class="bdp-cal__detail__event__information__data__section__heading__title">{f:translate(key: 'tx_calendarize_domain_model_event.location')}</h3>
+                            </div>
+                            <div class="bdp-cal__detail__event__information__data__section__content">
+                                <f:if condition="{event.locationLink}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{event.locationLink}" target="_blank">{event.location}</f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        {event.location}
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </f:if>
+                    <f:if condition="{event.organizer}">
+                        <div class="bdp-cal__detail__event__information__data__section">
+                            <div class="bdp-cal__detail__event__information__data__section__heading">
+                                <h3 class="bdp-cal__detail__event__information__data__section__heading__title">{f:translate(key: 'tx_calendarize_domain_model_event.organizer')}</h3>
+                            </div>
+                            <div class="bdp-cal__detail__event__information__data__section__content">
+                                <f:if condition="{event.organizerLink}">
+                                    <f:then>
+                                        <f:link.typolink parameter="{event.organizerLink}" target="_blank" >{event.organizer}</f:link.typolink>
+                                    </f:then>
+                                    <f:else>
+                                        {event.organizer}
+                                    </f:else>
+                                </f:if>
+                            </div>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+            <div class="bdp-cal__detail__event__information__content">
+                <div class="bdp-cal__detail__event__box">
+                    <div class="bdp-cal__detail__event__box__content">
+                        <f:if condition="{event.abstract}">
+                            <div class="bdp-cal__detail__event__box__content__teaser">
+                                {event.abstract -> f:format.html()}
+                            </div>
+                        </f:if>
+                        <div class="bdp-cal__detail__event__box__content__main">
+                            {event.description -> f:format.html()}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <f:if condition="{event.downloads}">
+            <div class="bdp-cal__detail__event__box">
+                <div class="downloads">
+                    <f:for each="{event.downloads}" as="download" iteration="i">
+                        <a href="{download.originalResource.publicUrl}">{download.originalResource.publicUrl}</a>
+                    </f:for>
+                </div>
+            </div>
+        </f:if>
+    </div>
+</f:alias>
+
+<c:ifExtensionLoaded extensionKey="schema">
+    <f:render partial="{index.configuration.partialIdentifier}/StructuredData/Detail" arguments="{index: index}"/>
+</c:ifExtensionLoaded>
