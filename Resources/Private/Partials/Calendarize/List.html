@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+     xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+     xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers">
+<encore:renderWebpackLinkTags entryName="pfadfinden-calendarize-list" />
+<div class="bdp-cal__event-list">
+    <f:if condition="{searchMode}">
+        <f:render partial="Event/SearchInformation" arguments="{searchParameter: searchParameter, indices: indices}" />
+    </f:if>
+    <f:if condition="{indices -> f:count()}">
+        <f:then>
+            {f:variable(name: 'month', value: '{indices.0.startDate -> f:format.date(format: \'Y.m.\')}')}
+            <f:if condition="{settings.hidePagination}">
+                <f:then>
+                    <div class="bdp-cal__event-list__events">
+                        <div class="bdp-cal__event-list__events__month">
+                            <h3 class="bdp-cal__event-list__events__month__title">{indices.0.startDate -> f:format.date(format: '%B %Y')}</h3>
+                        <f:for each="{indices}" as="index">
+                            <f:if condition="{month} != {index.startDate -> f:format.date(format: 'Y.m.')}">
+                        </div>
+                            <div class="bdp-cal__event-list__events__month">
+                                    <h3 class="bdp-cal__event-list__events__month__title">{index.startDate -> f:format.date(format: '%B %Y')}</h3>
+                                {f:variable(name: 'month', value: '{index.startDate -> f:format.date(format: \'Y.m.\')}')}
+                            </f:if>
+                            <f:render partial="{index.configuration.partialIdentifier}/ListItem" arguments="{index: index}" />
+                        </f:for>
+                        </div>
+                    </div>
+                </f:then>
+                <f:else>
+                    <f:if condition="{settings.paginateConfiguration.insertAbove -> f:or(alternative:0)}">
+                        <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                    </f:if>
+                    <div class="bdp-cal__event-list__events">
+                        <div class="bdp-cal__event-list__events__month">
+                            <h3 class="bdp-cal__event-list__events__month__title">{indices.0.startDate -> f:format.date(format: '%B %Y')}</h3>
+                        <f:for each="{pagination.paginator.paginatedItems}" as="index">
+                            <f:if condition="{month} != {index.startDate -> f:format.date(format: 'Y.m.')}">
+                        </div><div class="bdp-cal__event-list__events__month">
+                                    <h3 class="bdp-cal__event-list__events__month__title">{index.startDate -> f:format.date(format: '%B %Y')}</h3>
+                                {f:variable(name: 'month', value: '{index.startDate -> f:format.date(format: \'Y.m.\')}')}
+                            </f:if>
+                            <f:render partial="{index.configuration.partialIdentifier}/ListItem" arguments="{index: index}" />
+                        </f:for>
+                    </div>
+                    </div>
+                    <f:if condition="{settings.paginateConfiguration.insertBelow -> f:or(alternative:1)}">
+                        <f:render partial="Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                    </f:if>
+                </f:else>
+            </f:if>
+        </f:then>
+        <f:else>
+            <f:translate key="no_events" />
+        </f:else>
+    </f:if>
+</div>
+</html>
+

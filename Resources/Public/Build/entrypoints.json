@@ -32,6 +32,24 @@
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-news-detail.css"
       ]
     },
+    "pfadfinden-calendarize-list": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-calendarize-list.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-calendarize-list.css"
+      ]
+    },
+    "pfadfinden-calendarize-detail": {
+      "js": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-calendarize-detail.js"
+      ],
+      "css": [
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden-calendarize-detail.css"
+      ]
+    },
     "pfadfinden-address-list": {
       "js": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",

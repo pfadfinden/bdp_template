@@ -1,0 +1,16 @@
+# ==============================================
+# FE-Plugin configuration for EXT:calendarize
+# ==============================================
+plugin.tx_calendarize  {
+    view {
+        templateRootPaths {
+           300 = EXT:bdp_template/Resources/Private/Templates/Calendarize/
+        }
+        partialRootPaths {
+            300 = EXT:bdp_template/Resources/Private/Partials/Calendarize/
+        }
+        layoutRootPaths {
+            300 = EXT:bdp_template/Resources/Private/Layouts/Calendarize/
+        }
+    }
+}

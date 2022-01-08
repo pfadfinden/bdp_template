@@ -1,0 +1,90 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.bdp-cal__detail {
+  &__event {
+    &__asset {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      background-color: #ffffff;
+      color: #000000;
+      box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      &__media {
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    &__information {
+      @include tools-grid.make-row(1rem);
+      overflow: hidden;
+      &__data {
+        @include tools-grid.make-col-ready();
+        @include breakpoints.media-breakpoint-up(lg) {
+          @include tools-grid.make-col(4, 12);
+        }
+        &__section {
+          margin-top: 1.5rem;
+          &:first-child {
+            margin-top: 0;
+          }
+          &__heading {
+            margin-bottom: 0.625rem;
+            &__title {
+              display: inline;
+              padding: 0.1875rem 0.25rem 0.1875rem 0.25rem;
+              margin: 0.625rem 0 .625rem -0.125rem;
+              line-height: 1.4;
+              letter-spacing: 1px;
+              box-decoration-break: clone;
+              background-color: colors.get-color('bdp-yellow', 'base');
+              color: colors.get-color('bdp-blue', 'base');
+              &--canceled {
+                background-color: colors.get-color('bdp-red', 'base');
+                color: #ffffff;
+              }
+            }
+          }
+          &__content {
+
+          }
+        }
+      }
+      &__content {
+        @include tools-grid.make-col-ready();
+        @include breakpoints.media-breakpoint-up(lg) {
+          @include tools-grid.make-col(8, 12);
+        }
+      }
+    }
+    &__box {
+      padding: 1rem;
+      margin-bottom: 1rem;
+      font-size: 0.875rem;
+      background-color: #ffffff;
+      color: #000000;
+      box-shadow: 0 5px 5px rgba(0,0,0,.1);
+      &__content {
+        &__teaser {
+          font-weight: 600;
+          margin-bottom: 1rem;
+        }
+        &__main {
+          > * {
+            &:first-child {
+              margin-top: 0;
+            }
+            &:last-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

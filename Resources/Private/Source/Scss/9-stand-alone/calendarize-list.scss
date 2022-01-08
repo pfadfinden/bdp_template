@@ -1,0 +1,38 @@
+@use "../2-design-tokens/fonts";
+@use "../3-tools/grid" as tools-grid;
+@use "../3-tools/breakpoints";
+@use "../3-tools/colors";
+
+.bdp-cal__event-list {
+  &__events {
+    &__month {
+      &:first-child {
+        .bdp-cal__event-list__events__month__title {
+          margin-top: 0;
+        }
+      }
+      &__title {
+        color: colors.get-color('bdp-blue', 'base');
+        margin-top: 0.625rem;
+        margin-bottom: 0;
+      }
+    }
+    &__event {
+      display: flex;
+      padding: 0.25rem;
+      &:nth-child(odd) {
+        background-color: #fff5d0;
+      }
+      &__date {
+        flex: 0 0 180px;
+        @include breakpoints.media-breakpoint-up(md) {
+          flex: 0 0 250px;
+        }
+      }
+      &__content {
+
+      }
+    }
+  }
+}
+
