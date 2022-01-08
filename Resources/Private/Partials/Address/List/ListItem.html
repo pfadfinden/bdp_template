@@ -2,9 +2,12 @@
     <div class="ce-address__list__items__item__box">
         <f:if condition="{address.image}">
             <div class="ce-address__list__items__item__box__picture">
-                <f:media file="{address.firstImage}" width="100c" height="150" class="ce-address__list__items__item__box__picture__image"
+                <f:media file="{address.firstImage}"
+                         width="100c"
+                         height="{f:if(condition: '{settings.image-variant} == \'circle\' || {settings.image-variant} == \'square\'', then: '100', else: '150')}"
+                         class="ce-address__list__items__item__box__picture__image{f:if(condition: '{settings.image-variant} == \'circle\'', then: ' ce-address__list__items__item__box__picture__image--circle')}"
                          alt="{address.firstImage.originalResource.alt}"
-                         title="{address.fullName}"/>
+                         title="{address.fullName}" />
             </div>
         </f:if>
         <div class="ce-address__list__items__item__box__content">

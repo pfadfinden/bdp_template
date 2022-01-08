@@ -32,6 +32,11 @@
             max-width: 100%;
             height: auto;
           }
+          &__image {
+            &--circle {
+              border-radius: 50%;
+            }
+          }
         }
         &__content {
           flex: 1 1 auto;

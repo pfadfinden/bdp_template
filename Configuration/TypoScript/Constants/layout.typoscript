@@ -5,5 +5,7 @@ bdp {
     layout {
         # cat=bdp/layout/a; type=string; label=Content min height on Desktop
         content-min-height = 100vh
+        # cat=bdp/layout/b; type=options[rectangle,square,circle]; label=Layout of the address image. one of this options: rectangle,square,circle
+        address-image-variant = rectangle
     }
 }
