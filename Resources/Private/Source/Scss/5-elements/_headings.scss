@@ -28,6 +28,15 @@ h1, .ce-header--1 {
   > a {
     color: inherit;
   }
+  ~ .ce-subheader {
+    @extend %__headings;
+    font-size: 1.3125rem;
+    line-height: 1.4;
+    letter-spacing: 1px;
+    box-decoration-break: clone;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
 }
 
 h2, .ce-header--2 {
@@ -41,6 +50,12 @@ h2, .ce-header--2 {
   > a {
     color: inherit;
   }
+  ~ .ce-subheader {
+    @extend %__headings;
+    font-size: 1.1875rem;
+    margin-top: 0.625rem;
+    margin-bottom: 0.625rem;
+  }
 }
 
 h3, .ce-header--3 {
@@ -48,6 +63,10 @@ h3, .ce-header--3 {
   font-size: 1.1875rem;
   > a {
     color: inherit;
+  }
+  ~ .ce-subheader {
+    @extend %__headings;
+    font-size: 1rem;
   }
 }
 
