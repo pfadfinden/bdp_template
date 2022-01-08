@@ -10,4 +10,7 @@ plugin.tx_ttaddress {
             3 = EXT:bdp_template/Resources/Private/Layouts/Address/
         }
     }
+    settings {
+        image-variant = {$bdp.layout.address-image-variant}
+    }
 }
