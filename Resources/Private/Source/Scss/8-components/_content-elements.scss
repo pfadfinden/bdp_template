@@ -24,6 +24,14 @@
       .ce-header {
         @extend .ce-header--83;
       }
+      a {
+        color: colors.get-color('bdp-blue', 'base');
+        text-decoration: none;
+        &:hover {
+          color: inherit;
+          text-decoration: underline;
+        }
+      }
     }
     &-2 {
       background-color: colors.get-color('bdp-blue', 'base');
@@ -32,6 +40,14 @@
       .ce-header {
         @extend .ce-header--80;
       }
+      a {
+        color: #ffffff;
+        text-decoration: underline #ffffff dotted;
+        &:hover {
+          color: inherit;
+          text-decoration: underline #ffffff solid;
+        }
+      }
     }
     &-3 {
       background-color: colors.get-color('bdp-red', 'base');
@@ -39,6 +55,14 @@
       box-shadow: 0 5px 5px rgba(0,0,0,.1);
       .ce-header {
         @extend .ce-header--84;
+      }
+      a {
+        color: #ffffff;
+        text-decoration: underline #ffffff dotted;
+        &:hover {
+          color: inherit;
+          text-decoration: underline #ffffff solid;
+        }
       }
     }
     &-4 {
