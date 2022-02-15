@@ -15,7 +15,10 @@ document.addEventListener(
             },
             {
                 offCanvas: {
-                    clone: true
+                    clone: true,
+                    page: {
+                        selector: "body > .page"
+                    },
                 }
             });
         const api = menu.API;
