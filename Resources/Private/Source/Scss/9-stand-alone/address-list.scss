@@ -37,10 +37,12 @@
               border-radius: 50%;
             }
           }
+          + .ce-address__list__items__item__box__content {
+            margin-left: 1rem;
+          }
         }
         &__content {
           flex: 1 1 auto;
-          margin-left: 1rem;
           font-size: 0.875rem;
           &__name {
             display: inline;
