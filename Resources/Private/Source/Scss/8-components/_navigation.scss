@@ -18,6 +18,20 @@
     background-color: rgba(56,46,35,.7);
     font-size: 0.8125rem;
     line-height: 1.1875rem;
+    &__region {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 1rem;
+      @include breakpoints.media-breakpoint-up(md) {
+        justify-content: left;
+        padding-bottom: 0;
+      }
+      &__image {
+        width: 100%;
+        height: auto;
+        max-width: 7.8125rem;
+      }
+    }
   }
 }
 @include breakpoints.media-breakpoint-up(md) {
