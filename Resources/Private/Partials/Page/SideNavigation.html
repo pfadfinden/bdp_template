@@ -1,4 +1,9 @@
 <aside class="page__navigation__side">
+    <f:if condition="{settings.branding.region-image.enable} && {settings.branding.region-image.value}">
+        <div class="page__navigation__side__region">
+            <f:image src="{settings.branding.region-image.value}" width="125" class="page__navigation__side__region__image" />
+        </div>
+    </f:if>
     <nav id="side-navigation" class="side-navigation" aria-label="Secondary">
         <ul class="side-navigation__list">
             <f:for each="{sideNavigation}" as="sideNavigationItem">
