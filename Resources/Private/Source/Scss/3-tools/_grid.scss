@@ -1,3 +1,4 @@
+@use "sass:math";
 @use "../1-settings/variables";
 @use "../2-design-tokens/grid" as grid-variables;
 @use "../2-design-tokens/media-breakpoints";
@@ -31,7 +32,7 @@
 
 @mixin make-col($size, $columns: grid-variables.$grid-columns) {
   flex: 0 0 auto;
-  width: percentage($size / $columns);
+  width: percentage(math.div($size,$columns));
 }
 
 @mixin make-col-auto() {
@@ -40,7 +41,7 @@
 }
 
 @mixin make-col-offset($size, $columns: grid-variables.$grid-columns) {
-  $num: $size / $columns;
+  $num: math.div($size, $columns);
   margin-left: if($num == 0, 0, percentage($num));
 }
 
@@ -52,7 +53,7 @@
 @mixin row-cols($count) {
   > * {
     flex: 0 0 auto;
-    width: 100% / $count;
+    width: math.div(100%,$count);
   }
 }
 

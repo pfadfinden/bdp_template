@@ -1,7 +1,8 @@
+@use "sass:math";
 @use "../1-settings/variables";
 @use "../2-design-tokens/grid" as grid-variables;
 
-$container-padding-x: grid-variables.$grid-gutter-width / 2;
+$container-padding-x: math.div(grid-variables.$grid-gutter-width,2);
 
 @mixin make-container($gutter: $container-padding-x) {
   width: 100%;
