@@ -1,7 +1,7 @@
 <?php
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 $GLOBALS['TCA']['tt_content']['types']['bdp_shift-box-banner'] = [
     'previewRenderer' => \TYPO3\CMS\Backend\Preview\StandardContentPreviewRenderer::class,

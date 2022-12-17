@@ -4,7 +4,7 @@ use B13\Container\Tca\ContainerConfiguration;
 use B13\Container\Tca\Registry;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 
-defined('TYPO3_MODE') || die();
+defined('TYPO3') || die();
 
 call_user_func(static function()
 {

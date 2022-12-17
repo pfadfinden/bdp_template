@@ -1,10 +1,10 @@
 tt_content.bdp-2x6-container < lib.contentElement
 tt_content.bdp-2x6-container {
-    templateName = 2x6Container
-    templateRootPaths {
-        10 = EXT:bdp_template/Resources/Private/Templates/Container/
-    }
-    dataProcessing {
-        100 = B13\Container\DataProcessing\ContainerProcessor
-    }
+  templateName = 2x6Container
+  templateRootPaths {
+    10 = EXT:bdp_template/Resources/Private/Templates/Container/
+  }
+  dataProcessing {
+    100 = B13\Container\DataProcessing\ContainerProcessor
+  }
 }

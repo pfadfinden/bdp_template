@@ -1,16 +1,16 @@
 plugin.tx_ttaddress {
-    view {
-        templateRootPaths {
-            3 = EXT:bdp_template/Resources/Private/Templates/Address/
-        }
-        partialRootPaths {
-            3 = EXT:bdp_template/Resources/Private/Partials/Address/
-        }
-        layoutRootPaths {
-            3 = EXT:bdp_template/Resources/Private/Layouts/Address/
-        }
+  view {
+    templateRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Templates/Address/
     }
-    settings {
-        image-variant = {$bdp.layout.address-image-variant}
+    partialRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Partials/Address/
     }
+    layoutRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Layouts/Address/
+    }
+  }
+  settings {
+    image-variant = {$bdp.layout.address-image-variant}
+  }
 }

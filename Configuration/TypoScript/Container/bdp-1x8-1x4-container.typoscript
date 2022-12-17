@@ -1,10 +1,10 @@
 tt_content.bdp-1x8-1x4-container < lib.contentElement
 tt_content.bdp-1x8-1x4-container {
-    templateName = 1x8-1x4Container
-    templateRootPaths {
-        10 = EXT:bdp_template/Resources/Private/Templates/Container/
-    }
-    dataProcessing {
-        100 = B13\Container\DataProcessing\ContainerProcessor
-    }
+  templateName = 1x8-1x4Container
+  templateRootPaths {
+    10 = EXT:bdp_template/Resources/Private/Templates/Container/
+  }
+  dataProcessing {
+    100 = B13\Container\DataProcessing\ContainerProcessor
+  }
 }
