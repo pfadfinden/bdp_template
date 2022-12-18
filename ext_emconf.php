@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Extension Manager/Repository config file for ext "bdptemplate".
+ * Extension Manager/Repository config file for ext "bdp_template".
  */
 $EM_CONF['bdp_template'] = [
     'title' => 'BdP Template',
