@@ -42,236 +42,221 @@
 ##############
 page = PAGE
 page {
-    typeNum = 0
-    shortcutIcon = EXT:bdp_template/Resources/Public/Icons/favicon.ico
+  typeNum = 0
+  shortcutIcon = EXT:bdp_template/Resources/Public/Icons/favicon.ico
 
-    10 = FLUIDTEMPLATE
-    10 {
-        # Template names will be generated automatically by converting the applied
-        # backend_layout, there is no explicit mapping necessary anymore.
-        #
-        # BackendLayout Key
-        # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        #
-        # Backend Record
-        # uid: 1 -> 1.html
-        #
-        # Database Entry
-        # value: -1 -> None.html
-        # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
-        templateName = TEXT
-        templateName {
-            cObject = TEXT
-            cObject {
-                data = pagelayout
-                required = 1
-                case = uppercamelcase
-                split {
-                    token = pagets__
-                    cObjNum = 1
-                    1.current = 1
-                }
-            }
-            ifEmpty = Default
+  10 = FLUIDTEMPLATE
+  10 {
+    # Template names will be generated automatically by converting the applied
+    # backend_layout, there is no explicit mapping necessary anymore.
+    #
+    # BackendLayout Key
+    # subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    #
+    # Backend Record
+    # uid: 1 -> 1.html
+    #
+    # Database Entry
+    # value: -1 -> None.html
+    # value: pagets__subnavigation_right_2_columns -> SubnavigationRight2Columns.html
+    templateName = TEXT
+    templateName {
+      cObject = TEXT
+      cObject {
+        data = pagelayout
+        required = 1
+        case = uppercamelcase
+        split {
+          token = pagets__
+          cObjNum = 1
+          1.current = 1
         }
-        templateRootPaths {
-            0 = EXT:bdp_template/Resources/Private/Templates/Page/
-            1 = {$page.fluidtemplate.templateRootPath}
-        }
-        partialRootPaths {
-            0 = EXT:bdp_template/Resources/Private/Partials/Page/
-            1 = {$page.fluidtemplate.partialRootPath}
-        }
-        layoutRootPaths {
-            0 = EXT:bdp_template/Resources/Private/Layouts/Page/
-            1 = {$page.fluidtemplate.layoutRootPath}
-        }
+      }
+      ifEmpty = Default
+    }
+    templateRootPaths {
+      0 = EXT:bdp_template/Resources/Private/Templates/Page/
+      1 = {$page.fluidtemplate.templateRootPath}
+    }
+    partialRootPaths {
+      0 = EXT:bdp_template/Resources/Private/Partials/Page/
+      1 = {$page.fluidtemplate.partialRootPath}
+    }
+    layoutRootPaths {
+      0 = EXT:bdp_template/Resources/Private/Layouts/Page/
+      1 = {$page.fluidtemplate.layoutRootPath}
+    }
+    dataProcessing {
+      10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
+      10 {
+        as = site
+      }
+      20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      20 {
+        levels = 2
+        expandAll = 1
+        includeSpacer = 0
+        titleField = nav_title // title
+        as = mainNavigation
+      }
+      30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
+      30 {
+        special = directory
+        special.value = {$page.config.sideNavigationPid}
+        levels = 3
+        expandAll = 1
+        includeSpacer = 1
+        titleField = nav_title // title
+        as = sideNavigation
         dataProcessing {
-            10 = TYPO3\CMS\Frontend\DataProcessing\SiteProcessor
-            10 {
-                as = site
-            }
-
-            20 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            20 {
-                levels = 2
-                expandAll = 1
-                includeSpacer = 0
-                titleField = nav_title // title
-                as = mainNavigation
-            }
-
-            30 = TYPO3\CMS\Frontend\DataProcessing\MenuProcessor
-            30 {
-                special = directory
-                special.value = {$page.config.sideNavigationPid}
-                levels = 3
-                expandAll = 1
-                includeSpacer = 1
-                titleField = nav_title // title
-                as = sideNavigation
-                dataProcessing {
-                    10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-                    10 {
-                        references.fieldName = media
-                    }
-                }
-            }
-
-            50 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
-            50 {
-                languages = auto
-                as = languageNavigation
-            }
-
-            60 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
-            60 {
-                references.fieldName = media
-            }
-
-            70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
-            70 {
-                table = pages
-                selectFields = pages.bdp_button_value, pages.bdp_button_link
-                uidInList.data = leveluid:0
-                pidInList = 0
-                as = cta-header
-            }
+          10 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+          10 {
+            references.fieldName = media
+          }
         }
-
-        settings {
-            branding {
-                region {
-                    enable = {$bdp.branding.region.enable}
-                    value = {$bdp.branding.region.value}
-                }
-                region-image {
-                    enable = {$bdp.branding.region-image.enable}
-                    value = {$bdp.branding.region-image.value}
-                }
-                organisation = {$bdp.branding.organisation}
-            }
-            contact {
-                name = {$bdp.contact.name}
-                address = {$bdp.contact.address}
-                phone = {$bdp.contact.phone}
-                fax = {$bdp.contact.fax}
-                email = {$bdp.contact.email}
-                website = {$bdp.contact.website}
-            }
-            social {
-                facebook {
-                    enable = {$bdp.social.facebook.enable}
-                    value = {$bdp.social.facebook.value}
-                }
-                instagram {
-                    enable = {$bdp.social.instagram.enable}
-                    value = {$bdp.social.instagram.value}
-                }
-                youtube {
-                    enable = {$bdp.social.youtube.enable}
-                    value = {$bdp.social.youtube.value}
-                }
-            }
-            privacy = {$page.config.privacyPid}
-            legalNotice = {$page.config.legalNoticePid}
-        }
+      }
+      50 = TYPO3\CMS\Frontend\DataProcessing\LanguageMenuProcessor
+      50 {
+        languages = auto
+        as = languageNavigation
+      }
+      60 = TYPO3\CMS\Frontend\DataProcessing\FilesProcessor
+      60 {
+        references.fieldName = media
+      }
+      70 = TYPO3\CMS\Frontend\DataProcessing\DatabaseQueryProcessor
+      70 {
+        table = pages
+        selectFields = pages.bdp_button_value, pages.bdp_button_link
+        uidInList.data = leveluid:0
+        pidInList = 0
+        as = cta-header
+      }
     }
-
-    meta {
-        viewport = {$page.meta.viewport}
-        robots = {$page.meta.robots}
-        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
-        description = {$page.meta.description}
-        description {
-            override.field = description
+    settings {
+      branding {
+        region {
+          enable = {$bdp.branding.region.enable}
+          value = {$bdp.branding.region.value}
         }
-        author = {$page.meta.author}
-        author {
-            override.field = author
+        region-image {
+          enable = {$bdp.branding.region-image.enable}
+          value = {$bdp.branding.region-image.value}
         }
-        keywords = {$page.meta.keywords}
-        keywords {
-            override.field = keywords
+        organisation = {$bdp.branding.organisation}
+      }
+      contact {
+        name = {$bdp.contact.name}
+        address = {$bdp.contact.address}
+        phone = {$bdp.contact.phone}
+        fax = {$bdp.contact.fax}
+        email = {$bdp.contact.email}
+        website = {$bdp.contact.website}
+      }
+      social {
+        facebook {
+          enable = {$bdp.social.facebook.enable}
+          value = {$bdp.social.facebook.value}
         }
-        X-UA-Compatible = {$page.meta.compatible}
-        X-UA-Compatible {
-            attribute = http-equiv
+        instagram {
+          enable = {$bdp.social.instagram.enable}
+          value = {$bdp.social.instagram.value}
         }
-
-        # OpenGraph Tags
-        og:title {
-            attribute = property
-            field = title
+        youtube {
+          enable = {$bdp.social.youtube.enable}
+          value = {$bdp.social.youtube.value}
         }
-        og:site_name {
-            attribute = property
-            data = site:websiteTitle
+      }
+      privacy = {$page.config.privacyPid}
+      legalNotice = {$page.config.legalNoticePid}
+    }
+  }
+  meta {
+    viewport = {$page.meta.viewport}
+    robots = {$page.meta.robots}
+    apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+    description = {$page.meta.description}
+    description {
+      override.field = description
+    }
+    author = {$page.meta.author}
+    author {
+      override.field = author
+    }
+    keywords = {$page.meta.keywords}
+    keywords {
+      override.field = keywords
+    }
+    X-UA-Compatible = {$page.meta.compatible}
+    X-UA-Compatible {
+      attribute = http-equiv
+    }
+    # OpenGraph Tags
+    og:title {
+      attribute = property
+      field = title
+    }
+    og:site_name {
+      attribute = property
+      data = site:websiteTitle
+    }
+    og:description = {$page.meta.description}
+    og:description {
+      attribute = property
+      field = description
+    }
+    og:image {
+      attribute = property
+      stdWrap.cObject = FILES
+      stdWrap.cObject {
+        references {
+          data = levelfield:-1, media, slide
         }
-        og:description = {$page.meta.description}
-        og:description {
-            attribute = property
-            field = description
-        }
-        og:image {
-            attribute = property
-            stdWrap.cObject = FILES
-            stdWrap.cObject {
-                references {
-                    data = levelfield:-1, media, slide
-                }
-                maxItems = 1
-                renderObj = COA
-                renderObj {
-                    10 = IMG_RESOURCE
-                    10 {
-                        file {
-                            import.data = file:current:uid
-                            treatIdAsReference = 1
-                            width = 1280c
-                            height = 720c
-                        }
-                        stdWrap {
-                            typolink {
-                                parameter.data = TSFE:lastImgResourceInfo|3
-                                returnLast = url
-                                forceAbsoluteUrl = 1
-                            }
-                        }
-                    }
-                }
+        maxItems = 1
+        renderObj = COA
+        renderObj {
+          10 = IMG_RESOURCE
+          10 {
+            file {
+              import.data = file:current:uid
+              treatIdAsReference = 1
+              width = 1280c
+              height = 720c
             }
+            stdWrap {
+              typolink {
+                parameter.data = TSFE:lastImgResourceInfo|3
+                returnLast = url
+                forceAbsoluteUrl = 1
+              }
+            }
+          }
         }
+      }
     }
+  }
+  cssInline {
+    10 = TEXT
+    10.value = :root{--bdp-desktop-min-height:{$bdp.layout.content-min-height};}
+  }
+  includeCSSLibs {
 
-    cssInline {
-        10 = TEXT
-        10.value = :root{--bdp-desktop-min-height:{$bdp.layout.content-min-height};}
-    }
+  }
+  includeCSS {
+    bdptemplate_layout = typo3_encore:pfadfinden
+  }
+  includeJSLibs {
 
-    includeCSSLibs {
+  }
+  includeJS {
 
-    }
+  }
+  includeJSFooterlibs {
 
-    includeCSS {
-        bdptemplate_layout = typo3_encore:pfadfinden
-    }
-
-    includeJSLibs {
-
-    }
-
-    includeJS {
-
-    }
-
-    includeJSFooterlibs {
-
-    }
-
-    includeJSFooter {
-        bdptemplate_layout = typo3_encore:pfadfinden
-    }
+  }
+  includeJSFooter {
+    bdptemplate_layout = typo3_encore:pfadfinden
+  }
 }
 
 
@@ -279,39 +264,39 @@ page {
 #### CONFIG ####
 ################
 config {
-    absRefPrefix = auto
-    no_cache = {$config.no_cache}
-    uniqueLinkVars = 1
-    pageTitleFirst = 1
-    pageTitleSeparator = |
-    pageTitleSeparator.noTrimWrap = | | |
-    linkVars = L(0-1)
-    prefixLocalAnchors = {$config.prefixLocalAnchors}
-    renderCharset = utf-8
-    metaCharset = utf-8
-    doctype = html5
-    removeDefaultJS = {$config.removeDefaultJS}
-    inlineStyle2TempFile = 1
-    admPanel = {$config.admPanel}
-    debug = 0
-    cache_period = 604800
-    sendCacheHeaders = {$config.sendCacheHeaders}
-    intTarget =
-    extTarget =
-    disablePrefixComment = 1
-    index_enable = 1
-    index_externals = 1
-    index_metatags = 1
-    headerComment = {$config.headerComment}
+  absRefPrefix = auto
+  no_cache = {$config.no_cache}
+  uniqueLinkVars = 1
+  pageTitleFirst = 1
+  pageTitleSeparator = |
+  pageTitleSeparator.noTrimWrap = | | |
+  linkVars = L(0-1)
+  prefixLocalAnchors = {$config.prefixLocalAnchors}
+  renderCharset = utf-8
+  metaCharset = utf-8
+  doctype = html5
+  removeDefaultJS = {$config.removeDefaultJS}
+  inlineStyle2TempFile = 1
+  admPanel = {$config.admPanel}
+  debug = 0
+  cache_period = 604800
+  sendCacheHeaders = {$config.sendCacheHeaders}
+  intTarget = 
+  extTarget = 
+  disablePrefixComment = 1
+  index_enable = 1
+  index_externals = 1
+  index_metatags = 1
+  headerComment = {$config.headerComment}
 
-    // Disable Image Upscaling
-    noScaleUp = 1
+  // Disable Image Upscaling
+  noScaleUp = 1
 
-    // Compression and Concatenation of CSS and JS Files
-    compressJs = 0
-    compressCss = 0
-    concatenateJs = 0
-    concatenateCss = 0
+  // Compression and Concatenation of CSS and JS Files
+  compressJs = 0
+  compressCss = 0
+  concatenateJs = 0
+  concatenateCss = 0
 }
 
 plugin.tx_frontend._CSS_DEFAULT_STYLE >

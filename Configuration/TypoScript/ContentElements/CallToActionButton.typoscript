@@ -1,15 +1,15 @@
 tt_content {
-    bdp_cta =< lib.contentElement
-    bdp_cta {
-        templateName = CallToActionButton
-        templateRootPaths {
-            200 = EXT:bdp_template/Resources/Private/Templates/ContentElements/
-        }
-        partialRootPaths {
-            200 = EXT:bdp_template/Resources/Private/Partials/ContentElements/
-        }
-        layoutRootPaths {
-            200 = EXT:bdp_template/Resources/Private/Layouts/ContentElements/
-        }
+  bdp_cta =< lib.contentElement
+  bdp_cta {
+    templateName = CallToActionButton
+    templateRootPaths {
+      200 = EXT:bdp_template/Resources/Private/Templates/ContentElements/
     }
+    partialRootPaths {
+      200 = EXT:bdp_template/Resources/Private/Partials/ContentElements/
+    }
+    layoutRootPaths {
+      200 = EXT:bdp_template/Resources/Private/Layouts/ContentElements/
+    }
+  }
 }

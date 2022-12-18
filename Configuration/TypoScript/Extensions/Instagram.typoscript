@@ -2,11 +2,11 @@
 # FE-Plugin configuration for EXT:instagram
 # ==============================================
 plugin {
-    tx_instagram_pi1 {
-        view {
-            templateRootPaths {
-                0 = EXT:bdp_template/Resources/Private/Templates/Instagram/
-            }
-        }
+  tx_instagram_pi1 {
+    view {
+      templateRootPaths {
+        0 = EXT:bdp_template/Resources/Private/Templates/Instagram/
+      }
     }
+  }
 }

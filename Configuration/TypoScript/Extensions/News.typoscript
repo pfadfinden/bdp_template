@@ -2,75 +2,70 @@
 # FE-Plugin configuration for EXT:news
 # ==============================================
 plugin.tx_news {
-    view {
-        templateRootPaths {
-           3 = EXT:bdp_template/Resources/Private/Templates/News/
-        }
-        partialRootPaths {
-            3 = EXT:bdp_template/Resources/Private/Partials/News/
-        }
-        layoutRootPaths {
-            3 = EXT:bdp_template/Resources/Private/Layouts/News/
-        }
+  view {
+    templateRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Templates/News/
     }
-    settings {
-        cssFile >
-        displayDummyIfNoMedia = 0
-
-        analytics {
-            social {
-                facebookLike = 0
-                facebookShare = 0
-                twitter = 0
-            }
-        }
-
-        cropMaxCharacters = 220
-
-        link {
-            hrDate = 1
-            hrDate {
-                day = d
-                month = m
-                year = Y
-            }
-
-            skipControllerAndAction = 0
-        }
-
-        # --------------
-        #  List
-        # --------------
-        list {
-            showDate = 1
-
-            # media configuration
-            media {
-                image {
-                    maxWidth = 597
-                    maxHeight = 292
-                }
-            }
-
-            # Paginate configuration.
-            paginate {
-                itemsPerPage = 9
-                insertAbove = 0
-                insertBelow = 1
-                templatePath =
-                prevNextHeaderTags = 1
-                maximumNumberOfLinks = 3
-            }
-        }
-
-        detail {
-            media {
-                image {
-                    lightbox {
-                        enabled = 1
-                    }
-                }
-            }
-        }
+    partialRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Partials/News/
     }
+    layoutRootPaths {
+      3 = EXT:bdp_template/Resources/Private/Layouts/News/
+    }
+  }
+  settings {
+    cssFile >
+    displayDummyIfNoMedia = 0
+
+    analytics {
+      social {
+        facebookLike = 0
+        facebookShare = 0
+        twitter = 0
+      }
+    }
+    cropMaxCharacters = 220
+
+    link {
+      hrDate = 1
+      hrDate {
+        day = d
+        month = m
+        year = Y
+      }
+      skipControllerAndAction = 0
+    }
+    # --------------
+    #  List
+    # --------------
+    list {
+      showDate = 1
+
+      # media configuration
+      media {
+        image {
+          maxWidth = 597
+          maxHeight = 292
+        }
+      }
+      # Paginate configuration.
+      paginate {
+        itemsPerPage = 9
+        insertAbove = 0
+        insertBelow = 1
+        templatePath = 
+        prevNextHeaderTags = 1
+        maximumNumberOfLinks = 3
+      }
+    }
+    detail {
+      media {
+        image {
+          lightbox {
+            enabled = 1
+          }
+        }
+      }
+    }
+  }
 }

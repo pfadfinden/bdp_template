@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:semantilizer="http://typo3.org/ns/Zeroseven/Semantilizer/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{data.header_layout} != 100">
+    <f:if condition="{data.header} || {data.subheader} || {data.date}">
+        <f:spaceless>
+            <header>
+                <f:variable name="layout" value="{data.header_layout}" />
+                <f:variable name="position" value="{data.header_position}" />
+
+                <semantilizer:headline class="ce-header{f:if(condition:layout, then:'--{layout}')}{f:if(condition:position, then:' ce-header--{position}')}" edit="tt_content:{data.uid}:header_type" type="{data.header_type}">
+                    <f:link.typolink parameter="{data.header_link}">{data.header}</f:link.typolink>
+                </semantilizer:headline>
+
+                <semantilizer:headline class="ce-subheader{f:if(condition:layout, then:'--{layout}')}{f:if(condition:position, then:' ce-subheader--{position}')}" content="{data.subheader}"/>
+
+                <f:comment><!-- Call the "original" partial --></f:comment>
+                <f:render partial="Header/Date" arguments="{date: data.date, positionClass: 'ce-date{f:if(condition: position, then: \'-{position}\')}'}" />
+            </header>
+        </f:spaceless>
+    </f:if>
+</f:if>
+</html>

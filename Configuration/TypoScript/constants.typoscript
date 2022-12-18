@@ -1,29 +1,29 @@
 ######################
 #### DEPENDENCIES ####
 ######################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:typo3_encore/Configuration/TypoScript/constants.typoscript">
+@import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
+@import 'EXT:typo3_encore/Configuration/TypoScript/constants.typoscript'
 
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/branding.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/contact.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/social-media.typoscript">
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/layout.typoscript">
+@import 'EXT:bdp_template/Configuration/TypoScript/Constants/branding.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Constants/contact.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Constants/social-media.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Constants/layout.typoscript'
 
 ####################
 #### Extensions ####
 ####################
-<INCLUDE_TYPOSCRIPT: source="FILE:EXT:bdp_template/Configuration/TypoScript/Constants/Extensions/Omcookiemanager.typoscript">
+@import 'EXT:bdp_template/Configuration/TypoScript/Constants/Extensions/Omcookiemanager.typoscript'
 
 
 ##############################
 #### FLUID STYLED CONTENT ####
 ##############################
 styles {
-    templates {
-        layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/ContentElements/
-        partialRootPath = EXT:bdp_template/Resources/Private/Partials/ContentElements/
-        templateRootPath = EXT:bdp_template/Resources/Private/Templates/ContentElements/
-    }
+  templates {
+    layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/ContentElements/
+    partialRootPath = EXT:bdp_template/Resources/Private/Partials/ContentElements/
+    templateRootPath = EXT:bdp_template/Resources/Private/Templates/ContentElements/
+  }
 }
 
 
@@ -31,25 +31,25 @@ styles {
 ### PAGE ###
 ############
 page {
-     fluidtemplate {
-        layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/Page/
-        partialRootPath = EXT:bdp_template/Resources/Private/Partials/Page/
-        templateRootPath = EXT:bdp_template/Resources/Private/Templates/Page/
-    }
-    meta {
-        description =
-        author =
-        keywords =
-        viewport = width=device-width, initial-scale=1
-        robots = index,follow
-        apple-mobile-web-app-capable = no
-        compatible = IE=edge
-    }
-    config {
-        sideNavigationPid = 7
-        legalNoticePid = 10
-        privacyPid = 12
-    }
+  fluidtemplate {
+    layoutRootPath = EXT:bdp_template/Resources/Private/Layouts/Page/
+    partialRootPath = EXT:bdp_template/Resources/Private/Partials/Page/
+    templateRootPath = EXT:bdp_template/Resources/Private/Templates/Page/
+  }
+  meta {
+    description = 
+    author = 
+    keywords = 
+    viewport = width=device-width, initial-scale=1
+    robots = index,follow
+    apple-mobile-web-app-capable = no
+    compatible = IE=edge
+  }
+  config {
+    sideNavigationPid = 7
+    legalNoticePid = 10
+    privacyPid = 12
+  }
 }
 
 
@@ -57,17 +57,17 @@ page {
 ### CONFIG ###
 ##############
 config {
-    no_cache = 0
-    removeDefaultJS = 1
-    admPanel = 0
-    prefixLocalAnchors = all
-    headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
-    sendCacheHeaders = 0
+  no_cache = 0
+  removeDefaultJS = 1
+  admPanel = 0
+  prefixLocalAnchors = all
+  headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
+  sendCacheHeaders = 0
 }
 
 plugin.tx_typo3encore {
-    settings {
-        entrypointJsonPath = EXT:bdp_template/Resources/Public/Build/entrypoints.json
-        manifestJsonPath = EXT:bdp_template/Resources/Public/Build/manifest.json
-    }
+  settings {
+    entrypointJsonPath = EXT:bdp_template/Resources/Public/Build/entrypoints.json
+    manifestJsonPath = EXT:bdp_template/Resources/Public/Build/manifest.json
+  }
 }
