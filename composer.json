@@ -36,7 +36,8 @@
     "typo3-ter/bdp_template": "self.version"
   },
   "suggest": {
-    "georgringer/news": "^10.0"
+    "georgringer/news": "^10.0",
+    "friendsoftypo3/tt-address": "^7.0"
   },
   "extra": {
     "typo3/cms": {
