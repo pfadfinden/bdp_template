@@ -4,7 +4,7 @@
       "js": [
         "/typo3conf/ext/bdp_template/Resources/Public/Build/runtime.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/682.js",
-        "/typo3conf/ext/bdp_template/Resources/Public/Build/987.js",
+        "/typo3conf/ext/bdp_template/Resources/Public/Build/774.js",
         "/typo3conf/ext/bdp_template/Resources/Public/Build/pfadfinden.js"
       ],
       "css": [

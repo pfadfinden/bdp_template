@@ -35,7 +35,14 @@
   }
 }
 @include breakpoints.media-breakpoint-up(md) {
-  #mm-pfadfinden-menu {
+  #mm-clone-pfadfinden-menu {
+    display: none !important;
+  }
+  .mm-wrapper--opened {
+    overflow: auto !important;
+    overflow-x: hidden !important;
+  }
+  .mm-wrapper__blocker {
     display: none !important;
   }
 }

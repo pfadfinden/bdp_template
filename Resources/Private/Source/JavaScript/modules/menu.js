@@ -4,11 +4,10 @@ document.addEventListener(
     "DOMContentLoaded", function () {
         const mobileMenuToggler = document.getElementById('mobile-bdp-menu-toggler');
         const menu = new Mmenu("#pfadfinden-menu", {
-                "extensions": [
-                    "position-front",
-                    "position-right",
-                    "theme-black",
-                ],
+                theme: "black",
+                offCanvas: {
+                    position: "right-front"
+                },
                 navbar: {
                     title: "&nbsp;"
                 },

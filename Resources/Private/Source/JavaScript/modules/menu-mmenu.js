@@ -1,12 +1,10 @@
+import '@/Scss/8-components/_mmenu.scss';
 /*!
  * mmenu.js
  * mmenujs.com
  *
  * Copyright (c) Fred Heusschen
  * frebsite.nl
- *
- * License: CC-BY-NC-4.0
- * http://creativecommons.org/licenses/by-nc/4.0/
  */
 
 //	Core
@@ -14,23 +12,27 @@ import Mmenu from 'mmenu-js/dist/core/oncanvas/mmenu.oncanvas';
 
 //	Core add-ons
 import offcanvas from 'mmenu-js/dist/core/offcanvas/mmenu.offcanvas';
-import screenReader from 'mmenu-js/dist/core/screenreader/mmenu.screenreader';
 import scrollBugFix from 'mmenu-js/dist/core/scrollbugfix/mmenu.scrollbugfix';
+import theme from 'mmenu-js/dist/core/theme/mmenu.theme';
 
 //	Add-ons
-import keyboardNavigation from 'mmenu-js/dist/addons/keyboardnavigation/mmenu.keyboardnavigation';
+import backButton from 'mmenu-js/dist/addons/backbutton/mmenu.backbutton';
 
-import '@/Scss/8-components/_mmenu.scss';
 
 Mmenu.addons = {
     //	Core add-ons
     offcanvas,
-    screenReader,
     scrollBugFix,
+    theme,
 
     //	Add-ons
-    keyboardNavigation
+    backButton,
 };
 
 //  Export module
 export default Mmenu;
+
+//	Global namespace
+if (window) {
+    window.Mmenu = Mmenu;
+}

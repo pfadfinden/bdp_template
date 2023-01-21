@@ -9,25 +9,9 @@
  * http://creativecommons.org/licenses/by-nc/4.0/
  */
 
-//  There's a bug in the CSS polyfill that'll override the :root vars with the .mm-menu_them-* vars
-//  Therefor we'll import the themes file first.
-@import '../../../../../node_modules/mmenu-js/src/extensions/themes/mmenu.themes';
-
 //	Core
-@import '../../../../../node_modules/mmenu-js/src/core/oncanvas/mmenu.oncanvas';
-
-//	Core add-ons
-@import '../../../../../node_modules/mmenu-js/src/core/offcanvas/mmenu.offcanvas';
-@import '../../../../../node_modules/mmenu-js/src/core/screenreader/mmenu.screenreader';
+@import "mmenu-js/src/core/oncanvas/mmenu.oncanvas";
+@import "mmenu-js/src/core/offcanvas/mmenu.offcanvas";
+@import "mmenu-js/src/core/theme/mmenu.theme";
 
 //	Add-ons
-@import '../../../../../node_modules/mmenu-js/src/addons/keyboardnavigation/mmenu.keyboardnavigation';
-
-//	Extensions
-@import '../../../../../node_modules/mmenu-js/src/extensions/borderstyle/mmenu.borderstyle';
-@import '../../../../../node_modules/mmenu-js/src/extensions/listview/mmenu.listview';
-@import '../../../../../node_modules/mmenu-js/src/extensions/multiline/mmenu.multiline';
-@import '../../../../../node_modules/mmenu-js/src/extensions/pagedim/mmenu.pagedim';
-@import '../../../../../node_modules/mmenu-js/src/extensions/positioning/mmenu.positioning';
-@import '../../../../../node_modules/mmenu-js/src/extensions/shadows/mmenu.shadows';
-@import '../../../../../node_modules/mmenu-js/src/extensions/themes/mmenu.themes';

@@ -9,24 +9,24 @@
   "license": "GPL-2.0-or-later",
   "main": "webpack.config.mjs",
   "engines": {
-    "node": ">=14.0.0",
+    "node": ">=16.0.0",
     "npm": ">=6.0.0"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^3.0.0",
-    "autoprefixer": "^10.4.7",
+    "@symfony/webpack-encore": "^4.2.0",
+    "autoprefixer": "^10.4.13",
+    "browserslist": "^4.21.4",
     "compression-webpack-plugin": "^10.0.0",
-    "core-js": "^3.23.4",
+    "core-js": "^3.27.2",
     "element-closest-polyfill": "^1.0.5",
     "eventslibjs": "^1.2.0",
     "file-loader": "^6.2.0",
     "imagemin-webp-webpack-plugin": "^3.3.6",
     "masonry-layout": "^4.2.2",
-    "mmenu-js": "^8.5.24",
-    "postcss-loader": "^7.0.1",
-    "sass": "1.53.0",
-    "sass-loader": "^13.0.2",
-    "browserslist": "^4.21.2"
+    "mmenu-js": "^9.3.0",
+    "postcss-loader": "^7.0.2",
+    "sass": "1.57.1",
+    "sass-loader": "^13.2.0"
   },
   "scripts": {
     "watch": "encore dev --watch",
@@ -42,6 +42,6 @@
     "edge 18"
   ],
   "dependencies": {
-    "lightgallery": "^2.3.0"
+    "lightgallery": "^2.7.1"
   }
 }

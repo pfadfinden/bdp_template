@@ -1,10 +1,10 @@
-import Encore from "@symfony/webpack-encore";
+import Encore from '@symfony/webpack-encore';
 
-import CompressionPlugin from "compression-webpack-plugin";
+import CompressionPlugin from 'compression-webpack-plugin';
 
-import path from "path";
+import path from 'path';
 import { fileURLToPath } from 'url';
-import ImageminWebpWebpackPlugin from "imagemin-webp-webpack-plugin";
+import ImageminWebpWebpackPlugin from 'imagemin-webp-webpack-plugin';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -76,6 +76,10 @@ Encore
     .enableSourceMaps(!Encore.isProduction())
     // enables hashed filenames (e.g. app.abc123.css)
     //.enableVersioning(Encore.isProduction())
+
+    .configureBabel((config) => {
+        config.plugins.push('@babel/plugin-proposal-class-properties');
+    })
 
     // enables @babel/preset-env polyfills
     .configureBabelPresetEnv((config) => {
@@ -159,7 +163,7 @@ if(Encore.isProduction()) {
         detailedLogs: false,
         silent: false,
         strict: true
-    }))
+    }));
 }
 export default Encore.getWebpackConfig();
 
