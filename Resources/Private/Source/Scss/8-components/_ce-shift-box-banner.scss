@@ -7,7 +7,10 @@
 .ce-shift-box-banner {
   display: grid;
   grid-template-columns: 1fr 4fr 1fr 4fr 1fr;
-  grid-template-rows: 4fr 1fr 1fr;
+  grid-template-rows: 4fr minmax(30px, 80px) minmax(30px, min-content);
+  @include breakpoints.media-breakpoint-up(md) {
+    grid-template-rows: 4fr minmax(30px, min-content) minmax(30px, min-content);
+  }
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   margin-top: 3rem;
@@ -52,21 +55,9 @@
       grid-area: 2 / 3 / 4 / 6;
     }
     &__content {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-      bottom: 1rem;
-      left: 1rem;
-      overflow: hidden;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      @include breakpoints.media-breakpoint-up(xxl) {
-        top: 2rem;
-        right: 2rem;
-        bottom: 2rem;
-        left: 2rem;
-      }
       &__wrapper {
         &__header {
           margin-bottom: 0.5rem;
@@ -96,6 +87,15 @@
         display: flex;
         margin-top: 1rem;
         justify-content: center;
+        @include breakpoints.media-breakpoint-up(lg) {
+          margin-top: 1.5rem;
+        }
+        @include breakpoints.media-breakpoint-up(xl) {
+          margin-top: 2rem;
+        }
+        @include breakpoints.media-breakpoint-up(xxl) {
+          margin-top: 2.5rem;
+        }
         &__action {
           display: block;
           background-color: colors.get-color('bdp-blue', 'base');
