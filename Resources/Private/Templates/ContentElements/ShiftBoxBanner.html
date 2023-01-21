@@ -1,4 +1,4 @@
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" xmlns:semantilizer="http://typo3.org/ns/Zeroseven/Semantilizer/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:layout name="NoBox" />
 <f:section name="Header" />
 <f:section name="Main">
@@ -17,12 +17,9 @@
                         <f:if condition="{data.header}">
                             <f:spaceless>
                                 <header class="ce-shift-box-banner__box__content__wrapper__header">
-                                    <f:variable name="tagName" value="{f:if(condition: data.header_type, then:'h{data.header_type}', else:'div')}" />
-                                    <f:variable name="baseClassName" value="{f:if(condition:class, then:'{class}', else:'ce-header')}" />
-
-                                    <{tagName} class="ce-shift-box-banner__box__content__wrapper__header__title">
+                                    <semantilizer:headline class="ce-shift-box-banner__box__content__wrapper__header__title" edit="tt_content:{data.uid}:header_type" type="{data.header_type}">
                                         <f:link.typolink parameter="{data.header_link}">{data.header}</f:link.typolink>
-                                    </{tagName}>
+                                    </semantilizer:headline>
                                 </header>
                             </f:spaceless>
                         </f:if>
