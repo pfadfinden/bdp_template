@@ -10,12 +10,12 @@
                 <instagram:isLocalImageExisting id="{image.id}">
                     <div class="ce-social__i__item">
                         <f:link.external uri="{image.permalink}" title="Instagram profile {settings.username}" target="_blank" rel="noopener" class="ce-social__i__item__box">
-                            <picture>
+                            <picture class="ce-social__i__item__box__picture">
                                 <img
-                                    src="{f:uri.image(src:'/typo3temp/assets/tx_instagram/{image.id}.jpg', width:'332c', height:'332c')}"
+                                    src="{f:uri.image(src:'/typo3temp/assets/tx_instagram/{image.id}.jpg', width:'332c', height:'332c', fileExtension: 'jpg')}"
                                     title="{image.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
                                     alt="{image.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
-                                    class="ce-social__i__item__box__image"
+                                    class="ce-social__i__item__box__picture__image"
                                     width="332"
                                     height="332"
                                     loading="lazy" />
