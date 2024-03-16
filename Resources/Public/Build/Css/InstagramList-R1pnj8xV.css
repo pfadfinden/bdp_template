@@ -1,0 +1,8 @@
+/**
+ * name: @pfadfinden/bdp_template
+ * version: v6.0.0
+ * license: GPL-2.0-or-later
+ * author: Christian Schrebe
+ * homepage: https://www.pfadfinden.de/
+ */
+.ce-social__i{--bdp-gutter-x: 1rem;--bdp-gutter-y: 0;display:flex;flex-wrap:wrap;margin-top:calc(var(--bdp-gutter-y) * -1);margin-right:calc(var(--bdp-gutter-x) / -2);margin-left:calc(var(--bdp-gutter-x) / -2)}.ce-social__i__item{flex-shrink:0;width:100%;max-width:100%;padding-right:calc(var(--bdp-gutter-x) / 2);padding-left:calc(var(--bdp-gutter-x) / 2);margin-top:var(--bdp-gutter-y);flex:0 0 auto;width:50%;padding-bottom:1rem}@media (min-width: 992px){.ce-social__i__item{flex:0 0 auto;width:33.3333333333%}}@media (min-width: 1400px){.ce-social__i__item{flex:0 0 auto;width:25%}}.ce-social__i__item__box{display:block;position:relative;background-color:#fff;color:#000;padding:1rem;font-size:.875rem;text-decoration:none}.ce-social__i__item__box:hover,.ce-social__i__item__box:visited{color:#000;text-decoration:none}.ce-social__i__item__box:focus{color:#000;text-decoration:none}.ce-social__i__item__box:after{content:"";display:block;position:absolute;right:1.5rem;bottom:1.5rem;z-index:2;background-image:url(../Media/ig-B_8LRiyU.svg);width:30px;height:30px}@media (min-width: 576px){.ce-social__i__item__box:after{right:2rem;bottom:2rem;width:40px;height:40px}}.ce-social__i__item__box__picture{display:block;position:relative;overflow:hidden}.ce-social__i__item__box__picture:before{content:"";display:block;position:relative;padding-top:100%}.ce-social__i__item__box__picture__image{display:block;position:absolute;top:0;right:0;bottom:0;left:0;-webkit-user-select:none;-moz-user-select:none;user-select:none;width:100%;height:100%;z-index:1;-o-object-fit:cover;object-fit:cover}

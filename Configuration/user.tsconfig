@@ -1,0 +1,4 @@
+#
+# UserTS for bdp_template
+#
+@import 'EXT:bdp_template/Configuration/TsConfig/User/Default.tsconfig'

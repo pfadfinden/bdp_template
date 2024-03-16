@@ -12,14 +12,14 @@ ExtensionManagementUtility::addTCAcolumns('tt_content',
                 'renderType' => 'selectSingle',
                 'items' => [
                     [
-                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.10',
-                        0,
-                        'content-beside-text-img-left'
+                        'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.10',
+                        'value' => 0,
+                        'icon' => 'content-beside-text-img-left'
                     ],
                     [
-                        'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.9',
-                        1,
-                        'content-beside-text-img-right'
+                        'label' => 'LLL:EXT:frontend/Resources/Private/Language/locallang_ttc.xlf:imageorient.I.9',
+                        'value' => 1,
+                        'icon' => 'content-beside-text-img-right'
                     ],
                 ],
                 'default' => 0,

@@ -1,9 +1,0 @@
-#
-# PageTS for bdpTemplate
-#
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/RTE.tsconfig'
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/TCEFORM.tsconfig'
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/TCEMAIN.tsconfig'
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts.tsconfig'
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements.tsconfig'
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/Z7Semantilizer.tsconfig'

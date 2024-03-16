@@ -1,6 +1,6 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 <f:layout name="General" />
 <!--
@@ -9,8 +9,13 @@
 -->
 
 <f:section name="content">
-    <encore:renderWebpackLinkTags entryName="pfadfinden-news-list" />
-    <encore:renderWebpackScriptTags entryName="pfadfinden-news-list" />
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Source/JavaScript/NewsList.entry.js"
+        cssTagAttributes="{
+            media: 'all'
+        }"
+    />
 	<!--TYPO3SEARCH_end-->
     <div class="news-list">
         <f:if condition="{news}">

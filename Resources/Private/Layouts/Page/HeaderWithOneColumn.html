@@ -1,4 +1,13 @@
+{namespace vac = Praetorius\ViteAssetCollector\ViewHelpers}
 <f:spaceless>
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Source/JavaScript/Main.entry.js"
+        priority="1"
+        cssTagAttributes="{
+            media: 'all'
+        }"
+    />
     <div class="page">
         <f:render partial="Header" arguments="{_all}" />
         <section class="page__navigation">
@@ -6,9 +15,12 @@
             <f:render partial="SideNavigation" arguments="{_all}" />
         </section>
         <main class="page__content">
-            <section class="page__content__header">
-                <f:render section="Header" arguments="{_all}" />
-            </section>
+            {f:render(section: 'Header', arguments: _all) -> f:variable(name: 'headerContent')}
+            <f:if condition="{headerContent}">
+                <section class="page__content__header">
+                    {headerContent -> f:format.raw()}
+                </section>
+            </f:if>
             <section class="page__content__main container-bdp{f:if(condition: '{data.layout} == \'1\'', then:' container-bdp--wide')}">
                 <f:render section="Main" arguments="{_all}"/>
             </section>

@@ -1,13 +1,18 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
 	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
 	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
-      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
 	  data-namespace-typo3-fluid="true">
 
 <f:layout name="Detail" />
 <f:section name="content">
-    <encore:renderWebpackLinkTags entryName="pfadfinden-news-detail" />
-    <encore:renderWebpackScriptTags entryName="pfadfinden-news-detail" />
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Source/JavaScript/NewsDetail.entry.js"
+        cssTagAttributes="{
+            media: 'all'
+        }"
+    />
 	<f:if condition="{newsItem}">
         <article class="news-article">
             <n:format.nothing>

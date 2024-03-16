@@ -1,6 +1,11 @@
-{namespace encore = Ssch\Typo3Encore\ViewHelpers}
-<encore:renderWebpackLinkTags entryName="pfadfinden-address-list" />
-<encore:renderWebpackScriptTags entryName="pfadfinden-address-list" />
+{namespace vac = Praetorius\ViteAssetCollector\ViewHelpers}
+<vac:asset.vite
+    manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+    entry="Resources/Private/Source/JavaScript/AddressList.entry.js"
+    cssTagAttributes="{
+            media: 'all'
+        }"
+/>
 <div class="ce-address__list">
     <!--TYPO3SEARCH_end-->
     <f:if condition="{settings.hidePagination}">

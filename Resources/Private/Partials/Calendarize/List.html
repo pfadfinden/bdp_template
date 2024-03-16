@@ -1,7 +1,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
-     xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers">
-<encore:renderWebpackLinkTags entryName="pfadfinden-calendarize-list" />
+     xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers">
+<vac:asset.vite
+    manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+    entry="Resources/Private/Source/JavaScript/CalendarizeList.entry.js"
+    cssTagAttributes="{
+        media: 'all'
+    }"
+/>
 <div class="bdp-cal__event-list">
     <f:if condition="{searchMode}">
         <f:render partial="Event/SearchInformation" arguments="{searchParameter: searchParameter, indices: indices}" />

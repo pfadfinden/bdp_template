@@ -21,11 +21,11 @@
     "typo3/cms-rte-ckeditor": "^12.4",
     "typo3/cms-fluid-styled-content": "^12.4",
     "typo3/cms-composer-installers": "^5",
-    "ssch/typo3-encore": "^5.0.6",
+    "praetorius/vite-asset-collector": "^1.9.0",
     "zeroseven/z7-semantilizer": "^v4.0.1",
-    "b13/container": "^2.2.3",
-    "opfaff/om-cookie-manager": "^11.0.0",
-    "ichhabrecht/content-defender": "^3.4.0"
+    "b13/container": "^2.3.5",
+    "opfaff/om-cookie-manager": "^12.0.1",
+    "ichhabrecht/content-defender": "^3.4.1"
   },
   "autoload": {
     "psr-4": {
