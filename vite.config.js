@@ -39,6 +39,7 @@ export default defineConfig({
         manifest: true,
         assetsInlineLimit: 0,
         outDir: resolve(rootPath, VITE_OUTPUT_PATH),
+        target: 'es2015',
         rollupOptions: {
             input: VITE_ENTRYPOINTS.map(entry => resolve(rootPath, entry)),
             output: {

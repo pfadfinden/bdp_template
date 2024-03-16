@@ -168,22 +168,22 @@
     "src": "Resources/Private/Source/Images/holzhintergrund_1.jpg"
   },
   "Resources/Private/Source/JavaScript/AddressList.entry.js": {
-    "file": "Js/AddressList.entry-DteUYK7i.js",
+    "file": "Js/AddressList.entry-BZKB0k76.js",
     "src": "Resources/Private/Source/JavaScript/AddressList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-DMJWjakW.js"
+      "_masonry-C0AHI_fN.js"
     ],
     "css": [
       "Css/AddressList-ked3Ob0q.css"
     ]
   },
   "Resources/Private/Source/JavaScript/AddressLv.entry.js": {
-    "file": "Js/AddressLv.entry-BBokNkVg.js",
+    "file": "Js/AddressLv.entry-QGygK5aa.js",
     "src": "Resources/Private/Source/JavaScript/AddressLv.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-DMJWjakW.js"
+      "_masonry-C0AHI_fN.js"
     ],
     "css": [
       "Css/AddressLv-DjFdci7B.css"
@@ -206,7 +206,7 @@
     ]
   },
   "Resources/Private/Source/JavaScript/Cookiemanager.entry.js": {
-    "file": "Js/Cookiemanager.entry-Dspdl7cp.js",
+    "file": "Js/Cookiemanager.entry-8N1XJ2Mw.js",
     "src": "Resources/Private/Source/JavaScript/Cookiemanager.entry.js",
     "isEntry": true,
     "css": [
@@ -214,22 +214,22 @@
     ]
   },
   "Resources/Private/Source/JavaScript/InstagramList.entry.js": {
-    "file": "Js/InstagramList.entry-mISMZ9CQ.js",
+    "file": "Js/InstagramList.entry-CFC3CqeI.js",
     "src": "Resources/Private/Source/JavaScript/InstagramList.entry.js",
     "isEntry": true,
     "css": [
-      "Css/InstagramList-R1pnj8xV.css"
+      "Css/InstagramList-C7Kt_YUT.css"
     ],
     "assets": [
       "Media/ig-B_8LRiyU.svg"
     ]
   },
   "Resources/Private/Source/JavaScript/Main.entry.js": {
-    "file": "Js/Main.entry-DElxzVWc.js",
+    "file": "Js/Main.entry-DDpPv3QR.js",
     "src": "Resources/Private/Source/JavaScript/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-DqRfnehA.css"
+      "Css/Main-BSs4iqcB.css"
     ],
     "assets": [
       "Fonts/immenhausen-latin-ext-BJ6tGZT8.woff2",
@@ -269,14 +269,14 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsDetail.entry.js": {
-    "file": "Js/NewsDetail.entry-Bxz6Zsq1.js",
+    "file": "Js/NewsDetail.entry-hvotwOKw.js",
     "src": "Resources/Private/Source/JavaScript/NewsDetail.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-DMJWjakW.js"
+      "_masonry-C0AHI_fN.js"
     ],
     "css": [
-      "Css/NewsDetail-E9fTT1pX.css"
+      "Css/NewsDetail-ZmX_sQJC.css"
     ],
     "assets": [
       "Fonts/lg-C7ze34MH.woff2",
@@ -287,18 +287,18 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsList.entry.js": {
-    "file": "Js/NewsList.entry-B7a7Jszi.js",
+    "file": "Js/NewsList.entry-DBd8I3iE.js",
     "src": "Resources/Private/Source/JavaScript/NewsList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-DMJWjakW.js"
+      "_masonry-C0AHI_fN.js"
     ],
     "css": [
       "Css/NewsList-uhlCnDaf.css"
     ]
   },
-  "_masonry-DMJWjakW.js": {
-    "file": "Js/masonry-DMJWjakW.js"
+  "_masonry-C0AHI_fN.js": {
+    "file": "Js/masonry-C0AHI_fN.js"
   },
   "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.svg": {
     "file": "Media/lg-B0dIV2BS.svg",
