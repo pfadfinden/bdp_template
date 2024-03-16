@@ -1,1 +1,8 @@
 @import 'EXT:om_cookie_manager/Configuration/TypoScript/constants.typoscript'
+plugin.tx_omcookiemanager_main {
+  view {
+    templateRootPath = EXT:bdp_template/Resources/Private/Templates/Cookiemanager/
+    partialRootPath = EXT:bdp_template/Resources/Private/Partials/Cookiemanager/
+    layoutRootPaths = EXT:bdp_template/Resources/Private/Layouts/Cookiemanager/
+  }
+}
