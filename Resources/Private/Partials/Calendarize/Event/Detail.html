@@ -38,9 +38,9 @@
                             <h3 class="bdp-cal__detail__event__information__data__section__heading__title">{f:translate(key: 'date')}</h3>
                         </div>
                         <div class="bdp-cal__detail__event__information__data__section__content">
-                            <strong>{index.startDate -> f:format.date(format: settings.dateFormat)}
+                            <strong>{index.startDate -> f:format.date(format: '{f:translate(key: \'dateFormat\')}')}
                             <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} != {index.endDate -> f:format.date(format: 'd.m.Y')}">
-                                    - {index.endDate -> f:format.date(format: settings.dateFormat)}
+                                    - {index.endDate -> f:format.date(format: '{f:translate(key: \'dateFormat\')}')}
                             </f:if>
                             </strong>
                         </div>
@@ -55,7 +55,7 @@
                                     <f:translate key="all_day" />
                                 </f:then>
                                 <f:else>
-                                    <f:format.date format="{settings.timeFormat}">{index.startDateComplete}</f:format.date>
+                                    <f:format.date format="{f:translate(key: 'timeFormat')}">{index.startDateComplete}</f:format.date>
                                     <f:if condition="{index.openEndTime}">
                                         <f:then>
                                             <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
@@ -67,7 +67,7 @@
                                             <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
                                                 -
                                             </f:if>
-                                            <f:format.date format="{settings.timeFormat}">{index.endDateComplete}</f:format.date>
+                                            <f:format.date format="{f:translate(key: 'timeFormat')}">{index.endDateComplete}</f:format.date>
                                         </f:else>
                                     </f:if>
                                 </f:else>

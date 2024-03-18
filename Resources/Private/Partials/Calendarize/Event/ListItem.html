@@ -3,17 +3,17 @@
 <f:alias map="{event: index.originalObject}">
     <div class="bdp-cal__event-list__events__event bdp-cal__event-list__events__event--state-{index.state}">
         <div class="bdp-cal__event-list__events__event__date">
-            {index.startDate -> f:format.date(format: settings.dateFormat)}
+            {index.startDate -> f:format.date(format: '{f:translate(key: \'dateFormat\')}')}
             <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} != {index.endDate -> f:format.date(format: 'd.m.Y')}">
-                    - {index.endDate -> f:format.date(format: settings.dateFormat)}
+                    - {index.endDate -> f:format.date(format: '{f:translate(key: \'dateFormat\')}')}
             </f:if>
             <f:if condition="!{index.allDay}">
-                <f:format.date format="{settings.timeFormat}">{index.startDateComplete}</f:format.date>
+                <f:format.date format="{f:translate(key: 'timeFormat')}">{index.startDateComplete}</f:format.date>
                 <f:if condition="!{index.openEndTime}">
                     <f:if condition="{index.startDate -> f:format.date(format: 'd.m.Y')} == {index.endDate -> f:format.date(format: 'd.m.Y')}">
                         -
                     </f:if>
-                    <f:format.date format="{settings.timeFormat}">{index.endDateComplete}</f:format.date>
+                    <f:format.date format="{f:translate(key: 'timeFormat')}">{index.endDateComplete}</f:format.date>
                 </f:if>
             </f:if>
         </div>
