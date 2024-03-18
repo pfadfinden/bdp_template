@@ -1,43 +1,53 @@
-{namespace encore = Ssch\Typo3Encore\ViewHelpers}
+{namespace vac = Praetorius\ViteAssetCollector\ViewHelpers}
 <f:spaceless>
-<header id="mainheader" class="page__header mainheader{f:if(condition: settings.branding.region.enable, then: ' page__header--region')}">
-    <div class="mainheader__container">
-        <f:if condition="{languageNavigation -> f:count()} > 1">
-            <f:render partial="Navigation/LanguageNavigation" arguments="{languageNavigation: languageNavigation, site: site}" />
-        </f:if>
-        <div class="mainheader__container__i">
-            <div class="brand">
-                <f:link.page pageUid="{site.rootPageId}" class="brand__box{f:if(condition: settings.branding.region.enable, then: ' brand__box--region')}">
-                    <div class="brand__box__logo{f:if(condition: settings.branding.region.enable, then: ' brand__box__logo--region')}">
-                        <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/bundeszeichen.png')}" alt="Pfadfinden Logo" class="brand__box__logo__image"/>
-                    </div>
-                    <f:if condition="{settings.branding.region.enable}">
-                        <div class="brand__box__region">
-                            {settings.branding.region.value}
+    <header id="mainheader"
+            class="page__header mainheader{f:if(condition: settings.branding.region.enable, then: ' page__header--region')}">
+        <div class="mainheader__container">
+            <f:if condition="{languageNavigation -> f:count()} > 1">
+                <f:render partial="Navigation/LanguageNavigation"
+                          arguments="{languageNavigation: languageNavigation, site: site}"/>
+            </f:if>
+            <div class="mainheader__container__i">
+                <div class="brand">
+                    <f:link.page pageUid="{site.rootPageId}"
+                                 class="brand__box{f:if(condition: settings.branding.region.enable, then: ' brand__box--region')}">
+                        <div
+                            class="brand__box__logo{f:if(condition: settings.branding.region.enable, then: ' brand__box__logo--region')}">
+                            <f:image
+                                src="{vac:resource.vite(manifest: 'EXT:bdp_template/Resources/Public/Build/.vite/manifest.json', file: 'Resources/Private/Source/Images/bundeszeichen.svg')}"
+                                width="390"
+                                height="79"
+                                alt="Pfadfinden Logo" class="brand__box__logo__image"/>
                         </div>
-                    </f:if>
+                        <f:if condition="{settings.branding.region.enable}">
+                            <div class="brand__box__region">
+                                {settings.branding.region.value}
+                            </div>
+                        </f:if>
+                    </f:link.page>
+                </div>
+                <button id="mobile-bdp-menu-toggler" class="mobile-menu-opener" data-open="Open the menu"
+                        data-close="Close the menu">
+                    <span class="line"></span>
+                    <span class="line"></span>
+                    <span class="line"></span>
+                </button>
+            </div>
+        </div>
+        <f:if condition="{settings.branding.region.enable}">
+            <div class="mainheader__region">
+                <f:link.page pageUid="{site.rootPageId}" class="mainheader__region__link">
+                    {settings.branding.region.value}
                 </f:link.page>
             </div>
-            <button id="mobile-bdp-menu-toggler" class="mobile-menu-opener" data-open="Open the menu" data-close="Close the menu">
-                <span class="line"></span>
-                <span class="line"></span>
-                <span class="line"></span>
-            </button>
-        </div>
-    </div>
-    <f:if condition="{settings.branding.region.enable}">
-        <div class="mainheader__region">
-            <f:link.page pageUid="{site.rootPageId}" class="mainheader__region__link">
-                {settings.branding.region.value}
-            </f:link.page>
-        </div>
-    </f:if>
-    <f:if condition="{cta-header.0.data.bdp_button_link} && {cta-header.0.data.bdp_button_value} && {f:uri.typolink(parameter: cta-header.0.data.bdp_button_link)}">
-        <div class="mainheader__cta">
-            <f:link.typolink parameter="{cta-header.0.data.bdp_button_link}" class="mainheader__cta__button">
-                <div class="mainheader__cta__button__text">{cta-header.0.data.bdp_button_value}</div>
-            </f:link.typolink>
-        </div>
-    </f:if>
-</header>
+        </f:if>
+        <f:if
+            condition="{cta-header.0.data.bdp_button_link} && {cta-header.0.data.bdp_button_value} && {f:uri.typolink(parameter: cta-header.0.data.bdp_button_link)}">
+            <div class="mainheader__cta">
+                <f:link.typolink parameter="{cta-header.0.data.bdp_button_link}" class="mainheader__cta__button">
+                    <div class="mainheader__cta__button__text">{cta-header.0.data.bdp_button_value}</div>
+                </f:link.typolink>
+            </div>
+        </f:if>
+    </header>
 </f:spaceless>

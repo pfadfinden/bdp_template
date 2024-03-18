@@ -1,0 +1,44 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Source/JavaScript/Cookiemanager.entry.js"
+        cssTagAttributes="{
+            media: 'all'
+        }"
+    />
+    <div class="om-cookie-panel" data-omcookie-panel="1">
+        <h3>{cookiePanel.name}</h3>
+        <div class="cookie-panel__selection">
+            <form>
+                <f:for as="cookiegroup" each="{cookieGroups}">
+                    <div class="cookie-panel__checkbox-wrap">
+                        <input class="cookie-panel__checkbox {f:if(condition:cookiegroup.essential,then:'cookie-panel__checkbox--state-inactiv',else:'')}" data-omcookie-panel-grp="1" id="group-{cookiegroup.uid}" type="checkbox" {f:if(condition:cookiegroup.essential,then:'checked data-omcookie-panel-essential="1" disabled="disabled"',else:'')} value="group-{cookiegroup.uid}" />
+                        <label for="group-{cookiegroup.uid}">{cookiegroup.name}</label>
+                    </div>
+                </f:for>
+            </form>
+        </div>
+        <div class="cookie-panel__description">
+            <f:format.html>{cookiePanel.description}</f:format.html>
+        </div>
+        <div class="cookie-panel__control">
+            <button data-omcookie-panel-save="all" class="cookie-panel__button cookie-panel__button--color--green"><f:translate key="tx_omcookiemanager.fe.cookie_accept"/></button>
+            <f:if condition="{essential}">
+                <button data-omcookie-panel-save="min" class="cookie-panel__button"><f:translate key="tx_omcookiemanager.fe.cookie_essential"/></button>
+            </f:if>
+            <button data-omcookie-panel-save="save" class="cookie-panel__button"><f:translate key="tx_omcookiemanager.fe.cookie_save"/></button>
+        </div>
+        <f:if condition="{cookiePanel.link}">
+            <div class="cookie-panel__link"><f:link.typolink parameter="{cookiePanel.link}"><f:translate key="tx_omcookiemanager.fe.cookie_info"/></f:link.typolink></div>
+        </f:if>
+        <div class="cookie-panel__attribution">
+            <f:link.typolink target="_blank" parameter="https://olli-machts.de">Cookie optin by Olli machts</f:link.typolink>
+        </div>
+    </div>
+</f:section>
+</html>

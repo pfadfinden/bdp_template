@@ -1,7 +1,8 @@
 @import 'EXT:om_cookie_manager/Configuration/TypoScript/setup.typoscript'
 plugin.tx_omcookiemanager_main {
   settings {
-    css = EXT:bdp_template/Resources/Public/Build/pfadfinden-cookieconsent.css
-    js = EXT:bdp_template/Resources/Public/Build/pfadfinden-cookieconsent.js
+    css = ''
+    js = ''
   }
 }
+plugin.tx_omcookiemanager_info < plugin.tx_omcookiemanager_main

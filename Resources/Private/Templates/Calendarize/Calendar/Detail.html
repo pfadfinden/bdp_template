@@ -1,12 +1,18 @@
 <div xmlns="http://www.w3.org/1999/xhtml" lang="en"
      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
      xmlns:c="http://typo3.org/ns/HDNET/Calendarize/ViewHelpers"
-     xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers">
+     xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers">
 
     <f:layout name="Default"/>
 
     <f:section name="Main">
-        <encore:renderWebpackLinkTags entryName="pfadfinden-calendarize-detail" />
+        <vac:asset.vite
+            manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+            entry="Resources/Private/Source/JavaScript/CalendarizeDetail.entry.js"
+            cssTagAttributes="{
+                media: 'all'
+            }"
+        />
         <div class="bdp-cal__detail">
             <f:render partial="{index.configuration.partialIdentifier}/Detail" arguments="{index: index}"/>
         </div>

@@ -1,0 +1,8 @@
+/**
+ * name: @pfadfinden/bdp_template
+ * version: v6.0.0
+ * license: GPL-2.0-or-later
+ * author: Christian Schrebe
+ * homepage: https://www.pfadfinden.de/
+ */
+.bdp-cal__event-list__events__month:first-child .bdp-cal__event-list__events__month__title{margin-top:0}.bdp-cal__event-list__events__month__title{color:#1d4899;margin-top:.625rem;margin-bottom:0}.bdp-cal__event-list__events__event{display:flex;padding:.25rem}.bdp-cal__event-list__events__event:nth-child(odd){background-color:#fff5d0}.bdp-cal__event-list__events__event__date{flex:0 0 180px}@media (min-width: 768px){.bdp-cal__event-list__events__event__date{flex:0 0 250px}}

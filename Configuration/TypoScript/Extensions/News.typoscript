@@ -53,7 +53,7 @@ plugin.tx_news {
         itemsPerPage = 9
         insertAbove = 0
         insertBelow = 1
-        templatePath = 
+        templatePath =
         prevNextHeaderTags = 1
         maximumNumberOfLinks = 3
       }
@@ -63,6 +63,8 @@ plugin.tx_news {
         image {
           lightbox {
             enabled = 1
+            width = 1920m
+            height = 1920m
           }
         }
       }

@@ -1,6 +1,8 @@
 <?php
-defined('TYPO3') || die();
 
+use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+
+defined('TYPO3') || die();
 /***************
  * Add default RTE configuration
  */
@@ -9,10 +11,10 @@ $GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bdptemplate'] = 'EXT:bdp_template
 /***************
  * PageTS
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addPageTSConfig('@import "EXT:bdp_template/Configuration/TsConfig/Page/All.tsconfig"');
+ExtensionManagementUtility::addPageTSConfig('@import "EXT:bdp_template/Configuration/page.tsconfig"');
 
 /***************
  * UserTs
  */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addUserTSConfig('@import "EXT:bdp_template/Configuration/TsConfig/User/Default.tsconfig"');
+ExtensionManagementUtility::addUserTSConfig('@import "EXT:bdp_template/Configuration/user.tsconfig"');
 

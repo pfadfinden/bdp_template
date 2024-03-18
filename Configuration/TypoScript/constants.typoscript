@@ -2,7 +2,6 @@
 #### DEPENDENCIES ####
 ######################
 @import 'EXT:fluid_styled_content/Configuration/TypoScript/constants.typoscript'
-@import 'EXT:typo3_encore/Configuration/TypoScript/constants.typoscript'
 
 @import 'EXT:bdp_template/Configuration/TypoScript/Constants/branding.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Constants/contact.typoscript'
@@ -37,9 +36,9 @@ page {
     templateRootPath = EXT:bdp_template/Resources/Private/Templates/Page/
   }
   meta {
-    description = 
-    author = 
-    keywords = 
+    description =
+    author =
+    keywords =
     viewport = width=device-width, initial-scale=1
     robots = index,follow
     apple-mobile-web-app-capable = no
@@ -63,11 +62,4 @@ config {
   prefixLocalAnchors = all
   headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
   sendCacheHeaders = 0
-}
-
-plugin.tx_typo3encore {
-  settings {
-    entrypointJsonPath = EXT:bdp_template/Resources/Public/Build/entrypoints.json
-    manifestJsonPath = EXT:bdp_template/Resources/Public/Build/manifest.json
-  }
 }

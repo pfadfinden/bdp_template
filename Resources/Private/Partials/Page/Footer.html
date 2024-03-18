@@ -1,4 +1,4 @@
-{namespace encore = Ssch\Typo3Encore\ViewHelpers}
+{namespace vac = Praetorius\ViteAssetCollector\ViewHelpers}
 <footer class="page__footer">
     <div class="page__footer__title">
         {settings.branding.organisation}
@@ -45,19 +45,19 @@
                 <ul class="page__footer__content__section__nav__list">
                     <li class="page__footer__content__section__nav__list__item">
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
-                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy"/>
+                            <f:image src="{vac:resource.vite(manifest: 'EXT:bdp_template/Resources/Public/Build/.vite/manifest.json', file: 'Resources/Private/Source/Images/Icons/impressum_1.png')}" loading="lazy"/>
                         </span>
                         <f:link.page pageUid="{settings.legalNotice}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.legalNotice', extensionName: 'bdp_template', default: 'Impressum')}</f:link.page>
                     </li>
                     <li class="page__footer__content__section__nav__list__item">
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
-                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/impressum_1.png')}" loading="lazy" />
+                            <f:image src="{vac:resource.vite(manifest: 'EXT:bdp_template/Resources/Public/Build/.vite/manifest.json', file: 'Resources/Private/Source/Images/Icons/impressum_1.png')}" loading="lazy" />
                         </span>
                         <f:link.page pageUid="{settings.privacy}" class="page__footer__content__section__nav__list__item__link">{f:translate(key: 'footer.navigation.privacy', extensionName: 'bdp_template', default: 'Datenschutzerklärung')}</f:link.page>
                     </li>
                     <li class="page__footer__content__section__nav__list__item">
                         <span class="page__footer__content__section__nav__list__item__icon" aria-hidden="true">
-                            <f:image src="{encore:asset(pathToFile: 'EXT:bdp_template/Resources/Public/Build/images/Icons/login_1.png')}" loading="lazy"/>
+                            <f:image src="{vac:resource.vite(manifest: 'EXT:bdp_template/Resources/Public/Build/.vite/manifest.json', file: 'Resources/Private/Source/Images/Icons/login_1.png')}" loading="lazy"/>
                         </span>
                         <a href="/typo3" class="page__footer__content__section__nav__list__item__link" rel="nofollow">{f:translate(key: 'footer.navigation.login', extensionName: 'bdp_template', default: 'Login')}</a>
                     </li>

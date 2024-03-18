@@ -52,7 +52,7 @@ class PipeBreakViewHelper extends AbstractViewHelper
      */
     public static function renderStatic(array $arguments, \Closure $renderChildrenClosure, RenderingContextInterface $renderingContext) {
         $trim = empty($arguments['trim']) || (bool)$arguments['trim'];
-        $parts = explode('|', $renderChildrenClosure());
+        $parts = explode('|', (string) $renderChildrenClosure());
         return $trim ? array_map('trim', $parts) : $parts;
     }
 }

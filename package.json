@@ -1,47 +1,42 @@
 {
   "name": "@pfadfinden/bdp_template",
-  "version": "5.0.0",
+  "version": "6.0.0",
   "description": "",
+  "author": "Christian Schrebe",
+  "homepage": "https://www.pfadfinden.de/",
   "repository": {
     "type": "git",
     "url": "https://github.com/pfadfinden/bdp_template.git"
   },
   "license": "GPL-2.0-or-later",
-  "main": "webpack.config.mjs",
+  "main": "vite.config.js",
+  "type": "module",
   "engines": {
-    "node": ">=16.0.0",
-    "npm": ">=6.0.0"
+    "node": ">=20.0.0",
+    "pnpm": ">=8.0.0"
   },
   "devDependencies": {
-    "@symfony/webpack-encore": "^4.2.0",
-    "autoprefixer": "^10.4.13",
-    "browserslist": "^4.21.4",
-    "compression-webpack-plugin": "^10.0.0",
-    "core-js": "^3.27.2",
-    "element-closest-polyfill": "^1.0.5",
+    "@vheemstra/vite-plugin-imagemin": "^2.0.0",
+    "autoprefixer": "^10.4.18",
+    "core-js": "^3.36.0",
+    "element-closest-polyfill": "^1.0.7",
     "eventslibjs": "^1.2.0",
-    "file-loader": "^6.2.0",
-    "imagemin-webp-webpack-plugin": "^3.3.6",
+    "imagemin-avif": "^0.1.6",
+    "imagemin-mozjpeg": "^10.0.0",
+    "imagemin-webp": "^8.0.0",
     "masonry-layout": "^4.2.2",
     "mmenu-js": "^9.3.0",
-    "postcss-loader": "^7.0.2",
-    "sass": "1.57.1",
-    "sass-loader": "^13.2.0"
+    "sass": "^1.72.0",
+    "vite": "^5.1.6",
+    "vite-plugin-auto-origin": "^1.0.2",
+    "vite-plugin-banner": "^0.7.1",
+    "vite-plugin-compression2": "^1.0.0"
   },
   "scripts": {
-    "watch": "encore dev --watch",
-    "dev": "encore dev",
-    "build": "encore production --progress"
+    "dev": "vite serve",
+    "build": "vite build"
   },
-  "author": "",
-  "browserslist": [
-    "> 0.5%",
-    "last 2 versions",
-    "Firefox ESR",
-    "not dead",
-    "edge 18"
-  ],
   "dependencies": {
-    "lightgallery": "^2.7.1"
+    "lightgallery": "^2.7.2"
   }
 }

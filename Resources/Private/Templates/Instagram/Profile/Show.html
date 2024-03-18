@@ -1,8 +1,14 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
       xmlns:instagram="http://typo3.org/ns/In2code/Instagram/ViewHelpers"
-      xmlns:encore="http://typo3.org/ns/Ssch/Typo3Encore/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
       data-namespace-typo3-fluid="true">
-<encore:renderWebpackLinkTags entryName="pfadfinden-instagram" />
+<vac:asset.vite
+    manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+    entry="Resources/Private/Source/JavaScript/InstagramList.entry.js"
+    cssTagAttributes="{
+        media: 'all'
+    }"
+/>
 <div class="ce-social">
     <div class="ce-social__i">
         <f:for each="{feed.data}" as="image" iteration="iteration">
