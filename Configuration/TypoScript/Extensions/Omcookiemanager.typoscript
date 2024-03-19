@@ -1,8 +1,17 @@
 @import 'EXT:om_cookie_manager/Configuration/TypoScript/setup.typoscript'
-plugin.tx_omcookiemanager_main {
-  settings {
-    css = ''
-    js = ''
+plugin {
+  tx_omcookiemanager_main {
+    settings {
+      css >
+      js >
+    }
+  }
+  tx_omcookiemanager_info {
+    settings {
+      css >
+      js >
+    }
   }
 }
+
 plugin.tx_omcookiemanager_info < plugin.tx_omcookiemanager_main
