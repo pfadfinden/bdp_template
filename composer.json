@@ -41,6 +41,7 @@
   },
   "extra": {
     "typo3/cms": {
+      "skip-ter-packagist-import": true,
       "extension-key": "bdp_template"
     }
   }
