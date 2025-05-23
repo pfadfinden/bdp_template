@@ -1,0 +1,29 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      data-namespace-typo3-fluid="true"
+>
+<div class="ce-social__i__item">
+    <f:switch expression="{post.mediaType}">
+        <f:case value="IMAGE">
+            <f:for each="{post.images}" as="falImage">
+                <f:render partial="Post/Image"
+                          arguments="{falImage:falImage, post:post}"
+                />
+            </f:for>
+        </f:case>
+
+        <f:case value="CAROUSEL_ALBUM">
+            <f:render partial="Post/Image"
+                      arguments="{falImage:post.images.0, post:post}"
+            />
+        </f:case>
+
+        <f:case value="VIDEO">
+            <f:for each="{post.videos}" as="video">
+                <f:render partial="Post/Video"
+                          arguments="{video:video, post:post}"
+                />
+            </f:for>
+        </f:case>
+    </f:switch>
+</div>
+</html>

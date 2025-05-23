@@ -32,6 +32,7 @@
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Address.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Omcookiemanager.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Instagram.typoscript'
+@import 'EXT:bdp_template/Configuration/TypoScript/Extensions/InstagramBusiness.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Calendarize.typoscript'
 @import 'EXT:bdp_template/Configuration/TypoScript/Extensions/Z7semantilizer.typoscript'
 

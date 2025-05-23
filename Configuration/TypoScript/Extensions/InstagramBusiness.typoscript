@@ -1,0 +1,18 @@
+# ==============================================
+# FE-Plugin configuration for EXT:instagram
+# ==============================================
+plugin {
+  tx_instagram {
+    view {
+      templateRootPaths {
+        0 = EXT:bdp_template/Resources/Private/Templates/InstagramBusiness/
+      }
+      partialRootPaths {
+        0 = EXT:bdp_template/Resources/Private/Partials/InstagramBusiness/
+      }
+      layoutRootPaths {
+        0 = EXT:bdp_template/Resources/Private/Layouts/InstagramBusiness/
+      }
+    }
+  }
+}
