@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Source/JavaScript/InstagramList.entry.js"
+        cssTagAttributes="{
+        media: 'all'
+    }"
+    />
+    <div class="ce-social__i">
+        <f:for each="{posts}" as="post">
+            <f:render partial="Post/RenderMedia" arguments="{post:post}"/>
+        </f:for>
+    </div>
+</f:section>
+
+</html>

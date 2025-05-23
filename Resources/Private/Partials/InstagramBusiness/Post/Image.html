@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      data-namespace-typo3-fluid="true"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:link.external uri="{post.link}"
+                 target="_blank"
+                 rel="noopener"
+                 class="ce-social__i__item__box"
+                 title="{post.caption}"
+>
+    <picture class="ce-social__i__item__box__picture">
+        <img
+            src="{f:uri.image(image:'{falImage}', width:'332c', height:'332c', fileExtension: 'jpg')}"
+            title="{post.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+            alt="{post.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+            class="ce-social__i__item__box__picture__image"
+            width="332"
+            height="332"
+            loading="lazy" />
+    </picture>
+</f:link.external>
+</html>
