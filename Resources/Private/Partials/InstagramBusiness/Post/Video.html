@@ -2,18 +2,20 @@
       data-namespace-typo3-fluid="true"
       xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
 >
+<f:debug>{_all}</f:debug>
 <f:link.external uri="{post.link}"
                  target="_blank"
                  rel="noopener"
                  class="ce-social__i__item__box"
                  title="{post.caption}"
 >
-    <div class="ce-social__i__item__box__picture">
+    <div class="ce-social__i__item__box__video">
         <video width="320"
                height="320"
-               autoplay
+               preload="none"
                controls
-               class="ce-social__i__item__box__picture__image"
+               poster="{f:uri.image(image:'{post.images.0}', width:'332c', height:'332c', fileExtension: 'jpg')}"
+               class="ce-social__i__item__box__video__player"
         >
             <source src="{video.originalResource.publicUrl}"
                     type="video/mp4"

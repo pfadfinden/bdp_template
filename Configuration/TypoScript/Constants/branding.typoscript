@@ -13,9 +13,9 @@ bdp {
       # cat=bdp/branding/b1; type=boolean; label=Aktiviere Region Image
       enable = 1
       # cat=bdp/branding/b2; type=string; label=Regional Branding Image
-      value = 
+      value =
     }
     # cat=bdp/branding/c1; type=string; label=Name der Organisation
-    organisation = Bund der Pfadfinderinnen und Pfadfinder (BdP), Stamm Weiße Dose e.V.
+    organisation = Bund der Pfadfinder*innen (BdP), Stamm Weiße Dose e.V.
   }
 }
