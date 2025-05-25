@@ -60,6 +60,6 @@ config {
   removeDefaultJS = 1
   admPanel = 0
   prefixLocalAnchors = all
-  headerComment = Bund der Pfadfinderinnen und Pfadfinder e. V. - Arbeitskreis Öffentlichkeitsarbeit
+  headerComment = Bund der Pfadfinder*innen e.V. - Arbeitskreis Öffentlichkeitsarbeit
   sendCacheHeaders = 0
 }

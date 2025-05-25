@@ -160,7 +160,7 @@
     "src": "Resources/Private/Source/Images/Icons/sc/yt.svg"
   },
   "Resources/Private/Source/Images/bundeszeichen.svg": {
-    "file": "Media/bundeszeichen-DXEtWgM-.svg",
+    "file": "Media/bundeszeichen-DEKPnC7w.svg",
     "src": "Resources/Private/Source/Images/bundeszeichen.svg"
   },
   "Resources/Private/Source/Images/holzhintergrund_1.jpg": {
@@ -168,68 +168,75 @@
     "src": "Resources/Private/Source/Images/holzhintergrund_1.jpg"
   },
   "Resources/Private/Source/JavaScript/AddressList.entry.js": {
-    "file": "Js/AddressList.entry-BZKB0k76.js",
+    "file": "Js/AddressList.entry-CIg213BN.js",
+    "name": "AddressList.entry",
     "src": "Resources/Private/Source/JavaScript/AddressList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-C0AHI_fN.js"
+      "_masonry-zSoApu56.js"
     ],
     "css": [
-      "Css/AddressList-ked3Ob0q.css"
+      "Css/AddressList-CASSr_w9.css"
     ]
   },
   "Resources/Private/Source/JavaScript/AddressLv.entry.js": {
-    "file": "Js/AddressLv.entry-QGygK5aa.js",
+    "file": "Js/AddressLv.entry-BVzL_Fbn.js",
+    "name": "AddressLv.entry",
     "src": "Resources/Private/Source/JavaScript/AddressLv.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-C0AHI_fN.js"
+      "_masonry-zSoApu56.js"
     ],
     "css": [
-      "Css/AddressLv-DjFdci7B.css"
+      "Css/AddressLv-CxFa4RS-.css"
     ]
   },
   "Resources/Private/Source/JavaScript/CalendarizeDetail.entry.js": {
-    "file": "Js/CalendarizeDetail.entry-CYCpaKbl.js",
+    "file": "Js/CalendarizeDetail.entry-CoOZkUkY.js",
+    "name": "CalendarizeDetail.entry",
     "src": "Resources/Private/Source/JavaScript/CalendarizeDetail.entry.js",
     "isEntry": true,
     "css": [
-      "Css/CalendarizeDetail-CSJDqo5a.css"
+      "Css/CalendarizeDetail-YK22A34s.css"
     ]
   },
   "Resources/Private/Source/JavaScript/CalendarizeList.entry.js": {
-    "file": "Js/CalendarizeList.entry-D6-KSwC0.js",
+    "file": "Js/CalendarizeList.entry-QbnQJNWy.js",
+    "name": "CalendarizeList.entry",
     "src": "Resources/Private/Source/JavaScript/CalendarizeList.entry.js",
     "isEntry": true,
     "css": [
-      "Css/CalendarizeList-ChthnwZ9.css"
+      "Css/CalendarizeList-Bn2njYof.css"
     ]
   },
   "Resources/Private/Source/JavaScript/Cookiemanager.entry.js": {
-    "file": "Js/Cookiemanager.entry-8N1XJ2Mw.js",
+    "file": "Js/Cookiemanager.entry-B1uRQ3YP.js",
+    "name": "Cookiemanager.entry",
     "src": "Resources/Private/Source/JavaScript/Cookiemanager.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Cookiemanager-Ba3Uj68B.css"
+      "Css/Cookiemanager-vohHK0fD.css"
     ]
   },
   "Resources/Private/Source/JavaScript/InstagramList.entry.js": {
-    "file": "Js/InstagramList.entry-CFC3CqeI.js",
+    "file": "Js/InstagramList.entry-z1NKZ_Mo.js",
+    "name": "InstagramList.entry",
     "src": "Resources/Private/Source/JavaScript/InstagramList.entry.js",
     "isEntry": true,
     "css": [
-      "Css/InstagramList-C7Kt_YUT.css"
+      "Css/InstagramList-DYXPSSDI.css"
     ],
     "assets": [
       "Media/ig-B_8LRiyU.svg"
     ]
   },
   "Resources/Private/Source/JavaScript/Main.entry.js": {
-    "file": "Js/Main.entry-DDpPv3QR.js",
+    "file": "Js/Main.entry-BrLkNA6A.js",
+    "name": "Main.entry",
     "src": "Resources/Private/Source/JavaScript/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-BSs4iqcB.css"
+      "Css/Main-D0Ty9c-X.css"
     ],
     "assets": [
       "Fonts/immenhausen-latin-ext-BJ6tGZT8.woff2",
@@ -269,14 +276,15 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsDetail.entry.js": {
-    "file": "Js/NewsDetail.entry-hvotwOKw.js",
+    "file": "Js/NewsDetail.entry-D4ok7NvY.js",
+    "name": "NewsDetail.entry",
     "src": "Resources/Private/Source/JavaScript/NewsDetail.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-C0AHI_fN.js"
+      "_masonry-zSoApu56.js"
     ],
     "css": [
-      "Css/NewsDetail-ZmX_sQJC.css"
+      "Css/NewsDetail-D5fg8Zmm.css"
     ],
     "assets": [
       "Fonts/lg-C7ze34MH.woff2",
@@ -287,37 +295,39 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsList.entry.js": {
-    "file": "Js/NewsList.entry-DBd8I3iE.js",
+    "file": "Js/NewsList.entry-DTXxTyuR.js",
+    "name": "NewsList.entry",
     "src": "Resources/Private/Source/JavaScript/NewsList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-C0AHI_fN.js"
+      "_masonry-zSoApu56.js"
     ],
     "css": [
-      "Css/NewsList-uhlCnDaf.css"
+      "Css/NewsList-BWnaV_dZ.css"
     ]
   },
-  "_masonry-C0AHI_fN.js": {
-    "file": "Js/masonry-C0AHI_fN.js"
+  "_masonry-zSoApu56.js": {
+    "file": "Js/masonry-zSoApu56.js",
+    "name": "masonry"
   },
-  "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.svg": {
+  "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.svg": {
     "file": "Media/lg-B0dIV2BS.svg",
-    "src": "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.svg"
+    "src": "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.svg"
   },
-  "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.ttf": {
+  "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.ttf": {
     "file": "Fonts/lg-oyjwlqP2.ttf",
-    "src": "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.ttf"
+    "src": "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.ttf"
   },
-  "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.woff": {
+  "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.woff": {
     "file": "Fonts/lg-CosQH4Cu.woff",
-    "src": "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.woff"
+    "src": "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.woff"
   },
-  "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.woff2": {
+  "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.woff2": {
     "file": "Fonts/lg-C7ze34MH.woff2",
-    "src": "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/fonts/lg.woff2"
+    "src": "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.woff2"
   },
-  "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/images/loading.gif": {
+  "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/images/loading.gif": {
     "file": "Media/loading-BZOHaeKn.gif",
-    "src": "node_modules/.pnpm/lightgallery@2.7.2/node_modules/lightgallery/images/loading.gif"
+    "src": "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/images/loading.gif"
   }
 }
