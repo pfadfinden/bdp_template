@@ -168,24 +168,24 @@
     "src": "Resources/Private/Source/Images/holzhintergrund_1.jpg"
   },
   "Resources/Private/Source/JavaScript/AddressList.entry.js": {
-    "file": "Js/AddressList.entry-CIg213BN.js",
+    "file": "Js/AddressList.entry-BAKYndi6.js",
     "name": "AddressList.entry",
     "src": "Resources/Private/Source/JavaScript/AddressList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-zSoApu56.js"
+      "_masonry-M7VMX1Uu.js"
     ],
     "css": [
       "Css/AddressList-CASSr_w9.css"
     ]
   },
   "Resources/Private/Source/JavaScript/AddressLv.entry.js": {
-    "file": "Js/AddressLv.entry-BVzL_Fbn.js",
+    "file": "Js/AddressLv.entry-CaiTf45T.js",
     "name": "AddressLv.entry",
     "src": "Resources/Private/Source/JavaScript/AddressLv.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-zSoApu56.js"
+      "_masonry-M7VMX1Uu.js"
     ],
     "css": [
       "Css/AddressLv-CxFa4RS-.css"
@@ -210,7 +210,7 @@
     ]
   },
   "Resources/Private/Source/JavaScript/Cookiemanager.entry.js": {
-    "file": "Js/Cookiemanager.entry-B1uRQ3YP.js",
+    "file": "Js/Cookiemanager.entry-Dv1b-MMZ.js",
     "name": "Cookiemanager.entry",
     "src": "Resources/Private/Source/JavaScript/Cookiemanager.entry.js",
     "isEntry": true,
@@ -219,12 +219,12 @@
     ]
   },
   "Resources/Private/Source/JavaScript/InstagramList.entry.js": {
-    "file": "Js/InstagramList.entry-z1NKZ_Mo.js",
+    "file": "Js/InstagramList.entry-CyTKITrB.js",
     "name": "InstagramList.entry",
     "src": "Resources/Private/Source/JavaScript/InstagramList.entry.js",
     "isEntry": true,
     "css": [
-      "Css/InstagramList-DYXPSSDI.css"
+      "Css/InstagramList-DT-nti48.css"
     ],
     "assets": [
       "Media/ig-B_8LRiyU.svg"
@@ -276,12 +276,12 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsDetail.entry.js": {
-    "file": "Js/NewsDetail.entry-D4ok7NvY.js",
+    "file": "Js/NewsDetail.entry-htSbBXYq.js",
     "name": "NewsDetail.entry",
     "src": "Resources/Private/Source/JavaScript/NewsDetail.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-zSoApu56.js"
+      "_masonry-M7VMX1Uu.js"
     ],
     "css": [
       "Css/NewsDetail-D5fg8Zmm.css"
@@ -295,19 +295,19 @@
     ]
   },
   "Resources/Private/Source/JavaScript/NewsList.entry.js": {
-    "file": "Js/NewsList.entry-DTXxTyuR.js",
+    "file": "Js/NewsList.entry-D9TJVLmI.js",
     "name": "NewsList.entry",
     "src": "Resources/Private/Source/JavaScript/NewsList.entry.js",
     "isEntry": true,
     "imports": [
-      "_masonry-zSoApu56.js"
+      "_masonry-M7VMX1Uu.js"
     ],
     "css": [
       "Css/NewsList-BWnaV_dZ.css"
     ]
   },
-  "_masonry-zSoApu56.js": {
-    "file": "Js/masonry-zSoApu56.js",
+  "_masonry-M7VMX1Uu.js": {
+    "file": "Js/masonry-M7VMX1Uu.js",
     "name": "masonry"
   },
   "node_modules/.pnpm/lightgallery@2.8.3/node_modules/lightgallery/fonts/lg.svg": {

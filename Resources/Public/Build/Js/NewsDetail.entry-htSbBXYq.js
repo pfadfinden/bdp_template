@@ -1,11 +1,11 @@
 /**
  * name: @pfadfinden/bdp_template
- * version: v6.0.0
+ * version: v6.2.1
  * license: GPL-2.0-or-later
  * author: Christian Schrebe
  * homepage: https://www.pfadfinden.de/
  */
-import{M as B}from"./masonry-zSoApu56.js";/*!
+import{M as B}from"./masonry-M7VMX1Uu.js";/*!
  * lightgallery | 2.8.3 | March 1st 2025
  * http://www.lightgalleryjs.com/
  * Copyright (c) 2020 Sachin Neravath;
