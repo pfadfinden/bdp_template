@@ -4,11 +4,12 @@ import {fileURLToPath} from "node:url"
 import banner from 'vite-plugin-banner'
 import autoOrigin from "vite-plugin-auto-origin"
 import pkg from './package.json'
-import {compression} from 'vite-plugin-compression2'
+import { compression, defineAlgorithm } from 'vite-plugin-compression2'
 import viteImagemin from '@vheemstra/vite-plugin-imagemin'
 import imageminMozjpeg from 'imagemin-mozjpeg'
 import imageminWebp from 'imagemin-webp'
 import imageminAvif from 'imagemin-avif'
+import {constants} from "zlib"
 import path from 'path';
 
 
@@ -84,12 +85,17 @@ export default defineConfig({
     },
     plugins: [
         autoOrigin(),
-        compression(),
         compression({
-            algorithm: 'brotliCompress',
+            algorithms: [
+                defineAlgorithm('deflate', { level: 9 }),
+                defineAlgorithm('brotliCompress', {
+                    params: {
+                        [constants.BROTLI_PARAM_QUALITY]: 11
+                    }
+                })
+            ],
             exclude: [/\.(br)$/, /\.(gz)$/],
             deleteOriginalAssets: false,
-            compressionOptions: {level: 11}
         }),
         banner({
             outDir: resolve(rootPath, VITE_OUTPUT_PATH),

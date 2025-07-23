@@ -1,6 +1,6 @@
 {
   "name": "@pfadfinden/bdp_template",
-  "version": "6.0.0",
+  "version": "6.2.1",
   "description": "",
   "author": "Christian Schrebe",
   "homepage": "https://www.pfadfinden.de/",
@@ -16,9 +16,9 @@
     "pnpm": ">=8.0.0"
   },
   "devDependencies": {
-    "@vheemstra/vite-plugin-imagemin": "^2.0.0",
-    "autoprefixer": "^10.4.18",
-    "core-js": "^3.36.0",
+    "@vheemstra/vite-plugin-imagemin": "^2.2.0",
+    "autoprefixer": "^10.4.21",
+    "core-js": "^3.44.0",
     "element-closest-polyfill": "^1.0.7",
     "eventslibjs": "^1.2.0",
     "imagemin-avif": "^0.1.6",
@@ -26,17 +26,17 @@
     "imagemin-webp": "^8.0.0",
     "masonry-layout": "^4.2.2",
     "mmenu-js": "^9.3.0",
-    "sass": "^1.72.0",
+    "sass": "^1.89.2",
     "vite": "^6.3.5",
-    "vite-plugin-auto-origin": "^1.0.2",
+    "vite-plugin-auto-origin": "^1.2.2",
     "vite-plugin-banner": "^0.8.1",
-    "vite-plugin-compression2": "^1.0.0"
+    "vite-plugin-compression2": "^2.2.0"
   },
   "scripts": {
     "dev": "vite serve",
     "build": "vite build"
   },
   "dependencies": {
-    "lightgallery": "^2.7.2"
+    "lightgallery": "^2.8.3"
   }
 }
