@@ -1,0 +1,26 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      data-namespace-typo3-fluid="true"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:link.external uri="{post.link}"
+                 target="_blank"
+                 rel="noopener"
+                 class="block relative after:bg-[url('PImages/sc/ig.svg')] after:w-[46px] after:h-[46px] after:z-2 after:absolute after:right-6 after:bottom-6"
+                 title="{post.caption}"
+>
+    <div class="block relative aspect-4/5 max-w-[332px]">
+        <video width="332"
+               height="415"
+               preload="none"
+               controls
+               poster="{f:uri.image(image:'{post.images.0}', width:'332c', height:'415c', fileExtension: 'jpg')}"
+               class="block absolute object-cover z-1 w-full h-full left-0 right-0 bottom-0 top-0 select-none fullscreen:height-auto fullscreen:object-contain"
+        >
+            <source src="{video.originalResource.publicUrl}"
+                    type="video/mp4"
+            >
+            Your browser does not support the video tag.
+        </video>
+    </div>
+</f:link.external>
+</html>

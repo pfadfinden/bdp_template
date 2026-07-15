@@ -1,0 +1,32 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+>
+<vac:asset.vite
+    manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+    entry="Resources/Private/Sources/Entry/Main.entry.js"
+    priority="1"
+    cssTagAttributes="{media: 'all' }"
+/>
+<div class="flex min-h-dvh flex-col text-blue-500 dark:bg-kothe font-medium dark:text-white">
+    <f:render partial="Header" arguments="{_all}"/>
+    <main>
+        {f:render(section: 'Header', arguments: _all) -> f:variable(name: 'headerContent')}
+        <f:if condition="{headerContent}">
+            <section class="content__header">
+                {headerContent -> f:format.raw()}
+            </section>
+        </f:if>
+        <section>
+            <f:render section="Main" arguments="{_all}"/>
+        </section>
+    </main>
+    <f:render partial="Footer" arguments="{_all}"/>
+</div>
+<f:if condition="{site.rootPageId} == {page.id} && {settings.jsonld.enabled} === '1'">
+    <f:render partial="JsonLD" arguments="{_all}"/>
+</f:if>
+<f:render partial="MobileMenuPanel" arguments="{_all}"/>
+</html>
+

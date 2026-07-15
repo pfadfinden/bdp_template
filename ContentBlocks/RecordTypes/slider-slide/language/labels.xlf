@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-04-17T17:18:19+00:00" product-name="pfadfinden/slider-slide">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Slide</source>
+      </trans-unit>
+      <trans-unit id="title.label">
+        <source>Title</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

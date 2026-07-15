@@ -1,0 +1,16 @@
+name: pfadfinden/dropdown-group
+typeName: 1775308392
+prefixFields: true
+prefixType: vendor
+isViewable: false
+group: link
+allowedRecordTypes:
+  - pages
+wizardSteps:
+  setup:
+    title: Setup
+    fields:
+      - title
+      - slug
+      - nav_title
+      - hidden

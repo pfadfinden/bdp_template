@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+    <file source-language="en" datatype="plaintext" original="messages" date="2025-04-22UTC10:32:070">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
         </header>
         <body>
-            <trans-unit id="footer.contact.phone">
-                <source>Phone</source>
-            </trans-unit>
-            <trans-unit id="footer.contact.fax">
-                <source>Fax</source>
-            </trans-unit>
-            <trans-unit id="footer.contact.email">
-                <source>Email</source>
-            </trans-unit>
-            <trans-unit id="footer.contact.internet">
-                <source>Internet</source>
-            </trans-unit>
-            <trans-unit id="footer.navigation.legalNotice">
-                <source>Legal notice</source>
-            </trans-unit>
-            <trans-unit id="footer.navigation.privacy">
-                <source>Privacy policy</source>
-            </trans-unit>
-            <trans-unit id="footer.navigation.login">
-                <source>Login</source>
-            </trans-unit>
+        <trans-unit id="language.aria">
+            <source>Language select</source>
+        </trans-unit>
+        <trans-unit id="footer.contact">
+            <source>Contact us</source>
+        </trans-unit>
+        <trans-unit id="footer.contact.name">
+            <source>Zentrum Pfadfinden Immenhausen / Immenhausen Scouting Center</source>
+        </trans-unit>
+        <trans-unit id="footer.contact.email">
+            <source>Email</source>
+        </trans-unit>
+        <trans-unit id="footer.bdp.text">
+            <source>An Institution of the</source>
+        </trans-unit>
+        <trans-unit id="footer.bdp.abbr.full">
+            <source>Bund der Pfadfinder*innen (German Association of Guides and Scouts)</source>
+        </trans-unit>
+        <trans-unit id="news.list.show-all">
+            <source>Show all</source>
+        </trans-unit>
+        <trans-unit id="ct.textimage.details">
+            <source>Details</source>
+        </trans-unit>
         </body>
     </file>
 </xliff>

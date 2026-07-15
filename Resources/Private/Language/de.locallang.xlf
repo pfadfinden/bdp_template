@@ -1,38 +1,34 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+    <file source-language="en" target-language="de" datatype="plaintext" original="messages" date="2025-04-22UTC10:32:070" product-name="bdp_template">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
         </header>
         <body>
-            <trans-unit id="footer.contact.phone">
-                <source>Phone</source>
-                <target>Telefon</target>
+            <trans-unit id="language.aria">
+                <target>Sprachauswahl</target>
             </trans-unit>
-            <trans-unit id="footer.contact.fax">
-                <source>Fax</source>
-                <target>Telefax</target>
+            <trans-unit id="footer.contact">
+                <target>Kontakt</target>
+            </trans-unit>
+            <trans-unit id="footer.contact.name">
+                <target>Zentrum Pfadfinden Immenhausen</target>
             </trans-unit>
             <trans-unit id="footer.contact.email">
-                <source>Email</source>
                 <target>E-Mail</target>
             </trans-unit>
-            <trans-unit id="footer.contact.internet">
-                <source>Internet</source>
-                <target>Internet</target>
+            <trans-unit id="footer.bdp.text">
+                <target>Bundeszentrum des</target>
             </trans-unit>
-            <trans-unit id="footer.navigation.legalNotice">
-                <source>Legal notice</source>
-                <target>Impressum</target>
+            <trans-unit id="footer.bdp.abbr.full">
+                <target>Bund der Pfadfinder*innen</target>
             </trans-unit>
-            <trans-unit id="footer.navigation.privacy">
-                <source>Privacy policy</source>
-                <target>Datenschutzerklärung</target>
+            <trans-unit id="news.list.show-all">
+                <target>Weitere anzeigen</target>
             </trans-unit>
-            <trans-unit id="footer.navigation.login">
-                <source>Login</source>
-                <target>Login</target>
+            <trans-unit id="ct.textimage.details">
+                <target>Details anzeigen</target>
             </trans-unit>
         </body>
     </file>

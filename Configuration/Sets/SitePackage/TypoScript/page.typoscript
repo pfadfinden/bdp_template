@@ -1,0 +1,93 @@
+##############
+#### PAGE ####
+##############
+page = PAGE
+page {
+    typeNum = 0
+    shortcutIcon = EXT:bdp_template/Resources/Public/Icons/favicon.ico
+
+    10 = PAGEVIEW
+    10 {
+        paths {
+            0 = EXT:bdp_template/Resources/Private/PageView/
+            1 = {$page.pageview.paths}
+        }
+        dataProcessing {
+            10 = files
+            10 {
+                references.fieldName = media
+            }
+            20 = menu
+            20 {
+                levels = 2
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = mainnavigation
+            }
+            30 = menu
+            30 {
+                special = directory
+                special.value = {$page.footer.pid}
+                levels = 1
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = footernavigation
+            }
+            40 = menu
+            40 {
+                special = directory
+                special.value = {$page.meta.left.pid}
+                levels = 1
+                expandAll = 1
+                includeSpacer = 0
+                titleField = nav_title // title
+                as = metaleftnavigation
+            }
+            60 = language-menu
+            60 {
+                languages = auto
+                as = languageNavigation
+            }
+            70 = page-content
+        }
+    }
+
+    meta {
+        viewport = {$page.meta.viewport}
+        robots = {$page.meta.robots}
+        apple-mobile-web-app-capable = {$page.meta.apple-mobile-web-app-capable}
+
+        X-UA-Compatible = {$page.meta.compatible}
+        X-UA-Compatible {
+            attribute = http-equiv
+        }
+    }
+
+    includeCSSLibs {
+
+    }
+
+    includeCSS {
+
+    }
+
+    includeJSLibs {
+
+    }
+
+    includeJS {
+
+    }
+
+    includeJSFooterlibs {
+
+    }
+
+    includeJSFooter {
+
+    }
+}
+
+plugin.tx_frontend._CSS_DEFAULT_STYLE >

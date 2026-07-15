@@ -1,0 +1,59 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
+    <f:case value="extra-small"> pt-4</f:case>
+    <f:case value="small"> pt-8</f:case>
+    <f:case value="medium"> pt-12</f:case>
+    <f:case value="large"> pt-16</f:case>
+    <f:case value="extra-large"> pt-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
+    <f:case value="extra-small"> pb-4</f:case>
+    <f:case value="small"> pb-8</f:case>
+    <f:case value="medium"> pb-12</f:case>
+    <f:case value="large"> pb-16</f:case>
+    <f:case value="extra-large"> pb-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="layout"><f:switch expression="{data.layout}">
+    <f:case value="1"> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:case>
+    <f:case value="2"> bg-blue-500 text-white dark:bg-blue-500 dark:text-white</f:case>
+    <f:case value="3"> bg-red-500 text-white dark:bg-red-500 dark:text-white</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<div id="c-{data.uid}" class="{layout}{spaceBefore}{spaceAfter}">
+    <f:if condition="{data.image.0}">
+        <figure class="relative">
+            <picture class="block relative w-full">
+                <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '350c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '700c', fileExtension: 'webp')} 2x" type="image/webp">
+                <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '350c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '700c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                <f:image image="{data.image.0}" width="500c" height="350c" loading="lazy" class="w-full h-auto max-w-full" />
+            </picture>
+            <f:if condition="{data.image.0.properties.copyright}">
+                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
+            </f:if>
+            <f:if condition="{data.image.0.description}">
+                <figcaption class="image-caption">
+                    {file.description -> f:format.nl2br()}
+                </figcaption>
+            </f:if>
+        </figure>
+    </f:if>
+    <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
+    <f:if condition="{header}">
+        <h2 class="mt-3 text-3xl font-semibold">{header}</h2>
+    </f:if>
+    <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
+    <f:if condition="{bodytext}">
+        <f:then>
+            <div class="text-md mt-3">
+                {bodytext}
+            </div>
+        </f:then>
+    </f:if>
+</div>
+</html>

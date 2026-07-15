@@ -1,0 +1,4 @@
+#config.contentObjectExceptionHandler = 0
+@import './TypoScript/ContentElements/'
+@import './TypoScript/'
+config.contentObjectExceptionHandler = 0

@@ -1,42 +1,23 @@
 {
   "name": "@pfadfinden/bdp_template",
-  "version": "6.2.1",
-  "description": "",
-  "author": "Christian Schrebe",
-  "homepage": "https://www.pfadfinden.de/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/pfadfinden/bdp_template.git"
-  },
-  "license": "GPL-2.0-or-later",
   "main": "vite.config.js",
   "type": "module",
-  "engines": {
-    "node": ">=20.0.0",
-    "pnpm": ">=8.0.0"
-  },
+  "packageManager": "pnpm@11.5.1",
   "devDependencies": {
-    "@vheemstra/vite-plugin-imagemin": "^2.2.0",
-    "autoprefixer": "^10.4.21",
-    "core-js": "^3.44.0",
-    "element-closest-polyfill": "^1.0.7",
-    "eventslibjs": "^1.2.0",
-    "imagemin-avif": "^0.1.6",
-    "imagemin-mozjpeg": "^10.0.0",
-    "imagemin-webp": "^8.0.0",
-    "masonry-layout": "^4.2.2",
+    "@tailwindcss/vite": "^4.3.2",
+    "accordion-js": "^3.4.1",
+    "micromodal": "^0.7.0",
     "mmenu-js": "^9.3.0",
-    "sass": "^1.89.2",
-    "vite": "^6.3.5",
-    "vite-plugin-auto-origin": "^1.2.2",
-    "vite-plugin-banner": "^0.8.1",
-    "vite-plugin-compression2": "^2.2.0"
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
+    "swiper": "^14.0.5",
+    "tailwindcss": "^4.3.2",
+    "vite": "^7.3.6",
+    "vite-plugin-compression2": "^2.5.3",
+    "vite-plugin-typo3": "^3.0.0"
   },
   "scripts": {
     "dev": "vite serve",
     "build": "vite build"
-  },
-  "dependencies": {
-    "lightgallery": "^2.8.3"
   }
 }

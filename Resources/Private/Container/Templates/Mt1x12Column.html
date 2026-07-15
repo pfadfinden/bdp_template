@@ -1,0 +1,33 @@
+<f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
+    <f:case value="extra-small"> pt-4</f:case>
+    <f:case value="small"> pt-8</f:case>
+    <f:case value="medium"> pt-12</f:case>
+    <f:case value="large"> pt-16</f:case>
+    <f:case value="extra-large"> pt-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
+    <f:case value="extra-small"> pb-4</f:case>
+    <f:case value="small"> pb-8</f:case>
+    <f:case value="medium"> pb-12</f:case>
+    <f:case value="large"> pb-16</f:case>
+    <f:case value="extra-large"> pb-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="layout"><f:switch expression="{data.layout}">
+    <f:case value="1"> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:case>
+    <f:case value="2"> bg-blue-500 text-white dark:bg-blue-500 dark:text-white</f:case>
+    <f:case value="3"> bg-red-500 text-white dark:bg-red-500 dark:text-white</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<div id="c-{data.uid}" class="{layout}{spaceBefore}{spaceAfter}">
+    <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20">
+        <div class="flex flex-wrap -mx-2">
+            <div class="w-full lg:w-1/2 px-2">
+                <f:for each="{content.110}" as="record">
+                    {record -> f:render.record()}
+                </f:for>
+            </div>
+        </div>
+    </div>
+</div>

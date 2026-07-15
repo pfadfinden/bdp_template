@@ -1,22 +1,25 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <xliff version="1.0">
-    <file source-language="en" datatype="plaintext" original="messages" date="2020-07-19UTC10:23:400">
+    <file source-language="en" datatype="plaintext" original="messages" date="2025-04-22UTC10:32:070">
         <header>
             <authorName>Christian Schrebe</authorName>
-            <authorEmail>christian.schrebe@pfadfinden.de</authorEmail>
+            <authorEmail>info@christian.schrebe.de</authorEmail>
         </header>
         <body>
             <trans-unit id="backend_layout.default">
                 <source>Default</source>
             </trans-unit>
             <trans-unit id="backend_layout.headerWithOneColumn">
-                <source>Header with Content</source>
+                <source>One Column with Header</source>
             </trans-unit>
-            <trans-unit id="backend_layout.column.header">
-                <source>Header</source>
+            <trans-unit id="backend_layout.home">
+                <source>Home</source>
             </trans-unit>
             <trans-unit id="backend_layout.column.normal">
                 <source>Normal</source>
+            </trans-unit>
+            <trans-unit id="backend_layout.column.header">
+                <source>Header</source>
             </trans-unit>
         </body>
     </file>

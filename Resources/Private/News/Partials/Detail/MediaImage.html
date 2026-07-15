@@ -1,0 +1,32 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<figure class="mediaelement mediaelement-image block relative w-fit">
+    <f:if condition="{mediaElement.link}">
+        <f:then>
+            <f:link.typolink parameter="{mediaElement.link}" target="{n:targetLink(link:mediaElement.link)}">
+                <f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" loading="{settings.detail.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+            </f:link.typolink>
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.detail.media.image.lightbox.enabled}">
+                <f:then>
+                    <a href="{f:uri.image(image:mediaElement, width:'{settings.detail.media.image.lightbox.width}', height:'{settings.detail.media.image.lightbox.height}')}" title="{mediaElement.title}" class="{settings.detail.media.image.lightbox.class}" rel="{settings.detail.media.image.lightbox.rel}">
+                        <f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" loading="{settings.detail.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+                    </a>
+                </f:then>
+                <f:else>
+                    <f:image image="{mediaElement}" title="{mediaElement.title}" alt="{mediaElement.alternative}" loading="{settings.detail.media.image.lazyLoading}" maxWidth="{f:if(condition: settings.media.maxWidth, then: settings.media.maxWidth, else: settings.detail.media.image.maxWidth)}" maxHeight="{f:if(condition: settings.media.maxHeight, then: settings.media.maxHeight, else: settings.detail.media.image.maxHeight)}" additionalAttributes="{itemprop:'image'}" />
+                </f:else>
+            </f:if>
+        </f:else>
+    </f:if>
+    <f:if condition="{mediaElement.originalResource.properties.copyright}">
+        <div class="absolute bottom-[0.375rem] right-[0.875rem] text-[0.875rem] text-white/60 hover:text-white hover:text-shadow-sm">© {mediaElement.originalResource.properties.copyright}</div>
+    </f:if>
+    <f:if condition="{mediaElement.description}">
+        <figcaption>{mediaElement.description}</figcaption>
+    </f:if>
+</figure>
+</html>

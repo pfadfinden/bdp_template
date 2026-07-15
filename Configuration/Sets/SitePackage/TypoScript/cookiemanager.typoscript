@@ -1,0 +1,9 @@
+plugin.tx_cfcookiemanager_cookiefrontend {
+    view {
+        templateRootPaths {
+            0 =  EXT:cf_cookiemanager/Resources/Private/Templates/
+            1 = {$plugin.tx_cfcookiemanager_cookiefrontend.view.layoutRootPath}
+            10 = EXT:bdp_template/Resources/Private/CookieManager/Templates/
+        }
+    }
+}

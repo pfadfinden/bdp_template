@@ -1,0 +1,21 @@
+name: pfadfinden/text-top-image
+typeName: pfadfinden_texttopimage
+group: default
+prefixFields: true
+prefixType: vendor
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+fields:
+  - identifier: header
+    useExistingField: true
+  - identifier: header_layout
+    useExistingField: true
+  - identifier: header_link
+    useExistingField: true
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+  - identifier: image
+    useExistingField: true
+    maxitems: 1

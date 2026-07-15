@@ -1,0 +1,60 @@
+@import './PageTsConfig/BackendLayouts/'
+
+RTE {
+    default {
+        preset = bdp_template
+    }
+}
+
+TCEFORM {
+    pages {
+        layout {
+            altLabels {
+            }
+        }
+    }
+    tt_content {
+        layout {
+            altLabels {
+                1 = Yellow Background
+                2 = Blue Background
+                3 = Red Background
+            }
+            types {
+                # Change possible layouts for menu,textpic, etc.
+                gridelements_pi1 {
+                    # Umbenennen
+                    altLabels {
+                        #0 = Transparent
+                        1 = Yellow Background
+                        2 = Blue Background
+                        3 = Red Background
+                    }
+                }
+            }
+
+        }
+        header_position {
+            removeItems = left,right
+        }
+        frame_class {
+            removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
+            types {
+            }
+        }
+        frame_class.disabled = 1
+        pi_flexform {
+            ttaddress_listview {
+                sDISPLAY {
+                    settings\.displayMode.addItems {
+                        team = Team
+                    }
+                }
+            }
+        }
+    }
+}
+
+TCEMAIN {
+
+}

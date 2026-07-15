@@ -1,0 +1,112 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<header class="relative box-border lg:static">
+    <div
+        class="box-border flex h-7.5 w-full flex-nowrap justify-between bg-blue-500 text-xs leading-7.5 font-medium text-yellow-500 dark:bg-black dark:text-white"
+    >
+        <div class="3xl:pl-23 pl-3 md:pl-3 lg:pl-8 xl:pl-18">
+            <ul class="hidden md:block">
+                <f:for each="{metaleftnavigation}" as="metaItem">
+                    <li>
+                        <a href="{metaItem.link}" target="{metaItem.target}" class="hover:bg-kluft focus-visible:bg-kluft block h-7.5 px-2 uppercase duration-150 ease-in-out hover:text-white focus-visible:text-white focus-visible:outline-yellow-500 focus-visible:outline-solid" title="{metaItem.title}">
+                            {metaItem.title}
+                        </a>
+                    </li>
+                </f:for>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li
+                    class="hover:bg-yellow-light dark:hover:bg-kluft h-7.5 w-full max-w-103.5 sm:w-[21.5234375vw] bg-yellow-500 mask-[url(Images/clips/image.svg#c)] mask-cover mask-top-right mask-no-repeat text-blue-500 duration-150 ease-in-out dark:bg-blue-500 dark:text-white"
+                >
+                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white">
+                        {f:uri.page(pageUid: '{site.rootPageId}', absolute: 'true')}
+                    </f:link.page>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div
+        class="3xl:pl-25 relative mx-auto flex w-full px-3 text-blue-500 md:px-5 md:py-0 lg:px-10 xl:pl-20 bg-white dark:bg-kothe dark:text-white forced-colors:border-y"
+    >
+        <f:link.page pageUid="{site.rootPageId}" class="focus-visible:outline-kluft z-1 mr-0 block h-20 w-52 flex-none py-3 focus-visible:outline-solid lg:mr-6 dark:focus-visible:outline-white">
+            <bdp:inlineSvg
+                src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg"
+                aria-label="Logo des Bund der Pfadfinder*innen e.V."
+                aria-hidden="false"
+                class="h-14"
+                width="208"
+                height="56"
+            />
+        </f:link.page>
+        <div class="flex-end flex w-full flex-row-reverse justify-between lg:block">
+            <nav id="main-menu" class="mx-4 hidden w-full lg:block" role="navigation" aria-label="Main">
+                <ul class="font-medium lg:flex lg:text-lg">
+                    <f:for each="{mainnavigation}" as="mainnavigationItem">
+                        <f:if condition="!{mainnavigationItem.children} && {mainnavigationItem.data.doktype} != 1775308392">
+                            <f:then>
+                                <li class="group/navitem relative block">
+                                    <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" class="z-1 whitespace-nowrap hover:text-kluft focus-visible:text-kluft focus-visible:outline-kluft focus-visible:outline-solid lg:relative lg:block lg:h-20 lg:px-3 lg:leading-20 lg:duration-150 lg:ease-in-out xl:px-6 2xl:px-8 dark:hover:text-yellow-light dark:focus-visible:text-yellow-light dark:focus-visible:outline-white{f:if(condition: '{mainnavigationItem.current} && {mainnavigationItem.active}', then:' font-semibold')}"{f:if(condition: mainnavigationItem.current, then:' aria-current="page"')}>
+                                        {mainnavigationItem.title}
+                                    </a>
+                                </li>
+                            </f:then>
+                            <f:else if="{mainnavigationItem.data.doktype} == 1775308392 && {mainnavigationItem.children}">
+                                <li class="group/navitem relative block">
+                                    <button
+                                        id="bdp-m-b-{mainnavigationItem.data.uid}"
+                                        class="group/navbutton peer/navbutton z-1 cursor-pointer bg-white whitespace-nowrap text-blue-500 hover:text-kluft focus-visible:text-kluft focus-visible:outline-kluft focus-visible:outline-solid enabled:text-blue-500 enabled:hover:text-kluft enabled:active:text-kluft lg:relative lg:block lg:h-20 lg:px-3 lg:leading-20 lg:duration-150 lg:ease-in-out xl:px-6 2xl:px-8 dark:bg-kothe dark:text-white dark:hover:text-yellow-light dark:focus-visible:text-yellow-light dark:focus-visible:outline-white dark:enabled:text-white dark:enabled:hover:text-yellow-light dark:enabled:active:text-yellow-light"
+                                        data-tid="{mainnavigationItem.data.uid}" aria-expanded="false" aria-controls="bdp-m-s-{mainnavigationItem.data.uid}">
+                                        {mainnavigationItem.title}
+                                        <span class="hidden overflow-hidden text-yellow-500 group-hover/navbutton:text-yellow-500 group-focus-visible/navbutton:text-yellow-500 lg:absolute lg:right-3 lg:bottom-5 lg:left-3 lg:duration-150 lg:ease-in-out group-hover/navbutton:lg:block group-focus-visible/navbutton:lg:block xl:right-6 xl:left-6 2xl:right-8 2xl:left-8 dark:text-yellow-light dark:group-hover/navbutton:text-yellow-light dark:group-focus-visible/navbutton:text-yellow-light" aria-hidden="true">
+                                        <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/lines/line.svg" height="7px"/>
+                                    </span>
+                                    </button>
+                                    <ul
+                                        id="bdp-m-s-{mainnavigationItem.data.uid}"
+                                        class="lg:absolute lg:z-1000 lg:float-left lg:hidden lg:w-auto lg:bg-white lg:shadow-md dark:lg:bg-kothe lg:peer-aria-expanded/navbutton:block"
+                                        aria-labelledby="bdp-m-b-{mainnavigationItem.data.uid}"
+                                    >
+                                        <f:for each="{mainnavigationItem.children}" as="child">
+                                            <li class="first:pt-3 last:pb-1.5 lg:relative lg:block 2xl:last:pb-5.5">
+                                                <a href="{child.link}" target="{child.target}" class="group/drowpdownitem whitespace-nowrap lg:relative lg:block lg:min-w-32 lg:px-4 lg:py-2.5 lg:leading-none lg:hover:text-kluft lg:hover:duration-200 lg:hover:ease-linear lg:focus:text-black lg:focus:text-kluft lg:focus:duration-200 lg:focus:ease-linear lg:focus-visible:outline-kluft lg:focus-visible:outline-solid xl:px-6 2xl:px-8 dark:hover:text-yellow-light dark:focus:text-yellow-light dark:lg:focus-visible:outline-white"{f:if(condition: child.current, then:' aria-current="page"')}>
+                                                    <span class="block">{child.title}</span>
+                                                    <f:if condition="{child.data.subtitle}">
+                                                        <f:then>
+                                                             <span class="mt-1 block text-base font-normal text-blue-light group-hover/drowpdownitem:text-blue-500 group-focus/drowpdownitem:text-blue-500 dark:group-hover/drowpdownitem:text-yellow-light dark:group-focus/drowpdownitem:text-yellow-light">
+                                                                {child.data.subtitle}
+                                                            </span>
+                                                        </f:then>
+                                                    </f:if>
+                                                    <span class="mt-3 hidden overflow-hidden lg:block lg:max-w-48" aria-hidden="true">
+                                                        <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/lines/line.svg" height="6px"/>
+                                                    </span>
+                                                </a>
+                                            </li>
+                                        </f:for>
+                                    </ul>
+                                </li>
+                            </f:else>
+                        </f:if>
+                    </f:for>
+                </ul>
+            </nav>
+            <button
+                id="mobile-main-menu-toggle"
+                aria-controls="mobile-main-menu-sidebar"
+                aria-haspopup="true"
+                class="block cursor-pointer lg:hidden"
+                aria-expanded="false"
+                aria-label="Menu">
+              <span aria-hidden="true">
+                  <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/menu.svg" width="50" height="50" class="mt-1.5 mr-2 block" aria-hidden="true" />
+              </span>
+            </button>
+        </div>
+    </div>
+</header>
+
+</html>

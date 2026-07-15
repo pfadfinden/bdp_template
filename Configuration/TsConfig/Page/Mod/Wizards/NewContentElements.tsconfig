@@ -1,4 +1,0 @@
-#
-# custom content elements
-#
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/Mod/Wizards/NewContentElements/*.tsconfig'

@@ -1,0 +1,15 @@
+identifier: Pfadfinden/Icon
+prefixFields: true
+prefixType: vendor
+fields:
+  - identifier: icon
+    type: Select
+    renderType: selectSingle
+    fieldWizard:
+      selectIcons:
+        disabled: false
+    items:
+      - label: 'Feuer'
+        value: 'feuer'
+        icon: 'EXT:bdp_template/Resources/Public/Icons/pfadfinden/feuer.svg'
+

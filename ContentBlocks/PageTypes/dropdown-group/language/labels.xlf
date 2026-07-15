@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-04-04T13:13:49+00:00" product-name="pfadfinden/dropdown-group">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Dropdown MGroup</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

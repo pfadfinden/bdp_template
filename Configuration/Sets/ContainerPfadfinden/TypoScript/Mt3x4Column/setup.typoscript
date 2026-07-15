@@ -1,0 +1,9 @@
+// use default/general ContainerProcessor
+tt_content.mt3x4Column < lib.contentElement
+tt_content.mt3x4Column {
+    templateName = mt3x4Column
+    templateRootPaths.10 = EXT:bdp_template/Resources/Private/Container/Templates
+    dataProcessing {
+        200 = B13\Container\DataProcessing\ContentAreaProcessor
+    }
+}

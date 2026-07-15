@@ -1,0 +1,131 @@
+categories:
+  pfadfinden:
+    label: 'BdP Template' # (1)
+  pfadfinden.settings:
+    label: 'Base Settings'
+    parent: pfadfinden
+  pfadfinden.contact:
+    label: 'Kontakt'
+    parent: pfadfinden
+  pfadfinden.seo:
+    label: 'SEO'
+    parent: pfadfinden
+
+settings:
+  page.footer.pid:
+    type: page
+    default: 9
+    category: pfadfinden.settings
+    label: 'Footer Menü'
+    description: 'Page of the Footer Menü Folder'
+
+  page.meta.left.pid:
+    type: page
+    default: 13
+    category: pfadfinden.settings
+    label: 'Left Header Menü'
+    description: 'Page of the left Header Menü Folder'
+
+  page.infotype:
+    type: string
+    default: 'stamm'
+    category: pfadfinden.settings
+    label: 'Left Header Menü'
+    description: 'Page of the left Header Menü Folder'
+    enum:
+      stamm: 'Stamm'
+      bund: 'Bundesseite'
+      lv: 'Landesverband'
+      project: 'Projekt'
+      service: 'Service'
+
+  contact.association:
+    type: string
+    default: 'Bund der Pfadfinder*innen e.V. (BdP)'
+    category: pfadfinden.contact
+    label: 'Name'
+    description: ''
+
+  contact.name:
+    type: string
+    default: 'BdP Bundesamt'
+    category: pfadfinden.contact
+    label: 'Name'
+    description: ''
+
+  contact.street:
+    type: string
+    default: 'Kesselhaken'
+    category: pfadfinden.contact
+    label: 'Straße'
+    description: ''
+
+  contact.housenumber:
+    type: string
+    default: '23'
+    category: pfadfinden.contact
+    label: 'Hausnummer'
+    description: ''
+
+  contact.postcode:
+    type: string
+    default: '34376'
+    category: pfadfinden.contact
+    label: 'PLZ'
+    description: ''
+
+  contact.city:
+    type: string
+    default: 'Immenhausen'
+    category: pfadfinden.contact
+    label: 'Ort'
+    description: ''
+
+  contact.region:
+    type: string
+    default: 'Hessen'
+    category: pfadfinden.contact
+    label: 'Ort'
+    description: ''
+
+  contact.phone:
+    type: string
+    default: '+49 5673 99584-0'
+    category: pfadfinden.contact
+    label: 'Telefon'
+    description: ''
+
+  contact.email:
+    type: string
+    default: 'info@pfadfinden.de'
+    category: pfadfinden.contact
+    label: 'E-Mail'
+    description: ''
+
+  contact.internet:
+    type: string
+    default: 'https://www.pfadfinden.de/'
+    category: pfadfinden.contact
+    label: 'Internet'
+    description: ''
+
+  contact.instagram:
+    type: string
+    default: ''
+    category: pfadfinden.contact
+    label: 'Instagram'
+    description: 'URL with https to the Instagram Account: Example: https://www.instagram.com/pfadfinden/'
+
+  contact.youtube:
+    type: string
+    default: ''
+    category: pfadfinden.contact
+    label: 'Youtube'
+    description: 'URL with https to the Youtube Account: Example: https://www.youtube.com/user/BdPpfadfinden'
+
+  jsonld.enabled:
+    type: bool
+    default: false
+    category: pfadfinden.seo
+    label: 'Enable JSON+LD output'
+    description: ''

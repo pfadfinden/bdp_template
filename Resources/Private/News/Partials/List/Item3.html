@@ -1,0 +1,25 @@
+<div class="h-full articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}">
+	<n:excludeDisplayedNews newsItem="{newsItem}"/>
+    <n:link newsItem="{newsItem}" settings="{settings}" class="group/n-link block relative w-full md:h-full" title="{newsItem.title}">
+        <figure class="md:w-full md:h-full bg-zentrum-black overflow-hidden">
+            <picture>
+                <f:if condition="{newsItem.falMedia.0}">
+                    <source media="(max-width: 575px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '575c', height: '323c', fileExtension: 'webp')}" type="image/webp">
+                    <source media="(max-width: 575px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '575c', height: '323c', fileExtension: 'jpg')}" type="image/jpeg">
+                    <source media="(max-width: 767px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '767c', height: '329c', fileExtension: 'webp')}" type="image/webp">
+                    <source media="(max-width: 767px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '767c', height: '329c', fileExtension: 'jpg')}" type="image/jpeg">
+                    <source media="(max-width: 991px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '480c', height: '480c', fileExtension: 'webp')}" type="image/webp">
+                    <source media="(max-width: 991px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '480c', height: '480c', fileExtension: 'jpg')}" type="image/jpeg">
+                    <source media="(max-width: 1799px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '800c', height: '800c', fileExtension: 'webp')}" type="image/webp">
+                    <source media="(max-width: 1799px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '800c', height: '800c', fileExtension: 'jpg')}" type="image/jpeg">
+                    <source media="(min-width: 1800px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '850c', height: '850c', fileExtension: 'webp')} 1x, {f:uri.image(image: newsItem.falMedia.0, width: '1700c', height: '1700c', fileExtension: 'webp')} 2x" type="image/webp">
+                    <source media="(min-width: 1800px)" srcset="{f:uri.image(image: newsItem.falMedia.0, width: '850c', height: '850c', fileExtension: 'jpg')} 1x, {f:uri.image(image: newsItem.falMedia.0, width: '1700c', height: '1700c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                    <f:image image="{newsItem.falMedia.0}" width="800c" height="800c" loading="lazy" class="block h-full w-full object-cover duration-300 ease-in-out group-hover/n-link:opacity-80 group-hover/n-link:scale-103 group-focus/n-link:opacity-80 group-focus/n-link:scale-103"/>
+                </f:if>
+            </picture>
+            <figcaption class="md:absolute md:top-0 md:left-0 md:right-0 md:bottom-0 text-white">
+                <h3 class="p-4 bg-zentrum-black text-[1.2rem] leading-[1.1] lg:text-xl md:text-right md:absolute md:bottom-0 md:right-0 md:py-2 md:pl-4 md:pr-[50%] lg:pr-[10%] lg:pl-8 md:w-auto md:max-w-full md:my-8 md:ml-3 lg:my-12">{newsItem.title -> f:format.stripTags(allowedTags: '<abbr><span>')}</h3>
+            </figcaption>
+        </figure>
+    </n:link>
+</div>

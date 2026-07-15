@@ -1,0 +1,118 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+
+<footer id="footer" class="pt-20 text-blue-500 dark:text-white forced-colors:border-t">
+    <section class="relative z-2 text-base lg:min-h-45">
+        <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20">
+            <div class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-3">
+                <div class="order-1 col-span-1 row-span-1 lg:row-span-2">
+                    <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg" class="h-16" aria-label="Pfadfinden Logo" width="238" height="64" aria-hidden="false"/>
+                </div>
+                <div
+                    class="order-2 col-span-1 row-span-1 pt-12 md:order-3 md:pt-4 lg:order-2 lg:row-span-2"
+                >
+                    <f:if condition="{settings.contact.instagram}">
+                        <a
+                            href="{settings.contact.instagram}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-kluft dark:hover:text-yellow-light flex text-lg font-bold hover:underline md:ml-13.75 lg:ml-0"
+                        >
+                            <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/sc/ig.svg" width="50" height="50" class="mr-2" aria-hidden="true" />
+                            <span class="mt-2 block">Folge uns auf Instagram</span>
+                        </a>
+                    </f:if>
+                    <f:if condition="{settings.contact.youtube}">
+                        <a
+                            href="{settings.contact.youtube}"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="hover:text-kluft dark:hover:text-yellow-light mt-5 flex text-lg font-bold hover:underline md:ml-13.75 lg:ml-0"
+                        >
+                            <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/sc/yt.svg" width="50" height="35" class="mt-1.5 mr-2 block" aria-hidden="true" />
+                            <span class="mt-2 block">Folge uns auf YouTube</span>
+                        </a>
+                    </f:if>
+                </div>
+                <div
+                    class="order-3 col-span-1 row-span-2 pt-10 pb-10 md:order-2 md:justify-self-end md:pt-2 lg:order-3 lg:pt-6 lg:pb-0"
+                >
+                    <div class="text-lg font-bold">Bund der Pfadfinder*innen e.V. (BdP)</div>
+                    <div class="text-lg font-bold">{settings.contact.name}</div>
+                    <div>{settings.contact.street} {settings.contact.housenumber} <br />{settings.contact.postcode} {settings.contact.city}, DE</div>
+                    <f:if condition="{settings.contact.phone}">
+                        <div>
+                            <span>Telefon: </span>
+                            <span>
+                                <a href="tel:{settings.contact.phone}" class="hover:text-kluft dark:hover:text-yellow-light hover:underline">{settings.contact.phone}</a>
+                            </span>
+                        </div>
+                    </f:if>
+                    <f:if condition="{settings.contact.email}">
+                        <div>
+                            <f:link.email email="{settings.contact.email}" class="hover:text-kluft dark:hover:text-yellow-light hover:underline">{settings.contact.email}</f:link.email>
+                        </div>
+                    </f:if>
+                    <f:if condition="{settings.contact.website}">
+                        <div>
+                            <f:link.external uri="{settings.contact.website}" class="hover:text-kluft dark:hover:text-yellow-light hover:underline">{settings.contact.website}</f:link.external>
+                        </div>
+                    </f:if>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section
+        class="2x:aspect-1760/380 relative z-1 h-auto w-full bg-blue-500 mask-[url(Images/clips/footer.svg)] mask-size-[100%_auto] mask-top-left mask-no-repeat text-yellow-500 lg:-mt-30 lg:aspect-1760/464 xl:aspect-1760/380 dark:bg-black dark:text-white"
+    >
+        <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 pt-14 md:pt-18 lg:pt-30">
+            <nav aria-label="Footer">
+                <ul class="text-lg font-bold">
+                    <f:for each="{footernavigation}" as="footernavtigationItem">
+                        <li class="{f:if(condition: footernavtigationItem.active, then:'active')}">
+                            <a href="{footernavtigationItem.link}" target="{footernavtigationItem.target}" class="hover:text-yellow-light relative inline-block py-1" title="{footernavtigationItem.title}"{f:if(condition: footernavtigationItem.current, then:' aria-current="page"')}>
+                            {footernavtigationItem.title}
+                            <span class="block max-w-24 overflow-hidden" aria-hidden="true">
+                                <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/lines/line.svg" height="6px"/>
+                            </span>
+                            </a>
+                        </li>
+                    </f:for>
+                </ul>
+            </nav>
+            <div class="mt-6 pb-4 text-sm font-semibold lg:mt-10 lg:text-sm xl:mt-16">
+                <f:if condition="{settings.page.infotype} === 'bund'">
+                    <f:then>
+                        Mitglied im
+                        <a
+                            href="https://pfadfinden-in-deutschland.de"
+                            target="_blank"
+                            class="hover:text-yellow-light hover:underline"
+                        >
+                            Ring deutscher Pfadfinder*innenverbände (rdp)
+                        </a>
+                    </f:then>
+                    <f:else>
+                        <f:variable name="infotypeName"><f:switch expression="{settings.page.infotype}">
+                            <f:case value="lv">Landesverband</f:case>
+                            <f:case value="project">Projekt</f:case>
+                            <f:case value="service">Service</f:case>
+                            <f:defaultCase>Stamm</f:defaultCase>
+                        </f:switch></f:variable>
+                        Ein {infotypeName} im
+                        <a
+                            href="https://www.pfadfinden.de"
+                            target="_blank"
+                            class="hover:text-yellow-light hover:underline"
+                        >
+                            Bund der Pfadfinder*innen e.V. (BdP)
+                        </a>
+                    </f:else>
+                </f:if>
+            </div>
+        </div>
+    </section>
+</footer>
+</html>

@@ -1,48 +1,29 @@
 {
-  "name": "pfadfinden/bdp_template",
-  "type": "typo3-cms-extension",
-  "description": "",
-  "homepage": "https://www.pfadfinden.de",
-  "license": [
-    "GPL-2.0-or-later"
-  ],
-  "keywords": [
-    "TYPO3 CMS"
-  ],
-  "authors": [
-    {
-      "name": "Christian Schrebe",
-      "role": "Developer",
-      "email": "christian.schrebe@pfadfinden.de"
+    "name": "pfadfinden/bdp_template",
+    "type": "typo3-cms-extension",
+    "description": "",
+    "homepage": "https://www.pfadfinden.de/",
+    "license": ["GPL-2.0-or-later"],
+    "keywords": ["TYPO3 CMS"],
+    "require": {
+        "typo3/cms-core": "^14.3",
+        "typo3/cms-rte-ckeditor": "^14.3",
+        "typo3/cms-fluid-styled-content": "^14.3",
+        "friendsoftypo3/content-blocks": "^2.4.7",
+        "friendsoftypo3/tt-address": "^10.0.1",
+        "friendsoftypo3/visual-editor": "^1.8.0",
+        "georgringer/news": "^14.0",
+        "b13/container": "^4.0",
+        "praetorius/vite-asset-collector": "^1.18.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pfadfinden\\BdpTemplate\\": "Classes/"
+        }
+    },
+    "extra": {
+        "typo3/cms": {
+            "extension-key": "bdp_template"
+        }
     }
-  ],
-  "require": {
-    "typo3/cms-core": "^12.4",
-    "typo3/cms-rte-ckeditor": "^12.4",
-    "typo3/cms-fluid-styled-content": "^12.4",
-    "typo3/cms-composer-installers": "^5",
-    "praetorius/vite-asset-collector": "^1.9.0",
-    "zeroseven/z7-semantilizer": "^v4.0.1",
-    "b13/container": "^2.3.5",
-    "opfaff/om-cookie-manager": "^12.0.1",
-    "ichhabrecht/content-defender": "^3.4.1"
-  },
-  "autoload": {
-    "psr-4": {
-      "Pfadfinden\\BdpTemplate\\": "Classes/"
-    }
-  },
-  "replace": {
-    "typo3-ter/bdp_template": "self.version"
-  },
-  "suggest": {
-    "georgringer/news": "^11.1",
-    "friendsoftypo3/tt-address": "^8.0"
-  },
-  "extra": {
-    "typo3/cms": {
-      "skip-ter-packagist-import": true,
-      "extension-key": "bdp_template"
-    }
-  }
 }

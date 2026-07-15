@@ -1,0 +1,88 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+	  xmlns:rx="http://typo3.org/ns/Reelworx/RxShariff/ViewHelper"
+	  data-namespace-typo3-fluid="true">
+
+<f:layout name="Detail" />
+
+<!--
+	=====================
+		News/Detail.html
+-->
+
+<f:section name="content">
+	<f:if condition="{newsItem}">
+		<f:then>
+			<n:format.nothing>
+				<n:excludeDisplayedNews newsItem="{newsItem}" />
+				<f:if condition="{newsItem.alternativeTitle}">
+					<f:then>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.alternativeTitle}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:then>
+					<f:else>
+						<n:titleTag>
+							<f:format.htmlentitiesDecode>{newsItem.title}</f:format.htmlentitiesDecode>
+						</n:titleTag>
+					</f:else>
+				</f:if>
+				<f:if condition="{settings.detail.showMetaTags}">
+					<f:render partial="Detail/Opengraph" arguments="{newsItem: newsItem, settings:settings}" />
+				</f:if>
+			</n:format.nothing>
+            <header>
+                <h1 itemprop="headline" class="zt-headline-1">{newsItem.title}</h1>
+            </header>
+            <f:if condition="{newsItem.contentElements}">
+                <f:then>
+                    <f:cObject typoscriptObjectPath="lib.tx_news.contentElementRendering">{newsItem.contentElementIdList}</f:cObject>
+                </f:then>
+                <f:else>
+                    <n:renderMedia news="{newsItem}" imgClass="img-responsive" videoClass="video-wrapper" audioClass="audio-wrapper">
+                        <f:if condition="{newsItem.mediaNonPreviews.0}">
+                            <figure class="block relative w-full">
+                                <picture class="block relative w-full">
+                                    <source media="(max-width: 359px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '390c', height: '300c', fileExtension: 'webp')}" type="image/webp">
+                                    <source media="(max-width: 359px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '390c', height: '300c', fileExtension: 'jpg')}" type="image/jpeg">
+                                    <source media="(max-width: 575px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '575c', height: '430c', fileExtension: 'webp')}" type="image/webp">
+                                    <source media="(max-width: 575px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '575c', height: '430c', fileExtension: 'jpg')}" type="image/jpeg">
+                                    <source media="(max-width: 767px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '767c', height: '432c', fileExtension: 'webp')}" type="image/webp">
+                                    <source media="(max-width: 767px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '767c', height: '432c', fileExtension: 'jpg')}" type="image/jpeg">
+                                    <source media="(max-width: 1200px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1200c', height: '675c', fileExtension: 'webp')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '2400c', height: '1350c', fileExtension: 'webp')} 2x" type="image/webp">
+                                    <source media="(max-width: 1200px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1200c', height: '675c', fileExtension: 'jpg')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '2400c', height: '1350c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                                    <source media="(max-width: 1451px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1451c', height: '622c', fileExtension: 'webp')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '2902c', height: '1244c', fileExtension: 'webp')} 2x" type="image/webp">
+                                    <source media="(max-width: 1451px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1451c', height: '622c', fileExtension: 'jpg')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '2902c', height: '1244c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                                    <source media="(max-width: 1799px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1800c', height: '772c', fileExtension: 'webp')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '3600c', height: '1544c', fileExtension: 'webp')} 2x" type="image/webp">
+                                    <source media="(max-width: 1799px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1800c', height: '772c', fileExtension: 'jpg')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '3600c', height: '1544c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                                    <source media="(min-width: 1800px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1920c', height: '823c', fileExtension: 'webp')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '3840c', height: '1646c', fileExtension: 'webp')} 2x" type="image/webp">
+                                    <source media="(min-width: 1800px)" srcset="{f:uri.image(image: newsItem.mediaNonPreviews.0, width: '1920c', height: '823c', fileExtension: 'jpg')} 1x, {f:uri.image(image: newsItem.mediaNonPreviews.0, width: '3840c', height: '1646c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                                    <f:image image="{newsItem.mediaNonPreviews.0}" width="1800c" height="772c" />
+                                </picture>
+                                <f:if condition="{newsItem.mediaNonPreviews.0.originalResource.properties.copyright}">
+                                    <div class="absolute bottom-2 right-2 text-white/60 hover:text-white hover:text-shadow-sm">© {newsItem.mediaNonPreviews.0.originalResource.properties.copyright}</div>
+                                </f:if>
+                            </figure>
+                        </f:if>
+                        <div class="pt-12">
+                            <f:if condition="{newsItem.teaser}">
+                                <div class="ct-news__article__teaser" itemprop="description">
+                                    <f:format.html>{newsItem.teaser}</f:format.html>
+                                </div>
+                            </f:if>
+                            <div class="full-text md:columns-[300px_3] md:gap-16" itemprop="articleBody">
+                                <f:format.html>{newsItem.bodytext}</f:format.html>
+                            </div>
+                        </div>
+
+                        <f:render partial="Detail/MediaContainer" arguments="{media: newsItem.mediaNonPreviews, settings:settings}" />
+                    </n:renderMedia>
+                </f:else>
+            </f:if>
+		</f:then>
+		<f:else>
+
+		</f:else>
+	</f:if>
+</f:section>
+</html>

@@ -1,0 +1,76 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<div id="mobile-sidebar"
+    class="hidden transition-300 left-0 pointer-events-auto fixed top-27.5 right-0 z-1001 flex h-full w-full flex-row-reverse lg:hidden">
+    <div id="mobile-main-menu-sidebar"
+         class="pointer-events-auto flex h-full w-full max-w-[480px] flex-col border-r border-kluft bg-blue-500 text-white shadow-lg transition-all transition-transform duration-300 sm:flex sm:w-[calc(14vw_+_16rem)] sm:max-w-[480px] dark:border-surface-700 dark:bg-black dark:text-white"
+         role="complementary">
+        <span class="p-hidden-accessible p-hidden-focusable"
+              tabindex="0" role="presentation" aria-hidden="true"
+              data-p-hidden-accessible="true"
+              data-p-hidden-focusable="true"
+              data-pc-section="firstfocusableelement">
+        </span>
+        <div tabindex="0" class="z-10 overflow-hidden overflow-y-auto">
+            <div>
+                <nav id="mobile-menu" class="block w-full lg:hidden" role="navigation" aria-label="Main">
+                    <ul class="m-0 list-none p-0">
+                        <f:for each="{mainnavigation}" as="mainnavigationItem">
+                            <f:if condition="!{mainnavigationItem.children} && {mainnavigationItem.data.doktype} != 1775308392">
+                                <f:then>
+                                    <li class="group/navitem relative block">
+                                        <div class="space-between flex">
+                                            <a href="{mainnavigationItem.link}" target="{mainnavigationItem.target}" class="router-link-active router-link-exact-active w-full px-4 py-4 text-xl -outline-offset-2 hover:text-yellow-500 focus-visible:text-yellow-500 focus-visible:outline-yellow-500 focus-visible:outline-solid dark:focus-visible:outline-white"{f:if(condition: mainnavigationItem.current, then:' aria-current="page"')}>
+                                                <span>{mainnavigationItem.title}</span>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </f:then>
+                                <f:else if="{mainnavigationItem.data.doktype} == 1775308392 && {mainnavigationItem.children}">
+                                    <li class="group/navitem relative block">
+                                        <div>
+                                            <button id="bdp-mm-b-{mainnavigationItem.data.uid}"
+                                                    data-tid="{mainnavigationItem.data.uid}"
+                                                    aria-expanded="false"
+                                                    aria-controls="bdp-mm-s-{mainnavigationItem.data.uid}"
+                                                    class="group/mnavbutton w-full cursor-pointer px-4 py-4 text-left text-xl -outline-offset-2 focus-visible:text-yellow-500 focus-visible:outline-yellow-500 focus-visible:outline-solid enabled:text-white enabled:hover:text-yellow-500 enabled:active:text-yellow-500 dark:focus-visible:outline-white">
+                                                {mainnavigationItem.title}
+                                            </button>
+                                        </div>
+                                        <div>
+                                            <div id="bdp-mm-s-{mainnavigationItem.data.uid}" data-sid="{mainnavigationItem.data.uid}" class="m-submenu" style="display: none;">
+                                                <ul aria-labelledby="bdp-mm-b-{mainnavigationItem.data.uid}" class="overflow-hidden">
+                                                    <f:for each="{mainnavigationItem.children}" as="child">
+                                                        <li>
+                                                            <a href="{child.link}" target="{child.target}" class="group/drowpdownitem relative block px-4 py-2.5 leading-none whitespace-nowrap -outline-offset-2 hover:text-yellow-500 hover:duration-200 hover:ease-linear focus:text-yellow-500 focus:duration-200 focus:ease-linear focus-visible:outline-yellow-500 focus-visible:outline-solid dark:hover:text-yellow-light dark:focus:text-yellow-light dark:focus-visible:outline-white"{f:if(condition: child.current, then:' aria-current="page"')}>
+                                                                <span class="block">{child.title}</span>
+                                                                <span class="mt-1 block text-base font-normal text-blue-light group-hover/drowpdownitem:text-yellow-light group-focus/drowpdownitem:text-yellow-light">
+                                                                  Finde die nächste Gruppe
+                                                                </span>
+                                                                <span class="mt-3 block w-full overflow-hidden" aria-hidden="true">
+                                                                    <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/lines/line.svg" height="6px"/>
+                                                                </span>
+                                                            </a>
+                                                        </li>
+                                                    </f:for>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </f:else>
+                            </f:if>
+                        </f:for>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <span class="p-hidden-accessible p-hidden-focusable"
+              tabindex="0" role="presentation" aria-hidden="true"
+              data-p-hidden-accessible="true" data-p-hidden-focusable="true"
+              data-pc-section="lastfocusableelement">
+        </span>
+    </div>
+</div>
+</html>

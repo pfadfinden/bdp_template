@@ -1,0 +1,19 @@
+name: pfadfinden/text-mask
+typeName: pfadfinden_textmask
+group: default
+prefixFields: true
+prefixType: vendor
+fields:
+  - identifier: TYPO3/Header
+    type: Basic
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+  - identifier: mask
+    type: Select
+    renderType: selectSingle
+  - identifier: Pfadfinden/Icon
+    type: Basic
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links

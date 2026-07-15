@@ -1,0 +1,21 @@
+plugin.tx_news {
+    view {
+        templateRootPaths {
+            0 = EXT:news/Resources/Private/Templates/
+            1 = {$plugin.tx_news.view.templateRootPath}
+            10 = EXT:bdp_template/Resources/Private/News/Templates/
+        }
+
+        partialRootPaths {
+            0 = EXT:news/Resources/Private/Partials/
+            1 = {$plugin.tx_news.view.partialRootPath}
+            10 = EXT:bdp_template/Resources/Private/News/Partials/
+        }
+
+        layoutRootPaths {
+            0 = EXT:news/Resources/Private/Layouts/
+            1 = {$plugin.tx_news.view.layoutRootPath}
+            10 = EXT:bdp_template/Resources/Private/News/Layouts/
+        }
+    }
+}
