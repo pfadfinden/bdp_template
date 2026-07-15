@@ -1,6 +1,6 @@
 @import "./Fonts/font-face-jost.css";
 /* custom source to scan in all packages for classes*/
-@import "tailwindcss" source("../../../../../");
+@import "tailwindcss" source("../../../../");
 @import "./variants/forced-colors.css";
 @import "./theme.css";
 
