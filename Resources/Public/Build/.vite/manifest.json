@@ -9,41 +9,41 @@
     ]
   },
   "Resources/Private/Sources/Entry/Headerslider.entry.js": {
-    "file": "Js/Headerslider.entry-RCfejQG6.js",
+    "file": "Js/Headerslider.entry-wZl8IMBi.js",
     "name": "Headerslider.entry",
     "src": "Resources/Private/Sources/Entry/Headerslider.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-Bz6LTTL6.js"
+      "_navigation-Cyfumqw5.js"
     ],
     "css": [
       "Css/Headerslider-CsAyU8sB.css"
     ]
   },
   "Resources/Private/Sources/Entry/InstagramBusiness.entry.js": {
-    "file": "Js/InstagramBusiness.entry-B6cqp3tq.js",
+    "file": "Js/InstagramBusiness.entry-YD5bBBo2.js",
     "name": "InstagramBusiness.entry",
     "src": "Resources/Private/Sources/Entry/InstagramBusiness.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-Bz6LTTL6.js"
+      "_navigation-Cyfumqw5.js"
     ]
   },
   "Resources/Private/Sources/Entry/Main.entry.js": {
-    "file": "Js/Main.entry-MlHaPD-I.js",
+    "file": "Js/Main.entry-DZiY0ZYc.js",
     "name": "Main.entry",
     "src": "Resources/Private/Sources/Entry/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-BI8b2mj-.css"
+      "Css/Main-DujZJSOP.css"
     ]
   },
   "_navigation-BJPu9yXy.css": {
     "file": "Css/navigation-BJPu9yXy.css",
     "src": "_navigation-BJPu9yXy.css"
   },
-  "_navigation-Bz6LTTL6.js": {
-    "file": "Js/navigation-Bz6LTTL6.js",
+  "_navigation-Cyfumqw5.js": {
+    "file": "Js/navigation-Cyfumqw5.js",
     "name": "navigation",
     "css": [
       "Css/navigation-BJPu9yXy.css"

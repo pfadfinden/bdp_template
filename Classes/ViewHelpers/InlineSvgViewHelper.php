@@ -37,6 +37,7 @@ class InlineSvgViewHelper extends AbstractViewHelper
 
     /**
      * @return string
+     * @throws \Exception
      */
     public function render(): string {
         $src = (string)$this->arguments['src'];

@@ -3,7 +3,7 @@
     --font-sans: "Jost", -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Ubuntu, Helvetica Neue, sans-serif;
 
     --color-blue-light: #a9bbce;
-    --color-kothe: #222423;
+    --color-kohte: #222423;
     --color-kluft: #0b2341;
     --color-lagerplatzgruen: #009d3c;
     --color-waldgruen: #006c54;
@@ -14,6 +14,8 @@
     --color-morgenkreis: #ef859d;
     --color-yellow-light: #ffe894;
     --color-yellow-dark: #8b7417;
+    --color-red-light: #d5a4ac;
+    --color-red-dark: #52111b;
 
     --color-blue-50: oklch(0.94 0.027 267.55);
     --color-blue-100: oklch(0.879 0.055 267.24);

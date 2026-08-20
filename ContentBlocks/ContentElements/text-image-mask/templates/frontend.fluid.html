@@ -1,0 +1,78 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
+    <f:case value="extra-small"> pt-4</f:case>
+    <f:case value="small"> pt-8</f:case>
+    <f:case value="medium"> pt-12</f:case>
+    <f:case value="large"> pt-16</f:case>
+    <f:case value="extra-large"> pt-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
+    <f:case value="extra-small"> pb-4</f:case>
+    <f:case value="small"> pb-8</f:case>
+    <f:case value="medium"> pb-12</f:case>
+    <f:case value="large"> pb-16</f:case>
+    <f:case value="extra-large"> pb-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="layout"><f:switch expression="{data.layout}">
+    <f:case value="1"> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:case>
+    <f:case value="2"> bg-blue-500 text-white dark:bg-blue-500 dark:text-white</f:case>
+    <f:case value="3"> bg-red-500 text-white dark:bg-red-500 dark:text-white</f:case>
+    <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="mask"><f:switch expression="{data.mask}">
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_007.svg)]</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_007.svg)]</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_007.svg)]</f:defaultCase>
+</f:switch></f:variable>
+
+<div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
+    <div class="relative min-h-[500px] xl:min-h-[560px]">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-20 xl:gap-30 xl:gap-40 z-2 3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 pt-4 pb-6 lg:pt-14 lg:pb-16 xl:pt-18 xl:pb-20">
+            <div class="2xl:pr-10 3xl:pr-20">
+                <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
+                <f:if condition="{header}">
+                    <h2 class="text-3xl font-semibold">{header}</h2>
+                </f:if>
+                <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
+                <f:if condition="{bodytext}">
+                    <f:then>
+                        <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 xl:[&_p]:mt-6">
+                            {bodytext}
+                        </div>
+                    </f:then>
+                </f:if>
+            </div>
+            <f:if condition="{data.image.0}">
+                <div class="pt-2">
+                    <figure class="relative">
+                        <picture class="block relative w-full">
+                            <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '450c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'webp')} 2x" type="image/webp">
+                            <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '450c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1800c', fileExtension: 'webp')} 2x" type="image/webp">
+                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1800c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                            <f:image image="{data.image.0}" width="500c" height="450c" loading="lazy" class="w-full h-auto max-w-full" />
+                        </picture>
+                        <f:if condition="{data.image.0.properties.copyright}">
+                            <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
+                        </f:if>
+                        <f:if condition="{data.image.0.description}">
+                            <figcaption class="image-caption">
+                                {file.description -> f:format.nl2br()}
+                            </figcaption>
+                        </f:if>
+                    </figure>
+                </div>
+            </f:if>
+        </div>
+        <div class="z-1 absolute left-0 right-0 bottom-0 top-0 {layout} {mask} mask-size-[cover] md:mask-size-[auto_100%] mask-position-[top_0px_right_-20rem] sm:mask-top-right mask-no-repeat">
+        </div>
+    </div>
+</div>
+</html>
