@@ -1,0 +1,22 @@
+name: pfadfinden/text-images-mask
+typeName: pfadfinden_textimagesmask
+group: default
+prefixFields: true
+prefixType: vendor
+fields:
+  - identifier: TYPO3/Header
+    type: Basic
+  - identifier: bodytext
+    useExistingField: true
+    enableRichtext: true
+  - identifier: image
+    useExistingField: true
+    maxitems: 2
+    minitems: 2
+  - identifier: mask
+    type: Select
+    renderType: selectSingle
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+

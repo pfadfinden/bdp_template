@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file datatype="plaintext" original="labels.xlf" source-language="en" date="2026-08-21T10:19:02+00:00" product-name="pfadfinden/text-images-mask">
+    <header/>
+    <body>
+      <trans-unit id="title">
+        <source>Text und zwei Bilder rechts mit Anschnitt</source>
+      </trans-unit>
+      <trans-unit id="description">
+        <source>Description for Content Element pfadfinden/text-images-mask</source>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

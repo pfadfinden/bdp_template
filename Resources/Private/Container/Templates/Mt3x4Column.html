@@ -22,18 +22,18 @@
 </f:switch></f:variable>
 <div id="c-{data.uid}" class="{layout}{spaceBefore}{spaceAfter}">
     <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20">
-        <div class="flex flex-wrap -mx-2 lg:-mx-5 xl:-mx-10 3xl:-mx-12.5">
-            <div class="w-full lg:w-1/3 px-2 lg:px-5 xl:px-10 3xl:px-12.5">
+        <div class="flex flex-wrap -mx-2 md:-mx-5 xl:-mx-10 3xl:-mx-12.5">
+            <div class="w-full md:w-1/3 px-2 lg:px-5 xl:px-10 3xl:px-12.5">
                 <f:for each="{content.110}" as="record">
                     {record -> f:render.record()}
                 </f:for>
             </div>
-            <div class="flex flex-nowrap lg:justify-center w-full lg:w-1/3 px-2 lg:px-5 xl:px-10 3xl:px-12.5">
+            <div class="flex flex-nowrap lg:justify-center w-full md:w-1/3 px-2 md:px-5 xl:px-10 3xl:px-12.5">
                 <f:for each="{content.120}" as="record">
                     {record -> f:render.record()}
                 </f:for>
             </div>
-            <div class="flex flex-nowrap lg:justify-end w-full lg:w-1/3 px-2 lg:px-5 xl:px-10 3xl:px-12.5">
+            <div class="flex flex-nowrap lg:justify-end w-full md:w-1/3 px-2 md:px-5 xl:px-10 3xl:px-12.5">
                 <f:for each="{content.130}" as="record">
                     {record -> f:render.record()}
                 </f:for>

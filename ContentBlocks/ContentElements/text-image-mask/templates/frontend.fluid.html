@@ -51,12 +51,12 @@
             </div>
             <f:if condition="{data.image.0}">
                 <div class="pt-2">
-                    <figure class="relative">
+                    <figure class="relative w-full max-w-[720px]">
                         <picture class="block relative w-full">
                             <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '450c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'webp')} 2x" type="image/webp">
                             <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '450c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'jpg')} 2x" type="image/jpeg">
-                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1800c', fileExtension: 'webp')} 2x" type="image/webp">
-                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '900c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1800c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '720c', height: '648c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1440c', height: '1296c', fileExtension: 'webp')} 2x" type="image/webp">
+                            <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '720c', height: '648c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1440c', height: '1296c', fileExtension: 'jpg')} 2x" type="image/jpeg">
                             <f:image image="{data.image.0}" width="500c" height="450c" loading="lazy" class="w-full h-auto max-w-full" />
                         </picture>
                         <f:if condition="{data.image.0.properties.copyright}">

@@ -6,8 +6,9 @@ let activeSubmenu = '';
 
 function mobileSideNavigation(entry) {
     const mobileSidebar = document.getElementById('mobile-sidebar');
+    const mobileMenuToggler = document.getElementById('mobile-main-menu-toggle');
     if (window.innerWidth <= 1024) {
-        const open = mobileSidebar.classList.contains('hidden');
+        const open = !mobileSidebar.classList.contains('hidden');
         if (open) {
             document.querySelector('body').style.setProperty('overflow', 'hidden');
         }
