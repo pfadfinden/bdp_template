@@ -27,11 +27,10 @@
     <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="mask"><f:switch expression="{data.mask}">
-    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_005.svg)]</f:case>
-    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_005.svg)]</f:case>
-    <f:defaultCase>mask-[url(Images/clips/anschnitt_005.svg)]</f:defaultCase>
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_009.svg)]</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_009.svg)]</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_009.svg)]</f:defaultCase>
 </f:switch></f:variable>
-
 <f:variable name="icon"><f:switch expression="{data.icon}">
     <f:case value="kohte">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kohte.svg</f:case>
     <f:case value="feuer">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/feuer.svg</f:case>
@@ -51,45 +50,60 @@
 </f:switch></f:variable>
 
 <div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
-    <div class="relative{layout} min-h-[500px] xl:min-h-[560px] {mask} mask-size-[cover] md:mask-size-[auto_100%] mask-position-[top_0px_right_-10rem] sm:mask-top-right mask-no-repeat">
-        <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 pt-2 pb-6 lg:pt-12 lg:pb-16 xl:pt-16 xl:pb-20">
+    <div class="relative grid grid-cols-12 gap-4 min-h-[500px] xl:min-h-[560px] {layout}">
+        <div class="col-span-12 sm:col-span-6 md:col-span-4 gap-4 z-2 3xl:pl-25 relative mx-auto w-full px-3 md:pl-5 lg:pl-10 xl:pl-20 pt-4 pb-6 lg:pt-14 xl:pt-18">
             <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
             <f:if condition="{header}">
-                <h2 class="mt-3 text-3xl font-semibold">{header}</h2>
+                <h2 class="text-3xl font-semibold">{header}</h2>
             </f:if>
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">
                 <f:then>
-                    <div class="text-md 2xl:text-lg xl:pt-4 w-full max-w-1/2 md:max-w-6/10 xl:max-w-1/2 [&_p]:mt-4 xl:[&_p]:mt-6">
+                    <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 xl:[&_p]:mt-6">
                         {bodytext}
                     </div>
                 </f:then>
+                </f:if>
+            <f:if condition="{icon}">
+                <f:variable name="icon-color-class"><f:switch expression="{data.icon_color}">
+                    <f:case value="blue-500">text-blue-500</f:case>
+                    <f:case value="yellow-500">text-yellow-500</f:case>
+                    <f:case value="red-500">text-red-500</f:case>
+                    <f:case value="blue-light">text-blue-light</f:case>
+                    <f:case value="kluft">text-kluft</f:case>
+                    <f:case value="yellow-light">text-yellow-light</f:case>
+                    <f:case value="yellow-dark">text-yellow-dark</f:case>
+                    <f:case value="red-light">text-red-light</f:case>
+                    <f:case value="red-dark">text-red-dark</f:case>
+                    <f:case value="lagerplatzgruen">text-lagerplatzgruen</f:case>
+                    <f:case value="waldgruen">text-waldgruen</f:case>
+                    <f:case value="kohte">text-kohte</f:case>
+                    <f:case value="glut">text-glut</f:case>
+                    <f:case value="lagerfeuerorange">text-lagerfeuerorange</f:case>
+                    <f:case value="morgenkreis">text-morgenkreis</f:case>
+                    <f:case value="internationalerabend">text-internationalerabend</f:case>
+                    <f:case value="singekreislila">text-singekreislila</f:case>
+                    <f:defaultCase></f:defaultCase>
+                </f:switch></f:variable>
+                <div class="mt-10 {icon-color-class} dark:text-white">
+                    <bdp:inlineSvg src="{icon}" class="h-25 sm:h-32" width="128" height="128" aria-hidden="true" />
+                </div>
+            </f:if>
+        </div>
+        <div class="col-span-12 sm:col-span-6 md:col-span-8 xl:col-span-7 xl:col-start-6 relative {mask} mask-cover mask-bottom-left mask-no-repeat min-h-[350px]">
+            <f:if condition="{data.image.0}">
+                <figure class="relative h-full">
+                    <picture class="block relative w-full h-full">
+                        <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <f:image image="{data.image.0}" width="500c" height="470c" loading="lazy" class="w-full h-full block absolute object-cover" />
+                    </picture>
+                    <f:if condition="{data.image.0.properties.copyright}">
+                        <div class="text-sm absolute top-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
+                    </f:if>
+                </figure>
             </f:if>
         </div>
     </div>
-    <f:if condition="{icon}">
-        <f:variable name="icon-color-class"><f:switch expression="{data.icon_color}">
-            <f:case value="yellow-500">text-yellow-500</f:case>
-            <f:case value="red-500">text-red-500</f:case>
-            <f:case value="blue-light">text-blue-light</f:case>
-            <f:case value="kluft">text-kluft</f:case>
-            <f:case value="yellow-light">text-yellow-light</f:case>
-            <f:case value="yellow-dark">text-yellow-dark</f:case>
-            <f:case value="red-light">text-red-light</f:case>
-            <f:case value="red-dark">text-red-dark</f:case>
-            <f:case value="lagerplatzgruen">text-lagerplatzgruen</f:case>
-            <f:case value="waldgruen">text-waldgruen</f:case>
-            <f:case value="kohte">text-kohte</f:case>
-            <f:case value="glut">text-glut</f:case>
-            <f:case value="lagerfeuerorange">text-lagerfeuerorange</f:case>
-            <f:case value="morgenkreis">text-morgenkreis</f:case>
-            <f:case value="internationalerabend">text-internationalerabend</f:case>
-            <f:case value="singekreislila">text-singekreislila</f:case>
-            <f:defaultCase>text-blue-500</f:defaultCase>
-        </f:switch></f:variable>
-        <div class="absolute right-2 sm:right-10 bottom-[15%] {icon-color-class} dark:text-white">
-            <bdp:inlineSvg src="{icon}" class="h-25 sm:h-32" width="128" height="128" aria-hidden="true" />
-        </div>
-    </f:if>
 </div>
 </html>
