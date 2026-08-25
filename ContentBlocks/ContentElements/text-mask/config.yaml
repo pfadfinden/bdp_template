@@ -9,9 +9,8 @@ fields:
   - identifier: bodytext
     useExistingField: true
     enableRichtext: true
-  - identifier: mask
-    type: Select
-    renderType: selectSingle
+  - identifier: Pfadfinden/Mask
+    type: Basic
   - identifier: Pfadfinden/Icon
     type: Basic
 basics:

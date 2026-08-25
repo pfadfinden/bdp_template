@@ -27,13 +27,13 @@
     <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="mask"><f:switch expression="{data.mask}">
-    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_008.svg)]</f:case>
-    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_008.svg)]</f:case>
-    <f:defaultCase>mask-[url(Images/clips/anschnitt_008.svg)]</f:defaultCase>
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_005/anschnitt_005_variant_01.svg)]</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_005/anschnitt_005_variant_01.svg)]</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_005/anschnitt_005_variant_01.svg)]</f:defaultCase>
 </f:switch></f:variable>
 
 <div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
-    <div class="relative min-h-[500px] xl:min-h-[560px]">
+    <div class="relative min-h-[460px] xl:min-h-[560px]">
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-20 xl:gap-30 xl:gap-40 z-2 3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 pt-4 pb-6 lg:pt-14 lg:pb-16 xl:pt-18 xl:pb-20">
             <div class="pr-18 sm:pr-0 2xl:pr-10 3xl:pr-20">
                 <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
@@ -51,42 +51,38 @@
             </div>
             <div class="grid grid-cols-2 sm:grid-cols-1 gap-4 xl:gap-10 pr-8 sm:pr-18 md:pr-20 lg:pr-25 xl:pr-30 sm:mt-2">
                 <f:if condition="{data.image.0}">
-                        <f:if condition="{data.image.0}">
-                            <figure class="relative w-full max-w-[500px]">
-                                <picture class="block relative w-full">
-                                    <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '350c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '700c', fileExtension: 'webp')} 2x" type="image/webp">
-                                    <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '350c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '700c', fileExtension: 'jpg')} 2x" type="image/jpeg">
-                                    <f:image image="{data.image.0}" width="500c" height="350c" loading="lazy" class="w-full h-auto max-w-[500px]" />
-                                </picture>
-                                <f:if condition="{data.image.0.properties.copyright}">
-                                    <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
-                                </f:if>
-                                <f:if condition="{data.image.0.description}">
-                                    <figcaption class="image-caption">
-                                        {file.description -> f:format.nl2br()}
-                                    </figcaption>
-                                </f:if>
-                            </figure>
-                        </f:if>
-                </f:if>
-                <f:if condition="{data.image.1}">
-                    <f:if condition="{data.image.1}">
-                        <figure class="relative w-full max-w-[500px]">
+                        <figure class="relative w-full max-w-[480px]">
                             <picture class="block relative w-full">
-                                <source srcset="{f:uri.image(image: data.image.1, width: '500c', height: '350c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.1, width: '1000c', height: '700c', fileExtension: 'webp')} 2x" type="image/webp">
-                                <source srcset="{f:uri.image(image: data.image.1, width: '500c', height: '350c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.1, width: '1000c', height: '700c', fileExtension: 'jpg')} 2x" type="image/jpeg">
-                                <f:image image="{data.image.1}" width="500c" height="350c" loading="lazy" class="w-full h-auto max-w-[500px]" />
+                                <source srcset="{f:uri.image(image: data.image.0, width: '480c', height: '320c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '960c', height: '640c', fileExtension: 'webp')} 2x" type="image/webp">
+                                <source srcset="{f:uri.image(image: data.image.0, width: '480c', height: '320c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '960c', height: '640c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                                <f:image image="{data.image.0}" width="480c" height="320c" loading="lazy" class="w-full h-auto max-w-[480px]" />
                             </picture>
-                            <f:if condition="{data.image.1.properties.copyright}">
-                                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.1.properties.copyright}</div>
+                            <f:if condition="{data.image.0.properties.copyright}">
+                                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {data.image.0.properties.copyright}</div>
                             </f:if>
-                            <f:if condition="{data.image.1.description}">
+                            <f:if condition="{data.image.0.description}">
                                 <figcaption class="image-caption">
                                     {file.description -> f:format.nl2br()}
                                 </figcaption>
                             </f:if>
                         </figure>
-                    </f:if>
+                </f:if>
+                <f:if condition="{data.image.1}">
+                    <figure class="relative w-full max-w-[480px]">
+                        <picture class="block relative w-full">
+                            <source srcset="{f:uri.image(image: data.image.1, width: '480c', height: '320c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.1, width: '960c', height: '640c', fileExtension: 'webp')} 2x" type="image/webp">
+                            <source srcset="{f:uri.image(image: data.image.1, width: '480c', height: '320c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.1, width: '960c', height: '640c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                            <f:image image="{data.image.1}" width="480c" height="320c" loading="lazy" class="w-full h-auto max-w-[480px]" />
+                        </picture>
+                        <f:if condition="{data.image.1.properties.copyright}">
+                            <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {data.image.1.properties.copyright}</div>
+                        </f:if>
+                        <f:if condition="{data.image.1.description}">
+                            <figcaption class="image-caption">
+                                {file.description -> f:format.nl2br()}
+                            </figcaption>
+                        </f:if>
+                    </figure>
                 </f:if>
             </div>
         </div>

@@ -34,7 +34,7 @@
                 <f:image image="{data.image.0}" width="500c" height="350c" loading="lazy" class="w-full h-auto max-w-full" />
             </picture>
             <f:if condition="{data.image.0.properties.copyright}">
-                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
+                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {data.image.0.properties.copyright}</div>
             </f:if>
             <f:if condition="{data.image.0.description}">
                 <figcaption class="image-caption">

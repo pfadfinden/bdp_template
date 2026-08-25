@@ -13,9 +13,8 @@ fields:
     useExistingField: true
     maxitems: 1
     minitems: 1
-  - identifier: mask
-    type: Select
-    renderType: selectSingle
+  - identifier: Pfadfinden/Mask
+    type: Basic
 basics:
   - TYPO3/Appearance
   - TYPO3/Links

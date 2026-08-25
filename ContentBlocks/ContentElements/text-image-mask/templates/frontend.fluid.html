@@ -27,9 +27,9 @@
     <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="mask"><f:switch expression="{data.mask}">
-    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_007.svg)]</f:case>
-    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_007.svg)]</f:case>
-    <f:defaultCase>mask-[url(Images/clips/anschnitt_007.svg)]</f:defaultCase>
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_004/anschnitt_004_variant_01.svg)]</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_004/anschnitt_004_variant_01.svg)]</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_004/anschnitt_004_variant_01.svg)]</f:defaultCase>
 </f:switch></f:variable>
 
 <div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
@@ -60,7 +60,7 @@
                             <f:image image="{data.image.0}" width="500c" height="450c" loading="lazy" class="w-full h-auto max-w-full" />
                         </picture>
                         <f:if condition="{data.image.0.properties.copyright}">
-                            <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm">© {data.image.0.properties.copyright}</div>
+                            <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {data.image.0.properties.copyright}</div>
                         </f:if>
                         <f:if condition="{data.image.0.description}">
                             <figcaption class="image-caption">

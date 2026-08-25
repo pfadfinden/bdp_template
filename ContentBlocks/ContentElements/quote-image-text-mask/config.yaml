@@ -1,9 +1,11 @@
-name: pfadfinden/text-images-mask
-typeName: pfadfinden_textimagesmask
+name: pfadfinden/quote-image-text-mask
+typeName: pfadfinden_quoteimagetextmask
 group: default
 prefixFields: true
 prefixType: vendor
 fields:
+  - identifier: Pfadfinden/Quote
+    type: Basic
   - identifier: TYPO3/Header
     type: Basic
   - identifier: bodytext
@@ -11,11 +13,12 @@ fields:
     enableRichtext: true
   - identifier: image
     useExistingField: true
-    maxitems: 2
-    minitems: 2
+    maxitems: 1
+    minitems: 1
   - identifier: Pfadfinden/Mask
+    type: Basic
+  - identifier: Pfadfinden/Icon
     type: Basic
 basics:
   - TYPO3/Appearance
   - TYPO3/Links
-
