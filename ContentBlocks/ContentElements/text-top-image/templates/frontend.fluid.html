@@ -50,7 +50,7 @@
     <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
     <f:if condition="{bodytext}">
         <f:then>
-            <div class="text-md mt-3">
+            <div class="text-md 2xl:text-lg mt-3 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
                 {bodytext}
             </div>
         </f:then>

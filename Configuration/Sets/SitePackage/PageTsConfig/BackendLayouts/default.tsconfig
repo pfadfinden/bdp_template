@@ -31,7 +31,7 @@ mod {
                                         colPos = 0
                                         identifier = main
                                         disallowed {
-                                            CType = pfadfinden_headearslider, pfadfinden_headerblock
+                                            CType = pfadfinden_headearslider, pfadfinden_headerblock, textpic, textmedia, image
                                         }
                                     }
                                 }

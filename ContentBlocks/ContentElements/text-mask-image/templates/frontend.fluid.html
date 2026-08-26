@@ -58,12 +58,10 @@
             </f:if>
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">
-                <f:then>
-                    <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 xl:[&_p]:mt-6">
-                        {bodytext}
-                    </div>
-                </f:then>
-                </f:if>
+                <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 xl:[&_p]:mt-6">
+                    {bodytext}
+                </div>
+            </f:if>
             <f:if condition="{icon}">
                 <f:variable name="icon-color-class"><f:switch expression="{data.icon_color}">
                     <f:case value="blue-500">text-blue-500</f:case>

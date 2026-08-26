@@ -38,11 +38,15 @@ TCEFORM {
             removeItems = left,right
         }
         frame_class {
+            disabled = 1
             removeItems = ruler-before, ruler-after, indent, indent-left, indent-right, none
             types {
+                text {
+                    removeItems = ruler-before, ruler-after, indent, indent-left, indent-right,
+                    disabled = 0
+                }
             }
         }
-        frame_class.disabled = 1
         pi_flexform {
             ttaddress_listview {
                 sDISPLAY {

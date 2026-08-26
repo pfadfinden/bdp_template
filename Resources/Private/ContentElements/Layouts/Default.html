@@ -1,88 +1,32 @@
-<f:spaceless>
-    <f:variable name="backgroundColor"><f:switch expression="{data.layout}">
-        <f:case value="1"> bg-zentrum-light-gray</f:case>
-        <f:case value="2"> bg-zentrum-black text-white</f:case>
-        <f:case value="3"> bg-zentrum-blue</f:case>
-        <f:case value="4"> bg-zentrum-gray</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
-        <f:case value="extra-small"> pt-4</f:case>
-        <f:case value="small"> pt-8</f:case>
-        <f:case value="medium"> pt-12</f:case>
-        <f:case value="large"> pt-16</f:case>
-        <f:case value="extra-large"> pt-32</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceBeforeTablet"><f:switch expression="{data.tablet_space_before_class}">
-        <f:case value="extra-small"> md:pt-4</f:case>
-        <f:case value="small"> md:pt-8</f:case>
-        <f:case value="medium"> md:pt-12</f:case>
-        <f:case value="large"> md:pt-16</f:case>
-        <f:case value="extra-large"> md:pt-32</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceBeforeDesktop"><f:switch expression="{data.desktop_space_before_class}">
-        <f:case value="extra-small"> lg:pt-4</f:case>
-        <f:case value="small"> lg:pt-8</f:case>
-        <f:case value="medium"> lg:pt-12</f:case>
-        <f:case value="large"> lg:pt-16</f:case>
-        <f:case value="extra-large"> lg:pt-32 2xl:pt-40</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
-        <f:case value="extra-small"> pb-4</f:case>
-        <f:case value="small"> pb-8</f:case>
-        <f:case value="medium"> pb-12</f:case>
-        <f:case value="large"> pb-16</f:case>
-        <f:case value="extra-large"> pb-32</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceAfterTablet">
-        <f:switch expression="{data.tablet_space_after_class}">
-        <f:case value="extra-small"> md:pb-4</f:case>
-        <f:case value="small"> md:pb-8</f:case>
-        <f:case value="medium"> md:pb-12</f:case>
-        <f:case value="large"> md:pb-16</f:case>
-        <f:case value="extra-large"> md:pb-32</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:variable name="spaceAfterDesktop"><f:switch expression="{data.desktop_space_after_class}">
-        <f:case value="extra-small"> lg:pb-4</f:case>
-        <f:case value="small"> lg:pb-8</f:case>
-        <f:case value="medium"> lg:pb-12</f:case>
-        <f:case value="large"> lg:pb-16</f:case>
-        <f:case value="extra-large"> lg:pb-32 2xl:pb-40</f:case>
-        <f:defaultCase></f:defaultCase>
-    </f:switch></f:variable>
-    <f:if condition="{data.layout} != none">
-        <f:then>
-            <div id="item-{data.uid}" class="zt-box zt-box-{data.CType} group/bg{backgroundColor}{spaceBefore}{spaceBeforeTablet}{spaceBeforeDesktop}{spaceAfter}{spaceAfterTablet}{spaceAfterDesktop}">
-                <f:if condition="{data._LOCALIZED_UID}">
-                    <a id="item-{data._LOCALIZED_UID}"></a>
-                </f:if>
-                <f:render section="Before" optional="true">
-                    <f:render partial="DropIn/Before/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="Header" optional="true">
-                    <f:render partial="Header/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="Main" optional="true" />
-                <f:render section="Footer" optional="true">
-                    <f:render partial="Footer/All" arguments="{_all}" />
-                </f:render>
-                <f:render section="After" optional="true">
-                    <f:render partial="DropIn/After/All" arguments="{_all}" />
-                </f:render>
-            </div>
-        </f:then>
-        <f:else>
-            <a id="item{data.uid}"></a>
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
+    <f:case value="extra-small"> pt-4</f:case>
+    <f:case value="small"> pt-8</f:case>
+    <f:case value="medium"> pt-12</f:case>
+    <f:case value="large"> pt-16</f:case>
+    <f:case value="extra-large"> pt-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
+    <f:case value="extra-small"> pb-4</f:case>
+    <f:case value="small"> pb-8</f:case>
+    <f:case value="medium"> pb-12</f:case>
+    <f:case value="large"> pb-16</f:case>
+    <f:case value="extra-large"> pb-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="layout"><f:switch expression="{data.layout}">
+    <f:case value="1"> bg-yellow-500 text-blue-500 dark:bg-blue-500 dark:text-yellow-500</f:case>
+    <f:case value="2"> bg-blue-500 text-yellow-500 dark:bg-blue-500 dark:text-white</f:case>
+    <f:case value="2"> bg-blue-500 text-yellow-500 dark:bg-blue-500 dark:text-white</f:case>
+    <f:case value="3"> bg-red-500 text-white dark:bg-red-500 dark:text-white</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:if condition="{data.frame_class} != none">
+    <f:then>
+        <div id="c-{data.uid}" class="relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 3xl:px-25{spaceBefore}{spaceAfter}{layout}">
             <f:if condition="{data._LOCALIZED_UID}">
-                <a id="item{data._LOCALIZED_UID}"></a>
-            </f:if>
-            <f:if condition="{data.space_before_class} || {data.tablet_space_before_class} || {data.desktop_space_before_class}">
-                <div class="{spaceBefore}{spaceBeforeTablet}{spaceBeforeDesktop}"></div>
+                <a id="c-{data._LOCALIZED_UID}"></a>
             </f:if>
             <f:render section="Before" optional="true">
                 <f:render partial="DropIn/Before/All" arguments="{_all}" />
@@ -97,9 +41,33 @@
             <f:render section="After" optional="true">
                 <f:render partial="DropIn/After/All" arguments="{_all}" />
             </f:render>
-            <f:if condition="{data.space_after_class} || {data.tablet_space_after_class} || {data.desktop_space_after_class}">
-                <div class="{spaceAfter}{spaceAfterTablet}{spaceAfterDesktop}"></div>
-            </f:if>
-        </f:else>
-    </f:if>
-</f:spaceless>
+        </div>
+
+    </f:then>
+    <f:else>
+        <a id="c-{data.uid}"></a>
+        <f:if condition="{data._LOCALIZED_UID}">
+            <a id="c-{data._LOCALIZED_UID}"></a>
+        </f:if>
+        <f:if condition="{spaceBefore}">
+            <div class="{spaceBefore}"></div>
+        </f:if>
+        <f:render section="Before" optional="true">
+            <f:render partial="DropIn/Before/All" arguments="{_all}" />
+        </f:render>
+        <f:render section="Header" optional="true">
+            <f:render partial="Header/All" arguments="{_all}" />
+        </f:render>
+        <f:render section="Main" optional="true" />
+        <f:render section="Footer" optional="true">
+            <f:render partial="Footer/All" arguments="{_all}" />
+        </f:render>
+        <f:render section="After" optional="true">
+            <f:render partial="DropIn/After/All" arguments="{_all}" />
+        </f:render>
+        <f:if condition="{spaceAfter}">
+            <div class="{spaceAfter}"></div>
+        </f:if>
+    </f:else>
+</f:if>
+</html>

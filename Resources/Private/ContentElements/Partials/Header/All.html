@@ -1,23 +1,29 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
 <f:if condition="{data.header_layout} != 100">
-    <f:if condition="{data.header} || {data.subheader} || {data.date}">
+    <f:variable name="header">{record -> f:render.text(field: 'header', optional: true)}</f:variable>
+    <f:variable name="subheader">{record -> f:render.text(field: 'subheader', optional: true)}</f:variable>
+    <f:variable name="headerPosition"><f:switch expression="{data.header_position}">
+        <f:case value="left"> text-left</f:case>
+        <f:case value="center"> text-center</f:case>
+        <f:case value="right"> text-right</f:case>
+        <f:defaultCase></f:defaultCase>
+    </f:switch></f:variable>
+    <f:if condition="{header} || {subheader} || {data.date}">
         <header>
             <f:render partial="Header/Header" arguments="{
-				header: data.header,
-				layout: data.header_layout,
-				positionClass: '{f:if(condition: data.header_position, then: \' zt-headline-{data.header_position}\')}',
-				color: '{f:if(condition: data.header_color, then: \' zt-headline-color-{data.header_color}\')}',
-				design: data.header_design,
-				link: '{f:if(condition: noHeaderLink, then: \'\', else: data.header_link)}',
-				default: settings.defaultHeaderType}" />
+                header: header,
+                layout: data.header_layout,
+                positionClass: '{f:if(condition: headerPosition, then: \'{headerPosition}\')}',
+                link: data.header_link,
+                default: settings.defaultHeaderType}" />
             <f:render partial="Header/SubHeader" arguments="{
-				subheader: data.subheader,
-				layout: data.header_layout,
-				positionClass: '{f:if(condition: data.header_position, then: \' zt-headline-{data.header_position}\')}',
-				default: settings.defaultHeaderType}" />
+                subheader: subheader,
+                layout: data.header_layout,
+                positionClass: '{f:if(condition: headerPosition, then: \'{headerPosition}\')}',
+                default: settings.defaultHeaderType}" />
             <f:render partial="Header/Date" arguments="{
-				date: data.date,
-				positionClass: '{f:if(condition: data.header_position, then: \' zt-headline-{data.header_position}\')}'}" />
+                date: data.date,
+                positionClass: '{f:if(condition: headerPosition, then: \'{headerPosition}\')}'}" />
         </header>
     </f:if>
 </f:if>

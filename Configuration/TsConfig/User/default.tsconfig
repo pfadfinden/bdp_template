@@ -1,0 +1,2 @@
+# Disable and remove the button 'Select & upload files'
+setup.override.edit_docModuleUpload = 0
