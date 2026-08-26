@@ -1,23 +1,20 @@
-name: pfadfinden/small-cta-image
-typeName: pfadfinden_smallctaimage
+name: pfadfinden/text-left-image
+typeName: pfadfinden_textleftimage
 group: default
 prefixFields: true
 prefixType: vendor
 fields:
   - identifier: TYPO3/Header
     type: Basic
-  - identifier: subheader
-    useExistingField: true
   - identifier: bodytext
     useExistingField: true
     enableRichtext: true
+  - identifier: Pfadfinden/Link
+    type: Basic
   - identifier: image
     useExistingField: true
     maxitems: 1
     minitems: 1
-  - identifier: Pfadfinden/Mask
-    type: Basic
 basics:
   - TYPO3/Appearance
   - TYPO3/Links
-
