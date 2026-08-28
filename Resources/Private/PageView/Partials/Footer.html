@@ -3,12 +3,25 @@
       xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
+<f:variable name="marginMask">
+    <f:if condition="{settings.page.infotype} !== 'bund' && {settings.page.logo} !== '' && {settings.page.logolabel} !== ''">
+        <f:then>lg:-mt-56</f:then>
+        <f:else>lg:-mt-30</f:else>
+    </f:if>
+</f:variable>
 <footer id="footer" class="pt-20 text-blue-500 dark:text-white forced-colors:border-t">
-    <section class="relative z-2 text-base lg:min-h-45">
+    <section class="relative z-1 text-base lg:min-h-45">
         <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20">
             <div class="grid grid-cols-1 grid-rows-2 md:grid-cols-2 lg:grid-cols-3">
                 <div class="order-1 col-span-1 row-span-1 lg:row-span-2">
-                    <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg" class="h-16" aria-label="Pfadfinden Logo" width="238" height="64" aria-hidden="false"/>
+                    <f:if condition="{settings.page.infotype} !== 'bund' && {settings.page.logo} !== '' && {settings.page.logolabel} !== ''">
+                        <f:then>
+                            <bdp:inlineSvg src="{settings.page.logo}" class="h-16" aria-label="{settings.page.logolabel}" aria-hidden="false"/>
+                        </f:then>
+                        <f:else>
+                            <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg" class="h-16" aria-label="Pfadfinden Logo" width="238" height="64" aria-hidden="false"/>
+                        </f:else>
+                    </f:if>
                 </div>
                 <div
                     class="order-2 col-span-1 row-span-1 pt-12 md:order-3 md:pt-4 lg:order-2 lg:row-span-2"
@@ -39,6 +52,11 @@
                 <div
                     class="order-3 col-span-1 row-span-2 pt-10 pb-10 md:order-2 md:justify-self-end md:pt-2 lg:order-3 lg:pt-6 lg:pb-0"
                 >
+                    <f:if condition="{settings.page.infotype} !== 'bund' && {settings.page.logo} !== '' && {settings.page.logolabel} !== ''">
+                        <div class="pb-6 md:pb-14">
+                            <bdp:inlineSvg src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg" class="h-16" aria-label="Pfadfinden Logo" width="238" height="64" aria-hidden="false"/>
+                        </div>
+                    </f:if>
                     <div class="text-lg font-bold">Bund der Pfadfinder*innen e.V. (BdP)</div>
                     <div class="text-lg font-bold">{settings.contact.name}</div>
                     <div>{settings.contact.street} {settings.contact.housenumber} <br />{settings.contact.postcode} {settings.contact.city}, DE</div>
@@ -65,7 +83,7 @@
         </div>
     </section>
     <section
-        class="2x:aspect-1760/380 relative z-1 h-auto w-full bg-blue-500 mask-[url(Images/clips/footer.svg)] mask-size-[100%_auto] mask-top-left mask-no-repeat text-yellow-500 lg:-mt-30 lg:aspect-1760/464 xl:aspect-1760/380 dark:bg-black dark:text-white"
+        class="2x:aspect-1760/380 relative z-2 h-auto w-full bg-blue-500 mask-[url(Images/clips/footer.svg)] mask-size-[100%_auto] mask-top-left mask-no-repeat text-yellow-500 {marginMask} lg:aspect-1760/464 xl:aspect-1760/380 dark:bg-black dark:text-white"
     >
         <div class="3xl:px-25 relative mx-auto w-full px-3 md:px-5 lg:px-10 xl:px-20 pt-14 md:pt-18 lg:pt-30">
             <nav aria-label="Footer">

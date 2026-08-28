@@ -32,17 +32,31 @@
     <div
         class="3xl:pl-25 relative mx-auto flex w-full px-3 text-blue-500 md:px-5 md:py-0 lg:px-10 xl:pl-20 bg-white dark:bg-kohte dark:text-white forced-colors:border-y"
     >
-        <f:link.page pageUid="{site.rootPageId}" class="focus-visible:outline-kluft z-1 mr-0 block h-20 w-52 flex-none py-3 focus-visible:outline-solid lg:mr-6 dark:focus-visible:outline-white">
-            <bdp:inlineSvg
-                src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg"
-                aria-label="Logo des Bund der Pfadfinder*innen e.V."
-                aria-hidden="false"
-                class="h-14"
-                width="208"
-                height="56"
-            />
-        </f:link.page>
-        <div class="flex-end flex w-full flex-row-reverse justify-between lg:block">
+        <f:if condition="{settings.page.infotype} !== 'bund' && {settings.page.logo} !== '' && {settings.page.logolabel} !== ''">
+            <f:then>
+                <f:link.page pageUid="{site.rootPageId}" class="focus-visible:outline-kluft z-1 mr-0 block h-20 flex-none py-3 focus-visible:outline-solid lg:mr-6 dark:focus-visible:outline-white">
+                    <bdp:inlineSvg
+                        src="{settings.page.logo}"
+                        aria-label="{settings.page.logolabel}"
+                        aria-hidden="false"
+                        class="h-14"
+                    />
+                </f:link.page>
+            </f:then>
+            <f:else>
+                <f:link.page pageUid="{site.rootPageId}" class="focus-visible:outline-kluft z-1 mr-0 block h-20 w-52 flex-none py-3 focus-visible:outline-solid lg:mr-6 dark:focus-visible:outline-white">
+                    <bdp:inlineSvg
+                        src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg"
+                        aria-label="Logo des Bund der Pfadfinder*innen e.V."
+                        aria-hidden="false"
+                        class="h-14"
+                        width="208"
+                        height="56"
+                    />
+                </f:link.page>
+            </f:else>
+        </f:if>
+        <div class="justify-end flex w-full lg:justify-between">
             <nav id="main-menu" class="mx-4 hidden w-full lg:block" role="navigation" aria-label="Main">
                 <ul class="font-medium lg:flex lg:text-lg">
                     <f:for each="{mainnavigation}" as="mainnavigationItem">
@@ -94,6 +108,18 @@
                     </f:for>
                 </ul>
             </nav>
+            <f:if condition="{settings.page.infotype} !== 'bund' && {settings.page.logo} !== '' && {settings.page.logolabel} !== ''">
+                <div class="hidden z-1 mr-6 sm:block h-20 w-52 py-3 lg:mr-0 lg:ml-6">
+                    <bdp:inlineSvg
+                        src="EXT:bdp_template/Resources/Public/Images/brand/bundeszeichen_inline.svg"
+                        aria-label="Logo des Bund der Pfadfinder*innen e.V."
+                        aria-hidden="false"
+                        class="h-14"
+                        width="208"
+                        height="56"
+                    />
+                </div>
+            </f:if>
             <button
                 id="mobile-main-menu-toggle"
                 aria-controls="mobile-main-menu-sidebar"

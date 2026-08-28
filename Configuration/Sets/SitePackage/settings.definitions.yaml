@@ -39,6 +39,20 @@ settings:
       project: 'Projekt'
       service: 'Service'
 
+  page.logo:
+    type: string
+    default: ''
+    category: pfadfinden.settings
+    label: 'Page logo'
+    description: 'SVG of the page logo (fileadmin path)'
+
+  page.logolabel:
+    type: string
+    default: ''
+    category: pfadfinden.settings
+    label: 'Page logo label'
+    description: 'Label for the page logo to support accessibility'
+
   contact.association:
     type: string
     default: 'Bund der Pfadfinder*innen e.V. (BdP)'
