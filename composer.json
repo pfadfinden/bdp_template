@@ -11,7 +11,7 @@
         "typo3/cms-fluid-styled-content": "^14.3",
         "friendsoftypo3/content-blocks": "^2.4.8",
         "friendsoftypo3/tt-address": "^10.0.1",
-        "friendsoftypo3/visual-editor": "^1.10.1",
+        "friendsoftypo3/visual-editor": "^1.10.2",
         "georgringer/news": "^14.1",
         "b13/container": "^4.1",
         "praetorius/vite-asset-collector": "^1.18.1"
@@ -25,5 +25,8 @@
         "typo3/cms": {
             "extension-key": "bdp_template"
         }
+    },
+    "suggest": {
+        "codingfreaks/cf-cookiemanager": "Supported Cookie Manager"
     }
 }

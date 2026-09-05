@@ -1,0 +1,82 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:section name="defaultMediaElement">
+    <f:if condition="{mediaElement.originalResource.type} == 2 || {mediaElement.originalResource.type} == 5">
+        <figure class="relative">
+            <picture class="block relative w-full">
+                <source srcset="{f:uri.image(image: mediaElement, width: '500c', height: '350c', fileExtension: 'webp')} 1x, {f:uri.image(image: mediaElement, width: '1000c', height: '700c', fileExtension: 'webp')} 2x" type="image/webp">
+                <source srcset="{f:uri.image(image: mediaElement, width: '500c', height: '350c', fileExtension: 'jpg')} 1x, {f:uri.image(image: mediaElement, width: '1000c', height: '700c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="500c" height="350c" loading="lazy" class="w-full h-auto max-w-full" />
+            </picture>
+            <f:if condition="{mediaElement.originalResource.properties.copyright}">
+                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {mediaElement.originalResource.properties.copyright}</div>
+            </f:if>
+        </figure>
+    </f:if>
+    <f:if condition="{mediaElement.originalResource.type} == 4">
+        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+    </f:if>
+</f:section>
+<f:section name="bigMediaElement">
+    <f:if condition="{mediaElement.originalResource.type} == 2 || {mediaElement.originalResource.type} == 5">
+        <figure class="relative">
+            <picture class="block relative w-full">
+                <source srcset="{f:uri.image(image: mediaElement, width: '500c', height: '281c', fileExtension: 'webp')} 1x, {f:uri.image(image: mediaElement, width: '1000c', height: '562c', fileExtension: 'webp')} 2x" type="image/webp">
+                <source srcset="{f:uri.image(image: mediaElement, width: '500c', height: '281c', fileExtension: 'jpg')} 1x, {f:uri.image(image: mediaElement, width: '1000c', height: '562c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                <f:image image="{mediaElement}" title="{mediaElement.originalResource.title}" alt="{mediaElement.originalResource.alternative}" width="500c" height="281c" loading="lazy" class="w-full h-auto max-w-full" />
+            </picture>
+            <f:if condition="{mediaElement.originalResource.properties.copyright}">
+                <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {mediaElement.originalResource.properties.copyright}</div>
+            </f:if>
+        </figure>
+    </f:if>
+    <f:if condition="{mediaElement.originalResource.type} == 4">
+        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement}"/>
+    </f:if>
+</f:section>
+
+<f:variable name="colSpan">
+    <f:if condition="{iterator.total} > 4 && {iterator.index} < 2">
+        <f:then>sm:col-span-3</f:then>
+        <f:else>sm:col-span-3 lg:col-span-2</f:else>
+    </f:if>
+</f:variable>
+<div class="col-span-6 {colSpan} article articletype-{newsItem.type}{f:if(condition: newsItem.istopnews, then: ' topnews')}" itemscope="itemscope" itemtype="https://schema.org/Article">
+    <n:excludeDisplayedNews newsItem="{newsItem}"/>
+    <n:link newsItem="{newsItem}" settings="{settings}" class="group/n-link block relative w-full" title="{newsItem.title}">
+        <f:if condition="{newsItem.mediaPreviews}">
+            <div class="mb-4">
+                <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}">
+                    <f:if condition="{iterator.total} > 4 && {iterator.index} < 2">
+                        <f:then><f:render section="bigMediaElement" arguments="{mediaElement: newsItem.mediaPreviews.0}" /></f:then>
+                        <f:else><f:render section="defaultMediaElement" arguments="{mediaElement: newsItem.mediaPreviews.0}" /></f:else>
+                    </f:if>
+               </n:link>
+            </div>
+        </f:if>
+        <div class="text-md 2xl:text-lg">
+            <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'c')}">
+                <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+            </time>
+        </div>
+        <h3 class="mt-4 text-3xl font-semibold">
+            <n:link newsItem="{newsItem}" settings="{settings}" title="{newsItem.title}" itemprop="url">
+                <span itemprop="headline">{newsItem.title}</span>
+            </n:link>
+        </h3>
+        <div class="text-md 2xl:text-lg mt-3 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
+            <n:removeMediaTags>
+                <f:if condition="{newsItem.teaser}">
+                    <f:then>
+                        <div itemprop="description">{newsItem.teaser -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                    </f:then>
+                    <f:else>
+                        <div itemprop="description">{newsItem.bodytext -> f:format.crop(maxCharacters: '{settings.cropMaxCharacters}', respectWordBoundaries:'1') -> f:format.html()}</div>
+                    </f:else>
+                </f:if>
+            </n:removeMediaTags>
+        </div>
+    </n:link>
+</div>
+</html>

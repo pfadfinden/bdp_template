@@ -1,48 +1,47 @@
 <html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
-	  xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
-	  data-namespace-typo3-fluid="true">
-<f:layout name="Zentrum" />
+      xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="General" />
+<!--
+	=====================
+		Templates/News/List.html
+-->
 
 <f:section name="content">
-    <f:variable name="grid-classes">grid grid-cols-1 md:grid-cols-10 gap-4 md:gap-8 md:grid-rows-1 md:aspect-2/1</f:variable>
-    <div class="{grid-classes}">
-        <f:if condition="{news}">
-            <f:for each="{news}" as="newsItem" iteration="iterator">
-                <f:if condition="{iterator.cycle} % 3 == 1">
-                    <div class="md:col-start-1 md:col-end-7 md:row-start-1 md:row-end-2 md:clip-slant-rb-sp z-1 grid md:grid-rows-2 gap-4 md:gap-8">
-                        <f:render partial="List/Item1" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-
-                </f:if>
-                <f:if condition="{iterator.cycle} % 3 == 2">
-                    <f:if condition="{iterator.isLast}">
-                        <f:then>
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{news}">
+        <f:then>
+            <div id="news-container-{contentObjectData.uid}">
+                <f:if condition="{settings.hidePagination}">
+                    <f:then>
+                        <div class="grid grid-cols-6 gap-4 lg:gap-10 xl:gap-20 3xl:gap-25 mt-6 mb-6 md:mb-12">
+                            <f:for each="{news}" as="newsItem" iteration="iterator">
+                                <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
+                            </f:for>
+                        </div>
+                    </f:then>
+                    <f:else>
+                        <f:if condition="{settings.list.paginate.insertAbove}">
+                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+                        <f:for each="{pagination.paginator.paginatedItems}" as="newsItem" iteration="iterator">
+                            <div class="grid grid-cols-6 gap-4 lg:gap-10 xl:gap-20 3xl:gap-25">
+                                <f:render partial="List/Item" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
                             </div>
-                            <div class="md:col-start-6 md:col-end-11 md:row-start-1 md:row-end-2 md:clip-slant-lt z-1">
-                                <f:render partial="List/Item3" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                            </div>
-                        </f:then>
-                        <f:else>
-                                <f:render partial="List/Item2" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                            </div>
-                        </f:else>
-                    </f:if>
-
+                        </f:for>
+                        <f:if condition="{settings.list.paginate.insertBelow}">
+                            <f:render partial="List/Pagination" arguments="{pagination: pagination.pagination, paginator: pagination.paginator}" />
+                        </f:if>
+                    </f:else>
                 </f:if>
-                <f:if condition="{iterator.cycle} % 3 == 0">
-                    <div class="md:col-start-6 md:col-end-11 md:row-start-1 md:row-end-2 md:clip-slant-lt z-1">
-                        <f:render partial="List/Item3" arguments="{newsItem: newsItem,settings:settings,iterator:iterator}" />
-                    </div>
-                    <f:if condition="!{iterator.isLast}">
-                        </div><div class="{grid-classes} mt-4 md:mt-8">
-                    </f:if>
-                </f:if>
-            </f:for>
-        </f:if>
-    </div>
-    <f:if condition="{settings.listPid} !== {pageData.uid} && {settings.listPid} > 0">
-        <div class="py-8 flex justify-center">
-            <f:link.page pageUid="{settings.listPid}" class="block text-lg uppercase hover:underline after:doubble-arrow-down hover:after:scale-120">{f:translate(key: 'news.list.show-all', extensionName: 'ZentrumPfadfinden')}</f:link.page>
-        </div>
+            </div>
+        </f:then>
+        <f:else>
+            <div class="no-news-found">
+                <f:translate key="list_nonewsfound" />
+            </div>
+        </f:else>
     </f:if>
+    <!--TYPO3SEARCH_begin-->
 </f:section>
 </html>

@@ -18,4 +18,61 @@ plugin.tx_news {
             10 = EXT:bdp_template/Resources/Private/News/Layouts/
         }
     }
+    settings {
+        cssFile >
+        displayDummyIfNoMedia = 0
+
+        analytics {
+            social {
+                facebookLike = 0
+                facebookShare = 0
+                twitter = 0
+            }
+        }
+        cropMaxCharacters = 310
+
+        link {
+            hrDate = 1
+            hrDate {
+                day = d
+                month = m
+                year = Y
+            }
+            skipControllerAndAction = 0
+        }
+        # --------------
+        #  List
+        # --------------
+        list {
+            showDate = 1
+
+            # media configuration
+            media {
+                image {
+                    maxWidth = 597
+                    maxHeight = 292
+                }
+            }
+            # Paginate configuration.
+            paginate {
+                itemsPerPage = 9
+                insertAbove = 0
+                insertBelow = 1
+                templatePath =
+                prevNextHeaderTags = 1
+                maximumNumberOfLinks = 3
+            }
+        }
+        detail {
+            media {
+                image {
+                    lightbox {
+                        enabled = 1
+                        width = 1920m
+                        height = 1920m
+                    }
+                }
+            }
+        }
+    }
 }
