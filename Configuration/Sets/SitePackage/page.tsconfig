@@ -45,6 +45,10 @@ TCEFORM {
                     removeItems = ruler-before, ruler-after, indent, indent-left, indent-right,
                     disabled = 0
                 }
+                news_newsdetail {
+                    removeItems = ruler-before, ruler-after, indent, indent-left, indent-right,
+                    disabled = 0
+                }
             }
         }
         pi_flexform {

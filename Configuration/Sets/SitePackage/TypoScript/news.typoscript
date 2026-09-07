@@ -76,3 +76,4 @@ plugin.tx_news {
         }
     }
 }
+tt_content.news_newsdetail.templateName = NewsNewsdetail

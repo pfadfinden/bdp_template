@@ -22,7 +22,7 @@
                 <li
                     class="hover:bg-yellow-light dark:hover:bg-kluft h-7.5 w-full max-w-103.5 sm:w-[21.5234375vw] bg-yellow-500 mask-[url(Images/clips/image.svg#c)] mask-cover mask-top-right mask-no-repeat text-blue-500 duration-150 ease-in-out dark:bg-blue-500 dark:text-white"
                 >
-                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white">
+                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white overflow-hidden text-clip">
                         {f:uri.page(pageUid: '{site.rootPageId}', absolute: 'true') -> bdp:uriHost()}
                     </f:link.page>
                 </li>

@@ -2,13 +2,7 @@
       xmlns:n="http://typo3.org/ns/GeorgRinger/News/ViewHelpers"
       data-namespace-typo3-fluid="true">
 
-<f:if condition="{settings.cssFile}">
-    <f:asset.css identifier="ext-news" href="{settings.cssFile}" />
-</f:if>
-
 <div class="news news-single">
-    <div class="article" itemscope="itemscope" itemtype="https://schema.org/Article">
-        <f:render section="content" />
-    </div>
+    <f:render section="content" />
 </div>
 </html>
