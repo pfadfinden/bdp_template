@@ -1,4 +1,3 @@
-config.contentObjectExceptionHandler = 0
+#config.contentObjectExceptionHandler = 0
 @import './TypoScript/ContentElements/'
 @import './TypoScript/'
-config.admPanel = 1
