@@ -3,6 +3,7 @@
 @import "tailwindcss" source("../../../../");
 @import "./variants/forced-colors.css";
 @import "./theme.css";
+@import "./Page/richtext.css";
 
 :root {
     --swiper-navigation-color: #ebebeb;
@@ -14,3 +15,6 @@
     --swiper-pagination-bullet-inactive-opacity: 1;
     --swiper-theme-color: oklch(0.877 0.179 93.02);
 }
+
+
+

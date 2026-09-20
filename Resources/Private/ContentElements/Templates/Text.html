@@ -3,7 +3,7 @@
 <f:section name="Main">
     <f:variable name="bodytext">{record -> f:render.text(field: 'bodytext')}</f:variable>
     <f:if condition="{bodytext}">
-        <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
+        <div class="richtext text-base 2xl:text-lg xl:pt-4 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
             {bodytext}
         </div>
     </f:if>

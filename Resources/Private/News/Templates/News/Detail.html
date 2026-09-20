@@ -113,10 +113,10 @@
                                 <p>
                                     <!-- date -->
                                     <span class="news-list-date">
-						<time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'c')}">
-							<f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
-						</time>
-					</span>
+                                        <time itemprop="datePublished" datetime="{f:format.date(date:newsItem.datetime, format:'c')}">
+                                            <f:format.date format="{f:translate(key:'dateFormat')}">{newsItem.datetime}</f:format.date>
+                                        </time>
+                                    </span>
 
                                     <f:if condition="{newsItem.categories}">
                                         <f:render partial="Category/Items" arguments="{categories:newsItem.categories, settings:settings}" />
@@ -125,17 +125,17 @@
                                     <f:if condition="{newsItem.tags}">
                                         <!-- Tags -->
                                         <span class="news-list-tags" itemprop="keywords">
-						<f:for each="{newsItem.tags}" as="tag">
-							{tag.title}
-						</f:for>
-						</span>
+                                            <f:for each="{newsItem.tags}" as="tag">
+                                                {tag.title}
+                                            </f:for>
+                                        </span>
                                     </f:if>
 
                                     <f:if condition="{newsItem.author}">
                                         <!-- author -->
                                         <span class="news-list-author" itemprop="author" itemscope="itemscope" itemtype="https://schema.org/Person">
-							<f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
-						</span>
+                                            <f:translate key="author_simple" /> <span itemprop="name">{newsItem.author}</span>
+                                        </span>
                                     </f:if>
                                 </p>
                             </div>
@@ -153,7 +153,7 @@
                                 <div class="news-text-wrap" itemprop="articleBody">
                                     <f:variable name="bodytext">{newsItem -> f:render.text(field: 'bodytext')}</f:variable>
                                     <f:if condition="{bodytext}">
-                                        <div class="text-md 2xl:text-lg xl:pt-4 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
+                                        <div class="text-base 2xl:text-lg xl:pt-4 [&_p]:mt-4 [&_p]:first:mt-0 xl:[&_p]:mt-6 [&_ul]:list-disc [&_ul]:pl-6 [&_ol]:list-decimal [&_ol]:pl-6">
                                             {bodytext}
                                         </div>
                                     </f:if>
@@ -210,14 +210,14 @@
                                         <ul>
                                             <f:for each="{newsItem.relatedFiles}" as="relatedFile">
                                                 <li>
-									<span class="news-related-files-link">
-										<a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
-											{f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
-										</a>
-									</span>
-                                                    <span class="news-related-files-size">
-										{relatedFile.originalResource.size -> f:format.bytes()}
-									</span>
+                                                    <span class="news-related-files-link">
+                                                        <a href="{relatedFile.originalResource.publicUrl -> f:format.htmlspecialchars()}" target="_blank">
+                                                            {f:if(condition:relatedFile.originalResource.title, then:relatedFile.originalResource.title, else:relatedFile.originalResource.name)}
+                                                        </a>
+                                                    </span>
+                                                                    <span class="news-related-files-size">
+                                                        {relatedFile.originalResource.size -> f:format.bytes()}
+                                                    </span>
                                                 </li>
                                             </f:for>
                                         </ul>

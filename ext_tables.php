@@ -1,3 +1,5 @@
 <?php
 
-defined('TYPO3') or die('Access denied.');
+declare(strict_types=1);
+
+defined('TYPO3') || die('Access denied.');

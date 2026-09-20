@@ -1,9 +1,15 @@
 <?php
+declare(strict_types=1);
+
+use TYPO3\CMS\Core\Utility\GeneralUtility;
+use B13\Container\Tca\Registry;
+use B13\Container\Tca\ContainerConfiguration;
+
 defined('TYPO3') || die();
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
-    new \B13\Container\Tca\ContainerConfiguration(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
+    
+    new ContainerConfiguration(
         'mt1x12Column', // CType
         'Single background container', // label
         'Ein einspaltiges Inhaltselement', // description
@@ -17,15 +23,15 @@ defined('TYPO3') || die();
             ],
 
         ]
-    )
+    
     )
         // override default configurations
         ->setSaveAndCloseInNewContentElementWizard(false)
 );
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
-    new \B13\Container\Tca\ContainerConfiguration(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
+    
+    new ContainerConfiguration(
         'mt3x4Column', // CType
         '3x4 background container', // label
         'Ein dreispaltiges Inhaltselement', // description
@@ -52,15 +58,15 @@ defined('TYPO3') || die();
             ],
 
         ]
-    )
+    
     )
         // override default configurations
         ->setSaveAndCloseInNewContentElementWizard(false)
 );
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
-    new \B13\Container\Tca\ContainerConfiguration(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
+    
+    new ContainerConfiguration(
         'mt1x8-1x4Column', // CType
         '1x8-1x4 background container', // label
         'Ein zweispaltiges Inhaltselement', // description
@@ -80,15 +86,15 @@ defined('TYPO3') || die();
             ],
 
         ]
-    )
+    
     )
         // override default configurations
         ->setSaveAndCloseInNewContentElementWizard(false)
 );
 
-\TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\B13\Container\Tca\Registry::class)->configureContainer(
-    (
-    new \B13\Container\Tca\ContainerConfiguration(
+GeneralUtility::makeInstance(Registry::class)->configureContainer(
+    
+    new ContainerConfiguration(
         'mt2x6Column', // CType
         '2x6 background container', // label
         'Ein zweispaltiges Inhaltselement', // description
@@ -107,7 +113,7 @@ defined('TYPO3') || die();
             ],
 
         ]
-    )
+    
     )
         // override default configurations
         ->setSaveAndCloseInNewContentElementWizard(false)

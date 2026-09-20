@@ -1,11 +1,10 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <xliff version="1.0">
     <file source-language="en" datatype="plaintext" original="messages" date="2025-04-22UTC10:32:070">
         <header>
             <authorName>Christian Schrebe</authorName>
             <authorEmail>info@christian.schrebe.de</authorEmail>
         </header>
-        <body>
-        </body>
+        <body/>
     </file>
 </xliff>

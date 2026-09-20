@@ -38,7 +38,7 @@ class SvgUtility
         ?bool $ariaHidden = null,
         ?string $ariaLabel = null
     ): string {
-        if (($src === '' && $image === null) || ($src !== '' && $image !== null)) {
+        if (($src === '' && !$image instanceof FileInterface) || ($src !== '' && $image instanceof FileInterface)) {
             throw new \Exception('You must either specify a string src or a File object.', 1530601100);
         }
 

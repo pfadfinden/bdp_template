@@ -9,41 +9,78 @@
     ]
   },
   "Resources/Private/Sources/Entry/Headerslider.entry.js": {
-    "file": "Js/Headerslider.entry-wZl8IMBi.js",
+    "file": "Js/Headerslider.entry-CXaIpuzx.js",
     "name": "Headerslider.entry",
     "src": "Resources/Private/Sources/Entry/Headerslider.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-Cyfumqw5.js"
+      "_navigation-CaHjW2BJ.js"
     ],
     "css": [
       "Css/Headerslider-CsAyU8sB.css"
     ]
   },
   "Resources/Private/Sources/Entry/InstagramBusiness.entry.js": {
-    "file": "Js/InstagramBusiness.entry-YD5bBBo2.js",
+    "file": "Js/InstagramBusiness.entry-Cw6olwRB.js",
     "name": "InstagramBusiness.entry",
     "src": "Resources/Private/Sources/Entry/InstagramBusiness.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-Cyfumqw5.js"
+      "_navigation-CaHjW2BJ.js"
     ]
   },
   "Resources/Private/Sources/Entry/Main.entry.js": {
-    "file": "Js/Main.entry-BG1BnJ0w.js",
+    "file": "Js/Main.entry-C2bMPfXm.js",
     "name": "Main.entry",
     "src": "Resources/Private/Sources/Entry/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-DS6HmZbf.css"
+      "Css/Main-Cap1JcDS.css"
+    ],
+    "assets": [
+      "Fonts/jost-cyrillic-BqejVrLg.woff2",
+      "Fonts/jost-greek-k_hp0-Uh.woff2",
+      "Fonts/jost-vietnamese-mvitANAA.woff2",
+      "Fonts/jost-math-DUS3fnjd.woff2",
+      "Fonts/jost-symbols-KHwna8_t.woff2",
+      "Fonts/jost-latin-ext-ayhDQ9Z0.woff2",
+      "Fonts/jost-latin-BNIRKQTS.woff2"
     ]
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-cyrillic.woff2": {
+    "file": "Fonts/jost-cyrillic-BqejVrLg.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-cyrillic.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-greek.woff2": {
+    "file": "Fonts/jost-greek-k_hp0-Uh.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-greek.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-latin-ext.woff2": {
+    "file": "Fonts/jost-latin-ext-ayhDQ9Z0.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-latin-ext.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-latin.woff2": {
+    "file": "Fonts/jost-latin-BNIRKQTS.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-latin.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-math.woff2": {
+    "file": "Fonts/jost-math-DUS3fnjd.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-math.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-symbols.woff2": {
+    "file": "Fonts/jost-symbols-KHwna8_t.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-symbols.woff2"
+  },
+  "Resources/Private/Sources/Fonts/Jost/jost-vietnamese.woff2": {
+    "file": "Fonts/jost-vietnamese-mvitANAA.woff2",
+    "src": "Resources/Private/Sources/Fonts/Jost/jost-vietnamese.woff2"
   },
   "_navigation-BJPu9yXy.css": {
     "file": "Css/navigation-BJPu9yXy.css",
     "src": "_navigation-BJPu9yXy.css"
   },
-  "_navigation-Cyfumqw5.js": {
-    "file": "Js/navigation-Cyfumqw5.js",
+  "_navigation-CaHjW2BJ.js": {
+    "file": "Js/navigation-CaHjW2BJ.js",
     "name": "navigation",
     "css": [
       "Css/navigation-BJPu9yXy.css"

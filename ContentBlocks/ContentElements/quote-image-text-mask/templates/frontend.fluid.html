@@ -60,7 +60,7 @@
                         „{quote -> f:format.nl2br()}“
                     </blockquote>
                     <f:if condition="{quote_author}">
-                        <figcaption class="text-md 2xl:text-lg mt-6">— {quote_author}</figcaption>
+                        <figcaption class="text-base 2xl:text-lg mt-6">— {quote_author}</figcaption>
                     </f:if>
                 </figure>
             </f:if>
@@ -90,7 +90,7 @@
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">
                 <f:then>
-                    <div class="text-md 2xl:text-lg [&_p]:mt-4 xl:[&_p]:mt-6">
+                    <div class="text-base 2xl:text-lg [&_p]:mt-4 xl:[&_p]:mt-6">
                         {bodytext}
                     </div>
                 </f:then>

@@ -31,7 +31,14 @@ export default defineConfig({
     build: {
         cssCodeSplit: true,
         manifest: true,
-        assetsInlineLimit: 0,
+        assetsInlineLimit: (filePath) => {
+            // IMPORTANT: assetsInlineLimit is ignored in lib mode, which is active in this project
+            // Prüft auf gängige Font-Endungen
+            if (/\.(woff|woff2?|eot|ttf|otf)$/i.test(filePath)) {
+                return false; // Verhindert Base64-Inlining für Fonts
+            }
+            return 4096; // Standardwert: Bilder unter 4KB werden inline geladen
+        },
         commonjsOptions: {
             transformMixedEsModules: true
         },

@@ -1,4 +1,4 @@
-import { S as e, N as t } from "./navigation-Cyfumqw5.js";
+import { S as e, N as t } from "./navigation-CaHjW2BJ.js";
 new e(".ct-instagram", {
   // configure Swiper to use modules
   modules: [t],

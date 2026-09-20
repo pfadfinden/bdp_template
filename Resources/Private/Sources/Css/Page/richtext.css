@@ -1,0 +1,14 @@
+.richtext {
+    @apply text-base 2xl:text-lg xl:pt-4
+}
+.richtext p {
+    @apply mt-4 xl:mt-6 first:mt-0;
+}
+
+.richtext ul {
+    @apply list-disc pl-6;
+}
+
+.richtext ol {
+    @apply list-decimal pl-6;
+}
