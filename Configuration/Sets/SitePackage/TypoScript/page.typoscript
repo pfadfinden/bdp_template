@@ -90,4 +90,6 @@ page {
     }
 }
 
+lib.crosslink = TEXT
+lib.crosslink =
 plugin.tx_frontend._CSS_DEFAULT_STYLE >

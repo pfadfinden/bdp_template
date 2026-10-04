@@ -1,10 +1,14 @@
 {
     "name": "pfadfinden/bdp_template",
-    "type": "typo3-cms-extension",
     "description": "",
+    "license": [
+        "GPL-2.0-or-later"
+    ],
+    "type": "typo3-cms-extension",
+    "keywords": [
+        "TYPO3 CMS"
+    ],
     "homepage": "https://www.pfadfinden.de/",
-    "license": ["GPL-2.0-or-later"],
-    "keywords": ["TYPO3 CMS"],
     "require": {
         "typo3/cms-core": "^14.3",
         "typo3/cms-rte-ckeditor": "^14.3",
@@ -14,7 +18,10 @@
         "friendsoftypo3/visual-editor": "^1.10.2",
         "georgringer/news": "^14.1",
         "b13/container": "^4.1",
-        "praetorius/vite-asset-collector": "^1.18.1"
+        "praetorius/vite-asset-collector": "^1.18.3"
+    },
+    "suggest": {
+        "codingfreaks/cf-cookiemanager": "Supported Cookie Manager"
     },
     "autoload": {
         "psr-4": {
@@ -25,8 +32,5 @@
         "typo3/cms": {
             "extension-key": "bdp_template"
         }
-    },
-    "suggest": {
-        "codingfreaks/cf-cookiemanager": "Supported Cookie Manager"
     }
 }

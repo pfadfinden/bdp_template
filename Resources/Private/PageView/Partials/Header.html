@@ -22,9 +22,35 @@
                 <li
                     class="hover:bg-yellow-light dark:hover:bg-kluft h-7.5 w-full max-w-103.5 sm:w-[21.5234375vw] bg-yellow-500 mask-[url(Images/clips/image.svg#c)] mask-cover mask-top-right mask-no-repeat text-blue-500 duration-150 ease-in-out dark:bg-blue-500 dark:text-white"
                 >
-                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white overflow-hidden truncate">
-                        {f:uri.page(pageUid: '{site.rootPageId}', absolute: 'true') -> bdp:uriHost()}
-                    </f:link.page>
+                    <f:switch expression="{settings.page.infotype}">
+                        <f:case value="bund">
+                            <f:variable name="crosslinkContent">{f:cObject(typoscriptObjectPath: 'lib.crosslink')}</f:variable>
+                            <f:if condition="{crosslinkContent}">
+                                <f:then>
+                                    {crosslinkContent -> f:format.raw()}
+                                </f:then>
+                                <f:else>
+                                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white overflow-hidden truncate">
+                                        {f:uri.page(pageUid: '{site.rootPageId}', absolute: 'true') -> bdp:uriHost()}
+                                    </f:link.page>
+                                </f:else>
+                            </f:if>
+                        </f:case>
+                        <f:defaultCase>
+                            <f:if condition="{settings.page.crosslink}">
+                                <f:then>
+                                    <f:link.external uri="{settings.page.crosslink}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white overflow-hidden truncate">
+                                        {f:uri.external(uri: '{settings.page.crosslink}') -> bdp:uriHost()}
+                                    </f:link.external>
+                                </f:then>
+                                <f:else>
+                                    <f:link.page pageUid="{site.rootPageId}" class="uppercase block w-full pr-2 pl-20 text-center hover:text-blue-500 dark:hover:text-white overflow-hidden truncate">
+                                        {f:uri.page(pageUid: '{site.rootPageId}', absolute: 'true') -> bdp:uriHost()}
+                                    </f:link.page>
+                                </f:else>
+                            </f:if>
+                        </f:defaultCase>
+                    </f:switch>
                 </li>
             </ul>
         </div>

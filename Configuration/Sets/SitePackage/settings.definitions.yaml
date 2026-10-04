@@ -39,6 +39,13 @@ settings:
       project: 'Projekt'
       service: 'Service'
 
+  page.crosslink:
+    type: string
+    default: ''
+    category: pfadfinden.settings
+    label: 'Crosslink Url'
+    description: ''
+
   page.logo:
     type: string
     default: ''
