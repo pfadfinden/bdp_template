@@ -27,9 +27,9 @@
     <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-black dark:text-white</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="mask"><f:switch expression="{data.mask}">
-    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_01.svg)]</f:case>
-    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_01.svg)]</f:case>
-    <f:defaultCase>mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_01.svg)]</f:defaultCase>
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_02.svg)] pr-20 sm:pr-38 md:pr-40 lg:pr-45 2xl:pr-50 3xl:pr-60</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_03.svg)] pr-20 sm:pr-25 md:pr-25 lg:pr-30 2xl:pr-40 3xl:pr-50</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_01.svg)] pr-20 sm:pr-12 md:pr-20 lg:pr-30 2xl:pr-40 3xl:pr-50</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="icon"><f:switch expression="{data.icon}">
     <f:case value="kohte">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kohte.svg</f:case>
@@ -51,7 +51,7 @@
 
 <div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
     <div class="relative grid grid-cols-2 gap-4 md:gap-20 xl:gap-30 xl:gap-40">
-        <div class="col-span-2 sm:col-span-1 relative {layout} {mask} mask-size-[auto_100%] mask-bottom-right mask-no-repeat min-h-[280px] pt-4 pb-6 md:pt-12 lg:pt-22 lg:pl-10 xl:pt-26 pl-3 md:pl-5 xl:pl-20 3xl:pl-25 pr-20 sm:pr-12 md:pr-20 lg:pr-30 2xl:pr-40 3xl:pr-50">
+        <div class="col-span-2 sm:col-span-1 relative {layout} {mask} mask-size-[auto_100%] mask-bottom-right mask-no-repeat min-h-[280px] pt-4 pb-6 md:pt-12 lg:pt-22 lg:pl-10 xl:pt-26 pl-3 md:pl-5 xl:pl-20 3xl:pl-25">
             <f:variable name="quote">{data -> f:render.text(field: 'pfadfinden_quote')}</f:variable>
             <f:variable name="quote_author">{data -> f:render.text(field: 'pfadfinden_quote_author')}</f:variable>
             <f:if condition="{quote}">
@@ -90,7 +90,7 @@
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">
                 <f:then>
-                    <div class="text-base 2xl:text-lg [&_p]:mt-4 xl:[&_p]:mt-6">
+                    <div class="richtext">
                         {bodytext}
                     </div>
                 </f:then>

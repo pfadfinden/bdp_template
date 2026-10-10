@@ -92,8 +92,10 @@
             <f:if condition="{data.image.0}">
                 <figure class="relative h-full">
                     <picture class="block relative w-full h-full">
-                        <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'webp')} 2x" type="image/webp">
-                        <source srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(max-width: 500px)" srcset="{f:uri.image(image: data.image.0, width: '500c', height: '470c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1880c', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(min-width: 501px)" srcset="{f:uri.image(image: data.image.0, width: '1000c', height: '940c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '2000c', height: '1880c', fileExtension: 'jpg')} 2x" type="image/jpeg">
                         <f:image image="{data.image.0}" width="500c" height="470c" loading="lazy" class="w-full h-full block absolute object-cover" />
                     </picture>
                     <f:if condition="{data.image.0.properties.copyright}">
