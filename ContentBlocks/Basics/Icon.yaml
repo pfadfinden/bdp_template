@@ -5,10 +5,13 @@ fields:
   - identifier: icon
     type: Select
     renderType: selectSingle
+    minitems: 0
     fieldWizard:
       selectIcons:
         disabled: false
     items:
+      - label: '--- Keins ---'
+        value: ''
       - label: 'Kohte'
         value: 'kohte'
         icon: 'EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kohte.svg'

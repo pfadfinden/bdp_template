@@ -9,33 +9,33 @@
     ]
   },
   "Resources/Private/Sources/Entry/Headerslider.entry.js": {
-    "file": "Js/Headerslider.entry-CXaIpuzx.js",
+    "file": "Js/Headerslider.entry-DOT5_7Mr.js",
     "name": "Headerslider.entry",
     "src": "Resources/Private/Sources/Entry/Headerslider.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-CaHjW2BJ.js"
+      "_navigation-DiMISos5.js"
     ],
     "css": [
       "Css/Headerslider-CsAyU8sB.css"
     ]
   },
   "Resources/Private/Sources/Entry/InstagramBusiness.entry.js": {
-    "file": "Js/InstagramBusiness.entry-Cw6olwRB.js",
+    "file": "Js/InstagramBusiness.entry-AwNQ39q3.js",
     "name": "InstagramBusiness.entry",
     "src": "Resources/Private/Sources/Entry/InstagramBusiness.entry.js",
     "isEntry": true,
     "imports": [
-      "_navigation-CaHjW2BJ.js"
+      "_navigation-DiMISos5.js"
     ]
   },
   "Resources/Private/Sources/Entry/Main.entry.js": {
-    "file": "Js/Main.entry-C2bMPfXm.js",
+    "file": "Js/Main.entry-DFa4po78.js",
     "name": "Main.entry",
     "src": "Resources/Private/Sources/Entry/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-Cap1JcDS.css"
+      "Css/Main-ws-sWodg.css"
     ],
     "assets": [
       "Fonts/jost-cyrillic-BqejVrLg.woff2",
@@ -79,8 +79,8 @@
     "file": "Css/navigation-BJPu9yXy.css",
     "src": "_navigation-BJPu9yXy.css"
   },
-  "_navigation-CaHjW2BJ.js": {
-    "file": "Js/navigation-CaHjW2BJ.js",
+  "_navigation-DiMISos5.js": {
+    "file": "Js/navigation-DiMISos5.js",
     "name": "navigation",
     "css": [
       "Css/navigation-BJPu9yXy.css"

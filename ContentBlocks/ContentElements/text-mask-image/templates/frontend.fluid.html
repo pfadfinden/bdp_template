@@ -27,8 +27,8 @@
     <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-black dark:text-white</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="mask"><f:switch expression="{data.mask}">
-    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_006/anschnitt_006_variant_01.svg)]</f:case>
-    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_006/anschnitt_006_variant_01.svg)]</f:case>
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_006/anschnitt_006_variant_02.svg)]</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_006/anschnitt_006_variant_03.svg)]</f:case>
     <f:defaultCase>mask-[url(Images/clips/anschnitt_006/anschnitt_006_variant_01.svg)]</f:defaultCase>
 </f:switch></f:variable>
 <f:variable name="icon"><f:switch expression="{data.icon}">
@@ -58,7 +58,7 @@
             </f:if>
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">
-                <div class="text-base 2xl:text-lg xl:pt-4 [&_p]:mt-4 xl:[&_p]:mt-6">
+                <div class="richtext">
                     {bodytext}
                 </div>
             </f:if>
