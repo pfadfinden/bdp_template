@@ -12,3 +12,7 @@
 .richtext ol {
     @apply list-decimal pl-6;
 }
+
+.richtext a {
+    @apply hover:underline;
+}

@@ -1,12 +1,9 @@
 {
-  "Resources/Private/Sources/Entry/Cookieman.entry.js": {
-    "file": "Js/Cookieman.entry-BUViwrG4.js",
-    "name": "Cookieman.entry",
-    "src": "Resources/Private/Sources/Entry/Cookieman.entry.js",
-    "isEntry": true,
-    "css": [
-      "Css/Cookieman-pvxkJjp9.css"
-    ]
+  "Resources/Private/Sources/Entry/AddressList.entry.js": {
+    "file": "Js/AddressList.entry-qs_VGrax.js",
+    "name": "AddressList.entry",
+    "src": "Resources/Private/Sources/Entry/AddressList.entry.js",
+    "isEntry": true
   },
   "Resources/Private/Sources/Entry/Headerslider.entry.js": {
     "file": "Js/Headerslider.entry-DOT5_7Mr.js",
@@ -30,12 +27,12 @@
     ]
   },
   "Resources/Private/Sources/Entry/Main.entry.js": {
-    "file": "Js/Main.entry-DQPN8Nyz.js",
+    "file": "Js/Main.entry-DleuISzr.js",
     "name": "Main.entry",
     "src": "Resources/Private/Sources/Entry/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-BMAEmvCx.css"
+      "Css/Main-BDyskUdE.css"
     ],
     "assets": [
       "Fonts/jost-cyrillic-BqejVrLg.woff2",

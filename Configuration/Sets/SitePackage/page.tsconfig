@@ -55,7 +55,7 @@ TCEFORM {
             ttaddress_listview {
                 sDISPLAY {
                     settings\.displayMode.addItems {
-                        team = Team
+                        lv = Landesverband
                     }
                 }
             }
