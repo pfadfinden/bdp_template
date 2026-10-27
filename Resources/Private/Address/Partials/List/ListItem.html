@@ -19,11 +19,11 @@
         <div class="pt-6">
             <h3 class="text-xl font-extrabold">{address.fullName}</h3>
             <f:if condition="{address.position}">
-                <div class="mb-12">
+                <div>
                     {address.position}
                 </div>
             </f:if>
-            <ul class="ce-address__list__items__item__box__content__info">
+            <ul class="mt-12">
                 <f:if condition="{address.email}">
                     <li><f:link.email email="{address.email}" class="break-all hover:text-yellow-light dark:hover:text-yellow-light hover:underline" /></li>
                 </f:if>
