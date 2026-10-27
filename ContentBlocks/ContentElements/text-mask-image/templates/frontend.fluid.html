@@ -54,7 +54,7 @@
         <div class="col-span-12 sm:col-span-6 md:col-span-4 gap-4 z-2 3xl:pl-25 relative mx-auto w-full px-3 md:pl-5 lg:pl-10 xl:pl-20 pt-4 pb-6 lg:pt-14 xl:pt-18">
             <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
             <f:if condition="{header}">
-                <h2 class="text-3xl font-semibold">{header}</h2>
+                <h2 class="text-3xl font-extrabold">{header}</h2>
             </f:if>
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">

@@ -1,13 +1,13 @@
-<div class="ct-address__list__item mb-4 2xl:mb-6 bg-yellow-light text-blue-500 dark:bg-black dark:text-white forced-colors:border p-4 h-fit transition-[grid-row-end] duration-200">
-    <div class="grid gap-4 grid-cols-2">
+<div class="ct-address__list__item mb-4 2xl:mb-6 bg-blue-500 text-white dark:bg-black dark:text-white forced-colors:border pb-4 pr-4 h-fit transition-[grid-row-end] duration-200">
+    <div class="grid gap-6 grid-cols-2">
         <div>
-            <div class="bg-blue-500 dark:bg-white mask-contain mask-top-left mask-no-repeat aspect-3000/2432 mask-[url(Images/clips/anschnitt_008/anschnitt_008_variant_01.svg)]">
+            <div class="bg-blue-500 dark:bg-white mask-contain mask-top-left mask-no-repeat aspect-1310/1493 mask-[url(Images/clips/anschnitt_009/anschnitt_009_variant_01.svg)]">
                 <f:if condition="{address.image}">
                     <figure class="relative w-full h-full">
                         <picture class="block relative w-full h-full">
-                            <source srcset="{f:uri.image(image: address.firstImage, width: '300c', height: '244c', fileExtension: 'webp')}" type="image/webp">
-                            <source srcset="{f:uri.image(image: address.firstImage, width: '300c', height: '244c', fileExtension: 'jpg')}" type="image/jpeg">
-                            <f:image image="{address.firstImage}" width="300c" height="244c" additionalAttributes="{loading: 'lazy'}" class="block relative w-full h-full object-cover"/>
+                            <source srcset="{f:uri.image(image: address.firstImage, width: '308c', height: '350c', fileExtension: 'webp')}" type="image/webp">
+                            <source srcset="{f:uri.image(image: address.firstImage, width: '308c', height: '350c', fileExtension: 'jpg')}" type="image/jpeg">
+                            <f:image image="{address.firstImage}" width="308c" height="350c" additionalAttributes="{loading: 'lazy'}" class="block relative w-full h-full object-cover"/>
                         </picture>
                         <f:if condition="{address.firstImage.originalResource.properties.copyright}">
                             <div class="absolute bottom-4 right-[0.875rem] left-[0.875rem] text-center text-xs text-white/60 hover:text-white hover:text-shadow-sm">© {address.firstImage.originalResource.properties.copyright}</div>
@@ -16,32 +16,32 @@
                 </f:if>
             </div>
         </div>
-        <div>
-            <h3 class="text-xl font-semibold mb-1">{address.fullName}</h3>
+        <div class="pt-6">
+            <h3 class="text-xl font-extrabold">{address.fullName}</h3>
             <f:if condition="{address.position}">
-                <div class="italic mb-4">
+                <div class="mb-12">
                     {address.position}
                 </div>
             </f:if>
             <ul class="ce-address__list__items__item__box__content__info">
                 <f:if condition="{address.email}">
-                    <li><f:link.email email="{address.email}" class="break-all hover:text-kothe dark:hover:text-yellow-light hover:underline" /></li>
+                    <li><f:link.email email="{address.email}" class="break-all hover:text-yellow-light dark:hover:text-yellow-light hover:underline" /></li>
                 </f:if>
                 <f:if condition="{address.phone}">
                     <li>
-                        {f:translate(key:'label.telephone')}: <a class="hover:text-kothe dark:hover:text-yellow-light hover:underline" href="tel:{address.cleanedPhone}">{address.phone}</a>
+                        {f:translate(key:'label.telephone')}: <a class="hover:text-yellow-light dark:hover:text-yellow-light hover:underline" href="tel:{address.cleanedPhone}">{address.phone}</a>
                     </li>
                 </f:if>
                 <f:if condition="{address.mobile}">
                     <li>
-                        {f:translate(key:'label.mobile')}: <a class="hover:text-kothe dark:hover:text-yellow-light hover:underline" href="tel:{address.cleanedMobile}">{address.mobile}</a>
+                        {f:translate(key:'label.mobile')}: <a class="hover:text-yellow-light dark:hover:text-yellow-light hover:underline" href="tel:{address.cleanedMobile}">{address.mobile}</a>
                     </li>
                 </f:if>
                 <f:if condition="{address.fax}">
                     <li>{f:translate(key:'label.fax')}: {address.fax}</li>
                 </f:if>
             </ul>
-            <div class="richtext 2xl:text-base!">
+            <div class="richtext 2xl:text-base! [&_a]:hover:text-yellow-light">
                 {address.description -> f:format.html()}
             </div>
         </div>

@@ -85,7 +85,7 @@
             </f:if>
             <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
             <f:if condition="{header}">
-                <h2 class="text-3xl font-semibold">{header}</h2>
+                <h2 class="text-3xl font-extrabold">{header}</h2>
             </f:if>
             <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
             <f:if condition="{bodytext}">

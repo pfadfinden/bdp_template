@@ -27,12 +27,12 @@
     ]
   },
   "Resources/Private/Sources/Entry/Main.entry.js": {
-    "file": "Js/Main.entry-DleuISzr.js",
+    "file": "Js/Main.entry-oRrB-ils.js",
     "name": "Main.entry",
     "src": "Resources/Private/Sources/Entry/Main.entry.js",
     "isEntry": true,
     "css": [
-      "Css/Main-BDyskUdE.css"
+      "Css/Main-TfEZFmwM.css"
     ],
     "assets": [
       "Fonts/jost-cyrillic-BqejVrLg.woff2",
