@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:if condition="{media.1}">
+	<div class="pt-12 md:pt-16 lg:pt-32 2xl:pt-40 grid grid-cols-3 lg:grid-cols-4 gap-4">
+		<f:for each="{media}" as="mediaElement" iteration="mediaIterator">
+            <f:if condition="{mediaIterator.isFirst} != 1">
+                <div class="col-span-3 md:col-span-1">
+                    <f:if condition="{mediaElement.originalResource.type} == 2">
+                        <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 3">
+                        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 4">
+                        <f:render partial="Detail/MediaVideo" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                    <f:if condition="{mediaElement.originalResource.type} == 5">
+                        <f:render partial="Detail/MediaImage" arguments="{mediaElement: mediaElement, settings:settings}"/>
+                    </f:if>
+                </div>
+            </f:if>
+		</f:for>
+	</div>
+</f:if>
+</html>

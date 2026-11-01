@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      data-namespace-typo3-fluid="true"
+      xmlns:f="http://xsd.helmut-hummel.de/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+<f:link.external uri="{post.link}"
+                 target="_blank"
+                 rel="noopener"
+                 class="block relative after:bg-[url('PImages/sc/ig.svg')] after:w-[46px] after:h-[46px] after:z-2 after:absolute after:right-6 after:bottom-6"
+                 title="{post.caption}"
+>
+    <picture class="block relative aspect-4/5 max-w-[332px]">
+        <source srcset="{f:uri.image(image: falImage, width: '332c', height: '415c', fileExtension: 'webp')} 1x, {f:uri.image(image: falImage, width: '664c', height: '830c', fileExtension: 'webp')} 2x" type="image/webp">
+        <source srcset="{f:uri.image(image: falImage, width: '332c', height: '415c', fileExtension: 'jpg')} 1x, {f:uri.image(image: falImage, width: '664c', height: '830c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+        <img
+            src="{f:uri.image(image:'{falImage}', width:'332c', height:'415c', fileExtension: 'jpg')}"
+            title="{post.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+            alt="{post.caption -> f:format.crop(maxCharacters: 120, append: ' ...')}"
+            class="block absolute object-cover z-1 w-full h-full left-0 right-0 bottom-0 top-0 select-none"
+            width="332"
+            height="415"
+            loading="lazy" />
+    </picture>
+</f:link.external>
+</html>

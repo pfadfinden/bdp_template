@@ -1,0 +1,41 @@
+name: pfadfinden/slider-slide
+table: tx_pfadfinden_sliderslide
+prefixFields: false
+prefixType: vendor
+labelField: title
+security:
+  ignorePageTypeRestriction: true
+fields:
+  -
+    identifier: title
+    type: Text
+    label: Title
+  - identifier: image
+    type: File
+    extendedPalette: true
+    minitems: 1
+    maxitems: 1
+    allowed: common-image-types
+    cropVariants:
+      default:
+        title: Desktop
+        allowedAspectRatios:
+          16:9:
+            title: Landscape (16/9)
+            value: 16 / 9
+        coverAreas:
+          - x: 0.25
+            y: 0.3
+            width: 0.8
+            height: 0.1
+      mobile:
+        title: Mobil
+        allowedAspectRatios:
+          3:4:
+            title: Mobile (3/4)
+            value: 3 / 4
+        coverAreas:
+          - x: 0.25
+            y: 0.3
+            width: 0.8
+            height: 0.1

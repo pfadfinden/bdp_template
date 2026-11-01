@@ -1,5 +1,0 @@
-tx_semantilizer {
-  disabledPages = 0
-  disabledDoktypes = 0
-  contentSelectors = .page__content
-}

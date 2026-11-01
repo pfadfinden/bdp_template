@@ -1,0 +1,17 @@
+identifier: Pfadfinden/Quote
+prefixFields: true
+prefixType: vendor
+fields:
+  - identifier: quote
+    type: Textarea
+    required: true
+    enableRichtext: false
+    eval: trim
+    rows: 5
+  - identifier: quote_author
+    type: Text
+    required: true
+    eval: trim
+
+
+

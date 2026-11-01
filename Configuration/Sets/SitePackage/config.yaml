@@ -1,0 +1,4 @@
+name: pfadfinden/pfadfinden-template
+label: 'Pfadfinden - Template'
+dependencies:
+  - typo3/fluid-styled-content

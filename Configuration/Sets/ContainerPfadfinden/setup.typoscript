@@ -1,0 +1,4 @@
+@import './TypoScript/Mt1x12Column/setup.typoscript'
+@import './TypoScript/Mt1x8-1x4Column/setup.typoscript'
+@import './TypoScript/Mt2x6Column/setup.typoscript'
+@import './TypoScript/Mt3x4Column/setup.typoscript'

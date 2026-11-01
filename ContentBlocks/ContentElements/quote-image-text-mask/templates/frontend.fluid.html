@@ -1,0 +1,126 @@
+<html
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    xmlns:bdp="http://typo3.org/ns/Pfadfinden/BdpTemplate/ViewHelpers"
+    data-namespace-typo3-fluid="true"
+>
+<f:variable name="spaceBefore"><f:switch expression="{data.space_before_class}">
+    <f:case value="extra-small"> pt-4</f:case>
+    <f:case value="small"> pt-8</f:case>
+    <f:case value="medium"> pt-12</f:case>
+    <f:case value="large"> pt-16</f:case>
+    <f:case value="extra-large"> pt-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="spaceAfter"><f:switch expression="{data.space_after_class}">
+    <f:case value="extra-small"> pb-4</f:case>
+    <f:case value="small"> pb-8</f:case>
+    <f:case value="medium"> pb-12</f:case>
+    <f:case value="large"> pb-16</f:case>
+    <f:case value="extra-large"> pb-32</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="layout"><f:switch expression="{data.layout}">
+    <f:case value="1"> bg-yellow-500 text-blue-500 dark:bg-black dark:text-white</f:case>
+    <f:case value="2"> bg-blue-500 text-yellow-500 dark:bg-black dark:text-white</f:case>
+    <f:case value="3"> bg-red-500 text-white dark:bg-black dark:text-white</f:case>
+    <f:defaultCase> bg-yellow-500 text-blue-500 dark:bg-black dark:text-white</f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="mask"><f:switch expression="{data.mask}">
+    <f:case value="mask_002">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_02.svg)] pr-20 sm:pr-38 md:pr-40 lg:pr-45 2xl:pr-50 3xl:pr-60</f:case>
+    <f:case value="mask_003">mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_03.svg)] pr-20 sm:pr-25 md:pr-25 lg:pr-30 2xl:pr-40 3xl:pr-50</f:case>
+    <f:defaultCase>mask-[url(Images/clips/anschnitt_007/anschnitt_007_variant_01.svg)] pr-20 sm:pr-12 md:pr-20 lg:pr-30 2xl:pr-40 3xl:pr-50</f:defaultCase>
+</f:switch></f:variable>
+<f:variable name="icon"><f:switch expression="{data.icon}">
+    <f:case value="kohte">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kohte.svg</f:case>
+    <f:case value="feuer">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/feuer.svg</f:case>
+    <f:case value="halstuch">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/halstuch.svg</f:case>
+    <f:case value="wald">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/wald.svg</f:case>
+    <f:case value="kompass">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kompass.svg</f:case>
+    <f:case value="karte">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/karte.svg</f:case>
+    <f:case value="rucksack">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/rucksack.svg</f:case>
+    <f:case value="affe">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/affe.svg</f:case>
+    <f:case value="lampe">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/lampe.svg</f:case>
+    <f:case value="koschi">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/koschi.svg</f:case>
+    <f:case value="kessel">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/kessel.svg</f:case>
+    <f:case value="flasche">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/flasche.svg</f:case>
+    <f:case value="feuerkreis">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/feuerkreis.svg</f:case>
+    <f:case value="blatt">EXT:bdp_template/Resources/Public/Icons/pfadfinden/pfadi_elemente/blatt.svg</f:case>
+    <f:defaultCase></f:defaultCase>
+</f:switch></f:variable>
+
+<div id="c-{data.uid}" class="relative {spaceBefore}{spaceAfter}">
+    <div class="relative grid grid-cols-2 gap-4 md:gap-20 xl:gap-30 xl:gap-40">
+        <div class="col-span-2 sm:col-span-1 relative {layout} {mask} mask-size-[auto_100%] mask-bottom-right mask-no-repeat min-h-[280px] pt-4 pb-6 md:pt-12 lg:pt-22 lg:pl-10 xl:pt-26 pl-3 md:pl-5 xl:pl-20 3xl:pl-25">
+            <f:variable name="quote">{data -> f:render.text(field: 'pfadfinden_quote')}</f:variable>
+            <f:variable name="quote_author">{data -> f:render.text(field: 'pfadfinden_quote_author')}</f:variable>
+            <f:if condition="{quote}">
+                <figure class="relative w-full md:max-w-[500px]">
+                    <blockquote class="text-3xl font-semibold italic">
+                        „{quote -> f:format.nl2br()}“
+                    </blockquote>
+                    <f:if condition="{quote_author}">
+                        <figcaption class="text-base 2xl:text-lg mt-6">— {quote_author}</figcaption>
+                    </f:if>
+                </figure>
+            </f:if>
+        </div>
+        <div class="col-span-2 sm:col-span-1 relative px-3 sm:pl-0 pt-4 pb-6 lg:pt-14 xl:pt-18 md:pr-5 xl:pr-20 3xl:pr-25">
+            <f:if condition="{data.image.0}">
+                <figure class="relative w-full max-w-[480px] mb-4 xl:mb-6">
+                    <picture class="block relative w-full">
+                        <source srcset="{f:uri.image(image: data.image.0, width: '480c', height: '320c', fileExtension: 'webp')} 1x, {f:uri.image(image: data.image.0, width: '960c', height: '640c', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source srcset="{f:uri.image(image: data.image.0, width: '480c', height: '320c', fileExtension: 'jpg')} 1x, {f:uri.image(image: data.image.0, width: '960c', height: '640c', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <f:image image="{data.image.0}" width="480c" height="320c" loading="lazy" class="w-full h-auto max-w-[480px]" />
+                    </picture>
+                    <f:if condition="{data.image.0.properties.copyright}">
+                        <div class="absolute bottom-2 right-2 text-white/70 text-shadow-sm text-xs">© {data.image.0.properties.copyright}</div>
+                    </f:if>
+                    <f:if condition="{data.image.0.description}">
+                        <figcaption class="image-caption">
+                            {file.description -> f:format.nl2br()}
+                        </figcaption>
+                    </f:if>
+                </figure>
+            </f:if>
+            <f:variable name="header" value="{data -> f:render.text(field: 'header')}" />
+            <f:if condition="{header}">
+                <h2 class="text-3xl font-extrabold">{header}</h2>
+            </f:if>
+            <f:variable name="bodytext">{data -> f:render.text(field: 'bodytext')}</f:variable>
+            <f:if condition="{bodytext}">
+                <f:then>
+                    <div class="richtext">
+                        {bodytext}
+                    </div>
+                </f:then>
+            </f:if>
+            <f:if condition="{icon}">
+                <f:variable name="icon-color-class"><f:switch expression="{data.icon_color}">
+                    <f:case value="blue-500">text-blue-500</f:case>
+                    <f:case value="yellow-500">text-yellow-500</f:case>
+                    <f:case value="red-500">text-red-500</f:case>
+                    <f:case value="blue-light">text-blue-light</f:case>
+                    <f:case value="kluft">text-kluft</f:case>
+                    <f:case value="yellow-light">text-yellow-light</f:case>
+                    <f:case value="yellow-dark">text-yellow-dark</f:case>
+                    <f:case value="red-light">text-red-light</f:case>
+                    <f:case value="red-dark">text-red-dark</f:case>
+                    <f:case value="lagerplatzgruen">text-lagerplatzgruen</f:case>
+                    <f:case value="waldgruen">text-waldgruen</f:case>
+                    <f:case value="kohte">text-kohte</f:case>
+                    <f:case value="glut">text-glut</f:case>
+                    <f:case value="lagerfeuerorange">text-lagerfeuerorange</f:case>
+                    <f:case value="morgenkreis">text-morgenkreis</f:case>
+                    <f:case value="internationalerabend">text-internationalerabend</f:case>
+                    <f:case value="singekreislila">text-singekreislila</f:case>
+                    <f:defaultCase></f:defaultCase>
+                </f:switch></f:variable>
+                <div class="mt-10 {icon-color-class} dark:text-white">
+                    <bdp:inlineSvg src="{icon}" class="h-25 sm:h-32" width="128" height="128" aria-hidden="true" />
+                </div>
+            </f:if>
+        </div>
+    </div>
+</div>
+</html>

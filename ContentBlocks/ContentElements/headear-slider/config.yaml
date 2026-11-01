@@ -1,0 +1,19 @@
+name: pfadfinden/headear-slider
+typeName: pfadfinden_headearslider
+group: default
+prefixFields: true
+prefixType: vendor
+basics:
+  - TYPO3/Appearance
+fields:
+  -
+    identifier: header
+    useExistingField: true
+  - identifier: slides
+    type: Collection
+    foreign_table: tx_pfadfinden_sliderslide
+    shareAcrossTables: true
+    shareAcrossFields: true
+    minitems: 1
+    maxitems: 5
+

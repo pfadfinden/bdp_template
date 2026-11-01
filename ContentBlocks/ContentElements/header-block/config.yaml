@@ -1,0 +1,13 @@
+name: pfadfinden/header-block
+typeName: pfadfinden_headerblock
+group: default
+prefixFields: true
+prefixType: vendor
+basics:
+  - TYPO3/Appearance
+  - TYPO3/Links
+fields:
+  - identifier: header
+    useExistingField: true
+  - identifier: subheader
+    useExistingField: true

@@ -1,0 +1,17 @@
+identifier: Pfadfinden/Link
+prefixFields: true
+prefixType: vendor
+
+fields:
+  - identifier: link
+    type: Palette
+    fields:
+      - type: Linebreak
+      - identifier: link
+        type: Link
+      - identifier: linktext
+        type: Text
+        eval: trim
+
+
+

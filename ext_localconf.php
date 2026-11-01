@@ -1,20 +1,8 @@
 <?php
 
-use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
+declare(strict_types=1);
 
-defined('TYPO3') || die();
-/***************
- * Add default RTE configuration
- */
-$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bdptemplate'] = 'EXT:bdp_template/Configuration/RTE/Default.yaml';
+defined('TYPO3') || die('Access denied.');
 
-/***************
- * PageTS
- */
-ExtensionManagementUtility::addPageTSConfig('@import "EXT:bdp_template/Configuration/page.tsconfig"');
-
-/***************
- * UserTs
- */
-ExtensionManagementUtility::addUserTSConfig('@import "EXT:bdp_template/Configuration/user.tsconfig"');
-
+// Add default RTE configuration
+$GLOBALS['TYPO3_CONF_VARS']['RTE']['Presets']['bdp_template'] = 'EXT:bdp_template/Configuration/RTE/Default.yaml';

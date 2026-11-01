@@ -1,0 +1,68 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+>
+<vac:asset.vite
+    manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+    entry="Resources/Private/Sources/Entry/Headerslider.entry.js"
+    cssTagAttributes="{media: 'all' }"
+/>
+<div id="item-{data.uid}" class="ct-headerslider swiper relative w-full aspect-192/97" {f:editMode(then: 'data-edit="true"')}">
+    <div class="swiper-wrapper">
+        <f:for each="{data.slides}" as="slide" iteration="sliderIterator">
+            <div class="swiper-slide">
+                <f:if condition="{slide.image.0}">
+                    <picture class="block relative w-full">
+                        <source media="(max-width: 359px)" srcset="{f:uri.image(image: slide.image.0, width: '390c', height: '300c', fileExtension: 'webp')}" type="image/webp">
+                        <source media="(max-width: 359px)" srcset="{f:uri.image(image: slide.image.0, width: '390c', height: '300c', fileExtension: 'jpg')}" type="image/jpeg">
+                        <source media="(max-width: 575px)" srcset="{f:uri.image(image: slide.image.0, width: '575c', height: '430c', fileExtension: 'webp')}" type="image/webp">
+                        <source media="(max-width: 575px)" srcset="{f:uri.image(image: slide.image.0, width: '575c', height: '430c', fileExtension: 'jpg')}" type="image/jpeg">
+                        <source media="(max-width: 767px)" srcset="{f:uri.image(image: slide.image.0, width: '767c', height: '432c', fileExtension: 'webp')}" type="image/webp">
+                        <source media="(max-width: 767px)" srcset="{f:uri.image(image: slide.image.0, width: '767c', height: '432c', fileExtension: 'jpg')}" type="image/jpeg">
+                        <source media="(max-width: 1200px)" srcset="{f:uri.image(image: slide.image.0, width: '1200c', height: '675c', fileExtension: 'webp')} 1x, {f:uri.image(image: slide.image.0, width: '2400c', height: '1350', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(max-width: 1200px)" srcset="{f:uri.image(image: slide.image.0, width: '1200c', height: '675c', fileExtension: 'jpg')} 1x, {f:uri.image(image: slide.image.0, width: '2400c', height: '1350', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <source media="(max-width: 1451px)" srcset="{f:uri.image(image: slide.image.0, width: '1451c', height: '622c', fileExtension: 'webp')} 1x, {f:uri.image(image: slide.image.0, width: '2902c', height: '1244', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(max-width: 1451px)" srcset="{f:uri.image(image: slide.image.0, width: '1451c', height: '622c', fileExtension: 'jpg')} 1x, {f:uri.image(image: slide.image.0, width: '2902c', height: '1244', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <source media="(min-width: 2560px)" srcset="{f:uri.image(image: slide.image.0, width: '3840c', height: '1940', fileExtension: 'webp')}" type="image/webp">
+                        <source media="(min-width: 2560px)" srcset="{f:uri.image(image: slide.image.0, width: '3840c', height: '1940', fileExtension: 'jpg')}" type="image/jpeg">
+                        <source media="(min-width: 1800px)" srcset="{f:uri.image(image: slide.image.0, width: '1920c', height: '970c', fileExtension: 'webp')} 1x, {f:uri.image(image: slide.image.0, width: '3840c', height: '1940', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(min-width: 1800px)" srcset="{f:uri.image(image: slide.image.0, width: '1920c', height: '970c', fileExtension: 'jpg')} 1x, {f:uri.image(image: slide.image.0, width: '3840c', height: '1940', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <source media="(min-width: 1452px)" srcset="{f:uri.image(image: slide.image.0, width: '1800c', height: '909c', fileExtension: 'webp')} 1x, {f:uri.image(image: slide.image.0, width: '3600c', height: '1819', fileExtension: 'webp')} 2x" type="image/webp">
+                        <source media="(min-width: 1452px)" srcset="{f:uri.image(image: slide.image.0, width: '1800c', height: '909c', fileExtension: 'jpg')} 1x, {f:uri.image(image: slide.image.0, width: '3600c', height: '1819', fileExtension: 'jpg')} 2x" type="image/jpeg">
+                        <f:if condition="{sliderIterator.isFirst}">
+                            <f:then>
+                                <f:image image="{slide.image.0}" width="1800c" height="909c" class="w-full h-auto max-w-full aspect-192/97 object-cover brightness-75" />
+                            </f:then>
+                            <f:else>
+                                <f:image image="{slide.image.0}" width="1800c" height="909c" loading="lazy" class="w-full h-auto max-w-full aspect-192/97 object-cover brightness-75" />
+                            </f:else>
+                        </f:if>
+                    </picture>
+                    <f:if condition="{slide.image.0.properties.copyright}">
+                        <div class="z-3 absolute bottom-2 left-2 text-white/70 text-shadow-sm text-xs">© {slide.image.0.properties.copyright}</div>
+                    </f:if>
+                    <f:variable name="title" value="{slide -> f:render.text(field: 'title')}" />
+                    <f:if condition="{title}">
+                        <div class="absolute left-3 md:left-5 lg:left-10 xl:left-20 bottom-[18%]">
+                        <f:if condition="{sliderIterator.isFirst}">
+                            <f:then>
+                                <h1 class="text-yellow-500 dark:text-white text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{title}</h1>
+                            </f:then>
+                            <f:else>
+                                <div class="text-yellow-500 dark:text-white text-4xl font-bold md:text-5xl lg:text-6xl xl:text-7xl 2xl:text-8xl">{title}</div>
+                            </f:else>
+                        </f:if>
+                        </div>
+                    </f:if>
+                </f:if>
+            </div>
+        </f:for>
+    </div>
+    <div class="swiper-button-prev !h-full !top-0 !bottom-0 !left-0 !mt-0 !ml-0 px-2 *:hidden hover:*:block"></div>
+    <div class="swiper-button-next !h-full !top-0 !bottom-0 !right-0 !mt-0 !mr-0 px-2 *:hidden hover:*:block"></div>
+    <div class="swiper-pagination"></div>
+    <div class="absolute right-0 bottom-0 w-[21.5234375vw] top-0 z-2 bg-yellow-500 mask-[url(Images/clips/headerslider.svg)] mask-cover mask-top-right mask-no-repeat text-blue-500 dark:bg-blue-500 dark:text-white"></div>
+</div>
+</html>

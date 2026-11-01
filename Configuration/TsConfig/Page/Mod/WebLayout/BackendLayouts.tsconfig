@@ -1,4 +1,0 @@
-#
-# BACKENDLAYOUTS
-#
-@import 'EXT:bdp_template/Configuration/TsConfig/Page/Mod/WebLayout/BackendLayouts/*.tsconfig'

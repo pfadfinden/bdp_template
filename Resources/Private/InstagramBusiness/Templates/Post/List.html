@@ -1,0 +1,24 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+      data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+<f:section name="main">
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Sources/Entry/InstagramBusiness.entry.js"
+        cssTagAttributes="{media: 'all' }"
+    />
+    <div class="px-4 xl:px-8 py-8">
+        <div class="ct-instagram swiper relative w-full">
+            <div class="swiper-wrapper">
+                <f:for each="{posts}" as="post">
+                    <f:render partial="Post/RenderMedia" arguments="{post:post}"/>
+                </f:for>
+            </div>
+            <div class="swiper-button-prev !z-102 !h-full !top-0 !left-0 !w-15 !mt-0 pl-3 after:hidden hover:after:block"></div>
+            <div class="swiper-button-next !z-102 !h-full !top-0 !right-0 !w-15 !mt-0 pr-3 after:hidden hover:after:block"></div>
+        </div>
+    </div>
+</f:section>
+
+</html>

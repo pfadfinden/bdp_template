@@ -1,0 +1,64 @@
+<html
+    data-namespace-typo3-fluid="true"
+    xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+    xmlns:cb="http://typo3.org/ns/TYPO3/CMS/ContentBlocks/ViewHelpers"
+    xmlns:vac="http://typo3.org/ns/Praetorius/ViteAssetCollector/ViewHelpers"
+>
+<f:layout name="Default"/>
+
+<f:section name="main">
+    <vac:asset.vite
+        manifest="EXT:bdp_template/Resources/Public/Build/.vite/manifest.json"
+        entry="Resources/Private/Sources/Entry/AddressList.entry.js"
+        cssTagAttributes="{media: 'all' }"
+    />
+    <div class="ct-address">
+        <f:render section="displayMode_{settings.displayMode}" arguments="{_all}" />
+    </div>
+</f:section>
+
+<f:section name="displayMode_list">
+    <!--TYPO3SEARCH_end-->
+    <f:if condition="{settings.hidePagination}">
+        <f:then>
+            <div class="ct-address__list mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 grid-flow-row-dense auto-[10px] gap-x-4 xl:gap-x-8 3xl:gap-x-12 overflow-hidden">
+                <f:for each="{addresses}" as="address" iteration="iterator">
+                    <f:render partial="List/ListItem" arguments="{_all}"/>
+                </f:for>
+            </div>
+        </f:then>
+        <f:else>
+            <f:if condition="{settings.paginate.insertAbove}">
+                <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+            </f:if>
+            <div class="ct-address__list mt-6 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 3xl:grid-cols-4 grid-flow-row-dense auto-[10px] gap-x-4 xl:gap-x-8 3xl:gap-x-12 overflow-hidden">
+                <f:for each="{pagination.paginator.paginatedItems}" as="address" iteration="iterator">
+                    <f:render partial="List/ListItem" arguments="{_all}"/>
+                </f:for>
+            </div>
+            <f:if condition="{settings.paginate.insertBelow}">
+                <f:render partial="Pagination" arguments="{pagination: pagination.pagination, pages: pagination.pages, paginator: pagination.paginator}" />
+            </f:if>
+        </f:else>
+    </f:if>
+    <!--TYPO3SEARCH_begin-->
+</f:section>
+
+<f:section name="displayMode_single">
+    <f:for each="{addresses}" as="address">
+        <f:render partial="Full" arguments="{_all}"/>
+    </f:for>
+</f:section>
+
+<f:section name="displayMode_map">
+    <f:render partial="Maps" section="{settings.map.rendering}" arguments="{_all}"/>
+</f:section>
+
+<f:section name="displayMode_lv">
+    <div class="ct-address__list mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 grid-flow-row-dense auto-[10px] gap-x-4 2xl:gap-x-6 overflow-hidden">
+        <f:for each="{addresses}" as="address" iteration="iterator">
+            <f:render partial="Lv/ListItem" arguments="{address: address, iterator: iterator}"/>
+        </f:for>
+    </div>
+</f:section>
+</html>

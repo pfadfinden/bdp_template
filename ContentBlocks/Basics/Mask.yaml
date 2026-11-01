@@ -1,0 +1,18 @@
+identifier: Pfadfinden/Mask
+prefixFields: true
+prefixType: vendor
+fields:
+  - identifier: mask
+    type: Select
+    renderType: selectSingle
+    default: 'mask_001'
+    items:
+      - label: 'Mask 01'
+        value: mask_001
+      - label: 'Mask 02'
+        value: mask_002
+      - label: 'Mask 03'
+        value: mask_003
+
+
+

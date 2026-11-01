@@ -2,7 +2,7 @@ BdP Sitepackage für TYPO3
 ==============================================================
 Das Sitepackage stellt das BdP Webseiten Layout als Extension für das Content-Management-System TYPO3 zur Verfügung.
 
-Diese Version des Template ist für alle **TYPO3 12.4.x.** LTS Versionen kompatibel.
+Diese Version des Templates ist für alle **TYPO3 14.3.x.** LTS Versionen kompatibel.
 
 # Installation
 ### Installation mit Composer
@@ -13,8 +13,6 @@ Die empfohlene Methode zur Installation des BdP-Sitepackage ist über den Compos
 
 Weitere Informationen findest du im [Wiki](https://github.com/pfadfinden/bdp_template/wiki).
 
-### Extension Installation über das Extension Repository-Backend Modul
-Dieser Weg wird nicht mehr unterstützt.
 
 # Release Management
 Das BdP-Sitepackage benutzt [semantic versioning](https://semver.org/):
