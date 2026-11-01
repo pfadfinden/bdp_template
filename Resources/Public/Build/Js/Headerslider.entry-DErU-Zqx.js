@@ -1,4 +1,4 @@
-import { m as f, c as Z, e as w, s as K, a as ee, b as W, d as te, S as ae, N as ne } from "./navigation-DiMISos5.js";
+import { m as f, c as Z, e as w, s as K, a as ee, b as W, d as te, S as ae, N as ne } from "./navigation-o8XjlGlo.js";
 function H(e = "") {
   return `.${e.trim().replace(/([.:!+/()[\]#>~*^$|=,'"@{}\\])/g, "\\$1").replace(/ /g, ".")}`;
 }
@@ -510,7 +510,7 @@ const le = (e) => !!e.virtual && !!e.params.virtual?.enabled, ie = (e) => !!e.pa
     }, l)) : requestAnimationFrame(() => {
       o();
     }), l;
-  }, B = () => (L = (/* @__PURE__ */ new Date()).getTime(), e.autoplay.running = !0, T(), m("autoplayStart"), !0), u = () => (e.autoplay.running = !1, r !== void 0 && clearTimeout(r), S !== void 0 && cancelAnimationFrame(S), m("autoplayStop"), !0), E = (a, l) => {
+  }, B = () => e.destroyed ? !1 : (L = (/* @__PURE__ */ new Date()).getTime(), e.autoplay.running = !0, T(), m("autoplayStart"), !0), u = () => e.destroyed ? !1 : (e.autoplay.running = !1, r !== void 0 && clearTimeout(r), S !== void 0 && cancelAnimationFrame(S), m("autoplayStop"), !0), E = (a, l) => {
     if (e.destroyed || !e.autoplay.running)
       return;
     r !== void 0 && clearTimeout(r), a || (M = !0);

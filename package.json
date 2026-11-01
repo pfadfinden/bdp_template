@@ -8,12 +8,12 @@
     "accordion-js": "^3.4.1",
     "micromodal": "^0.7.0",
     "mmenu-js": "^9.3.0",
-    "prettier": "^3.9.9",
+    "prettier": "^3.9.10",
     "prettier-plugin-tailwindcss": "^0.8.1",
-    "swiper": "^14.3.0",
+    "swiper": "^14.4.0",
     "tailwindcss": "^4.3.3",
     "vite": "^7.3.6",
-    "vite-plugin-compression2": "^2.5.3",
+    "vite-plugin-compression2": "^2.5.4",
     "vite-plugin-typo3": "^3.0.0"
   },
   "scripts": {

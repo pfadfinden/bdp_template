@@ -1,4 +1,5 @@
 @theme {
+    --breakpoint-xs: 30rem;
     --breakpoint-3xl: 160rem;
     --font-sans: "Jost", -apple-system, system-ui, BlinkMacSystemFont, Segoe UI, Ubuntu, Helvetica Neue, sans-serif;
 
